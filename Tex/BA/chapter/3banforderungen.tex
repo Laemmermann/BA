@@ -1,0 +1,307 @@
+\section{Anforderungsdefinition}
+\label{sec:anforderungsdefinition}
+\dots
+
+
+%%%%%%%%%%
+\subsection{Anforderungen der Administrierenden}
+\todo[inline]{Aus User Stories Anforderungen erstellen und Priorisierung erläutern}
+
+\begin{table}[!ht]
+\def\arraystretch{1.4}
+\caption{Anforderungen der Administrierenden}
+\label{tab:AnforderungenAdministrierenden}
+ \begin{tabularx}{\textwidth}{lXll}      
+    \hline
+    Nr. & Anforderung & Priorität
+    \\\hline
+    1 & Erstellen eines Hyperaudio-Dokuments & hoch\\
+    2 & Bearbeiten eines Hyperaudio-Dokuments & mittel\\
+    3 & Löschen eines Hyperaudio-Dokuments & mittel\\
+    4 & Übernahme eines Hyperaudio-Dokuments in einen anderen Kurs & mittel\\
+    5 & Statistische Auswertungen über die Nutzung der Hyperaudio-Dokumente & niedrig\\
+    \hline
+    \end{tabularx}
+\end{table}
+
+
+%%%%%%%%%%
+\subsection{Anforderungen der Nutzenden}
+\todo[inline]{Aus User Stories Anforderungen erstellen und Priorisierung erläutern}
+
+\begin{table}[!ht]
+\def\arraystretch{1.4}
+\caption{Anforderungen der Nutzenden}
+\label{tab:AnforderungenNutzenden}
+\begin{tabularx}{\textwidth}{lXll}      
+    \hline
+    Nr. & Anforderung & Priorität
+    \\\hline
+    1 & Wiedergabe von Hyperaudio-Dokumenten & hoch\\
+    2 & Hinweise auf die Darstellung von annotierten Zusatzinhalten & hoch\\
+    3 & Übersicht über annotierte Zusatzinhalte & mittel\\
+    4 & Kommentarfunktion bei Hyperaudio-Dokumenten & \\
+    4.1 & Erstellen von Kommentaren & hoch\\
+    4.2 & Anzeigen von Kommentaren & hoch\\
+    4.3 & Antworten von Kommentaren & hoch\\
+    4.4 & Suchfunktion innerhalb der Kommentare & niedrig\\ 
+    5 & Notizfunktion bei Hyperaudio-Dokumenten & \\
+    5.1 & Erstellen von Notizen & hoch\\
+    5.2 & Anzeigen von Notizen & hoch\\
+    5.3 & Bearbeiten von Notizen & mittel\\
+   	5.4 & Löschen von Notizen & mittel\\
+    6 & Markierungsfunktion bei Hyperaudio-Dokumenten & \\
+    6.1 & Erstellen von Markierungen & hoch\\
+    6.2 & Anzeigen von Markierungen & hoch\\
+   	6.3 & Löschen von Markierungen & mittel\\
+    7 & Favoritenfunktion für Hyperaudio-Dokumente & \\
+    7.1 & Erstellen von Favoriten von Hyperaudio-Dokumenten & niedrig\\
+    7.2 & Anzeigen von Favoriten von Hyperaudio-Dokumenten & niedrig\\
+    7.3 & Löschen von Favoriten von Hyperaudio-Dokumenten & niedrig\\    
+    8 & Übersicht über alle Hyperaudio-Dokumente der belegten Kurse & niedrig\\
+    9 & Übersicht über die zuletzt abgespielten Hyperaudio-Dokumente & niedrig\\
+    10 &  Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle & niedrig\\
+    11 & Unterstützung von mobilen Endgeräten & mittel\\
+    \hline
+\end{tabularx}
+\end{table}
+
+
+
+%\section{Bedürfnisse der Studierenden und Lehrenden}
+%Bevor wir mit der detaillierten Konzeption des Plugins beginnen können, ist es wichtig, sich nochmals genauer mit den möglichen Bedürfnissen der Studierenden und Lehrenden auseinanderzusetzen. Eine Analyse der Bedürfnisse mittels Umfrage und/oder Interviews würde den Umfang dieser Arbeit sprengen, weshalb hierauf verzichtet wird.
+%
+%Nun sollen im ersten Schritt die Anforderungen an die einzelnen Bereiche erarbeitet werden, wobei bereits die Gruppe der Betroffenen mit festgehalten werden soll. Nachdem die Anforderungen erfasst wurden, sollen diese im zweiten Schritt mit einer Priorität versehen werden. Diese wird dann herangezogen um bei der geplanten iterativen Programmierung die Reihenfolge, in der die Anforderungen umgesetzt werden, zu bestimmen.
+%
+%%%%%%%%%%%
+%\subsection{Anforderungen an die Schnittstelle}
+%Die Schnittstelle soll es den Lehrenden ermöglichen, Hyperaudio-Dokumente in Moodle zu übertragen. Um die Anforderungen an die Schnittstelle zu ermitteln, überlegen wir kurz was ein Hyperaudio-Dokument ausmacht. Ein solches Dokument besteht zum einen aus einer Audio-Datei. Hieraus resultiert die Anforderung an die Schnittstelle, dass man festlegen können muss, welche Audio-Datei abgespielt werden soll. Zum anderen besteht ein Hyperaudio-Dokument aus zeitabhängigen Annotationen von Bildern, Tabellen, Formeln etc. Die Schnittstelle muss es uns also ermöglichen, zu definieren, zu welchem Zeitpunkt und für welche Dauer welches Zusatzinhalte angezeigt werden soll. Außerdem wäre es noch praktisch, Metadaten, wie den Autor, Quellen oder weiterführende Links, an das Hyperaudio-Dokument anzuheften. Um all diese Informationen zu speichern entsteht automatisch die Anforderung an eine Schnittstellen-Datei. Natürlich muss es auch die Möglichkeit geben, das Hyperaudio-Dokument in Moodle zu importieren. Alle diese Anforderungen (siehe Tabelle X
+%%\ref{tab:AnforderungenSchnittstelle}
+%) haben gemeinsam, dass ausschließlich die Lehrenden die Betroffenen darstellen.
+%
+%%\begin{table}[!ht]
+%%\def\arraystretch{1.4}
+%%\caption{Anforderungen an die Schnittstelle}
+%%\label{tab:AnforderungenSchnittstelle}
+%% \begin{tabularx}{\textwidth}{lXl}      
+%%    \hline
+%%    Nr. & Anforderung & Betroffene 
+%%    \\\hline
+%%    1. & Definition einer Schnittstellen-Datei & \\
+%%    1.1 & Definition der abzuspielenden Audiodatei & Lehrende\\
+%%    1.2 & Definition der zeitabhängigen Annotationen (Bildern, Tabellen, Formeln etc.) & Lehrende\\
+%%    1.3 & Definition von Metadaten (Autor, Quellen, weiterführende Links etc.) & Lehrende\\
+%%    2. & Entwickeln eines Imports für Moodle & Lehrende\\
+%%    \hline
+%%    \end{tabularx}
+%%\end{table}
+%
+%%%%%%%%%%%
+%\subsection{Anforderungen an die Integration in die Moodle-Oberfläche}
+%\label{sub:AnforderungenOberflaeche}
+%Um die Anforderungen für die Integration in die Moodle-Oberfläche (siehe Tabelle X
+%%\ref{tab:AnforderungenIntegration}
+%) zu bestimmen, versuchen wir uns in die Studierenden und Lehrenden hineinzuversetzen. 
+%
+%Zunächst beginnen wir mit der Perspektive der Lehrenden. Für diese Gruppe steht natürlich die Administration von Hyperaudio-Dokumenten im Vordergrund. Dementsprechend muss eine Administrationsseite zur Verfügung gestellt werden, über welche die Hyperaudio-Dokumente hochgeladen und verwaltet werden können.
+%
+%Nun kommen wir zu den Anforderungen, die sowohl Lehrende als auch Studierende an die Integration stellen. Die zentrale Anlaufstelle, an denen die Lerninhalte für die Lehrenden und Studierenden angezeigt werden, ist natürlich die Kursseite des jeweiligen Kurses. Also muss die Darstellung der Hyperaudio-Dokumente in die Kursseiten integriert werden. Bei dieser Integration müssen wiederum neben der reinen Integration eines Players für Hyperaudio-Dokumente weitere Aspekte berücksichtigt werden. Eine weitere Anforderung könnte sein, dass alle dargestellten Zusatzinhalte in einer separaten Galerie dargestellt werden, damit sich schnell einen Überblick über diese gemacht werden kann und gegebenenfalls schnell wieder an die entsprechende Stelle im Hyperaudio-Dokument gesprungen werden kann. Hier ist also auch eine Rückkopplung zum Player notwendig. Des Weiteren muss hier auch die gewünschte Kommentarsektion eingebunden werden, über welche sich die Studierenden und Lehrenden untereinander austauschen können.
+%
+%Zusätzlich ist auch eine Favoritenfunktion denkbar, mit welcher sich Studierende und Lehrende bestimmte Hyperaudio-Dokumente als Favoriten speichern können. Passend hierzu müsste es dann eine Übersicht über alle favorisierten Hyperaudio-Dokumente geben, welche ähnlich dargestellt werden könnte wie die bereits vorhandene Moodle-Ansicht \glqq Meine Lernumgebungen\grqq.
+%
+%Eine Übersicht über alle zuletzt abgespielten Dokumente stellt eine ähnliche Anforderung dar.
+%
+%Eine weitere mögliche Anforderung ist eine Übersichtsseite über alle verfügbaren Hyperaudio-Angebote aufgegliedert nach Kurs, Kurseinheit und Kapitel.
+%
+%%\begin{table}[!ht]
+%%\def\arraystretch{1.4}
+%%\caption{Anforderungen an die Integration in die Moodle-Oberfläche}
+%%\label{tab:AnforderungenIntegration}
+%% \begin{tabularx}{\textwidth}{lXl}      
+%%    \hline
+%%    Nr. & Anforderung & Betroffene 
+%%    \\\hline
+%%    1. & Einbindung der Administration in die Kursseite & Lehrende\\
+%%    2. & Einbindung der Hyperaudio-Dokumente in die Kursseite & \\
+%%    2.1 & Einbindung des Players & Lehrende und Studierende\\
+%%    2.2 & Einbindung einer Galerie der zeitabhängig annotierten Bilder, Tabellen, Formeln etc. mit Rückkopplung zum Player & Lehrende und Studierende\\
+%%    2.3 & Einbindung der Kommentarsektion & Lehrende und Studierende\\
+%%    3. & Favoritenfunktion analog zu \glqq Meine Lernumgebungen\grqq & Lehrende und Studierende\\
+%%    4. & Übersicht über zuletzt abgespielte Hyperaudio-Dokumente & Lehrende und Studierende\\
+%%    5. & Übersicht über alle verfügbaren Hyperaudio-Angebote & Lehrende und Studierende\\
+%%    \hline
+%%    \end{tabularx}
+%%\end{table}
+%
+%%%%%%%%%%%
+%\subsection{Anforderungen an die Kommentarsektion}
+%\label{sub:AnforderungenKommentarsektion}
+%Nachdem bereits bei den Anforderungen an die Intergration in die Moodle-Oberfläche auf die Kommentarsektion verwiesen wurde, sollen nun auch hierfür die Anforderungen definiert werden. Zunächst besteht der Wunsch, dass die Kommentarsektion neben öffentlichen Kommentaren auch persönliche Notizen enthalten können soll.
+%
+%An dieser Stelle wollen wir die Unterscheidung zwischen öffentlichen Kommentaren, persönlichen Notizen und persönlichen Markierungen vornehmen. Öffentliche Kommentare stellen die übliche Art der Kommentare dar, mittels derer der Austausch unter den Studierenden und den Lehrenden stattfindet. Persönliche Notizen stellen eine spezielle Form der Kommentare dar. Diese sind im Grunde auf gleiche Art und Weise wie die öffentlichen Kommentare zu verstehen, mit der einzigen Ausnahme, dass diese nur durch den Verfasser eingesehen werden können. Persönliche Markierungen dagegen sollen dem Studierenden oder Lehrenden die Möglichkeit geben, bestimmte Zeitpunkte des Hyperaudio-Dokuments für eventuelle spätere Bearbeitungen vorzumerken. Markierungen werden nur innerhalb des Players vorgenommen, sodass diese keinen Bestandteil der Kommentarsektion darstellen. %Persönliche Markierungen dagegen sollen dem Studierenden und Lehrenden die Möglichkeit geben, eine im Player sichtbare Markierung innerhalb der Fortschrittsleiste vorzunehmen. Diese Markierungen stellen also keinen Bestandteil der Kommentarsektion dar.
+%
+%%Am Anfang steht hier zunächst die Anforderung, dass Kommentare und persönliche Notizen erstellt werden können. Diese Kommentare und persönlichen Notizen sollen in der Kommentarsektion chronologisch dargestellt werden.
+%In der Kommentarsektion sollen Kommentare und Notizen chronologisch dargestellt werden.
+%% Dabei soll aus zwei Betrachtungsweisen entschieden werden können, zum einen der Betrachtung anhand des Erstellungsdatums und zum anderen mittels des Zeitpunktes zu dem der Kommentar oder die Notiz an das Hyperaudio-Dokument annotiert wurde.
+%Die Sortierung erfolgt standardmäßig anhand der Zeitpunkte, zu denen die Kommentare oder Notizen an das Hyperaudio-Dokument annotiert wurden. Alternativ kann der Betrachter auch eine Sortierung nach Erstellungsdatum wählen. 
+%Da die Studierenden und Lehrenden sich mittels der Kommentare austauschen können sollen, besteht auch die Anforderung, direkt auf einen öffentlichen Kommentar antworten zu können. Bei persönlichen Notizen besteht der Wunsch, diese auch bearbeiten und löschen zu können. Da jeder Kommentar und auch jede Notiz zu einem bestimmten Zeitpunkt innerhalb des Hyperaudio-Dokuments gehört, soll es auch möglich sein, vom jeweiligen Kommentar beziehungsweise von der jeweiligen Notiz aus zu der entsprechenden Stelle im Hyperaudio-Dokument zu springen. Diese Anforderung wird entsprechend in Tabelle X
+%%\ref{tab:AnforderungenKommentarsektion}
+%ergänzt. Zusätzlich wäre es auch von Vorteil, wenn in den Kommentare und Notizen nach Stichwörtern gesucht werden könnte.
+%
+%%\begin{table}[!ht]
+%%\def\arraystretch{1.4}
+%%\caption{Anforderungen an die Kommentarsektion}
+%%\label{tab:AnforderungenKommentarsektion}
+%% \begin{tabularx}{\textwidth}{lXl}      
+%%    \hline
+%%    Nr. & Anforderung & Betroffene 
+%%    \\\hline
+%%    %1. & Erstellen von Kommentaren und persönlichen Notizen & Lehrende und Studierende\\
+%%    1. & Chronologische Darstellung der Kommentare und Notizen & Lehrende und Studierende\\
+%%    2. & Antworten auf öffentliche Kommentare & Lehrende und Studierende\\
+%%    3. & Bearbeiten persönlicher Notizen & Lehrende und Studierende\\
+%%    4. & Löschen persönlicher Notizen & Lehrende und Studierende\\
+%%    5. & Rückkopplung zum Player & Lehrende und Studierende\\
+%%    6. & Suchfunktion in den Kommentaren und Notizen & Lehrende und Studierende\\
+%%    \hline
+%%    \end{tabularx}
+%%\end{table}
+%
+%%%%%%%%%%%
+%\subsection{Anforderungen an den Player für Hyperaudio-Dokumente}
+%Wenden wir uns nun den Anforderungen an den Player zu. Hierbei macht es wieder Sinn sich zu überlegen was mit dem Hyperaudio-Dokument bezweckt werden soll. Die Grundfunktion des Players besteht darin, Audio-Dateien abzuspielen. Zusätzlich sollen die zeitabhängig annotierten Zusatzinhalte dargestellt werden. Zu dem Zeitpunkt, zu dem die Zusatzinhalte dargestellt werden, ist die Wiedergabe eines \textit{Audio Cues}, also eines akustischen Hinweises, gewünscht, der die Zuhörer auf die Anzeige der annotierten Zusatzinhalte aufmerksam macht. Eine weitere Anforderung ist die Einbettung der Kommentare und Notizen in den Player. Diese besteht zum einen aus der reinen Visualisierung der zeitabhängig annotierten Kommentare und Notizen, zum anderen werden auch Interaktionsmöglichkeiten geboten, sei es die Weiterleitung an die entsprechende Stelle in der Kommentarsektion oder die Erstellung neuer zeitabhängiger annotierter Kommentare und Notizen.  Auch das Erstellen und Löschen von persönlichen Markierungen innerhalb des Players samt derer Visualisierung stellt eine Anforderung an den Player dar und wird in Tabelle X
+%%\ref{tab:AnforderungenPlayer}
+%festgehalten.
+%
+%Vorstellbar ist darüber hinaus, dass der Player sich beim Schließen der Seite merkt, zu welchem Zeitpunkt das Hyperaudio-Dokument beendet wurde, um es beim erneuten Öffnen an ebendieser Stelle fortzusetzen.
+%
+%%\begin{table}[!ht]
+%%\def\arraystretch{1.4}
+%%\caption{Anforderungen an den Player für Hyperaudio-Dokumente}
+%%\label{tab:AnforderungenPlayer}
+%% \begin{tabularx}{\textwidth}{lXl}      
+%%    \hline
+%%    Nr. & Anforderung & Betroffene 
+%%    \\\hline
+%%    1. & Wiedergabe der Audiodatei & Lehrende und Studierende\\
+%%    2. & Darstellung der zeitabhängig annotierten Bilder, Tabellen, Formeln etc & Lehrende und Studierende\\
+%%    3. & Wiedergabe der Audio Cues & Lehrende und Studierende\\
+%%    4. & Einbettung der Kommentare und Notizen & \\
+%%    4.1 & Visualisierung der zeitabhängig annotierten Kommentare und Notizen & Lehrende und Studierende\\
+%%    4.2. & Interaktionsmöglichkeiten & \\
+%%    4.2.1 & Weiterleitung zu vorhandenen Kommentaren und Notizen in der Kommentarsektion  & Lehrende und Studierende\\
+%%    4.2.2 & Erstellen zeitabhängiger annotierter Kommentare und Notizen & Lehrende und Studierende\\
+%%    5. & Einbettung der persönlichen Markierungen & \\
+%%    5.1 & Visualisierung der zeitabhängig annotierten Markierungen & Lehrende und Studierende\\
+%%    5.2. & Interaktionsmöglichkeiten & \\
+%%    5.2.1 & Erstellen zeitabhängig annotierter Markierungen  & Lehrende und Studierende\\
+%%    5.2.2 & Löschen zeitabhängig annotierter Markierungen & Lehrende und Studierende\\
+%%    6. & Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle & Lehrende und Studierende\\
+%%    \hline
+%%    \end{tabularx}
+%%\end{table}
+%
+%%%%%%%%%%%
+%\subsection{Priorisierung der Anforderungen}
+%Im nächsten Schritt nehmen wir die Priorisierung der erfassten Anforderungen vor. Hierbei wird bewertet wie wichtig der in der Anforderung beschriebene Wunsch für die Erreichung des Lernziels ist. Die Priorisierung wird anhand der drei Prioritätsstufen \textit{niedrig}, \textit{mittel} und \textit{hoch} festgelegt.
+%
+%\subsubsection{Priorisierung: Anforderungen an die Schnittstelle}
+%Wenn die gesammelten Anforderungen an die Schnittstelle betrachtet werden, kann festgestellt werden, dass abgesehen von der Definition von Metadaten (Autor, Quellen, weiterführende Links etc.) alle Anforderungen essenziell für die Erreichung des Lernziels und somit zur Umsetzung des Plugins sind. Die Metadaten stellen aber dennoch sinnvolle Informationen bereit, welche dem Studierenden beim Erreichen des Lernziels helfen können. Daraus resultiert die in Tabelle \ref{tab:PriorisierungAnforderungenSchnittstelle} dargestellte Priorisierung.
+%
+%\begin{table}[!ht]
+%\def\arraystretch{1.4}
+%\caption{Priorisierung: Anforderungen an die Schnittstelle}
+%\label{tab:PriorisierungAnforderungenSchnittstelle}
+% \begin{tabularx}{\textwidth}{lXll}      
+%    \hline
+%    Nr. & Anforderung & Betroffene & Priorität
+%    \\\hline
+%    1. & Definition einer Schnittstellen-Datei & & \\
+%    1.1 & Definition der abzuspielenden Audiodatei & Lehrende & hoch\\
+%    1.2 & Definition der zeitabhängigen Annotationen (Bildern, Tabellen, Formeln etc.) & Lehrende & hoch\\
+%    1.3 & Definition von Metadaten (Autor, Quellen, weiterführende Links etc.) & Lehrende & mittel\\
+%    2. & Entwickeln eines Imports für Moodle & Lehrende & hoch\\
+%    \hline
+%    \end{tabularx}
+%\end{table}
+%
+%%%%%%%%%%%
+%\subsubsection{Priorisierung: Anforderungen an die Integration in die Moodle-Oberfläche}
+%Bei der Integration in die Moodle-Oberfläche ergibt sich eine Priorisierung in drei Stufen. Auf die Einbindung der Administration in die Kursseite kann nicht verzichtet werden, genauso wie auf die Einbindung der Hyperaudio-Dokumente in die Kursseite inklusive des Players und der Kommentarsektion. Demzufolge erhalten diese Anforderungen die Priorität \textit{hoch}. Der Anforderung \glqq Einbindung einer Galerie der zeitabhängig annotierten Bilder, Tabellen, Formeln etc. mit Rückkopplung zum Player\grqq{} wird die Priorität \textit{mittel} zugeordnet, da sie das Erreichen des Lernziels sehr wohl unterstützen kann, aber nicht zwangsweise dafür benötigt wird. Alle weiteren Anforderungen an die Integration in die Moodle-Oberfläche werden mit der Priorität \textit{niedirg} in Tabelle \ref{tab:PriorisierungAnforderungenIntegration} festgehalten, da sie nicht dem eigentlichen Erreichen des Lernziels dienen, sondern nur eine verbesserte Übersicht über die Hyperaudio-Dokumente bieten.
+%
+%\begin{table}[!ht]
+%\def\arraystretch{1.4}
+%\caption{Priorisierung: Anforderungen an die Integration in die Moodle-Oberfläche}
+%\label{tab:PriorisierungAnforderungenIntegration}
+% \begin{tabularx}{\textwidth}{lXll}      
+%    \hline
+%    Nr. & Anforderung & Betroffene & Priorität
+%    \\\hline
+%    1. & Einbindung der Administration in die Kursseite & Lehrende & hoch\\
+%    2. & Einbindung der Hyperaudio-Dokumente in die Kursseite & \\
+%    2.1 & Einbindung des Players & Lehrende und Studierende & hoch\\
+%    2.2 & Einbindung einer Galerie der zeitabhängig annotierten Bilder, Tabellen, Formeln etc. mit Rückkopplung zum Player & Lehrende und Studierende & mittel\\
+%    2.3 & Einbindung der Kommentarsektion & Lehrende und Studierende & hoch\\
+%    3. & Favoritenfunktion analog zu \glqq Meine Lernumgebungen\grqq & Lehrende und Studierende & niedrig\\
+%    4. & Übersicht über zuletzt abgespielte Hyperaudio-Dokumente & Lehrende und Studierende & niedrig\\
+%    5. & Übersicht über alle verfügbaren Hyperaudio-Angebote & Lehrende und Studierende & niedrig\\
+%    \hline
+%    \end{tabularx}
+%\end{table}
+%
+%%%%%%%%%%%
+%\subsubsection{Priorisierung: Anforderungen an die Kommentarsektion}
+%Der Hauptbestandteil der Kommentarsektion besteht aus der Darstellung der Kommentare und Notizen. Die Vergabe einer hohen Priorität für diese Anforderung (siehe Tabelle \ref{tab:PriorisierungAnforderungenKommentarsektion}) ist daher trivial. Die Möglichkeit direkt auf Kommentare zu antworten und die Möglichkeit persönliche Notizen zu löschen stellen sinnvolle Erweiterungen der Kommentarfunktion dar, welche das Erreichen des Lernziels erleichtern können. Dies rechtfertigt die Priorität \textit{mittel}. Dem Bearbeiten persönlicher Notizen wird die Priorität \textit{niedrig} zugewiesen, da dieselben Ergebnisse auch dadurch erzielt werden können, dass ein bestehender Kommentar gelöscht und ein neuer Kommentar erstellt wird. Eine Bearbeitungsfunktion eröffnet also keine neuen Möglichkeiten, stellt jedoch eine Erleichterung des Arbeitsschrittes dar. Der Anforderung \glqq Rückkopplung zum Player\grqq{} wird die Priorität \textit{mittel} zugeordnet, da sie, ähnlich wie die Galerie, das Erreichen des Lernziels unterstützen kann, aber nicht zwangsweise dafür benötigt wird.
+%%Da der Fokus bei den Kommentaren von Hyperaudio-Dokumenten auf der Zeit und nicht direkt auf dem Inhalt liegt wird der Suchfunktion nur eine geringe Priorität zugewiesen
+%Eine Suchfunktion innerhalb der Kommentare ist nützlich, um Inhalte zu bestimmten Themen zu finden. Die Kommentare können jedoch auch anhand der Visualisierung im Player oder über die Inhalte der Galerie angesteuert werden. Da die Suchfunktion demnach nicht die einzige Möglichkeit darstellt, um zu den gewünschten Kommentaren zu navigieren, wird dieser nur eine geringe Priorität zugewiesen.
+%
+%\begin{table}[!ht]
+%\def\arraystretch{1.4}
+%\caption{Priorisierung: Anforderungen an die Kommentarsektion}
+%\label{tab:PriorisierungAnforderungenKommentarsektion}
+% \begin{tabularx}{\textwidth}{lXll}      
+%    \hline
+%    Nr. & Anforderung & Betroffene & Priorität
+%    \\\hline
+%    %1. & Erstellen von Kommentaren und persönlichen Notizen & Lehrende und Studierende & hoch\\
+%    1. & Chronologische Darstellung der Kommentare und Notizen & Lehrende und Studierende & hoch\\
+%    2. & Antworten auf öffentliche Kommentare & Lehrende und Studierende & mittel\\
+%    3. & Bearbeiten persönlicher Notizen & Lehrende und Studierende & niedrig\\
+%    4. & Löschen persönlicher Notizen & Lehrende und Studierende & mittel\\
+%    5. & Rückkopplung zum Player & Lehrende und Studierende & hoch\\
+%    6. & Suchfunktion in den Kommentaren und Notizen & Lehrende und Studierende & niedrig\\
+%    \end{tabularx}
+%\end{table}
+%
+%%%%%%%%%%%
+%\subsubsection{Priorisierung: Anforderungen an den Player für Hyperaudio-Dokumente}
+%Beim Player stellen die Wiedergabe der Audiodatei und die Darstellung der zeitabhängig annotierten Bilder, Tabellen, Formeln etc. die essenziellen Funktionen dar und werden entsprechend mit der Priorität \textit{hoch} bewertet. Mit dem Hintergrund, dass die Studierenden während des Abspielens des Hyperaudio-Dokuments andere Tätigkeiten ausüben können und nur in bestimmen Momenten auf den PC blicken müssen sollen, kann auch die Anforderung \glqq Wiedergabe der Audio Cues\grqq{} mit der Priorität \textit{hoch} bedacht werden. Es ist zu betonen, dass die Kommentarfunktion einen wesentlichen Bestandteil des Plugins ausmachen soll. Um die Nutzung der Kommentarfunktion beim Abspielen der Dokumente möglichst komfortabel zu gestalten, sollten die Interaktionsmöglichkeiten entsprechend mit der Priorität \textit{hoch} versehen werden. Gleiches gilt für die Anforderungen bezüglich der persönlichen Markierungen. Die Visualisierung der Kommentare, Notizen und Markierungen an sich wird ebenfalls mit der Priorität \textit{hoch} bewertet.
+%% Das Erreichen des Lernzieles wird dadurch erleichtert, dass beim Abspielen des Dokuments schnell die gewünschten Aktionen ausgeführt werden können und somit weniger kostbare Lernzeit verschwendet wird.
+%Durch die Umsetzung der eben genannten Anforderungen können beim Abspielen des Dokuments schnell die gewünschten Aktionen ausgeführt werden, wodurch letztlich das Erreichen des Lernzieles erleichert wird.
+%Der Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle wird eine geringere Bedeutung zugeschrieben, da falls gewünscht beispielsweise auch mittels einer persönlichen Notiz oder Markierung der Zeitpunkt festgehalten werden kann, an dem das Dokument beim nächsten Aufruf fortgesetzt werden soll. Dementsprechend wird dieser Anforderung in Tabelle \ref{tab:PriorisierungAnforderungenPlayer} nur eine geringe Priorität zugeordnet.
+%
+%\begin{table}[!ht]
+%\def\arraystretch{1.4}
+%\caption{Priorisierung: Anforderungen an den Player für Hyperaudio-Dokumente}
+%\label{tab:PriorisierungAnforderungenPlayer}
+% \begin{tabularx}{\textwidth}{lXll}      
+%    \hline
+%    Nr. & Anforderung & Betroffene & Priorität
+%    \\\hline
+%    1. & Wiedergabe der Audiodatei & Lehrende und Studierende & hoch\\
+%    2. & Darstellung der zeitabhängig annotierten Bilder, Tabellen, Formeln etc. & Lehrende und Studierende & hoch\\
+%    3. & Wiedergabe der Audio Cues & Lehrende und Studierende & hoch\\
+%    4. & Einbettung der Kommentare und Notizen & \\
+%    4.1 & Visualisierung der zeitabhängig annotierten Kommentare und Notizen & Lehrende und Studierende & hoch\\
+%    4.2. & Interaktionsmöglichkeiten & \\
+%    4.2.1 & Weiterleitung zu vorhandenen Kommentaren und Notizen in der Kommentarsektion  & Lehrende und Studierende & hoch\\
+%    4.2.2 & Erstellen zeitabhängiger annotierter Kommentare und Notizen & Lehrende und Studierende & hoch\\
+%    5. & Einbettung der persönlichen Markierungen & \\
+%    5.1 & Visualisierung der zeitabhängig annotierten Markierungen & Lehrende und Studierende & hoch\\\\
+%    5.2. & Interaktionsmöglichkeiten & \\
+%    5.2.1 & Erstellen zeitabhängig annotierter Markierungen  & Lehrende und Studierende & hoch\\
+%    5.2.2 & Löschen zeitabhängig annotierter Markierungen & Lehrende und Studierende & hoch\\
+%    6. & Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle & Lehrende und Studierende & niedrig\\
+%    \hline
+%    \end{tabularx}
+%\end{table}

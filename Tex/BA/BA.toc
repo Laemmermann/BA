@@ -1,0 +1,68 @@
+\babel@toc {german}{}
+\contentsline {chapter}{\numberline {1}Einf\IeC {\"u}hrung}{9}{chapter.3}
+\contentsline {section}{\numberline {1.1}Motivation}{9}{section.5}
+\contentsline {section}{\numberline {1.2}Problemstellung}{9}{section.8}
+\contentsline {subsection}{\numberline {1.2.1}Ist-Situation}{10}{subsection.9}
+\contentsline {subsection}{\numberline {1.2.2}Probleme}{10}{subsection.12}
+\contentsline {section}{\numberline {1.3}Forschungsfragen und Zielsetzung}{11}{section.13}
+\contentsline {chapter}{\numberline {2}Grundlagen}{13}{chapter.15}
+\contentsline {section}{\numberline {2.1}Moodle}{13}{section.21}
+\contentsline {section}{\numberline {2.2}Kooperation im Lernumfeld}{14}{section.23}
+\contentsline {subsection}{\numberline {2.2.1}Offline}{14}{subsection.24}
+\contentsline {subsection}{\numberline {2.2.2}Online}{14}{subsection.25}
+\contentsline {section}{\numberline {2.3}Lernen mit Hypermedia}{14}{section.26}
+\contentsline {section}{\numberline {2.4}Hyperaudio-Dokument}{16}{section.30}
+\contentsline {section}{\numberline {2.5}Zusammenfassung}{16}{section.32}
+\contentsline {chapter}{\numberline {3}Analyse}{17}{chapter.33}
+\contentsline {section}{\numberline {3.1}Zielgruppe}{17}{section.35}
+\contentsline {subsection}{\numberline {3.1.1}Personas}{17}{subsection.37}
+\contentsline {subsection}{\numberline {3.1.2}User Stories}{18}{subsection.39}
+\contentsline {subsection}{\numberline {3.1.3}Umgebungsbedingungen}{20}{subsection.67}
+\contentsline {section}{\numberline {3.2}Anforderungsdefinition}{20}{section.69}
+\contentsline {subsection}{\numberline {3.2.1}Anforderungen der Administrierenden}{20}{subsection.70}
+\contentsline {subsection}{\numberline {3.2.2}Anforderungen der Nutzenden}{20}{subsection.73}
+\contentsline {section}{\numberline {3.3}M\IeC {\"o}glichkeiten der Moodle Plugin-Entwicklung}{21}{section.76}
+\contentsline {section}{\numberline {3.4}Aktueller Stand der Technik}{21}{section.77}
+\contentsline {subsection}{\numberline {3.4.1}Etablierte Audio- und Video-Plattformen}{22}{subsection.78}
+\contentsline {subsubsection}{\nonumberline SoundCloud}{22}{section*.79}
+\contentsline {subsubsection}{\nonumberline Youtube}{22}{section*.81}
+\contentsline {subsection}{\numberline {3.4.2}Technologien f\IeC {\"u}r den Einsatz in Moodle}{23}{subsection.84}
+\contentsline {subsubsection}{\nonumberline VideoJS Player}{23}{section*.86}
+\contentsline {subsubsection}{\nonumberline H5P}{24}{section*.89}
+\contentsline {subsubsection}{\nonumberline Popcorn.js}{24}{section*.91}
+\contentsline {subsubsection}{\nonumberline wavesurfer.js}{24}{section*.93}
+\contentsline {subsubsection}{\nonumberline audio-annotator}{24}{section*.95}
+\contentsline {subsubsection}{\nonumberline BAT - BMAT Annotation Tool}{25}{section*.96}
+\contentsline {subsubsection}{\nonumberline wavesurfer.js f\IeC {\"u}r Hyperaudio-Dokumente}{25}{section*.99}
+\contentsline {subsubsection}{\nonumberline timesheets.js}{25}{section*.100}
+\contentsline {subsubsection}{\nonumberline Zusammenfassung}{25}{section*.102}
+\contentsline {section}{\numberline {3.5}Zusammenh\IeC {\"a}nge der Komponenten von Hyperaudio-Dokument und Annotationen}{25}{section.103}
+\contentsline {subsection}{\numberline {3.5.1}Komponenten}{26}{subsection.104}
+\contentsline {subsection}{\numberline {3.5.2}Zusammenh\IeC {\"a}nge}{26}{subsection.105}
+\contentsline {section}{\numberline {3.6}Zusammenfassung}{26}{section.107}
+\contentsline {chapter}{\numberline {4}Konzept}{28}{chapter.108}
+\contentsline {section}{\numberline {4.1}Gestaltung der Benutzeroberfl\IeC {\"a}che}{28}{section.109}
+\contentsline {subsubsection}{\nonumberline Player}{28}{section*.111}
+\contentsline {subsubsection}{\nonumberline Galerie}{29}{section*.114}
+\contentsline {subsubsection}{\nonumberline Kommentarsektion}{31}{section*.116}
+\contentsline {subsubsection}{\nonumberline Zusammenf\IeC {\"u}hren der Elemente}{31}{section*.118}
+\contentsline {section}{\numberline {4.2}Architektur des Moodle-Plugins}{31}{section.120}
+\contentsline {section}{\numberline {4.3}Definition des Schnittstellenformats f\IeC {\"u}r Hyperaudio-Dokumente}{32}{section.121}
+\contentsline {section}{\numberline {4.4}Zusammenfassung}{33}{section.122}
+\contentsline {chapter}{\numberline {5}Implementierung}{35}{chapter.123}
+\contentsline {section}{\numberline {5.1}Moodle-Integration}{35}{section.124}
+\contentsline {section}{\numberline {5.2}Player}{35}{section.125}
+\contentsline {section}{\numberline {5.3}Kommentarsektion}{35}{section.126}
+\contentsline {section}{\numberline {5.4}Zusammenfassung}{35}{section.127}
+\contentsline {chapter}{\numberline {6}Evaluation}{36}{chapter.128}
+\contentsline {section}{\numberline {6.1}Zusammenfassung}{36}{section.129}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{37}{chapter.130}
+\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{38}{appendix.131}
+\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{39}{appendix.132}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{41}{chapter*.133}
+\contentsline {chapter}{Abbildungsverzeichnis}{43}{section*.134}
+\contentsline {chapter}{Tabellenverzeichnis}{45}{section*.135}
+\contentsline {chapter}{Auflistungsverzeichnis}{47}{section*.136}
+\contentsline {chapter}{Verzeichnis der Algorithmen}{49}{section*.138}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{51}{section*.140}
+\contentsfinish 

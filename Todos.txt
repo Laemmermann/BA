@@ -1,0 +1,3 @@
+- Kursiv bei Begriffen
+- Anführungszeichen
+- Schreibweise Open Source Bib, Standard Plugin usw. 

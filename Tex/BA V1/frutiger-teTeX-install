@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Installation der Frutiger-Schriften in einer TeXLive-Installation.
+# Wir gehen davon aus, dass die Datei frutiger.zip mit dem cvs-Projekt texinputs
+# an sinnvoller Stelle ausgecheckt vorliegt, z. B. in 
+# /usr/local/texlive/????/texmf-local/tex/latex/texinputs
+# oder /usr/local/texlive/texmf-local/tex/latex/texinputs  (*)
+# Das aktuelle Verzeichnis muss genau dieses sein.
+# (*) Tipp: TEXMFLOCAL so setzen mit  sudo tlmgr conf texmf TEXMFLOCAL '$SELFAUTOPARENT/../texmf-local'
+
+# Zur Sicherheit: Wie heißt das aktuelle Verzeichnis?
+WD=`pwd`
+DIR=`dirname "$WD"`
+WD=`basename "$WD"`
+WDUP=`basename "$DIR"`
+DIR=`dirname "$DIR"`
+WDUPUP=`basename "$DIR"`
+#if [ "$WDUPUP/$WDUP/$WD" != "tex/latex/texinputs" ] ; then
+	#echo please cd to tex/latex/texinputs before calling $0 >&2
+	#exit 1
+#fi
+
+# Gehe nach oben ins Verzeichnis texmf,
+# entpacke dort frutiger.zip mit unzip und
+# sorge dafür, dass die Frutiger-Schriften gefunden werden.
+echo Installing frutiger... &&
+#cd ../../.. &&
+unzip -o ./frutiger.zip &&
+echo 'admin privileges required for installing fonts (via sudo)' &&
+sudo texhash &&
+sudo updmap-sys --enable Map frutiger.map &&
+echo ... finished successfully. && exit 0
+
+# Fertig oder Fehler
+
+
+echo Sorry, we have a problem, please have a look at the error messages above. >&2 && exit 1

@@ -1,0 +1,273 @@
+\label{cha:analyse}
+%Für die Analyse sowie für die darauffolgende Konzeption des Plugins ist es sinnvoll, dieses in mehrere Bereiche aufzuteilen, um die darin vorhandenen Funktionen im Einzelnen zu betrachten. Die erste Vorstellung unseres Moodle-Plugins ist in Abbildung \ref{fig:MockupBereiche} skizziert. Mit dieser Skizze im Hinterkopf erscheint die Aufteilung in die Bereiche Schnittstelle, Integration in die Moodle-Oberfläche, Player für Hyperaudio-Dokumente und Kommentarsektion naheliegend.
+
+%\begin{figure}[h!]
+%\includegraphics[width=.8\textwidth,center]{MockupBereiche.pdf}
+%\caption{\label{fig:MockupBereiche}Erste Skizze der Moodle-Repräsentation eines Hyperaudio-Dokuments}
+%\end{figure}
+
+\todo[inline]{Einleitung für Abschnitt schreiben}
+
+%%%%%%%%%%
+\section{Zielgruppe}
+\todo[inline]{Einleitung für Abschnitt schreiben}
+
+
+%%%%%%%%%%
+\subsection{Personas}
+\label{sec:personas}
+%https://dl.gi.de/bitstream/handle/20.500.12116/5888/Holt_Winter_Thomaschewski_2011.pdf?sequence=2
+Bevor sich den \textit{User Stories} zugewendet werden kann, müssen vorab die dafür nötigen \textit{Personas} entwickelt werden. Unter \textit{Personas} werden fiktive Benutzer verstanden, für welche das Programm, in unserem Fall das Moodle-Plugin, designt wird \citep{cooper2004inmates}. Jeder Persona wird eine Rolle im Zusammenhang mit der Anwendung zugewiesen. Darüber hinaus wird die Persona ausreichend beschrieben, damit sich leicht in die Person hineinversetzt werden kann \citep{cohn2004user}. Dieses Vorgehen hilft dabei, möglichst authentische \textit{User Stories} zu generieren, ohne auf echte Benutzer zurückgreifen zu müssen.
+
+\todo[inline]{Inhalte evtl. noch erweitern}
+
+\par
+\begingroup
+\leftskip=1cm
+\rightskip=1.5cm
+\noindent
+
+{\Large\emph{Prof. Dr. Karolin Schröder}} ist verantwortlich für den Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{}. In diesem Kurs werden bereits erfolgreich Hyperaudio-Dokumente eingesetzt. Nachdem Prof. Dr. Schröder mit dem Start des nächsten Semesters überarbeitete Kurseinheiten anbietet, müssen nun auch die vorhandenen Hyperaudio-Dokumente auf die Notwendigkeit einer Überarbeitung hin überprüft werden. Die veralteten Hyperaudio-Dokumente müssen dann durch neuere Versionen ersetzt werden.
+\vspace{.5cm}
+
+{\Large\emph{Dr. Julian Schmidt}} ist wissenschaftlicher Mitarbeiter und Betreuer für den Kurs \glqq Marketing\grqq{}. Nachdem der Kurs auch das Lernen mittels Hyperaudio-Dokument anbietet, ist er unter anderem für die Betreuung dieser verantwortlich und ist derjenige, der hier Rede und Antwort steht.
+\vspace{.5cm}
+
+{\Large\emph{Laura Ebert}} studiert in Teilzeit im Bachelorstudiengang Informatik im ersten Semester. Das Semester hat erst vor einigen Wochen begonnen und sie entdeckt gerade Moodle für sich. Hierbei ist sie auf die Hyperaudio-Dokumente gestoßen und hat sich fest vorgenommen, sich im Laufe des Semsters mit deren Hilfe mit den Lerninhalten auseinanderzusetzen.
+\vspace{.5cm}
+ 
+{\Large\emph{Max Lustig}} absolviert ein Vollzeitbachelorstudium in Wirtschaftsinformatik und befindet sich kurz vor der Prüfungsphase zum Ende des dritten Semesters. Max möchte sich nun auf die Klausur des Moduls \glqq Investition und Finanzierung (BWL II)\grqq{}, welche in zwei Wochen stattfindet, intensiv vorbereiten. Im Laufe des Semsters hat er bereits ausgiebig die neuen Hyperaudio-Dokumente zum Erreichen des Lernziels genutzt.
+
+\par
+\endgroup
+
+%%%%%%%%%%
+\subsection{User Stories}
+\textit{User Stories} beschreiben, wie die klassischen \textit{Use Cases}, Anforderungen an ein Softwaresystem. Diese sind dabei im Vergleich wesentlich oberflächlicher und ungenauer formuliert als \textit{Use Cases} \citep{wirdemann2017scrum}.
+
+Erst im Laufe der Entwicklung werden \textit{User Stories} konkreter und dienen am Ende dazu deren Ergebnis zu validieren. Beim Erstellen von \textit{User Stories} ist zu beachten, dass sogenannte \textit{Epics}, das sind \textit{User Stories} mit sehr großem Umfang, wenn möglich in kleinere \textit{User Stories} aufgesplittet werden. Unter anderem ist zu beachten, dass die \textit{User Stories} keine Abhängigkeiten untereinander aufweisen und dass deren Erfüllung überprüfbar ist. \textit{User Stories} können im \textit{Connextra Format} festgehalten werden, welches wie folgt aufgebaut ist \citep{cohn2004user}:
+
+\par
+\begingroup
+\leftskip=1cm
+\rightskip=1.5cm
+\noindent
+
+\textit{Ich als (Rolle) möchte (Funktion), um (Nutzen).}
+
+\par
+\endgroup
+
+\vspace{.3cm}
+
+Mit den Unterschieden und Einsatzzwecken von Personas und Rollen beschäftigt sich \cite{constantine2006users}. Grundsätzlich ist demnach festzustellen, dass Personas eher aus dem \textit{User-centered design} \citep{Norman1986user}, Benutzerrollen dagegen aus dem \textit{Usage-centered design} \citep{Constantine1996usage} motiviert sind. Während sowohl Personas als auch Benutzerrollen durchaus nützlich sind, um ein Verständnis von den Nutzern eines Systems zu erhalten, unterscheiden sie sich nach \cite{constantine2006users} in ihrer Philosophie und Relevanz für das Interaktionsdesign. Im Gegensatz zu Personas, die wie bereits im vorangegangenen Abschnitt \ref{sec:personas} beschrieben dazu dienen, die Nutzersicht anhand möglichst realer Personen darzustellen, sollen Benutzerrollen in einer wesentlich technischeren Sicht ein abstrahiertes Modell für die Art und Weise, in der Nutzer mit dem System interagieren, bilden \citep{constantine2006users}.
+
+Für die weitere Analyse soll das Beste beider Welten vereinbart werden. Um die \textit{User Stories} möglichst anschaulich zu halten, werden sie anhand der vorgestellten Personas definiert. Gleichzeitig wird eine Aufteilung in Benutzerrollen vorgenommen, die die Grundlage für die Ableitung von Anforderungen aus den \textit{User Stories} bildet.
+
+Für die Konzeption des Moodle-Plugins ergeben sich im Wesentlichen zwei Benutzerrollen wie in Abbildung \ref{fig:Rollen} dargestellt. \textit{Administrierende} sind diejenigen Anwender, die Lerninhalte in Form von Hyperaudio-Dokumenten bereitstellen und verwalten. Diese Rolle kann nur von Lehrenden eingenommen werden. Die Gruppe der \textit{Nutzenden} kann derweil aus Lehrenden sowie Studierenden bestehen, die mit Hyperaudio-Dokumenten interagieren möchten.
+
+\begin{figure}[h!]
+\includegraphics[width=.3\textwidth,center]{Rollen.png}
+\caption{\label{fig:Rollen}Benutzerrollen}
+\end{figure}
+
+Für das Angebot einer alternativen Repräsentation von Lerninhalten als Hyperaudio-Dokumente lassen sich folgende \textit{User Stories} festhalten.
+
+\begin{enumerate}
+
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder ein neues Hyperaudio-Dokument in ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} zur Verfügung stellen, um den Studierenden neue Lerninhalte bereitzustellen.
+
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} löschen können, um veraltete Informationen zu entfernen.
+
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} im Sommersemester in den darauffolgenden Kurs im Wintersemester übernehmen.
+
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente anderer Kurse in ihren Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} übernehmen, da sich die Themen überschneiden.
+
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder Erkenntnisse daraus gewinnen, wie die Hyperaudio-Dokumente des Kurses \glqq Einführung in die Wirtschaftsinformatik\grqq{} von Studierenden genutzt werden, um Verbesserungspotenzial auszumachen.
+
+\item Als Administrierender möchte Dr. Julian Schmidt ein vorhandenes Hyperaudio-Dokument in dem von ihm betreuten Kurs \glqq Marketing\grqq{} überarbeiten, um einen Fehler zu beseitigen.
+
+\item Als Nutzende möchte Prof. Dr. Karolin Schröder die bereits vorhandenen Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} wiedergeben, um diese auf ihre Richtigkeit zu überprüfen.
+
+\item Als Nutzende möchte Prof. Dr. Karolin Schröder die Kommentare zu einem Hyperaudio-Dokument lesen und beantworten können, um auf Fragen von Studierenden einzugehen.
+
+\item Als Nutzende möchte Prof. Dr. Karolin Schröder eine Notiz zu einem Hyperaudio-Dokument machen, um ihren Gedanken festzuhalten und später darauf zurückgreifen zu können.
+
+\item Als Nutzender möchte Dr. Julian Schmidt eine gefundene Erklärungslücke in einem Hyperaudio-Dokument durch einen Kommentar zum entsprechenden Zeitpunkt schließen.
+
+%\item \textit{Dr. Julian Schmidt stellt eine Erklärungslücke in einem Hyperaudio-Dokument fest und möchte diese durch einen Kommentar zum entsprechenden Zeitpunkt schließen.}
+
+\item Als Nutzende möchte Laura Ebert während des Kochens mittels Hyperaudio-Dokument lernen, um diese Zeit sinnvoller zu nutzen.
+
+\item Als Nutzende möchte Laura Ebert erfahren, welche Hyperaudio-Dokumente in den von ihr belegten Kursen angeboten werden.
+
+\item Als Nutzende möchte Laura Ebert einen Kommentar verfassen, um dem Kursbetreuer und den anderen Studierenden eine Frage zu stellen.
+
+\item Als Nutzende möchte Laura Ebert eine Markierung setzen, wenn eine klausurrelevante Thematik erklärt wird. Bei der Prüfungsvorbereitung möchte sie anhand dieser Markierungen diejenigen Themen erkennen, mit welchen sie sich besonders intensiv beschäftigen möchte.
+
+\item Als Nutzende möchte Laura Ebert eine Markierung löschen, da sie den markierten Lerninhalt inzwischen beherrscht. Anhand der übrigen Markierungen möchte sie schnell erkennen, wo für sie noch Lernbedarf besteht.
+
+\item Als Nutzende möchte Laura Ebert eine Notiz erstellen, um ein Beispiel zu dem genannten Sachverhalt festzuhalten, sodass sie die Thematik beim nächsten Mal einfacher nachvollziehen kann.
+
+\item Als Nutzende möchte Laura Ebert die Wiedergabe eines Hyperaudio-Dokuments beenden und am nächsten Tag an derselben Stelle fortsetzen.
+
+\item Als Nutzende möchte Laura Ebert die Hyperaudio-Angebote auch unterwegs mit ihrem Smartphone in Anspruch nehmen.
+
+\item Als Nutzender möchte Max Lustig eine alte Notiz bearbeiten, um einen Schreibfehler zu korrigieren.
+
+\item Als Nutzender möchte Max Lustig eine alte Notiz löschen, da er inzwischen Lernfortschritte gemacht hat und auf diese Notiz verzichten kann.
+
+\item Als Nutzender möchte Max Lustig nach Inhalten in Hyperaudio-Dokumenten suchen können, um schneller das Hyperaudio-Dokument zu finden, in dem ein bestimmtes Thema behandelt wird.
+
+\item Als Nutzender möchte Max Lustig nach Textinhalten in Kommentaren suchen können, um schnell Erklärungen zu finden.
+
+\item Als Nutzender möchte Max Lustig auf Kommentare antworten können, um sich mit den Studierenden und Lehrenden auszutauschen.
+
+\item Als Nutzender möchte Max Lustig erkennen, welche Hyperaudio-Dokumente er zuletzt abgespielt hat, um seinen Lernfortschritt im Auge zu behalten.
+
+\item Als Nutzender möchte Max Lustig besonders hilfreiche Hyperaudio-Dokumente als Favoriten speichern, um diese schnell als solche identifizieren zu können.
+
+\item Als Nutzender möchte Max Lustig die Markierung als Favorit entfernen können, wenn es für ihn nicht mehr von Interesse ist.
+
+\end{enumerate}
+
+
+%%%%%%%%%%
+\subsection{Umgebungsbedingungen}
+\todo[inline]{Rahmen in dem das Plugin durch Studierende genutzt werden können soll}
+
+%%%%%%%%%%
+\input{chapter/3banforderungen}
+%Anforderungen inkl. Priorisierung
+
+%%%%%%%%%%
+\section{Möglichkeiten der Moodle Plugin-Entwicklung}
+
+%Plugin Typen beschreiben, die in Frage kommen
+%Thirdparty Frameworks einbinden kann
+%LAMP/WAMP
+%Mobile
+
+%%%%%%%%%%
+\section{Aktueller Stand der Technik}
+Es wird zunächst der aktuelle Stand der Technik bezüglich der Zielsetzung dieser Arbeit betrachtet. Hierbei werden im ersten Schritt bereits etablierte Plattformen für die Bereitstellung von Audio- und Videoinhalten begutachtet, im zweiten Schritt werden dann vorhandene Technologien für die Umsetzung innerhalb von Moodle betrachtet.
+
+
+%%%%%%%%%%
+\subsection{Etablierte Audio- und Video-Plattformen}
+
+Mit dem Hintergrund, eine nach DIN EN ISO 9241 erwartungskonforme Software gestalten zu wollen, erfolgt nun zunächst eine Analyse von etablierten Systemen zur Wiedergabe von Audio- und Videoinhalten mit integrierten Kommunikationsmöglichkeiten. Da menschliches Handeln stark durch erlernte Verhaltensmuster geprägt ist, empfiehlt es sich, bei der Gestaltung von Interaktionen auf bekannte Verfahren zurückzugreifen, um den kognitiven Aufwand zum Erlernen der Bedienmöglichkeiten gering zu halten und somit eine Konzentration auf die wesentlichen Inhalte zu ermöglichen \citep{erwartungskonformitaet}.
+
+\subsubsection{SoundCloud}
+
+\glqq Als weltweit größte Musik- und Audio-Plattform\grqq{} \citep{soundcloudinfo} bietet \textit{SoundCloud} Künstlern eine Plattform um ihre Musik einem breiten Publikum anzubieten. Charakteristisch für \textit{SoundCloud} ist das Design des Players. Zum einen wird hier die Waveform des Musikstückes visualisiert und zum anderen werden gleichzeitig mittels Thumbnails Kommentare an der Stelle des Stücks visualisiert, zu der kommentiert wurde (siehe Abbildung \ref{fig:SoundCloudPlayer}). Beim Abspielen des Musikstücks werden die annotierten Kommentare zum jeweiligen Zeitpunkt eingeblendet. Zusätzlich bietet der Player durch einen Mouseover-Effekte auf den Thumbnails ebenfalls die Möglichkeit, die annotierten Kommentare zu lesen. Nach einem Klick auf das entsprechende Thumbnail kann direkt auf den Kommentar geantwortet werden. Unterhalb des Players befindet sich der Eingabebereich, um eigene Kommentare zu verfassen. Diese werden zu dem Zeitpunkt gespeichert, zu dem der Kommentar begonnen wurde. Wiederum unterhalb des Eingabebereichs befindet sich ein Bereich für die Anzeige der Kommentare. Sie werden chronologisch nach Erstellungsdatum, mit dem neusten Kommentar an oberster Stelle, dargestellt. Antworten auf Kommentare werden durch eine leichte Einrückung gekennzeichnet.
+
+\begin{figure}[h!]
+\includegraphics[width=.9\textwidth,center]{SoundCloudPlayer.png}
+\caption{\label{fig:SoundCloudPlayer}Player der Musik- und Audio-Plattform \textit{SoundCloud} \citep{SoundCloud2015Panic}}
+\end{figure}
+
+\subsubsection{Youtube}
+ 
+Im Bereich der Videoplattformen gilt \textit{Youtube} als die mit Abstand am weitesten verbreitete Videoplattform in Deutschland \citep{statista2016video}.  Zum Abspielen der von den Nutzern hochgeladenen Videos setzt \textit{Youtube} auf den HTML5-Player (siehe Abbildung \ref{fig:YoutubePlayer1}).
+
+\begin{figure}[h!]
+\includegraphics[width=.9\textwidth,center]{YoutubePlayer1.png}
+\caption{\label{fig:YoutubePlayer1}Player der Video-Plattform \textit{Youtube} \citep{Youtube2015Panic}}
+\end{figure}
+
+In \citep{youtubeinfokarten,youtubeabspann} werden Möglichkeiten aufgezeigt, Informationen an ein Video zu annotieren. Die Informationen können Verweise auf andere Videos, Playlists und Kanäle, eine Abstimmung oder ein Link zu einer genehmigten Webseite beinhalten. Einem Video können insgesamt einen Abspann und bis zu maximal fünf Infokarten mittels des integrierten Webeditors angeheftet werden. Bei Infokarten kann nur der jeweilige Startzeitpunkt für die Anzeige frei festgelegt werden, die Dauer wird durch \textit{Youtube} vorgegeben. In Abbildung \ref{fig:YoutubePlayer2} zeigt, wie eine solche Infokarte im Player dargestellt wird. Ein Abspann kann hingegen nur innerhalb der letzten fünf bis 20 Sekunden eines Videos angezeigt werden.
+
+\begin{figure}[h!]
+\includegraphics[width=.9\textwidth,center]{YoutubePlayer2.png}
+\caption{\label{fig:YoutubePlayer2}Anzeige der Infokarte \citep{Youtube2015Panic}}
+\end{figure}
+
+
+%%%%%%%%%%
+\subsection{Technologien für den Einsatz in Moodle}
+Bevor mit der Konzeption und Implementierung des Moodle-Plugins begonnen wird, wird sich nun der Analyse der bestehender Komponenten zugewendet, die als Basis für das Plugin dienen können. Ziel ist es festzustellen, ob eventuell bereits Technologien existieren, mit deren Hilfe die Idee des Moodle-Plugins umgesetzt werden kann oder ob zumindest Teile davon - unter entsprechender Beachtung der Lizenzierung - sinnvoll wiederverwendet werden können. Hierbei wird so vorgegangen, dass die einzelnen vorhanden Technologien auf diesem Gebiet und ihre Funktionen vorgestellt und anschließend bewertet werden, inwiefern diese für die Umsetzung des Plugins relevant sind.
+
+\todo[inline]{Um Screenshots ergänzen}
+
+%%%%%%%%%%
+\subsubsection{VideoJS Player}
+Bei dem \textit{VideoJS Player}\footnote{GitHub-Projekt, Apache-Lizenz 2.0: http://videojs.com/; https://github.com/videojs} handelt es sich um eine Open Source Bibliothek zum Abspielen von Videos und stellt damit einen HTML5 Video Player zur Verfügung. Der \textit{VideoJS Player} ist bereits als Standard Plugin für die Wiedergabe von Audio- und Video-Dateien in Moodle integriert. Wie der Name schon erkennen lässt, handelt es sich hierbei um eine JavaSrcipt Bibliothek. Der \textit{VideoJS Player} beschränkt sich in seiner Ausgangsversion ausschließlich auf das Abspielen von Audio- und Video-Dateien und bietet bis auf ein optionales Fallback auf den Adobe FlashPlayer keine weiteren Funktionen. Die Funktionalität des \textit{VideoJS Player} kann aber über Plugins erweitert werden. Es existieren bereits zahlreiche solcher Plugins. Hier sei vor allem das Plugin \textit{videojs-wavesurfer}\footnote{GitHub-Projekt, MIT Lizenz: https://github.com/collab-project/videojs-wavesurfer} zu nennen, welches das wavesurfer.js Framework (siehe Abschnitt \ref{sec:wavesurfer.js}) in den \textit{VideoJS Player} einbindet. Dank der Unterstützung von Plugins ist es durchaus denkbar, den Player mittels Plugin beispielsweise um Buttons zum Erstellen von Kommentaren oder persönlichen Notizen zu erweitern. Auch wäre es denkbar, mittels eines Plugins die annotierten Kommentare zu visualisieren. Grundsätzlich stellt der \textit{VideoJS Player} somit eine gute Ausgangslage für einen Hyperaudio-Player dar.
+
+%%%%%%%%%%
+\subsubsection{H5P}
+Mit \textit{H5P} und dem bereits vorhanden Plugin für Moodle\footnote{GitHub-Projekt, GNU General Public License v2.0: https://github.com/h5p/h5p-moodle-plugin} ist es möglich, etliche verschieden Arten von interaktiven Lerninhalten zu gestalten. Dabei handelt es sich um eine Sammlung von interaktiven Komponenten, darunter Course Presentation, Timeline und Interactive Video. Course Presentation bietet die Möglichkeit, interaktive Präsentationen zu gestalten. Timeline kann genutzt werden um Inhalte anhand eines Zeitstrahls darzustellen. Interactive Video ermöglicht, ähnlich wie Course Presentation, die Interaktion während des Abspielens eines Videos. Besonders erwähnenswert ist, dass sich bei \textit{H5P} die interaktiven Inhalte innerhalb der Weboberfläche erstellen lassen. Es wäre also denkbar, eine eigene interaktive Komponente zu entwickeln, welche es ermöglicht, Hyperaudio-Dokumente als interaktiven Lerninhalt zu erstellen und abzuspielen.
+
+%%%%%%%%%%
+\subsubsection{Popcorn.js}
+Die Mozilla Corporation bietet mit \textit{Popcorn.js}\footnote{GitHub-Projekt, MIT Lizenz: https://github.com/mozilla/popcorn-js} eine Bibliothek an, welche neben einer standardisierten Steuerung von Medieninhalten aus verschiedenen Quellen auch die Annotation von Inhalten mittels Plugins ermöglicht. Hier wäre also auch eine Entwicklung eines Plugins denkbar, mit welchem wir Hyperaudio-Dokumente wie gewünscht wiedergeben könnten. Die Wartung für die Bibliothek wurde seitens Mozilla zwar eingestellt, das Projekt steht aber weiterhin auf GitHub zur Verfügung. Obwohl das Projekt nicht mehr weiterentwickelt wird, kann es durch die vorhandenen Steuerungsmöglichkeiten und das Plugin-System ein sehr geeignetes Grundgerüst für die Entwicklung des Moodle Plugins darstellen.
+ 
+%%%%%%%%%%
+\subsubsection{wavesurfer.js}
+\label{sec:wavesurfer.js}
+Bei \textit{wavesurfer.js}\footnote{GitHub-Projekt, BSD-3-Clause: https://wavesurfer-js.org; https://github.com/katspaugh/wavesurfer.js} handelt es sich um ein JavaScript Framework, welches es ermöglicht, die Wellenform zu der abgespielten Audio-Datei in einem Audio-Player visualisieren zu lassen. Diese Basisfunktionalität wurde durch Weiterentwicklungen um nützliche Funktionen erweitert. Auf zwei dieser Weiterentwicklungen gehen wir im Folgenden ein.
+
+%%%%%%%%%%
+\subsubsection{audio-annotator}
+Der \textit{audio-annotator} stellt eine auf dem \textit{wavesurfer.js} Framework basierende Weiterentwicklung dar, welche es mittels Weboberfläche ermöglicht, Annotationen in Form von Text an eine Audio-Datei anzuheften. Es erweitert \textit{wavesurfer.js} also um die Möglichkeit, Annotationen an eine Datei anzuheften und bietet gleichzeitig noch eine Oberfläche, um ebendiese Annotationen vorzunehmen.
+
+%%%%%%%%%%
+\subsubsection{BAT - BMAT Annotation Tool}
+Beim \textit{BAT - BMAT Annotation Tool}\footnote{GitHub-Projekt, GNU General Public License 3: https://wavesurfer-js.org; https://github.com/BlaiMelendezCatalan/BAT} handelt es sich um eine Entwicklung basierend auf der im Zusammenhang von \textit{audio-annotator} erweiterten Frameworks \textit{wavesurfer.js} und \textit{regions.js}. Es ermöglicht, ebenso wie \textit{audio-annotator}, dem Benutzer mittels Weboberfläche Annotationen an einer Audio-Datei vorzunehmen. Somit bietet \textit{BAT - BMAT Annotation Tool} logischerweise dieselben Vorzüge wie bereits der \textit{audio-annotator}. Im Vergleich zum \textit{audio-annotator} stellt \textit{BAT - BMAT Annotation Tool} jedoch ein weiterentwickelteres Framework dar.
+
+\todo[inline]{regions.js bereits bei audio-annotator in Verwendung?}
+
+\subsubsection{wavesurfer.js für Hyperaudio-Dokumente}
+Das \textit{wavesurfer.js} Framework - speziell mit seinen Weiterenticklungen - bietet einige Funktionen, die für das Abspielen von Hyperaudio-Dokumenten nützlich sein könnten. Zusätzlich bietet es auch die Funktion,  die entsprechenden Annotationen in einer Weboberfläche an die Audio-Dateien anzuheften. Grundsätzlich lässt sich feststellen, dass \textit{wavesurfer.js} und seine Ableger im Vergleich zu den zuvor betrachteten Entwicklungen einen wesentlich unausgereifteren Eindruck hinterlassen.
+
+%%%%%%%%%%
+\subsubsection{timesheets.js}
+\textit{timesheets.js}\footnote{ehemaliges GitHub-Projekt, MIT Lizenz: http://wam.inrialpes.fr/timesheets} ist ebenfalls ein JavaScript Framemwork, welches analog zu \textit{audio-annotator} und \textit{BAT - BMAT Annotation Tool} die Annotation von zusätzlichen Inhalten ermöglicht. Leider befindet sich das Framework aktuell nicht mehr in der Entwicklung. Aufgrund der Ähnlichkeit zu den {wavesurfer.js} Ablegern und der eingestellten Entwicklung können hier zwar Ideen übernommen werden, als Basis für das zu entwickelnde Moodle-Plugin ist dieses Framework jedoch nicht geeignet.
+
+%%%%%%%%%%
+\subsubsection{Zusammenfassung}
+Zusammenfassend ist festzustellen, dass für die Entwicklung des Plugins für Hyperaudio-Dokumente vor allem \textit{VideoJS Player}, \textit{H5P} und \textit{Popcorn.js} die vielversprechendsten bestehenden Entwicklungen darstellen, da diese bereits einen sehr hohen Entwicklungsstand haben. Unter Anbetracht der benötigten Funktionen stellen aber speziell der \textit{VideoJS Player} und \textit{Popcorn.js} eine sehr gute Basis dar, da diese mit ihrem Kernelement als Player und durch die integrierten Plugin-Systeme für die Entwicklung von Multimedia-Elementen ausgelegt sind. Bei \textit{H5P} müsste die Playerfunktion mit der dazugehörigen Erweiterung für Hyperaudio-Dokumente von Grund auf entwickelt werden, um eine entsprechende interaktive Komponente für Hyperaudio-Dokumente bereitstellen zu können. Letztendlich ist \textit{Popcorn.js} die beste Grundlage für die Entwicklung des Plugins, da hier auch die Steuerung der Medieninhalte bereits von Grund auf ausgeprägt implementiert sind, woraus bei der Umsetzung einiger Funktionen großer Nutzen gezogen werden kann.
+
+
+
+%%%%%%%%%%%
+%\section{Nutzungsszenarien für das Moodle-Plugin}
+%Im nächsten Schritt betrachten wir zunächst die verschiedenen Nutzungsszenarien (auch Usage Scenarios oder Scenarios) unseres Moodle-Plugins. Hierfür wollen wir zunächst den Begriff Usage Scenario definieren.
+%
+%\glqq Ein Usage Scenario, kurz Scenario, beschreibt anhand eines Beispiels aus der realen Welt, wie eine oder mehrere Personen oder Organisationen mit einem System interagieren.
+%Es beschreibt die Schritte, Ereignisse und/oder Aktionen, welche während der Interaktion erfolgen.
+%Usage Scenarios können sehr detailliert sein, indem sie genau aufzeigen wie jemand mit der Benutzeroberfläche arbeitet, oder lediglich sehr oberflächlich, wenn nur die kritischen Geschäftsaktionen beschrieben werden, aber nicht wie diese ausgeführt werden\grqq{} \citep{agilemodeling2018stat}.
+%
+%%A usage scenario, or scenario for short, describes a real-world example of how one or more people or organizations interact with a system. They describe the steps, events, and/or actions which occur during the interaction. Usage scenarios can be very detailed, indicating exactly how someone works with the user interface, or reasonably high-level describing the critical business actions but not the indicating how they're performed.
+%
+%Für die Konzeption des Plugins macht es Sinn, Nutzungsszenarien aus den verschiedenen Perspektiven zu betrachten, in unserem Fall aus Sicht der Lehrenden und der Studierenden.
+
+%%%%%%%%%%
+\section{Zusammenhänge der Komponenten von Hyperaudio-Dokument und Annotationen}
+Basierend auf der Definition eines Hyperaudio-Dokuments aus Abschnitt \ref{sec:hyperaudio} und der in Abschnitt \ref{sec:anforderungsdefinition} erarbeiteten Anforderungen werden die Zusammenhänge der medialen Komponenten weiter analysiert. Hierbei soll vor allem geklärt werden, wie die einzelnen Komponenten von Hyperaudio-Dokument und Annotationen zusammenhängen und welche Möglichkeiten dadurch gegeben beziehungsweise nicht gegeben sind.
+
+%%%%%%%%%%
+\subsection{Komponenten}
+Im Mittelpunkt eines Hyperaudio-Dokuments steht eine Audio-Datei. Inhaltlich kann es sich hierbei beispielsweise um einen Vorlesungsvortrag handeln. Man könnte sich auch vorstellen, dass ein Hyperaudio-Dokument aus mehreren aneinandergereihten Audio-Dateien besteht. Dies würde an der grundsätzlichen Problemstellung jedoch nichts ändern und kann im Nachhinein jederzeit als Erweiterung umgesetzt werden. Aus diesem Grund wird in dieser Arbeit nur ein Plugin für ein Hyperaudio-Dokument bestehend aus einer Audio-Datei entwickelt.
+
+Neben dieser zentralen Audio-Datei besteht das Hyperaudio-Dokument aus mehreren Zusatzinhalten, wobei es sich um Bilder, Graphen, Tabellen usw. handeln kann. Entscheidend ist aber, dass diese Zusatzinhalte immer nur eine rein grafische Darstellung verkörpern. Videos mit Ton sind somit beispielsweise nicht als Zusatzinhalt verwendbar, reine Animationen ohne Ton sind aber durchaus möglich.
+
+Als besondere, nämlich externe Komponente, sind die Kommentare zu nennen. Diese gehören nicht zum eigentlichen Hyperaudio-Dokument, sollen aber mit diesem verknüpft werden. Es wird drei verschiedene Arten von Kommentaren geben, nämlich  öffentliche Kommentare, persönliche Notizen und persönliche Markierungen. Innerhalb der öffentlichen Kommentare muss noch zwischen den Original-Kommentaren und den Antworten auf diese unterschieden werden. 
+
+
+%%%%%%%%%%
+\subsection{Zusammenhänge}
+Diese Zusammenhänge der soeben genannten Komponenten sind im UML-Diagramm in Abbildung \ref{fig:UMLAufbau} ersichtlich. Zunächst werden die Zusammenhänge zwischen der Audio-Datei und den Zusatzinhalten betrachtet. Zu jedem beliebigen Zeitpunkt innerhalb der Abspieldauer der Audio-Datei kann maximal ein Zusatzinhalt gleichzeitig annotiert werden. Es sind also auch Phasen möglich, zu denen keinerlei Zusatzinhalt dargestellt wird. Das Zeitfenster für die Annotation soll mittels einer Start- und Endzeit pro Zusatzinhalt definiert werden, wobei nur die Minuten und Sekunden anzugeben sind. Bei dem Zeitfenster sollte natürlich bedacht werden, dass dieses nicht zu kurz sein sollte. Zwar soll, sobald ein Zusatzinhalt im Player des Hyperaudio-Dokuments angezeigt wird, ein entsprechender Audio Cue abgespielt werden, dennoch können bereits einige Sekunden vergehen bis der Studierende seinen Blick dem Player zuwendet.
+
+Auch die Kommentare stehen als externe Komponente in einer gewissen Art und Weise im Zusammenhang mit der Audio-Datei. Dies ergibt sich daraus, dass Kommentare zu einem bestimmten Zeitpunkt innerhalb der Audio-Datei erfasst werden. Während Antworten auf Original-Kommentare erfasst werden können, sind Antworten auf Antworten nicht möglich.
+
+Zwischen Kommentaren und Zusatzinhalten gibt es jedoch keinen direkten Zusammenhang. Solche Zusammenhänge ergeben sich alleine aus den Zeitpunkten der Annotationen. Zusatzinhalte können wiederum in keinem Zusammenhang mit einem anderen Zusatzinhalt stehen.
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth,center]{UMLZusammenhaenge.pdf}
+\caption{\label{fig:UMLAufbau}Zusammenhänge der Komponenten}
+\end{figure}
+
+%%%%%%%%%%
+\section{Zusammenfassung}
+\dots

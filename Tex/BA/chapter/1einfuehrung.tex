@@ -1,0 +1,110 @@
+Diese Arbeit beschäftigt sich mit dem Design und der Implementierung eines Plugins für die Moodle Lernplattform, welches es ermöglichen soll, den Studierenden die Lerninhalte mittels Hyperaudio-Dokumenten bereitzustellen. Ziel dieses Plugins ist die Erweiterung der Lernmöglichkeiten an der FernUniversität in Hagen, um die Studierenden beim Erreichen ihrer Lernziele besser zu unterstützen. 
+\todo[inline]{Abschnitt mit mehr Inhalt füllen}
+
+%%%%%%%%%%
+\section{Motivation}
+\label{sec:motivation}
+Die Motivation zur Behandlung dieses Themas besteht darin, dass 
+%ca. 80\% der Studierenden in Teilzeit studieren und 
+80\% der Studierenden gleichfalls neben dem Studium arbeiten \citep{fernuniversitaet2018stat}. Unter diesen Umständen beschäftigen sich viele Studierende erst kurz vor der Prüfung - dafür aber entsprechend intensiv - mit den Lerninhalten. An der Fakultät Mathematik/Informatik und auch an der Fakultät für Wirtschaftswissenschaften bestehen diese Lerninhalte zu einem guten Teil aus textlastigen Kurseinheiten, die Abbildungen und Formeln enthalten.
+
+
+Diese Aussage kann an Hand der Pflichtmodule des Bachelor Studiengangs Wirtschaftsinformatik bestätigt werden.
+Die Pflichtmodule an der Faktultät Mathematik/Informatik weisen einen Textanteil von XXX auf. An der der Fakultät für Wirtschaftswissenschaften liegt der Anteil in den Pflichtmodulen nochmals höher bei XXX. Die Analyse der Kurseinheiten wurde mittels der Textanalyse des Programms \textit{PDF-Analyzer 5.0}\footnote{http://www.is-soft.de} vorgenommen.
+\todo[inline]{Abschnitt nach Abschluss der Analyse der Kurseinheiten aktualisieren}
+
+Eher selten werden auch Videos angeboten, in welchen bestimmte Lerninhalte aus den Kurseinheiten nochmals rekapituliert werden. Hier sind als Beispiel die Videos von Univ.-Prof. Dr. Ulrike Baumöl zum Kurs \glqq Informationsmanagement\grqq{} zu nennen.
+
+Die Idee besteht nun darin, den Lernenden erstens eine alternative Repräsentation (Modalität) der Lerninhalte anzubieten und ihnen zweitens das Lernen während ungenutzter Alltagssituationen zu ermöglichen (z.B. lange Autofahrten, Pendeln in Bus und Bahn, beim Joggen, etc.). Auf diese Weise könnten die Lernenden die Inhalte häufiger rezipieren und einüben. Ergänzt um gute E-Assessments (Selbsttests) hätten Sie in Summe eine Chance, sich frühzeitig und kontinuierlich auf die Prüfung vorzubereiten und vielleicht bessere Lernerfolge zu erzielen. 
+
+
+%%%%%%%%%
+\section{Problemstellung}
+Diese Arbeit wird sich in diesem Zusammenhang vor allem mit dem Problem des sehr hohen Textanteils vieler Kurse und dem damit verbundenen Lernverhalten beschäftigen. Doch zunächst soll die Ist-Situation für die Studierenden an der FernUniversität in Hagen beschrieben werden.
+
+%%%%%%%%%
+\subsection{Ist-Situation}
+Jeder Studierende hat Zugriff auf den \textit{Virtuellen Studienplatz}, häufig auch \textit{Virtuelle Universität} (VU) oder \textit{Lernraum Virtuelle Universität} (LVU) genannt. Hierbei handelt es sich um ein eigenentwickeltes Webportal der FernUniversität in Hagen. Der \textit{Virtuelle Studienplatz} stellt unter anderem das Kurs- und Studiumsportal der FernUniversität dar. Hierüber können die Studierenden Kurse belegen, die Rückmeldung für das nächste Semester vornehmen oder ihre Daten einsehen und bearbeiten. Auch eine Übersicht über das Veranstaltungsangebot wird dem Studierenden geboten. Zusätzlich bietet der \textit{Virtuelle Studienplatz} eine Übersicht über alle belegten Kurse des Studierenden \citep{fernuniversitaet2018vu}. Mittels dieser Übersicht kann der Studierende direkt auf das jeweilige persönliche Kursportal seiner belegten Kurse gelangen. Neben allgemeinen Inforamtionen zu dem Kurs bietet das Kursportal unter anderem Zugriff auf die Online-Studieninhalte (z.B. Kurseinheiten\footnote{Kurseinheiten werden an der FernUniversität in Hagen auch als Studienbriefe bezeichnet.}, Einsendeaufgaben, Musterlösungen) und Verweise zu anderen Diensten (Moodle, Online-Übungssystem, Kommunikationsangebote Adobe Connect Videokonferenzen) die von diesem Kurs verwendet werden \citep{fernuniversitaet2018kurs}.
+
+Neben der Möglichkeit, die Kurseinheiten als PDF über den \textit{Virtuellen Studienplatz} herunterzuladen, werden diese im Regelfall für die belegten Kurse automatisch in gedruckter Form an die Studierenden versendet. Die Kurseinheiten bestehen zum Großteil aus Text (siehe Abschnitt \ref{sec:motivation}) und dienen als zentrales Lernmaterial für die Studierenden.
+
+Jeder Kurs hat die Möglichkeit, zusätzliches Lernmaterial über Moodle, die zentrale Lernplattform der FernUniversität in Hagen, zur Verfügung zu stellen. Moodle bietet den Kursen \glqq als sogenanntes Learningmanagementsystem (LMS) vielfältige Möglichkeiten zur Gestaltung der mediengestützten Lehre an\grqq{} \citep{fernuniversitaet2018moodle}. Besonders hervorzuheben sind hierbei die Möglichkeiten zum Einsatz von Lehrvideos, Foren und Tests. Diese Möglichkeiten können in Form von Plugins beliebig erweitert werden. In Abschnitt \ref{sec:moodle} wird die Plattform Moodle vorgestellt.
+
+\todo[inline]{Statistik über Moodle Verwendung Pflichtmodule Winfo}
+
+Durch den Einsatz von Adobe Connect besteht an der FernUniversität in Hagen auch die Möglichkeit von sogenannten \textit{Virtual Classrooms}. Dabei handelt es sich um eine Video- und Tonübertragung mit Textchat und Freigabemöglichkeiten für Präsentationen und Bildschirminhalten. \glqq Ein \emph{Virtual Classroom} [Hervorhebung v. Verf.] eignet sich insbesondere für Veranstaltungen, in denen die synchrone Kommunikation ein hohes Gewicht erhält: Seminare, Tutorien, Sprechstunden, Arbeitsgruppen u.Ä.\grqq{} \citep{fernuniversitaet2018kommunikationstools}.
+
+Darüber hinaus werden den Studierenden mit den \textit{Diskussionsforen} (Newsportal) und dem \textit{Conference Center} als Chat-System zwei weitere Systeme zur Kommunikation geboten \citep{fernuniversitaet2018kommunikationstools}.
+
+
+%%%%%%%%%
+\subsection{Probleme}
+Die im vorangegangen Abschnitt beschriebenen Lernangebote weisen jedoch Defizite im Bezug auf die Vermittlung der Lerninhalte auf. Der \textit{Virtuelle Studienplatz} dient aktuell ausschließlich als Portal, um die Studierenden zu den von ihnen benötigen Informationen zu leiten und unterstützt somit nur indirekt die Vermittlung von Lerninhalten.
+
+%Kurseinheiten: Fragen, Blättern, viel Text wenig Bilder, selber lesen/vorlesen, Text vs Frontalunterricht
+Die Kurseinheiten als zentrales Lernmaterial bestehen, wie anhand der Zahlen aus Abschnitt \ref{sec:motivation} erkenntlich, zum Großteil aus Text. Dies hat zur Folge, dass sich die Studierenden während der Auseinandersetzung mit den Lerninhalten mit keinen anderen Dingen beschäftigen können, welche die Aufmerksamkeit ihrer Augen und Hände benötigen. Zusätzlich besteht oft das Problem, dass Abbildungen, Formeln und Tabellen, auf die im Text verwiesen wird, nicht direkt auf der Seite ersichtlich sind, auf der diese im Text erwähnt werden. Hierdurch ist oftmals Blättern bzw. Scrollen nötig, je nachdem ob die Kurseinheit in Papierform oder digital bearbeitet wird. Dies erschwert zusätzlich zum hohen Textanteil das Verinnerlichen des in der Kurseinheit zu vermittelnden Inhalts. Im Vergleich zum Frontalunterricht bring die Vermittlung der Lerninhalte in Form von Kurseinheiten den Nachteil mit sich, dass bei Verständnisproblemen keine direkten Fragen gestellt werden können.
+
+%Lehrvideos: fragen, hinschauen, Recherche Nachteile Videos
+Dieses Problem tritt bei Lehrvideos ebenso auf. Hier ist im besten Fall ein asynchroner Austausch mittels einer Kommentarfunktion möglich. Ähnlich wie Kurseinheiten verlangen auch Lehrvideos die durchgehende visuelle Aufmerksamkeit des Studierenden. Nur durch ununterbrochenes Betrachten eines Videos kann ein Studierender sicherstellen, dass er jegliche dargestellten Inhalte wahrnimmt.
+
+
+%Foren/Chat: ist nicht direkt an den Lerninhalt gekoppelt
+Die Foren und der Chat sind ohnehin nur als zusätzliche Kommunikationswege für die Studierenden implementiert. Es besteht das grundsätzliche Problem, dass diese Funktionalitäten nicht direkt an die Lerninhalte gekoppelt sind und deswegen separat aufgerufen werden müssen, falls beim Lernen Fragen auftreten sollten. 
+
+%Tests: nur separate Selbstkontrolle nicht, keine Verständnisprüfung beim Lernen
+Die in Moodle verfügbaren Tests dienen in ihrer Form nur zur reinen Selbstkontrolle. Dadurch, dass diese Tests nicht direkt während der Erarbeitung der Lerninhalte durch Kurseinheit oder Lehrvideos erfolgen kann, wird nicht unmittelbar überprüft, ob die Inhalte korrekt verstanden wurden.
+
+%Dabei würde dies die Wahrscheinlichkeit, dass der Studierende die Lerninhalte im Gedächtnis behält, steigern.
+
+%\todo[inline]{Behauptung - Quelle}
+
+%Virtual Classrooms: live dabei sein
+Bedingt durch die Tatsache, dass der Unterricht in \textit{Virtual Classrooms} in Echtzeit abgehalten wird, entsteht der Nachteil, dass der Studierende nur zu einem festgelegten Zeitpunkt die Lehrveranstaltung wahrnehmen kann. Zusätzlich verlangen \textit{Virtual Classrooms}, genau wie Lehrvideos, die ständige Aufmerksamkeit des Studierenden. Im Gegensatz zu Lehrvideos schaffen \textit{Virtual Classrooms} jedoch die Möglichkeit zur synchronen Kommunikation.
+
+
+%Das Hauptproblem besteht darin, dass die Kurseinheiten als zentrales Lernmaterial, wie an den Zahlen in Abschnitt \ref{sec:motivation} erkenntlich, zum Großteil aus Text bestehen. Zusätzlich besteht oft das Problem, dass Abbildungen, Formeln und Tabellen, auf die im Text verwiesen wird, nicht direkt auf der Seite ersichtlich sind, zu dem diese im Text erwähnt werden. Hierdurch ist oftmals Blättern bzw. Scrollen nötig, je nachdem ob die Kurseinheit in Papierform oder digital bearbeitet wird. Dies erschwert zusätzlich zum hohen Textanteil das Verinnerlichen des in der Kurseinheit zu vermittelnden Inhalts.
+
+%Die Tatsache, dass die Kurseinheiten meist nur in Textform vorliegen, hat zur Folge, dass sich die Studierenden bei der Auseinandersetzung mit den Lerninhalten mit keinen anderen Dingen beschäftigen können, welche die Aufmerksamkeit ihrer Augen und Hände benötigen.
+%So könnte ein Studierender durchaus öfter seinem Studium ein \glqq Ohr und einen kurzen Blick leihen\grqq, dies ist aber durch die aktuelle Bereitstellung der Lerninhalte, als textlastige Kurseinheiten,  nicht möglich.
+%Auch die bereits vorhandenen Videos sind in der Hinsicht nicht optimal, da diese ebenfalls durchgehend die visuelle Aufmerksamkeit des Studierenden erfordern. Dies beruht beispielsweise darauf, dass der Studierende nur durch ununterbrochenen Betrachten des Videos sicherstellen kann, dass er jegliche dargestellten Inhalte wahrnimmt, da er auf diese nicht akustisch hingewiesen wird. 
+
+Somit ist mit den drei Lerninhalt vermittelnden Lehrangeboten Kurseinheiten, Lehrvideos und \textit{Virtual Classrooms} beispielsweise auch kein Lernen während der sportlichen Betätigung möglich. Dabei führt leichte körperliche Betätigung während des Lernens nach einer Studie von \cite{schmidt2013physical} sogar zu einem besseren Lernergebnis. Stattdessen ist der Studierende weiterhin daran gebunden im Sitzen oder gar vor dem Bildschirm zu lernen.
+
+Auf Grund der Tatsache, dass 80\% der Studierenden an der FernUniversität in Hagen neben dem Studium ebenfalls einer Arbeit nachgehen \citep{fernuniversitaet2018stat}, muss auch die dem Studierenden zur Verfügung stehenden Zeit berücksichtigt werden. Zur bezahlten Arbeit kommt immer auch unbezahlte Arbeit hinzu. Diese betrug in den Jahren 2012/2013 im Durchschnitt ca. 24,5 Stunden in der Woche für Personen ab 18 Jahren. Als unbezahlte Arbeit gelten Haushaltstätigkeiten, wie Kochen, Putzen, Gartenpflege und Einkaufen, aber auch ehrenamtliche Tätigkeiten sowie Wegzeiten \citep{destatis2015zeit}. Diese unbezahlte Arbeit kann aktuell zum Großteil nicht zum Lernen verwendet werden, da durch die heutigen Lernangebote stets die volle Aufmerksamkeit des Studierenden erforderlich ist.
+
+%\todo[inline]{Optimieren und mit Zitaten belegen}
+
+
+%%%%%%%%%
+\section{Forschungsfragen und Zielsetzung}
+Ziel dieser Arbeit soll es sein, den Studierenden eine alternative Repräsentation der Lerninhalte anzubieten, welche es ihnen ermöglichen soll mehr ihrer Zeit zum Lernen nutzen zu können und dabei die Effizienz des Lernens zu erhöhen. Die alternative Repräsentation der Lerninhalte soll in die Moodle-Plattform integriert werden, da diese mit ihrem Plugin-System und dem hohen Verbreitungsgrad an der FernUniversität in Hagen gute Voraussetzungen für die Bereitstellung neuer Lehrmethoden bietet. Damit sich den Studierenden neue Lernmöglichkeiten eröffnen, soll die Vermittlung der Lerninhalte primär in einer auditiven Form erfolgen.
+
+Es muss eine Lernumgebung gestaltet werden, welche es ermöglicht, die hauptsächlich auditiven Lerninhalte bereitzustellen. Daneben müssen auch Lerninhalte, welche nicht in auditiver Form abgebildet werden können, berücksichtigt werden. Akustische Signale können unterstützend eingesetzt werden, um Studierende auf Zusatzinhalte aufmerksam zu machen, die ihre tiefergehende Aufmerksamkeit erfordern. Typische Nutzerinteraktionen mit textuellen Lernmedien, wie beispielsweise persönliche Notizen und Markierungen oder das Durchsuchen des Inhaltsverzeichnisses, sollen hierbei erhalten bleiben.
+
+Zusätzlich zur Bereitstellung der Lerninhalte in alternativer Form soll das Moodle-Plugin auch den Kommunikationsaustausch zwischen Lehrenden und Studierenden ermöglichen und fördern. Um den Studierenden beim Lernen möglichst große Flexibilität zu bieten, ist eine mobile Verfügbarkeit der neugestalteten Lerninhalte erstrebenswert.
+\todo[inline]{Überarbeiten und mehr Ziele/Fragen ergänzen}
+
+%Hier mal ein paar Phrasen:
+%- Hauptziel des Vorhabens ist die  Gestaltung, ... und Entwicklung einer ...
+%- Didaktisches Ziel ist es daher, den Lernenden 
+%- Aus technischer Sicht besteht das Ziel darin ...
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Daraus resultiert die Umsetzung in einer auditiven Form, innerhalb von Moodle, da dies mit seinem Plugin-System und seinem hohen Verbreitungsgrad an der FernUniversität am besten geeignet ist. Hieraus ergeben sich mehrere Ziele für die Umsetzung dieses Plugins. Es muss eine Lernumgebung gestaltet werden, welche es ermöglicht die hauptsächlich auditiven Lerninhalte bereitzustellen. Dennoch müssen in dieser Lerninhalte, welche nicht in auditiver Form abgebildet werden können, dargestellt werden können. Hierbei müssen dem Studierenden weiterhin die typischen Nutzerinteraktionen eines textuellen Lernmediums erhalten bleiben. Ein weiteres Ziel ist einen Kommunikationsaustausch zwischen den Lehrenden und den Studierenden untereinander im Moodle-Plugin umzusetzen. Um den Studierenden beim Zeitpunkt des Lernens eine möglichst große Freiheit zu bieten, ist eine mobile Verfügbarkeit der neugestalteten Lerninhalte erstrebenswert.
+
+%Ziel soll es also sein, den Studierenden das Lernen mittels Hyperaudio-Dokument zu ermöglichen. Hierbei handelt es sich um Audio-Dateien, welche um weitere Inhalte erweitert werden, in unserem Fall Abbildungen, Formeln etc.. Damit sollen Studierende problemlos während Aktivitäten, die nicht ihre volle geistige und akustische Aufmerksamkeit beanspruchen, dem Hyperaudio-Dokument lauschen können und nur in bestimmten Momenten einen Blick zuwenden müssen. Dementsprechend ist es notwendig, den Studierenden mit einem akustischen Signal darauf aufmerksam zu machen, dass man sich nun auch mit seinen Augen dem Hyperaudio-Dokument zuwenden muss.
+%\todo[inline]{Auf Austausch zwischen Studierenden und Lehrenden eingehen}
+
+%Um das genannte Ziel zu erreichen, soll ein Moodle-Plugin entwickelt werden. Mit diesem soll es möglich sein, Audio-Dateien abzuspielen, bei denen zeitlich verankerte Inhalte (z.B. Abbildungen, Formeln, Verweisziele von Hyperlinks) aus den Kurseinheiten angezeigt werden können. Zu diesem Zeitpunkt soll ein akustisches Signal auf die Anzeige des visuellen Inhalts hinweisen. Zusätzlich sollen Studierende und Lehrende eines Kurses zeitgenau persönliche und für andere Studierende und Lehrende sichtbare Kommentare hinterlegen können, welche in Echtzeit dargestellt werden. Das Moodle-Plugin übernimmt somit auch Aufgaben eines Group Awareness-Tools.
+%\todo[inline]{Noch mehr Austausch zwischen Studierenden und Lehrenden eingehen}
+
+%Neben der reinen Abspielfunktionalität muss das Plugin auch die sinnvolle Integration der Hyperaudio-Dokumente in die Moodle-Oberfläche gewährleisten, sodass der Anwender einfachen und schnellen Zugriff darauf, beispielsweise über Kursseiten, erhält.
+
+%Neben der reinen Abspielfunktionalität sollen durch das Plugin die Hyperaudio-Dokumente auch sinnvoll in die Moodle-Oberfläche integriert werden, damit der Anwender einfachen und schnellen Zugriff auf die Dokumente erhält, welche er abzuspielen wünscht.
+
+%Die zu Grunde liegenden Hyperaudio-Dokumente sollen mittels einer definierten Schnittstellendatei, der Audio-Datei und weiteren Dateien (Inhalte wie z.B. Abbildungen oder Formeln) dem Plugin zur Verfügung gestellt werden. Die Schnittstellendatei soll hierbei neben Meta-Informationen (z.B. Autor, Quellen etc.) auch die Informationen darüber enthalten zu welchem Kurs, welcher Kurseinheit oder welchem Kapitel das Hyperaudio-Dokument gehört, welche Audio-Datei abgespielt werden soll und zu welchen Zeitpunkten die Annotation der weiteren Inhalte erfolgen soll.  
+
+%%Mit diesem soll es möglich sein, Audiodateien abzuspielen, bei welchen Studierende eines Kurses zeitgenau persönliche und für Kommilitonen sichtbare Kommentare hinterlegen können, welche in Echtzeit dargestellt werden. Zusätzlich soll es möglich sein, Inhalte (z.B. Abbildungen, Formeln, Verweisziele von Hyperlinks) aus den Kurseinheiten an den Audiodokumenten zeitlich zu verankern, damit diese beim Anhören zum entsprechenden Zeitpunkt dargestellt werden. Zu diesem Zeitpunkt soll ein akustische Signal auf die Anzeige des visuellen Inhalts hinweisen. Das Moodle-Plugin übernimmt somit auch Aufgaben eines Group Awareness-Tools.

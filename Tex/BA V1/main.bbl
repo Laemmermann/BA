@@ -1,0 +1,55 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{FernUniversität in Hagen}(2018)]{fernuniversitaet2018stat}
+{FernUniversität in Hagen}.
+\newblock Daten-zahlen-fakten - uni intern - fernuniversität in hagen.
+\newblock
+  \url{http://www.fernuni-hagen.de/arbeiten/statistik/daten/index.shtml}, 2018.
+\newblock abgerufen am 01.06.2018.
+
+\bibitem[Moos and Marroquin(2010)]{moos2010multimedia}
+Daniel~C Moos and Elizabeth Marroquin.
+\newblock Multimedia, hypermedia, and hypertext: Motivation considered and
+  reconsidered.
+\newblock \emph{Computers in Human Behavior}, 26\penalty0 (3):\penalty0
+  265--276, 2010.
+
+\bibitem[Nelson(1965)]{nelson1965complex}
+Theodor~H Nelson.
+\newblock Complex information processing: a file structure for the complex, the
+  changing and the indeterminate.
+\newblock In \emph{Proceedings of the 1965 20th national conference}, pages
+  84--100. ACM, 1965.
+
+\bibitem[Nielsen(2013)]{nielsen2013multimedia}
+Jakob Nielsen.
+\newblock \emph{Multimedia, Hypertext und Internet: Grundlagen und Praxis des
+  elektronischen Publizierens}.
+\newblock Springer-Verlag, 2013.
+
+\bibitem[Oppermann(2002)]{oppermann2002user}
+Reinhard Oppermann.
+\newblock User-interface design.
+\newblock In \emph{Handbook on information technologies for education and
+  training}, pages 233--248. Springer, 2002.
+
+\bibitem[{Scott W. Ambler}(2018)]{agilemodeling2018stat}
+{Scott W. Ambler}.
+\newblock Usage scenarios: An agile introduction.
+\newblock \url{http://agilemodeling.com/artifacts/usageScenario.htm}, 2018.
+\newblock abgerufen am 15.07.2018.
+
+\bibitem[Zumbach and Kroeber(2006)]{zumbach2006learning}
+Joerg Zumbach and Christiane Kroeber.
+\newblock Learning with hyperaudio: Cognitive load and knowledge acquisition in
+  non-linear auditory instruction.
+\newblock \emph{Avoiding simplicity confronting complexity. Advances in
+  studying and designing (computer-based) powerful learning environments},
+  pages 359--170, 2006.
+
+\end{thebibliography}

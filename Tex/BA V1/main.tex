@@ -1,0 +1,210 @@
+\documentclass[twoside,bibliography=totoc,openany]{fumi}
+
+% Definition von Variablen
+\newcommand{\thesistitle}{Repräsentation von Kurseinheiten der FernUniversität als Hyperaudio-Dokumente in Moodle: Design und Implementierung}
+\newcommand{\thesisauthor}{Michael Lämmermann}
+\newcommand{\thesistype}{Bachelorarbeit} % Bachelorarbeit, Diplom, Masterarbeit, ects.
+\newcommand{\thesismatrikelnummer}{9611711}
+
+% Tell LaTeX about how to wrap words using the correct german hyphenation rules.
+\hyphenation{Lern-arrange-ments Lern-arrange-ment Lern-aktivität Lern-aktivitäten doku-mentiert Hash-funk-tion Hash-funk-tionen Video-frames Video-frame Link-ak-ti-vier-ung Co-decs Link-ob-jekt-es  Hyper-video-Autoren-um-geb-ung-en  App-li-kat-ion-en  Kon-tain-er-for-mat Bild da-tei-en  Co-decs Brow-ser   Au-to-ren-um-ge-bun-gen Aus-zeich-nungs-spra-che spe-zi-fische Vi-deo-lern-um-ge-bung-en Vi-deo-lern-um-ge-bung Lern-um-ge-bung Lern-um-ge-bung-en}
+
+\title{\thesistitle}
+\author{\thesisauthor}
+\date{\today}
+
+%%%%%%%%%%
+\captionsetup[figure]{justification=centering}
+%\captionsetup[table]{justification=left}
+\captionsetup[subfigure]{labelformat=brace}
+\newcommand\Subref[3][]{%
+   \ref{#2}(\subref{#3}%
+   \ifthenelse{\equal{#1}{}}{}{-\subref{#1}}%
+   )}
+%%%%%%%%%%
+
+%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\sffamily
+\pagestyle{empty}
+
+
+%% Titelseite (optional für die PDF-Version des Textes)
+%\includepdf[pages=-, offset=0 0]{img/cover.pdf}\newpage~\newpage
+
+%% Die erste Seite eines Buches
+%\thesisauthor\\{\textbf{\thesistitle}}\vfill\newpage~\newpage
+
+%% Die Seite mit den Titelangaben
+\vspace{2cm}
+\begin{center}\LARGE
+\vfill
+{\Huge\thesistitle}\\
+\vfill
+\thesistype\\
+\vfill
+eingereicht von\\[4pt]
+\textbf{\thesisauthor}\\[4pt]
+(Matrikelnummer \thesismatrikelnummer)\\
+\vfill
+angefertigt am\\
+Lehrgebiet Kooperative Systeme\\
+Fakultät Mathematik und Informatik\\
+FernUniversität in Hagen\\
+\vfill 
+Betreuer\\
+Dr. Niels Seidel
+\vfill
+\monthname[\the\month] \the\year
+\end{center}
+\newpage~\newpage
+
+%% Leerseite mit Titel
+{\large\textbf{\thesisauthor}\\\textbf{\thesistitle}\vfill}\newpage~\newpage
+
+
+%% Seite mit Zusammenfassung und englishsprachigen Summary
+\section*{Zusammenfassung}
+\dots\vfill
+\section*{Summary}
+\dots\vfill\newpage
+
+%% Seite mit bibliografischen Angaben
+{\small
+%Herausgeber: Namen der Herausgeber\\
+
+% Zitation
+\thesisauthor. \textit{\thesistitle}. \thesistype. Fakultät Mathematik und Informatik, FernUniversität in Hagen, \the\year. %\href{}{}. % optional URN
+\\\vfill
+
+% Optional, jedoch sehr zu empfehlen
+Diese Publikation ist unter \emph{Creative Commons -- Namensnennung 3.0 Deutschland} lizenziert und darf als Ganzes oder ausschnittweise vervielfältigt, verbreitet und öffentlich zugänglich gemacht werden, sofern dies im Text nicht anders vermerkt ist.\newline\vspace{10pt}
+\hspace{-9pt}\includegraphics[height=10mm]{logo-cc.pdf}
+\\\vspace{10pt}
+
+% ISBN: \dots\\
+% URN: \href{...}
+Autor: \thesisauthor\\
+Gestaltung und Satz: \thesisauthor / \LaTeX\\
+% Lektorat: Claudia Neumann\\ optional
+% Titelbild: \dots\\optional
+Datum: \today\\
+% Printed in Germany
+\cleardoublepage
+}
+
+%% Inhaltsverzeichnis
+\pagestyle{headings}
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Einführung}
+%% lade Kapitel aus Datei
+\input{chapter/einfuehrung}
+
+
+%%%%%%%%%%%%%%%%
+\chapter{Analyse}
+%% lade Kapitel aus Datei
+\input{chapter/analyse}
+
+
+%%%%%%%%%%%%%%%%
+\chapter{Konzeption zur Repräsentation, Erstellung und Pflege von Kurseinheiten als Hyperaudio-Dokumente}
+%% lade Kapitel aus Datei
+\input{chapter/konzeption}
+
+
+%%%%%%%%%%%%%%%%
+\chapter{Implementierung}
+%% lade Kapitel aus Datei
+\input{chapter/implementierung}
+
+
+%%%%%%%%%%%%%%%%
+\chapter{Zusammenfassung und Ausblick}
+%% lade Kapitel aus Datei
+\input{chapter/zusammenfassung}
+
+
+%%%%%%%%%%%%%%%% ANHANG
+\appendix
+
+%%
+\chapter{Erster Teil des Anhangs}
+\dots
+
+%%
+\chapter{Zweiter Teil des Anhangs}
+\dots
+
+
+
+
+%%% Verzeichnisse
+\backmatter
+\pagestyle{fancyclear}
+
+
+
+%% Literaturverzeichnis
+%\phantomsection\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+{\footnotesize\flushleft\setlength{\itemsep}{-3pt}%\setlength{\bibsep}{3pt}
+\bibliographystyle{plainnat}
+\bibliography{literatur}}
+\cleardoublepage
+
+
+%% Abbildungsverzeichnis
+\phantomsection\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+\cleardoublepage
+
+
+%% Tabellenverzeichnis
+\phantomsection\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\listoftables
+\cleardoublepage
+
+
+%% Auflistungsverzeichnis
+\phantomsection\addcontentsline{toc}{chapter}{Auflistungsverzeichnis}
+\renewcommand\lstlistlistingname{Verzeichnis der Auflistungen}
+\lstlistoflistings
+\cleardoublepage
+
+
+%% Verzeichnis von Algorithmen
+\phantomsection\addcontentsline{toc}{chapter}{Verzeichnis der Algorithmen}
+\renewcommand*\listalgorithmcfname{Verzeichnis der Algorithmen}
+\listofalgorithms
+\cleardoublepage
+
+
+%% Abkürzungsverzeichnis
+\phantomsection\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\chapter*{Abkürzungsverzeichnis}
+
+%\begin{description}
+%%\item[AICC] Aviation Industry Computer-Based Training Committee
+%%\item[AJAX] Asynchronous JavaScript and XML
+%%\item[API] Application Programing Interface
+%%\item[BMBF] Bundesministerium für Bildung und Forschung
+%\end{description}
+\cleardoublepage
+
+
+%% Erklärung ...
+Name: \thesisauthor \hfill Matrikelnummer: \thesismatrikelnummer \vspace{2cm}
+\subsection*{Eidesstattliche Erklärung}
+Ich erkläre hiermit, dass ich diese \thesistype~selbständig verfasst, noch nicht anderweitig für Prüfungszwecke vorgelegt, keine anderen als die angegebenen Quellen und Hilfsmittel benutzt sowie wörtliche und sinngemäße Zitate als solche gekennzeichnet habe.\\[1cm]
+Hagen, den \dotfill
+
+\hspace{2cm}{\footnotesize Datum}\hspace{5cm} {\footnotesize \thesisauthor}
+
+
+
+\end{document}

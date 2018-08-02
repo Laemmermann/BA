@@ -1,0 +1,230 @@
+\begin{thebibliography}{31}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cohn(2004)]{cohn2004user}
+Mike Cohn.
+\newblock \emph{User stories applied: For agile software development}.
+\newblock Addison-Wesley Professional, 2004.
+
+\bibitem[Constantine(2006)]{constantine2006users}
+Larry Constantine.
+\newblock {Users, Roles, and Personas}.
+\newblock \emph{The Persona Lifecycle}, pages 498--519, 2006.
+
+\bibitem[Constantine(1996)]{Constantine1996usage}
+Larry~L. Constantine.
+\newblock {Usage-Centered Software Engineering: New Models, Methods and
+  Metrics}.
+\newblock In \emph{Proceedings of the 1996 International Conference on Software
+  Engineering: Education and Practice (SE:EP '96)}, SEEP '96, pages 2--,
+  Washington, DC, USA, 1996. IEEE Computer Society.
+\newblock ISBN 0-8186-7379-6.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=829500.829892}.
+
+\bibitem[Cooper et~al.(2004)]{cooper2004inmates}
+Alan Cooper et~al.
+\newblock \emph{The inmates are running the asylum:[Why high-tech products
+  drive us crazy and how to restore the sanity]}.
+\newblock Sams Indianapolis, 2004.
+
+\bibitem[{FernUniversität in Hagen}(2014)]{fernuniversitaet2018kurs}
+{FernUniversität in Hagen}.
+\newblock {Das Kursportal – helpdesk}.
+\newblock
+  \url{https://wiki.fernuni-hagen.de/helpdesk/index.php/Das_Kursportal}, 2014.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{FernUniversität in
+  Hagen}(2018{\natexlab{a}})]{fernuniversitaet2018kommunikationstools}
+{FernUniversität in Hagen}.
+\newblock {Zusammenarbeiten: Moodle, BSCW, Virtual Classroom, News, Chat -
+  Leistungsangebot - ZMI - FernUniversität in Hagen}.
+\newblock
+  \url{http://www.fernuni-hagen.de/zmi/produkte_service/kommunikationstools.shtml},
+  2018{\natexlab{a}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{FernUniversität in
+  Hagen}(2018{\natexlab{b}})]{fernuniversitaet2018moodle}
+{FernUniversität in Hagen}.
+\newblock {Moodle – helpdesk}.
+\newblock \url{https://wiki.fernuni-hagen.de/helpdesk/index.php/Moodle},
+  2018{\natexlab{b}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{FernUniversität in
+  Hagen}(2018{\natexlab{c}})]{fernuniversitaet2018stat}
+{FernUniversität in Hagen}.
+\newblock {Daten-Zahlen-Fakten - Uni Intern - FernUniversität in Hagen}.
+\newblock
+  \url{http://www.fernuni-hagen.de/arbeiten/statistik/daten/index.shtml},
+  2018{\natexlab{c}}.
+\newblock abgerufen am 01.06.2018.
+
+\bibitem[{FernUniversität in
+  Hagen}(2018{\natexlab{d}})]{fernuniversitaet2018vu}
+{FernUniversität in Hagen}.
+\newblock {Virtueller Studienplatz – helpdesk}.
+\newblock
+  \url{https://wiki.fernuni-hagen.de/helpdesk/index.php/Virtueller_Studienplatz},
+  2018{\natexlab{d}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{Google}(2018{\natexlab{a}})]{youtubeabspann}
+{Google}.
+\newblock {Videos mit einem Abspann versehen - Computer - Hilfe für YouTube}.
+\newblock
+  \url{https://support.google.com/youtube/answer/6388789?visit_id=1-636685303009655859-2954709875&p=end_screens&hl=de&rd=1},
+  2018{\natexlab{a}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{Google}(2018{\natexlab{b}})]{youtubeinfokarten}
+{Google}.
+\newblock {Infokarten in Videos hinzufügen - Computer - Hilfe für YouTube}.
+\newblock \url{https://support.google.com/youtube/answer/6140493?hl=de},
+  2018{\natexlab{b}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[McLuhan(1977)]{mcluhan1977laws}
+Marshall McLuhan.
+\newblock {Laws of the Media}.
+\newblock \emph{ETC: A Review of General Semantics}, pages 173--179, 1977.
+
+\bibitem[{Moodle}(2015{\natexlab{a}})]{moodle2015aufbau}
+{Moodle}.
+\newblock {Aufbau einer Moodle-Site – MoodleDocs}.
+\newblock \url{https://docs.moodle.org/35/de/Aufbau_einer_Moodle-Site},
+  2015{\natexlab{a}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{Moodle}(2015{\natexlab{b}})]{moodle2015was}
+{Moodle}.
+\newblock {Was ist Moodle – MoodleDocs}.
+\newblock \url{https://docs.moodle.org/35/de/Was_ist_Moodle},
+  2015{\natexlab{b}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{Moodle}(2017)]{moodle2017plugin}
+{Moodle}.
+\newblock {Moodle.org: Moodle Statistics}.
+\newblock
+  \url{https://docs.moodle.org/dev/Plugin_types#List_of_Moodle_plugin_types},
+  2017.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{Moodle}(2018{\natexlab{a}})]{moodle2018about}
+{Moodle}.
+\newblock {About Moodle - MoodleDocs}.
+\newblock \url{https://docs.moodle.org/35/en/About_Moodle}, 2018{\natexlab{a}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{Moodle}(2018{\natexlab{b}})]{moodle2018stats}
+{Moodle}.
+\newblock {Moodle.org: Moodle Statistics}.
+\newblock \url{https://moodle.net/stats/}, 2018{\natexlab{b}}.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[Moos und Marroquin(2010)]{moos2010multimedia}
+Daniel~C Moos und Elizabeth Marroquin.
+\newblock {Multimedia, hypermedia, and hypertext: Motivation considered and
+  reconsidered}.
+\newblock \emph{Computers in Human Behavior}, 26\penalty0 (3):\penalty0
+  265--276, 2010.
+
+\bibitem[Nelson(1965)]{nelson1965complex}
+Theodor~H Nelson.
+\newblock {Complex information processing: a file structure for the complex,
+  the changing and the indeterminate}.
+\newblock In \emph{Proceedings of the 1965 20th national conference}, pages
+  84--100. ACM, 1965.
+
+\bibitem[Nielsen(2013)]{nielsen2013multimedia}
+Jakob Nielsen.
+\newblock \emph{{Multimedia, Hypertext und Internet: Grundlagen und Praxis des
+  elektronischen Publizierens}}.
+\newblock Springer-Verlag, 2013.
+
+\bibitem[Norman und Draper(1986)]{Norman1986user}
+Donald~A. Norman und Stephen~W. Draper.
+\newblock \emph{{User Centered System Design; New Perspectives on
+  Human-Computer Interaction}}.
+\newblock L. Erlbaum Associates Inc., Hillsdale, NJ, USA, 1986.
+\newblock ISBN 0898597811.
+
+\bibitem[Oppermann(2002)]{oppermann2002user}
+Reinhard Oppermann.
+\newblock {User-interface design}.
+\newblock In \emph{Handbook on information technologies for education and
+  training}, pages 233--248. Springer, 2002.
+
+\bibitem[{Rampl, Hansjörg}(2007)]{erwartungskonformitaet}
+{Rampl, Hansjörg}.
+\newblock {ISO 9241:10 Erwartungskonformität}.
+\newblock \url{http://www.handbuch-usability.de/erwartungskonformitaet.html},
+  2007.
+\newblock abgerufen am 30.07.2018.
+
+\bibitem[Schmidt-Kassow et~al.(2013)Schmidt-Kassow, Deusser, Thiel, Otterbein,
+  Montag, Reuter, Banzer, und Kaiser]{schmidt2013physical}
+Maren Schmidt-Kassow, Marie Deusser, Christian Thiel, Sascha Otterbein,
+  Christian Montag, Martin Reuter, Winfried Banzer, und Jochen Kaiser.
+\newblock {Physical exercise during encoding improves vocabulary learning in
+  young female adults: a neuroendocrinological study}.
+\newblock \emph{PloS one}, 8\penalty0 (5):\penalty0 e64172, 2013.
+
+\bibitem[{SoundCloud}(2015)]{SoundCloud2015Panic}
+{SoundCloud}.
+\newblock {Victorious von Panic! At The Disco | Kostenlos hören auf
+  SoundCloud}.
+\newblock
+  \url{https://soundcloud.com/panicatthedisco/panic-at-the-disco-victorious},
+  2015.
+\newblock abgerufen am 29.07.2018.
+
+\bibitem[{SoundCloud}(o.D.)]{soundcloudinfo}
+{SoundCloud}.
+\newblock {Info zu SoundCloud auf SoundCloud}.
+\newblock \url{https://soundcloud.com/pages/contact}, o.D.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{Statista}(2016)]{statista2016video}
+{Statista}.
+\newblock {Videoplattformen - Reichweite in Deutschland 2016 | Statistik}.
+\newblock
+  \url{https://de.statista.com/statistik/daten/studie/209329/umfrage/fuehrende-videoportale-in-deutschland-nach-nutzeranteil/},
+  2016.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[{Statistisches Bundesamt}(2015)]{destatis2015zeit}
+{Statistisches Bundesamt}.
+\newblock {Wie die Zeit vergeht - Ergebnisse zur Zeitverwendung in Deutschland
+  - 2012/2013}.
+\newblock
+  \url{https://www.destatis.de/DE/PresseService/Presse/Pressekonferenzen/2015/zeitverwendung/Pressebroschuere_zeitverwendung.pdf?__blob=publicationFile},
+  2015.
+\newblock abgerufen am 27.07.2018.
+
+\bibitem[Wirdemann(2017)]{wirdemann2017scrum}
+Ralf Wirdemann.
+\newblock \emph{Scrum mit User Stories}.
+\newblock Carl Hanser Verlag GmbH Co KG, 2017.
+
+\bibitem[{Youtube}(2015)]{Youtube2015Panic}
+{Youtube}.
+\newblock {Panic! At The Disco: Victorious [OFFICIAL VIDEO] - YouTube}.
+\newblock \url{https://www.youtube.com/watch?v=AUChk0lxF44}, 2015.
+\newblock abgerufen am 28.07.2018.
+
+\bibitem[Zumbach und Kroeber(2006)]{zumbach2006learning}
+Joerg Zumbach und Christiane Kroeber.
+\newblock {Learning with Hyperaudio: Cognitive Load and Knowledge Acquisition
+  in Non-Linear Auditory Instruction}.
+\newblock \emph{Avoiding simplicity confronting complexity. Advances in
+  studying and designing (computer-based) powerful learning environments},
+  pages 359--170, 2006.
+
+\end{thebibliography}

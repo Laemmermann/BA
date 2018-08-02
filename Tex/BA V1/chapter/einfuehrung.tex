@@ -1,0 +1,44 @@
+Diese Arbeit beschäftigt sich mit dem Design und der Implementierung eines Plugins für die Moodle Lernplattform, welches es ermöglichen soll, den Studierenden die Lerninhalte mittels Hyperaudio-Dokumenten bereitzustellen. Ziel dieses Plugins ist die Erweiterung der Lernmöglichkeiten an der FernUniversität in Hagen, um die Studierenden beim Erreichen ihrer Lernziele besser zu unterstützen. 
+\todo[inline]{Abschnitt mit mehr Inhalt füllen}
+
+%%%%%%%%%%
+\section{Motivation}
+Die Motivation zur Behandlung dieses Themas besteht darin, dass 
+%ca. 80\% der Studierenden in Teilzeit studieren und 
+80\% der Studierenden gleichfalls neben dem Studium arbeiten \citep{fernuniversitaet2018stat}. Unter diesen Umständen beschäftigen sich viele Studierende erst kurz vor der Prüfung - dafür aber entsprechend intensiv - mit den Lerninhalten. An der Fakultät Mathematik/Informatik und auch an der Fakultät für Wirtschaftswissenschaften bestehen diese Lerninhalte zu einem guten Teil aus textlastigen Kurseinheiten, die Abbildungen und Formeln enthalten.
+
+
+Diese Aussage kann an Hand der Pflichtmodule des Bachelor Studiengangs Wirtschaftsinformatik bestätigt werden.
+Die Pflichtmodule an der Faktultät Mathematik/Informatik weisen einen Textanteil von XXX auf. An der der Fakultät für Wirtschaftswissenschaften liegt der Anteil in den Pflichtmodulen nochmals höher bei XXX. Die Analyse der Kurseinheiten wurde mittels der Textanalyse des Programms \textit{PDF-Analyzer 5.0}\footnote{http://www.is-soft.de} vorgenommen.
+\todo[inline]{Abschnitt nach Abschluss der Analyse der Kurseinheiten aktualisieren}
+
+Eher selten werden auch Videos angeboten, in welchen bestimmte Lerninhalte aus den Kurseinheiten nochmals rekapituliert werden. Hier sind als Beispiel die Videos von Univ.-Prof. Dr. Ulrike Baumöl zum Kurs \glqq Informationsmanagement\grqq{} zu nennen.
+
+Die Idee besteht nun darin, den Lernenden erstens eine alternative Repräsentation (Modalität) der Lerninhalte anzubieten und ihnen zweitens das Lernen während ungenutzter Alltagssituationen zu ermöglichen (z.B. lange Autofahrten, Pendeln in Bus und Bahn, beim Joggen, etc.). Auf diese Weise könnten die Lernenden die Inhalte häufiger rezipieren und einüben. Ergänzt um gute E-Assessments (Selbsttests) hätten Sie in Summe eine Chance, sich frühzeitig und kontinuierlich auf die Prüfung vorzubereiten und vielleicht bessere Lernerfolge zu erzielen. 
+
+
+%%%%%%%%%
+\section{Problemstellung}
+Diese Arbeit wird sich in diesem Zusammenhang vor allem mit dem Problem des sehr hohen Textanteils vieler Kurse beschäftigen. Hierbei besteht zusätzlich oft das Problem, dass Abbildungen, Formeln und Tabellen, auf die im Text verwiesen wird, nicht zu dem Zeitpunkt ersichtlich sind, zu dem diese im Text erwähnt werden. Hierdurch ist oftmals Blättern bzw. Scrollen nötig, je nachdem ob die Kurseinheit in Papierform oder digital bearbeitet wird. Dies erschwert zusätzlich zum hohen Textanteil das Verinnerlichen des in der Kurseinheit zu vermittelnden Inhalts.
+
+Die Tatsache, dass die Kurseinheiten meist nur in Textform vorliegen, hat zur Folge, dass sich die Studierenden bei der Auseinandersetzung mit den Lerninhalten mit keinen anderen Dingen beschäftigen können, welche die Aufmerksamkeit ihrer Augen und Hände benötigen.
+%So könnte ein Studierender durchaus öfter seinem Studium ein \glqq Ohr und einen kurzen Blick leihen\grqq, dies ist aber durch die aktuelle Bereitstellung der Lerninhalte, als textlastige Kurseinheiten,  nicht möglich.
+Auch die bereits vorhandenen Videos sind in der Hinsicht nicht optimal, da diese ebenfalls durchgehend die visuelle Aufmerksamkeit des Studierenden erfordern.
+
+\todo[inline]{Überprüfen ob der auskommentierte Satz vermisst wird}
+
+Ziel soll es also sein, den Studierenden das Lernen mittels Hyperaudio-Dokument zu ermöglichen. Hierbei handelt es sich um Audio-Dateien, welche um weitere Inhalte erweitert werden, in unserem Fall Abbildungen, Formeln etc.. Damit sollen Studierende problemlos während Aktivitäten, die nicht ihre volle geistige und akustische Aufmerksamkeit beanspruchen, dem Hyperaudio-Dokument lauschen können und nur in bestimmten Momenten einen Blick zuwenden müssen. Dementsprechend ist es notwendig, den Studierenden mit einem akustischen Signal darauf aufmerksam zu machen, dass man sich nun auch mit seinen Augen dem Hyperaudio-Dokument zuwenden muss.
+\todo[inline]{Auf Austausch zwischen Studierenden und Lehrenden eingehen}
+
+%%%%%%%%%
+\section{Zielsetzung}
+Um das genannte Ziel zu erreichen, soll ein Moodle-Plugin entwickelt werden. Mit diesem soll es möglich sein, Audio-Dateien abzuspielen, bei denen zeitlich verankerte Inhalte (z.B. Abbildungen, Formeln, Verweisziele von Hyperlinks) aus den Kurseinheiten angezeigt werden können. Zu diesem Zeitpunkt soll ein akustisches Signal auf die Anzeige des visuellen Inhalts hinweisen. Zusätzlich sollen Studierende und Lehrende eines Kurses zeitgenau persönliche und für andere Studierende und Lehrende sichtbare Kommentare hinterlegen können, welche in Echtzeit dargestellt werden. Das Moodle-Plugin übernimmt somit auch Aufgaben eines Group Awareness-Tools.
+\todo[inline]{Noch mehr Austausch zwischen Studierenden und Lehrenden eingehen}
+
+Neben der reinen Abspielfunktionalität muss das Plugin auch die sinnvolle Integration der Hyperaudio-Dokumente in die Moodle-Oberfläche gewährleisten, sodass der Anwender einfachen und schnellen Zugriff darauf, beispielsweise über Kursseiten, erhält.
+
+%Neben der reinen Abspielfunktionalität sollen durch das Plugin die Hyperaudio-Dokumente auch sinnvoll in die Moodle-Oberfläche integriert werden, damit der Anwender einfachen und schnellen Zugriff auf die Dokumente erhält, welche er abzuspielen wünscht.
+
+Die zu Grunde liegenden Hyperaudio-Dokumente sollen mittels einer definierten Schnittstellendatei, der Audio-Datei und weiteren Dateien (Inhalte wie z.B. Abbildungen oder Formeln) dem Plugin zur Verfügung gestellt werden. Die Schnittstellendatei soll hierbei neben Meta-Informationen (z.B. Autor, Quellen etc.) auch die Informationen darüber enthalten zu welchem Kurs, welcher Kurseinheit oder welchem Kapitel das Hyperaudio-Dokument gehört, welche Audio-Datei abgespielt werden soll und zu welchen Zeitpunkten die Annotation der weiteren Inhalte erfolgen soll.  
+
+%%Mit diesem soll es möglich sein, Audiodateien abzuspielen, bei welchen Studierende eines Kurses zeitgenau persönliche und für Kommilitonen sichtbare Kommentare hinterlegen können, welche in Echtzeit dargestellt werden. Zusätzlich soll es möglich sein, Inhalte (z.B. Abbildungen, Formeln, Verweisziele von Hyperlinks) aus den Kurseinheiten an den Audiodokumenten zeitlich zu verankern, damit diese beim Anhören zum entsprechenden Zeitpunkt dargestellt werden. Zu diesem Zeitpunkt soll ein akustische Signal auf die Anzeige des visuellen Inhalts hinweisen. Das Moodle-Plugin übernimmt somit auch Aufgaben eines Group Awareness-Tools.
