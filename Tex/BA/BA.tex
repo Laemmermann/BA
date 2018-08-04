@@ -22,7 +22,7 @@
    \ifthenelse{\equal{#1}{}}{}{-\subref{#1}}%
    )}
 %%%%%%%%%%
-
+\usepackage{rotating}
 %%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -148,7 +148,10 @@ Datum: \today\\
 
 %%
 \chapter{Erster Teil des Anhangs}
-\dots
+\begin{sidewaysfigure}
+\includegraphics[width=0.8\textwidth,center]{VerwendungMoodle.pdf}
+\caption{\label{fig:VerwendungMoodle} Verwendung von Moodle in den Pflichtmodulen des Bachelorstudiengangs Wirtschaftsinformatik (Sommersemester 2018)}
+\end{sidewaysfigure}
 
 %%
 \chapter{Zweiter Teil des Anhangs}

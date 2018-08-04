@@ -1,3 +1,4 @@
+\label{cha:einfuehrung}
 Diese Arbeit beschäftigt sich mit dem Design und der Implementierung eines Plugins für die Moodle Lernplattform, welches es ermöglichen soll, den Studierenden die Lerninhalte mittels Hyperaudio-Dokumenten bereitzustellen. Ziel dieses Plugins ist die Erweiterung der Lernmöglichkeiten an der FernUniversität in Hagen, um die Studierenden beim Erreichen ihrer Lernziele besser zu unterstützen. 
 \todo[inline]{Abschnitt mit mehr Inhalt füllen}
 
@@ -28,7 +29,9 @@ Jeder Studierende hat Zugriff auf den \textit{Virtuellen Studienplatz}, häufig 
 
 Neben der Möglichkeit, die Kurseinheiten als PDF über den \textit{Virtuellen Studienplatz} herunterzuladen, werden diese im Regelfall für die belegten Kurse automatisch in gedruckter Form an die Studierenden versendet. Die Kurseinheiten bestehen zum Großteil aus Text (siehe Abschnitt \ref{sec:motivation}) und dienen als zentrales Lernmaterial für die Studierenden.
 
-Jeder Kurs hat die Möglichkeit, zusätzliches Lernmaterial über Moodle, die zentrale Lernplattform der FernUniversität in Hagen, zur Verfügung zu stellen. Moodle bietet den Kursen \glqq als sogenanntes Learningmanagementsystem (LMS) vielfältige Möglichkeiten zur Gestaltung der mediengestützten Lehre an\grqq{} \citep{fernuniversitaet2018moodle}. Besonders hervorzuheben sind hierbei die Möglichkeiten zum Einsatz von Lehrvideos, Foren und Tests. Diese Möglichkeiten können in Form von Plugins beliebig erweitert werden. In Abschnitt \ref{sec:moodle} wird die Plattform Moodle vorgestellt.
+Jeder Kurs hat die Möglichkeit, zusätzliches Lernmaterial über Moodle, die zentrale Lernplattform der FernUniversität in Hagen, zur Verfügung zu stellen. Moodle bietet den Kursen \glqq als sogenanntes Learningmanagementsystem (LMS) vielfältige Möglichkeiten zur Gestaltung der mediengestützten Lehre an\grqq{} \citep{fernuniversitaet2018moodle}. Besonders hervorzuheben sind hierbei die Möglichkeiten zum Einsatz von Lehrvideos, Foren und Tests. Diese Möglichkeiten können in Form von Plugins beliebig erweitert werden. In Abschnitt \ref{sec:moodle} wird die Plattform Moodle vorgestellt. Im Bezug auf die Pflichtmodule des Bachelorstudiengangs Wirtschaftsinformatik an der FernUniversität in Hagen wird Moodle in 21 von 30 Kursen beziehungsweise 10 von 15 Modulen eingesetzt\footnote{Die Auswertung befindet sich im Anhang \ref{fig:VerwendungMoodle}}. Auffällig ist hierbei, dass Moodle an der Fakultät für Wirtschaftswissenschaft für jeden Kurs angeboten wird, während an der Fakultät für Mathematik und Informatik kein einziger Kurs auf Moodle zurückgreift.
+
+ 
 
 \todo[inline]{Statistik über Moodle Verwendung Pflichtmodule Winfo}
 
@@ -72,17 +75,23 @@ Somit ist mit den drei Lerninhalt vermittelnden Lehrangeboten Kurseinheiten, Leh
 
 Auf Grund der Tatsache, dass 80\% der Studierenden an der FernUniversität in Hagen neben dem Studium ebenfalls einer Arbeit nachgehen \citep{fernuniversitaet2018stat}, muss auch die dem Studierenden zur Verfügung stehenden Zeit berücksichtigt werden. Zur bezahlten Arbeit kommt immer auch unbezahlte Arbeit hinzu. Diese betrug in den Jahren 2012/2013 im Durchschnitt ca. 24,5 Stunden in der Woche für Personen ab 18 Jahren. Als unbezahlte Arbeit gelten Haushaltstätigkeiten, wie Kochen, Putzen, Gartenpflege und Einkaufen, aber auch ehrenamtliche Tätigkeiten sowie Wegzeiten \citep{destatis2015zeit}. Diese unbezahlte Arbeit kann aktuell zum Großteil nicht zum Lernen verwendet werden, da durch die heutigen Lernangebote stets die volle Aufmerksamkeit des Studierenden erforderlich ist.
 
-%\todo[inline]{Optimieren und mit Zitaten belegen}
+\todo[inline]{Arbeiten Sie noch besser heraus, warum und wann das Lernen mit visuellen Medien für Lernende nicht möglich ist. Es geht in der Argumentation nicht darum, welche Modalität die beste ist, sondern um die Frage wie man die Lernmaterialien so aufbereiten kann, dass Lernenden das Lernen besser in ihren Alltag integrieren können. Der Aspekt der unbezahlten Arbeit ist ein gutes Argument! Welche Modalität der Lernmaterialien ist für meine aktuelle körperliche/psychische Verfassung in meiner aktuellen Umgebung am besten geeignet? Man kann dies auch anhand der für das Lernen verfügbaren Zeit diskutieren: Wann habe ich wie viel Zeit um mir die Materialien anzusehen/anzuhören? Welche Probleme ergeben sich daraus, wenn ich versuche, alle Materialien als Audio aufzubereiten? Darüber hinaus können Lerntypen eine Rolle spielen. Ob jedoch Lerntypen wirklich existieren, wird von Forschern vielfach angezweifelt.  
+In der Argumentation geht es etwas durcheinander zu. Sie müssen klarer unterscheiden, z.B. zw. synchronem und asynchronem Lernen. Es scheint klar, dass die mit der Themenstellung verbundene Ermöglichung von Flexibilität beim Lernen nicht mit synchronen Lernszenarien vereinbar ist. }
 
 
 %%%%%%%%%
 \section{Forschungsfragen und Zielsetzung}
 Ziel dieser Arbeit soll es sein, den Studierenden eine alternative Repräsentation der Lerninhalte anzubieten, welche es ihnen ermöglichen soll mehr ihrer Zeit zum Lernen nutzen zu können und dabei die Effizienz des Lernens zu erhöhen. Die alternative Repräsentation der Lerninhalte soll in die Moodle-Plattform integriert werden, da diese mit ihrem Plugin-System und dem hohen Verbreitungsgrad an der FernUniversität in Hagen gute Voraussetzungen für die Bereitstellung neuer Lehrmethoden bietet. Damit sich den Studierenden neue Lernmöglichkeiten eröffnen, soll die Vermittlung der Lerninhalte primär in einer auditiven Form erfolgen.
 
-Es muss eine Lernumgebung gestaltet werden, welche es ermöglicht, die hauptsächlich auditiven Lerninhalte bereitzustellen. Daneben müssen auch Lerninhalte, welche nicht in auditiver Form abgebildet werden können, berücksichtigt werden. Akustische Signale können unterstützend eingesetzt werden, um Studierende auf Zusatzinhalte aufmerksam zu machen, die ihre tiefergehende Aufmerksamkeit erfordern. Typische Nutzerinteraktionen mit textuellen Lernmedien, wie beispielsweise persönliche Notizen und Markierungen oder das Durchsuchen des Inhaltsverzeichnisses, sollen hierbei erhalten bleiben.
+Es muss eine Audiolernumgebung gestaltet werden, welche es ermöglicht, die hauptsächlich auditiven Lerninhalte bereitzustellen. Daneben müssen auch Lerninhalte, welche nicht in auditiver Form abgebildet werden können, berücksichtigt werden. Akustische Signale können unterstützend eingesetzt werden, um Studierende auf Zusatzinhalte aufmerksam zu machen, die ihre tiefergehende Aufmerksamkeit erfordern. Typische Nutzerinteraktionen mit textuellen Lernmedien, wie beispielsweise persönliche Notizen und Markierungen oder das Durchsuchen des Inhaltsverzeichnisses, sollen hierbei erhalten bleiben.
 
 Zusätzlich zur Bereitstellung der Lerninhalte in alternativer Form soll das Moodle-Plugin auch den Kommunikationsaustausch zwischen Lehrenden und Studierenden ermöglichen und fördern. Um den Studierenden beim Lernen möglichst große Flexibilität zu bieten, ist eine mobile Verfügbarkeit der neugestalteten Lerninhalte erstrebenswert.
+
+\textbf{Aus diesen Zielsetzungen ergeben sich mehrere Forschungsfragen...}
 \todo[inline]{Überarbeiten und mehr Ziele/Fragen ergänzen}
+\todo[inline]{Laut dem Ziel könnte es auch sein, dass Sie sich auf eine haptische Lernumgebung konzentrieren. => Sofort mehr eingrenzen.=> Audio / Audiolernumgebung / audiobasiertes Lernen.
+Es fehlen noch die Forschungsfragen, z.B. Wie ist eine Hyperaudio Lernumgebung in Moodle zu gestalten? }
+
 
 %Hier mal ein paar Phrasen:
 %- Hauptziel des Vorhabens ist die  Gestaltung, ... und Entwicklung einer ...

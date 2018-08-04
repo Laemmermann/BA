@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -175,6 +175,13 @@ Maren Schmidt-Kassow, Marie Deusser, Christian Thiel, Sascha Otterbein,
 \newblock {Physical exercise during encoding improves vocabulary learning in
   young female adults: a neuroendocrinological study}.
 \newblock \emph{PloS one}, 8\penalty0 (5):\penalty0 e64172, 2013.
+
+\bibitem[Scutter et~al.(2010)Scutter, Stupans, Sawyer, und
+  King]{scutter2010students}
+Sheila Scutter, Ieva Stupans, Tim Sawyer, und Sharron King.
+\newblock How do students use podcasts to support learning?
+\newblock \emph{Australasian journal of educational technology}, 26\penalty0
+  (2), 2010.
 
 \bibitem[{SoundCloud}(2015)]{SoundCloud2015Panic}
 {SoundCloud}.
