@@ -15,7 +15,6 @@ Mit diesen Gedanken im Hinterkopf werden nun die Grundlagen für diese Arbeit be
 
 \todo[inline]{Um Inhalte (Beispiel aus Quelle), Überleitung zu den Abschnitten ergänzen, Verweis auf Kapitel Evaluation}
 
-%Versuchen Sie dieses Konzept als Einleitung des Grundlagenteils zu adaptieren. Ich dem Leser (und Ihnen) kann es helfen, das Vorhaben besser einzuordnen. Wo kommen wir her, wo gehen wir hin und was kann noch alles daraus werden.
 
 \section{Moodle}
 \label{sec:moodle}
@@ -46,15 +45,21 @@ Technisch baut Moodle auf den für eine Webanwendung üblichen Aufbau aus Webser
 
 
 %%%%%%%%%%
-\section{Lernen mit Hypermedia}
+\section{Hypermedia}
 Bevor wir uns der genauen Konzeption und Implementation des Moodle Plugins für Hyperaudio-Dokumente zuwenden, betrachten wir zunächst \textit{Hypermedia} im Allgemeinen. Dabei wollen wir zunächst eine Begriffsklärung durchführen. Darauf aufbauend werden einige Erfahrungen aus verschiedenen wissenschaftlichen Arbeiten gesammelt. Zuletzt wollen wir hieraus einige Rückschlüsse für unser Moodle Plugin und unsere Interpretation von Hyperaudio ziehen.
 
+
+%%%%%%%%%%
+\subsection{Grundbegriffe}
 Hyperaudio stellt eine Ausprägung von \textit{Hypermedia} dar. Der Begriff \textit{Hypermedia} wurde das erste Mal von Ted Nelson 1965 verwendet \citep{nelson1965complex}. In seinem Paper beschreibt er detailliert, was er sich unter einem \textit{Hypertext} vorstellt. Hierunter versteht er ein Dokument bestehend aus geschriebenen oder bildhaften Inhalten, welche in solch einer komplexen Art und Weise miteinander verbunden sind, dass sie nicht mehr auf Papier dargestellt werden können. Es kann Zusammenfassungen, Karten über die Inhalte und deren Zusammenhänge, Annotationen, Ergänzungen oder Anmerkungen von Wissenschaftlern, die das Dokument begutachtet haben, enthalten. Nelson beschreibt das Kriterium für den Präfix \textit{hyper} damit, dass diese Objekte nicht durch eine Konvertierung in ein einfaches lineares Medium, wie beispielsweise einen String umgewandelt werden können. Der wesentliche Punkt ist also, dass es sich beim Lernen mit \textit{Hypermedia} um ein nicht-lineares Lernen handelt.
 
 Genauer betrachtet stellt das, was Nelson sich damals als \textit{Hypertext} vorgestellt hatte, nach heutiger Definition bereits eine Form von \textit{Hypermedia} dar. Auch wenn viele die beiden Begriffe \textit{Hypertext} und \textit{Hypermedia} synonym verwenden \citep{nielsen2013multimedia}, werden bei strikter Betrachtung bei \textit{Hypertext} ausschließlich Texte miteinander verbunden, während bei \textit{Hypermedia} auch andere Medien eingebunden werden können. Gemeinsam haben beide Arten jedoch, dass der Lernende keinen linearen Weg vorgegeben hat, sondern von einem Knoten (Node) zum anderen springen kann und sich somit seinen Lernweg selbst aussucht. Als Folge dessen stellt \textit{Hypermedia} eine nicht-lineare Variante von \textit{Multimedia} dar.
 
 Nach dieser Logik handelt es sich bei Hyperaudio in seiner klassischen Form eigentlich um reine Audiosequenzen, die miteinander verknüpft sind, wobei der Lernende selbst entschieden kann, in welcher Reihenfolge er diese abspielt \citep{zumbach2006learning}.
 
+
+%%%%%%%%%%
+\subsection{Lernen mit Hypermedia}
 Wissenschaftler beschäftigen sich schon seit vielen Jahren damit, festzustellen, welche Effekte der Einsatz von \textit{Multimedia}, \textit{Hypertext} und \textit{Hypermedia} auf den Lernerfolg von Lehrenden hat. In der Arbeit von \cite{moos2010multimedia} wird eine Analyse von etlichen Arbeiten zu diesem Thema durchgeführt. \cite{moos2010multimedia} konzentrieren sich hierbei vor allem auf den Einfluss auf die Motivation der Lernenden. Dennoch wird auch auf andere Aspekte der drei verschiedenen E-Learning Methoden \textit{Multimedia}, \textit{Hypertext} und  \textit{Hypermedia} im Vergleich zu klassischen Lehrmethoden eingegangen.
 
 \cite{moos2010multimedia} verweisen auf Arbeiten, nach denen eine Herausforderung bei \textit{Multimedia} und somit auch bei \textit{Hypermedia} darin besteht, dass die kognitive Aufnahmekapazität der Studierenden überschritten werden kann (Mayer und Moreno; van Merrienboer und Ayres, nach \cite{moos2010multimedia}), wenn Informationen sowohl aus einem Text als auch aus einem Diagramm entnommen werden sollen. Dies beruht auf der Annahme der Cognitive Load Theory, welche dem Arbeitsgedächtnis nur eine begrenzte Kapazität zuspricht (Sweller; van Merrienboer und Sweller, nach \cite{moos2010multimedia}). Es gibt aber auch Studien, welche einen positiven Effekt nachweisen, wenn zur gleichen Zeit Bilder dargestellt werden und dazu passender Text vorgelesen wird, im Vergeleich zum alleinigen Betracheten von Bildern beziehungsweise Anhören von Texten (Mayer und Anderson; Mayer und Sims, nach \cite{moos2010multimedia}).
