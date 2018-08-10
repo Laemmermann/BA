@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.15)  5 AUG 2018 10:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.15)  10 AUG 2018 22:07
 entering extended mode
 **./BA.tex
 (BA.tex
@@ -2081,73 +2081,83 @@ Package hyperref Info: bookmark on input line 34:
 (hyperref)             reference {section.26}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.27' on input line 41.
+Package hyperref Info: Reference (cite) `cite.reinmann1995kooperation' on input
+ line 35.
+Package hyperref Info: Reference (cite) `cite.reinmann1995kooperation' on input
+ line 35.
+Package hyperref Info: Reference (cite) `cite.reinmann2002analyse' on input lin
+e 35.
+Package hyperref Info: Reference (cite) `cite.reinmann2002analyse' on input lin
+e 35.
+Package hyperref Info: Reference (cite) `cite.dillenbourg1999collaborative' on 
+input line 35.
+Package hyperref Info: Reference (cite) `cite.dillenbourg1999collaborative' on 
+input line 35.
+Package hyperref Info: Anchor `subsection.27' on input line 49.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 41.
-Package hyperref Info: bookmark on input line 41:
+(babel)             in language  on input line 49.
+Package hyperref Info: bookmark on input line 49:
 (hyperref)             thecounter {2.2.1}
 (hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
 ame }\@currenttocentry }
 (hyperref)             reference {subsection.27}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.28' on input line 44.
+Package hyperref Info: Reference (cite) `cite.reinmann1995kooperation' on input
+ line 51.
+Package hyperref Info: Reference (cite) `cite.reinmann1995kooperation' on input
+ line 51.
+Package hyperref Info: Reference (cite) `cite.reinmann2002analyse' on input lin
+e 52.
+Package hyperref Info: Reference (cite) `cite.reinmann2002analyse' on input lin
+e 52.
+Package hyperref Info: Reference (cite) `cite.pauli2000rolle' on input line 53.
+
+Package hyperref Info: Reference (cite) `cite.pauli2000rolle' on input line 53.
+
+Package hyperref Info: Anchor `subsection.28' on input line 56.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 44.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 44.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 44.
-Package hyperref Info: bookmark on input line 44:
+(babel)             in language  on input line 56.
+Package hyperref Info: bookmark on input line 56:
 (hyperref)             thecounter {2.2.2}
 (hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
 ame }\@currenttocentry }
 (hyperref)             reference {subsection.28}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `section.29' on input line 48.
+Package hyperref Info: Reference (cite) `cite.dillenbourg1999collaborative' on 
+input line 58.
+Package hyperref Info: Reference (cite) `cite.dillenbourg1999collaborative' on 
+input line 58.
+Package hyperref Info: Anchor `section.29' on input line 62.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 48.
-Package hyperref Info: bookmark on input line 48:
+(babel)             in language  on input line 62.
+Package hyperref Info: bookmark on input line 62:
 (hyperref)             thecounter {2.3}
 (hyperref)             text {\protect \numberline {\csname thesection\endcsname
  }\@currenttocentry }
 (hyperref)             reference {section.29}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.30' on input line 53.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 53.
-Package hyperref Info: bookmark on input line 53:
-(hyperref)             thecounter {2.3.1}
-(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
-ame }\@currenttocentry }
-(hyperref)             reference {subsection.30}
-(hyperref)             toclevel {2}
-(hyperref)             type {toc}.
-Package hyperref Info: Reference (cite) `cite.nelson1965complex' on input line 
-54.
-Package hyperref Info: Reference (cite) `cite.nelson1965complex' on input line 
-54.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 55.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 55.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 55.
-Package hyperref Info: Anchor `page.14' on input line 55.
+(babel)             in language  on input line 64.
+Package hyperref Info: Anchor `page.14' on input line 64.
  [14
 Package `hyperref' Info: End of reference (cite) `cite.moodle2015aufbau', line 
 23.
@@ -2157,27 +2167,69 @@ Package `hyperref' Info: End of reference (cite) `cite.moodle2017plugin', line
 30.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2017plugin', line 
 30.
-Package `hyperref' Info: End of reference (cite) `cite.nelson1965complex', line
- 54.
-Package `hyperref' Info: End of reference (cite) `cite.nelson1965complex', line
- 54.
+Package `hyperref' Info: End of reference (cite) `cite.reinmann1995kooperation'
+, line 35.
+Package `hyperref' Info: End of reference (cite) `cite.reinmann1995kooperation'
+, line 35.
+Package `hyperref' Info: End of reference (cite) `cite.reinmann2002analyse', li
+ne 35.
+Package `hyperref' Info: End of reference (cite) `cite.reinmann2002analyse', li
+ne 35.
+Package `hyperref' Info: End of reference (cite) `cite.dillenbourg1999collabora
+tive', line 35.
+Package `hyperref' Info: End of reference (cite) `cite.dillenbourg1999collabora
+tive', line 35.
+Package `hyperref' Info: End of reference (cite) `cite.reinmann1995kooperation'
+, line 51.
+Package `hyperref' Info: End of reference (cite) `cite.reinmann1995kooperation'
+, line 51.
+Package `hyperref' Info: End of reference (cite) `cite.reinmann2002analyse', li
+ne 52.
+Package `hyperref' Info: End of reference (cite) `cite.reinmann2002analyse', li
+ne 52.
+Package `hyperref' Info: End of reference (cite) `cite.pauli2000rolle', line 53
+.
+Package `hyperref' Info: End of reference (cite) `cite.pauli2000rolle', line 53
+.
+Package `hyperref' Info: End of reference (cite) `cite.dillenbourg1999collabora
+tive', line 58.
+Package `hyperref' Info: End of reference (cite) `cite.dillenbourg1999collabora
+tive', line 58.
  <./images/MoodleAufbau.pdf>]
-Package hyperref Info: Reference (cite) `cite.nielsen2013multimedia' on input l
-ine 56.
-Package hyperref Info: Reference (cite) `cite.nielsen2013multimedia' on input l
-ine 56.
-Package hyperref Info: Reference (cite) `cite.zumbach2006learning' on input lin
-e 58.
-Package hyperref Info: Reference (cite) `cite.zumbach2006learning' on input lin
-e 58.
-Package hyperref Info: Anchor `subsection.31' on input line 62.
+Package hyperref Info: Anchor `subsection.30' on input line 67.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 62.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 62.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 62.
-Package hyperref Info: bookmark on input line 62:
+(babel)             in language  on input line 67.
+Package hyperref Info: bookmark on input line 67:
+(hyperref)             thecounter {2.3.1}
+(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
+ame }\@currenttocentry }
+(hyperref)             reference {subsection.30}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Reference (cite) `cite.nelson1965complex' on input line 
+68.
+Package hyperref Info: Reference (cite) `cite.nelson1965complex' on input line 
+68.
+Package hyperref Info: Reference (cite) `cite.nielsen2013multimedia' on input l
+ine 70.
+Package hyperref Info: Reference (cite) `cite.nielsen2013multimedia' on input l
+ine 70.
+Package hyperref Info: Reference (cite) `cite.zumbach2006learning' on input lin
+e 72.
+Package hyperref Info: Reference (cite) `cite.zumbach2006learning' on input lin
+e 72.
+Package hyperref Info: Anchor `subsection.31' on input line 76.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 76.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 76.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 76.
+Package hyperref Info: bookmark on input line 76:
 (hyperref)             thecounter {2.3.2}
 (hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
 ame }\@currenttocentry }
@@ -2185,159 +2237,147 @@ ame }\@currenttocentry }
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 63.
+ 77.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 63.
+ 77.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 63.
+ 77.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 63.
+ 77.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 65.
+ 79.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 65.
+ 79.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 65.
+ 79.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 65.
+ 79.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 65.
+ 79.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 65.
+ 79.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 65.
+ 79.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 65.
+ 79.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 80.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 80.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 80.
+Package hyperref Info: Anchor `page.15' on input line 80.
+ [15
+Package `hyperref' Info: End of reference (cite) `cite.nelson1965complex', line
+ 68.
+Package `hyperref' Info: End of reference (cite) `cite.nelson1965complex', line
+ 68.
+Package `hyperref' Info: End of reference (cite) `cite.nielsen2013multimedia', 
+line 70.
+Package `hyperref' Info: End of reference (cite) `cite.nielsen2013multimedia', 
+line 70.
+Package `hyperref' Info: End of reference (cite) `cite.zumbach2006learning', li
+ne 72.
+Package `hyperref' Info: End of reference (cite) `cite.zumbach2006learning', li
+ne 72.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 77.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 77.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 77.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 77.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 79.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 79.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 79.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 79.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 79.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 79.
+]
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 67.
+ 81.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 67.
-Package hyperref Info: Anchor `section*.32' on input line 68.
-Package hyperref Info: bookmark on input line 68:
+ 81.
+Package hyperref Info: Anchor `section*.32' on input line 82.
+Package hyperref Info: bookmark on input line 82:
 (hyperref)             thecounter {\thetodo }
 (hyperref)             text {\@todonotes@caption }
 (hyperref)             reference {section*.32}
 (hyperref)             toclevel {0}
 (hyperref)             type {tdo}.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 70.
+ 84.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 70.
+ 84.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 70.
+ 84.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 70.
+ 84.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 70.
+ 84.
 Package hyperref Info: Reference (cite) `cite.moos2010multimedia' on input line
- 70.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 71.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 71.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 71.
-Package hyperref Info: Anchor `page.15' on input line 71.
- [15
-Package `hyperref' Info: End of reference (cite) `cite.nielsen2013multimedia', 
-line 56.
-Package `hyperref' Info: End of reference (cite) `cite.nielsen2013multimedia', 
-line 56.
-Package `hyperref' Info: End of reference (cite) `cite.zumbach2006learning', li
-ne 58.
-Package `hyperref' Info: End of reference (cite) `cite.zumbach2006learning', li
-ne 58.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 63.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 63.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 63.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 63.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 65.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 65.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 65.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 65.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 65.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 65.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 65.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 65.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 67.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 67.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 70.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 70.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 70.
-Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 70.
-]
-Package hyperref Info: Anchor `section*.33' on input line 72.
-Package hyperref Info: bookmark on input line 72:
+ 84.
+Package hyperref Info: Anchor `section*.33' on input line 86.
+Package hyperref Info: bookmark on input line 86:
 (hyperref)             thecounter {\thetodo }
 (hyperref)             text {\@todonotes@caption }
 (hyperref)             reference {section*.33}
 (hyperref)             toclevel {0}
 (hyperref)             type {tdo}.
-Package hyperref Info: Anchor `section*.34' on input line 74.
-Package hyperref Info: bookmark on input line 74:
+Package hyperref Info: Anchor `section*.34' on input line 88.
+Package hyperref Info: bookmark on input line 88:
 (hyperref)             thecounter {\thetodo }
 (hyperref)             text {\@todonotes@caption }
 (hyperref)             reference {section*.34}
 (hyperref)             toclevel {0}
 (hyperref)             type {tdo}.
 Package hyperref Info: Reference (cite) `cite.zumbach2006learning' on input lin
-e 78.
+e 92.
 Package hyperref Info: Reference (cite) `cite.zumbach2006learning' on input lin
-e 78.
-Package hyperref Info: Anchor `section.35' on input line 84.
+e 92.
+Package hyperref Info: Anchor `section.35' on input line 98.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 84.
-Package hyperref Info: bookmark on input line 84:
+(babel)             in language  on input line 98.
+Package hyperref Info: bookmark on input line 98:
 (hyperref)             thecounter {2.4}
 (hyperref)             text {\protect \numberline {\csname thesection\endcsname
  }\@currenttocentry }
 (hyperref)             reference {section.35}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `section*.36' on input line 86.
-Package hyperref Info: bookmark on input line 86:
+Package hyperref Info: Anchor `section*.36' on input line 100.
+Package hyperref Info: bookmark on input line 100:
 (hyperref)             thecounter {\thetodo }
 (hyperref)             text {\@todonotes@caption }
 (hyperref)             reference {section*.36}
 (hyperref)             toclevel {0}
 (hyperref)             type {tdo}.
-Package hyperref Info: Anchor `section*.37' on input line 87.
-Package hyperref Info: bookmark on input line 87:
+Package hyperref Info: Anchor `section*.37' on input line 101.
+Package hyperref Info: bookmark on input line 101:
 (hyperref)             thecounter {\thetodo }
 (hyperref)             text {\@todonotes@caption }
 (hyperref)             reference {section*.37}
 (hyperref)             toclevel {0}
 (hyperref)             type {tdo}.
-Package hyperref Info: Anchor `section.38' on input line 91.
+Package hyperref Info: Anchor `section.38' on input line 105.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 105.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 105.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 91.
-Package hyperref Info: bookmark on input line 91:
+(babel)             in language  on input line 105.
+Package hyperref Info: bookmark on input line 105:
 (hyperref)             thecounter {2.5}
 (hyperref)             text {\protect \numberline {\csname thesection\endcsname
  }\@currenttocentry }
@@ -2354,13 +2394,29 @@ Package babel Info: Redefining german shorthand "~
 Package hyperref Info: Anchor `page.16' on input line 116.
  [16
 Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 70.
+e 79.
 Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
-e 70.
+e 79.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 81.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 81.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 84.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 84.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 84.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 84.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 84.
+Package `hyperref' Info: End of reference (cite) `cite.moos2010multimedia', lin
+e 84.
 Package `hyperref' Info: End of reference (cite) `cite.zumbach2006learning', li
-ne 78.
+ne 92.
 Package `hyperref' Info: End of reference (cite) `cite.zumbach2006learning', li
-ne 78.
+ne 92.
 ]
 Package hyperref Info: Anchor `chapter.39' on input line 116.
 
@@ -2539,7 +2595,7 @@ ine 67.
 Package `hyperref' Info: End of reference (link) `figure.caption.47', line 71.
 ]
 Package hyperref Info: Anchor `figure.caption.47' on input line 73.
-<./images/Rollen.png, id=351, 237.88875pt x 214.8025pt>
+<./images/Rollen.png, id=370, 237.88875pt x 214.8025pt>
 File: ./images/Rollen.png Graphic file (type png)
 <use ./images/Rollen.png>
 Package pdftex.def Info: ./images/Rollen.png  used on input line 74.
@@ -2891,7 +2947,7 @@ Package hyperref Info: Reference (cite) `cite.soundcloudinfo' on input line 179
 .
 Package hyperref Info: Reference (link) `figure.caption.99' on input line 179.
 Package hyperref Info: Anchor `figure.caption.99' on input line 181.
-<./images/SoundCloudPlayer.png, id=429, 916.92563pt x 269.50688pt>
+<./images/SoundCloudPlayer.png, id=448, 916.92563pt x 269.50688pt>
 File: ./images/SoundCloudPlayer.png Graphic file (type png)
 <use ./images/SoundCloudPlayer.png>
 Package pdftex.def Info: ./images/SoundCloudPlayer.png  used on input line 182.
@@ -2924,7 +2980,7 @@ Package hyperref Info: Reference (cite) `cite.statista2016video' on input line
 Package hyperref Info: Reference (link) `figure.caption.101' on input line 188.
 
 Package hyperref Info: Anchor `figure.caption.101' on input line 190.
-<./images/YoutubePlayer1.png, id=435, 974.89218pt x 411.03563pt>
+<./images/YoutubePlayer1.png, id=454, 974.89218pt x 411.03563pt>
 File: ./images/YoutubePlayer1.png Graphic file (type png)
 <use ./images/YoutubePlayer1.png>
 Package pdftex.def Info: ./images/YoutubePlayer1.png  used on input line 191.
@@ -2989,7 +3045,7 @@ Package `hyperref' Info: End of reference (cite) `cite.youtubeinfokarten', line
  195.
  <./images/SoundCloudPlayer.png>]
 Package hyperref Info: Anchor `figure.caption.102' on input line 197.
-<./images/YoutubePlayer2.png, id=459, 970.3753pt x 410.2828pt>
+<./images/YoutubePlayer2.png, id=478, 970.3753pt x 410.2828pt>
 File: ./images/YoutubePlayer2.png Graphic file (type png)
 <use ./images/YoutubePlayer2.png>
 Package pdftex.def Info: ./images/YoutubePlayer2.png  used on input line 198.
@@ -3240,7 +3296,7 @@ Package `hyperref' Info: End of reference (link) `figure.caption.127', line 277
 .
 ]
 Package hyperref Info: Anchor `figure.caption.127' on input line 286.
-<./images/UMLZusammenhaenge.pdf, id=513, 693.59125pt x 463.7325pt>
+<./images/UMLZusammenhaenge.pdf, id=532, 693.59125pt x 463.7325pt>
 File: ./images/UMLZusammenhaenge.pdf Graphic file (type pdf)
 <use ./images/UMLZusammenhaenge.pdf>
 Package pdftex.def Info: ./images/UMLZusammenhaenge.pdf  used on input line 287
@@ -3359,13 +3415,13 @@ Package hyperref Info: bookmark on input line 24:
 (hyperref)             type {tdo}.
 Package hyperref Info: Reference (link) `figure.caption.134' on input line 31.
 Package hyperref Info: Anchor `figure.caption.134' on input line 33.
-<./images/MockupPlayerVersion1.pdf, id=552, 602.9225pt x 496.52502pt>
+<./images/MockupPlayerVersion1.pdf, id=571, 602.9225pt x 496.52502pt>
 File: ./images/MockupPlayerVersion1.pdf Graphic file (type pdf)
 <use ./images/MockupPlayerVersion1.pdf>
 Package pdftex.def Info: ./images/MockupPlayerVersion1.pdf  used on input line 
 35.
 (pdftex.def)             Requested size: 364.19667pt x 299.93262pt.
-<./images/MockupPlayerVersion2.pdf, id=553, 602.9225pt x 496.52502pt>
+<./images/MockupPlayerVersion2.pdf, id=572, 602.9225pt x 496.52502pt>
 File: ./images/MockupPlayerVersion2.pdf Graphic file (type pdf)
 <use ./images/MockupPlayerVersion2.pdf>
 Package pdftex.def Info: ./images/MockupPlayerVersion2.pdf  used on input line 
@@ -3434,31 +3490,31 @@ Package hyperref Info: Anchor `page.32' on input line 83.
 [32 <./images/MockupPlayerVersion1.pdf> <./images/MockupPlayerVersion2.pdf>]
 Package hyperref Info: Reference (link) `figure.caption.136' on input line 89.
 Package hyperref Info: Anchor `figure.caption.136' on input line 91.
-<./images/MockupGalerieGrid.pdf, id=584, 267.67003pt x 267.67003pt>
+<./images/MockupGalerieGrid.pdf, id=603, 267.67003pt x 267.67003pt>
 File: ./images/MockupGalerieGrid.pdf Graphic file (type pdf)
 <use ./images/MockupGalerieGrid.pdf>
 Package pdftex.def Info: ./images/MockupGalerieGrid.pdf  used on input line 93.
 
 (pdftex.def)             Requested size: 182.09833pt x 182.10713pt.
-<./images/MockupGalerieGridErweitert.pdf, id=585, 267.67003pt x 267.67003pt>
+<./images/MockupGalerieGridErweitert.pdf, id=604, 267.67003pt x 267.67003pt>
 File: ./images/MockupGalerieGridErweitert.pdf Graphic file (type pdf)
 <use ./images/MockupGalerieGridErweitert.pdf>
 Package pdftex.def Info: ./images/MockupGalerieGridErweitert.pdf  used on input
  line 98.
 (pdftex.def)             Requested size: 182.09833pt x 182.10713pt.
-<./images/MockupGalerieKacheln.pdf, id=586, 267.67003pt x 267.67003pt>
+<./images/MockupGalerieKacheln.pdf, id=605, 267.67003pt x 267.67003pt>
 File: ./images/MockupGalerieKacheln.pdf Graphic file (type pdf)
 <use ./images/MockupGalerieKacheln.pdf>
 Package pdftex.def Info: ./images/MockupGalerieKacheln.pdf  used on input line 
 104.
 (pdftex.def)             Requested size: 182.09833pt x 182.10713pt.
-<./images/MockupGalerieCoverFlow.pdf, id=587, 267.67003pt x 267.67003pt>
+<./images/MockupGalerieCoverFlow.pdf, id=606, 267.67003pt x 267.67003pt>
 File: ./images/MockupGalerieCoverFlow.pdf Graphic file (type pdf)
 <use ./images/MockupGalerieCoverFlow.pdf>
 Package pdftex.def Info: ./images/MockupGalerieCoverFlow.pdf  used on input lin
 e 109.
 (pdftex.def)             Requested size: 182.09833pt x 182.10713pt.
-<./images/MockupGalerieFinal.pdf, id=588, 267.67003pt x 240.9pt>
+<./images/MockupGalerieFinal.pdf, id=607, 267.67003pt x 240.9pt>
 File: ./images/MockupGalerieFinal.pdf Graphic file (type pdf)
 <use ./images/MockupGalerieFinal.pdf>
 Package pdftex.def Info: ./images/MockupGalerieFinal.pdf  used on input line 11
@@ -3492,13 +3548,13 @@ Package hyperref Info: Reference (link) `figure.caption.138' on input line 133.
 Package hyperref Info: Reference (link) `figure.caption.138' on input line 140.
 
 Package hyperref Info: Anchor `figure.caption.138' on input line 142.
-<./images/MockupKommentarsektionVersion1.pdf, id=591, 590.8775pt x 305.14pt>
+<./images/MockupKommentarsektionVersion1.pdf, id=610, 590.8775pt x 305.14pt>
 File: ./images/MockupKommentarsektionVersion1.pdf Graphic file (type pdf)
 <use ./images/MockupKommentarsektionVersion1.pdf>
 Package pdftex.def Info: ./images/MockupKommentarsektionVersion1.pdf  used on i
 nput line 144.
 (pdftex.def)             Requested size: 455.24411pt x 235.09354pt.
-<./images/MockupKommentarsektionFinal.pdf, id=592, 590.8775pt x 305.14pt>
+<./images/MockupKommentarsektionFinal.pdf, id=611, 590.8775pt x 305.14pt>
 File: ./images/MockupKommentarsektionFinal.pdf Graphic file (type pdf)
 <use ./images/MockupKommentarsektionFinal.pdf>
 Package pdftex.def Info: ./images/MockupKommentarsektionFinal.pdf  used on inpu
@@ -3528,13 +3584,13 @@ Package hyperref Info: Reference (link) `figure.caption.140' on input line 166.
 Package hyperref Info: Reference (link) `figure.caption.140' on input line 166.
 
 Package hyperref Info: Anchor `figure.caption.140' on input line 178.
-<./images/MockupSeiteLayoutVersion1.pdf, id=596, 1041.8925pt x 807.6875pt>
+<./images/MockupSeiteLayoutVersion1.pdf, id=615, 1041.8925pt x 807.6875pt>
 File: ./images/MockupSeiteLayoutVersion1.pdf Graphic file (type pdf)
 <use ./images/MockupSeiteLayoutVersion1.pdf>
 Package pdftex.def Info: ./images/MockupSeiteLayoutVersion1.pdf  used on input 
 line 180.
 (pdftex.def)             Requested size: 409.71692pt x 317.62193pt.
-<./images/MockupSeiteLayoutFinal.pdf, id=597, 1041.8925pt x 820.395pt>
+<./images/MockupSeiteLayoutFinal.pdf, id=616, 1041.8925pt x 820.395pt>
 File: ./images/MockupSeiteLayoutFinal.pdf Graphic file (type pdf)
 <use ./images/MockupSeiteLayoutFinal.pdf>
 Package pdftex.def Info: ./images/MockupSeiteLayoutFinal.pdf  used on input lin
@@ -3824,7 +3880,7 @@ Package hyperref Info: Anchor `figure.caption.153' on input line 152.
 
 pdfTeX warning: pdflatex (file ./images/VerwendungMoodle.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<./images/VerwendungMoodle.pdf, id=685, 844.95674pt x 597.432pt>
+<./images/VerwendungMoodle.pdf, id=704, 844.95674pt x 597.432pt>
 File: ./images/VerwendungMoodle.pdf Graphic file (type pdf)
 <use ./images/VerwendungMoodle.pdf>
 Package pdftex.def Info: ./images/VerwendungMoodle.pdf  used on input line 152.
@@ -3917,28 +3973,29 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 26.
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package hyperref Info: Anchor `cite.cooper2004inmates' on input line 28.
-Package hyperref Info: Anchor `cite.fernuniversitaet2018kurs' on input line 34.
+Package hyperref Info: Anchor `cite.dillenbourg1999collaborative' on input line
+ 34.
+Package hyperref Info: Anchor `cite.fernuniversitaet2018kurs' on input line 40.
 
 Package hyperref Info: Anchor `cite.fernuniversitaet2018kommunikationstools' on
- input line 42.
+ input line 48.
 Package hyperref Info: Anchor `cite.fernuniversitaet2018moodle' on input line 5
-2.
-Package hyperref Info: Anchor `cite.fernuniversitaet2018stat' on input line 60.
+8.
+Package hyperref Info: Anchor `cite.fernuniversitaet2018stat' on input line 66.
 
-Package hyperref Info: Anchor `cite.fernuniversitaet2018vu' on input line 69.
-Package hyperref Info: Anchor `cite.youtubeabspann' on input line 77.
-Package hyperref Info: Anchor `cite.youtubeinfokarten' on input line 85.
-Package hyperref Info: Anchor `cite.mcluhan1977laws' on input line 92.
-Package hyperref Info: Anchor `cite.moodle2015aufbau' on input line 97.
-Package hyperref Info: Anchor `cite.moodle2015was' on input line 104.
-Package hyperref Info: Anchor `cite.moodle2017plugin' on input line 111.
-Package hyperref Info: Anchor `cite.moodle2018about' on input line 119.
-Package hyperref Info: Anchor `cite.moodle2018stats' on input line 125.
-Package hyperref Info: Anchor `cite.moos2010multimedia' on input line 131.
-Package hyperref Info: Anchor `cite.nelson1965complex' on input line 138.
-Package hyperref Info: Anchor `cite.nielsen2013multimedia' on input line 145.
-Package hyperref Info: Anchor `cite.Norman1986user' on input line 151.
-Package hyperref Info: Anchor `cite.oppermann2002user' on input line 158.
+Package hyperref Info: Anchor `cite.fernuniversitaet2018vu' on input line 75.
+Package hyperref Info: Anchor `cite.youtubeabspann' on input line 83.
+Package hyperref Info: Anchor `cite.youtubeinfokarten' on input line 91.
+Package hyperref Info: Anchor `cite.mcluhan1977laws' on input line 98.
+Package hyperref Info: Anchor `cite.moodle2015aufbau' on input line 103.
+Package hyperref Info: Anchor `cite.moodle2015was' on input line 110.
+Package hyperref Info: Anchor `cite.moodle2017plugin' on input line 117.
+Package hyperref Info: Anchor `cite.moodle2018about' on input line 125.
+Package hyperref Info: Anchor `cite.moodle2018stats' on input line 131.
+Package hyperref Info: Anchor `cite.moos2010multimedia' on input line 137.
+Package hyperref Info: Anchor `cite.nelson1965complex' on input line 144.
+Package hyperref Info: Anchor `cite.nielsen2013multimedia' on input line 151.
+Package hyperref Info: Anchor `cite.Norman1986user' on input line 157.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -3978,16 +4035,21 @@ Package `hyperref' Info: End of reference (link) `figure.caption.140', line 166
 Package `hyperref' Info: End of reference (link) `figure.caption.140', line 166
 .
 ]
-Package hyperref Info: Anchor `cite.erwartungskonformitaet' on input line 164.
-Package hyperref Info: Anchor `cite.schmidt2013physical' on input line 172.
-Package hyperref Info: Anchor `cite.scutter2010students' on input line 180.
-Package hyperref Info: Anchor `cite.SoundCloud2015Panic' on input line 186.
-Package hyperref Info: Anchor `cite.soundcloudinfo' on input line 195.
-Package hyperref Info: Anchor `cite.statista2016video' on input line 201.
-Package hyperref Info: Anchor `cite.destatis2015zeit' on input line 209.
-Package hyperref Info: Anchor `cite.wirdemann2017scrum' on input line 218.
-Package hyperref Info: Anchor `cite.Youtube2015Panic' on input line 223.
-Package hyperref Info: Anchor `cite.zumbach2006learning' on input line 229.
+Package hyperref Info: Anchor `cite.oppermann2002user' on input line 164.
+Package hyperref Info: Anchor `cite.pauli2000rolle' on input line 170.
+Package hyperref Info: Anchor `cite.erwartungskonformitaet' on input line 176.
+Package hyperref Info: Anchor `cite.reinmann1995kooperation' on input line 183.
+
+Package hyperref Info: Anchor `cite.reinmann2002analyse' on input line 189.
+Package hyperref Info: Anchor `cite.schmidt2013physical' on input line 197.
+Package hyperref Info: Anchor `cite.scutter2010students' on input line 205.
+Package hyperref Info: Anchor `cite.SoundCloud2015Panic' on input line 211.
+Package hyperref Info: Anchor `cite.soundcloudinfo' on input line 220.
+Package hyperref Info: Anchor `cite.statista2016video' on input line 226.
+Package hyperref Info: Anchor `cite.destatis2015zeit' on input line 234.
+Package hyperref Info: Anchor `cite.wirdemann2017scrum' on input line 243.
+Package hyperref Info: Anchor `cite.Youtube2015Panic' on input line 248.
+Package hyperref Info: Anchor `cite.zumbach2006learning' on input line 254.
 )
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 174.
@@ -4372,10 +4434,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 30395 strings out of 492973
- 541167 string characters out of 3135888
+ 30411 strings out of 492973
+ 541619 string characters out of 3135888
  911642 words of memory out of 3000000
- 33272 multiletter control sequences out of 15000+200000
+ 33284 multiletter control sequences out of 15000+200000
  111956 words of font info for 87 fonts, out of 3000000 for 9000
  1166 hyphenation exceptions out of 8191
  80i,11n,80p,9084b,717s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -4392,9 +4454,9 @@ e1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
 sso10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso9.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/lm/lmtt9.pfb>
-Output written on BA.pdf (57 pages, 3321822 bytes).
+Output written on BA.pdf (57 pages, 3327496 bytes).
 PDF statistics:
- 1087 PDF objects out of 1200 (max. 8388607)
- 254 named destinations out of 1000 (max. 500000)
+ 1106 PDF objects out of 1200 (max. 8388607)
+ 258 named destinations out of 1000 (max. 500000)
  532 words of extra memory for PDF output out of 10000 (max. 10000000)
 

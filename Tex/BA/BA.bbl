@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -30,6 +30,12 @@ Alan Cooper et~al.
 \newblock \emph{The inmates are running the asylum:[Why high-tech products
   drive us crazy and how to restore the sanity]}.
 \newblock Sams Indianapolis, 2004.
+
+\bibitem[Dillenbourg(1999)]{dillenbourg1999collaborative}
+Pierre Dillenbourg.
+\newblock \emph{Collaborative learning: Cognitive and computational approaches.
+  advances in learning and instruction series.}
+\newblock ERIC, 1999.
 
 \bibitem[{FernUniversität in Hagen}(2014)]{fernuniversitaet2018kurs}
 {FernUniversität in Hagen}.
@@ -161,12 +167,31 @@ Reinhard Oppermann.
 \newblock In \emph{Handbook on information technologies for education and
   training}, pages 233--248. Springer, 2002.
 
+\bibitem[Pauli und Reusser(2000)]{pauli2000rolle}
+Christine Pauli und Kurt Reusser.
+\newblock Zur rolle der lehrperson beim kooperativen lernen.
+\newblock \emph{Schweizerische Zeitschrift fur Bildungswissenschaften}, pages
+  421--442, 2000.
+
 \bibitem[{Rampl, Hansjörg}(2007)]{erwartungskonformitaet}
 {Rampl, Hansjörg}.
 \newblock {ISO 9241:10 Erwartungskonformität}.
 \newblock \url{http://www.handbuch-usability.de/erwartungskonformitaet.html},
   2007.
 \newblock abgerufen am 30.07.2018.
+
+\bibitem[Reinmann-Rothmeier und Mandl(1995)]{reinmann1995kooperation}
+Gabi Reinmann-Rothmeier und Heinz Mandl.
+\newblock Kooperation. lernen im team.
+\newblock \emph{Grundlagen der Weiterbildung}, 6\penalty0 (2):\penalty0 65--68,
+  1995.
+
+\bibitem[Reinmann-Rothmeier und Mandl(2002)]{reinmann2002analyse}
+Gabi Reinmann-Rothmeier und Heinz Mandl.
+\newblock Analyse und f{\"o}rderung kooperativen lernens in netzbasierten
+  umgebungen.
+\newblock \emph{Zeitschrift f{\"u}r Entwicklungspsychologie und
+  P{\"a}dagogische Psychologie}, 34\penalty0 (1):\penalty0 44--57, 2002.
 
 \bibitem[Schmidt-Kassow et~al.(2013)Schmidt-Kassow, Deusser, Thiel, Otterbein,
   Montag, Reuter, Banzer, und Kaiser]{schmidt2013physical}
