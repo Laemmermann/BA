@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -36,6 +36,11 @@ Pierre Dillenbourg.
 \newblock \emph{Collaborative learning: Cognitive and computational approaches.
   advances in learning and instruction series.}
 \newblock ERIC, 1999.
+
+\bibitem[Dillenbourg et~al.(1995)Dillenbourg, Baker, Blaye, und
+  O'Malley]{dillenbourg1995evolution}
+Pierre Dillenbourg, Michael~J Baker, Agnes Blaye, und Claire O'Malley.
+\newblock The evolution of research on collaborative learning, 1995.
 
 \bibitem[{FernUniversität in Hagen}(2014)]{fernuniversitaet2018kurs}
 {FernUniversität in Hagen}.
