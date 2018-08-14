@@ -1,5 +1,6 @@
 Mit den Erkenntnissen des vorherigen Kapitels können wir uns nun der Konzeption unseres Moodle-Plugins zuwenden. Dabei werden wir zu Beginn verschiedene Nutzungsszenarien basierend auf den bereits festgelegten Anforderungen definieren. Diese sollen dann im späteren Verlauf auch zur Evaluierung der Implementierung herangezogen werden. Mit diesen Nutzungsszenarien im Hinterkopf wenden wir uns dann im nächsten Schritt der Benutzeroberfläche und deren Gestaltung zu. Abschließend haben wir ausreichend Vorarbeiten geleistet, um die Architektur des Plugins festzulegen und das Schnittstellenformat zu definieren. Diese stellen dann die letzten Schritte vor der Implementierung des Plugins dar.
-
+\todo[inline]{komplett überarbeiten}
+Der in Abbildung \ref{fig:UMLAufbau} dargestellte Zusammenhang zwischen Zusatzinhalt und Hyperaudio-Dokument kann mittels einer Schnittstellendatei umgesetzt werden. Diese wird im laufe des Kapitels genauer erörtert.
 
 
 %%%%%%%%%%
@@ -202,13 +203,65 @@ Im ersten Schritt führen wir die jeweils favorisierten Elemente in ein Layout z
 
 
 %%%%%%%%%%
-\section{Datenbankentwurf}
-\dots
+\section{Definition des Schnittstellenformats für Hyperaudio-Dokumente}
+\todo[inline]{Grobe Beschreibung der Struktur und des Ablaufs...u.A. warum Schnittstellendatei notwendig ist}
+Wie in der Einleitung dieses Kapitels beschrieben, kann die Konfiguration zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll mittels einer Konfigurationsdatei durchgeführt werden. Diese Vorgehensweise wird nun umgesetzt und die Konfigurationsdatei ist entsprechend zu definieren.
+Auf Grund des Einsatzes von \textit{PHP} und \textit{JavaScript} innerhalb der Moodle Plugin-Entwicklung bietet sich der Einsatz von \textit{JSON} (JavaScript Object Notation) an. \textit{JSON} wird direkt durch \textit{JavaScript} unterstützt, ist somit am besten für \textit{JavaScript} geeignet und bietet im Vergleich zu \textit{XML} erhebliche Geschwindigkeitsvorteile \citep{nurseitov2009comparison}.
+%JSON is directly supported inside JavaScript [7] and is best suited for JavaScript applications; thus providing significant performance gains over XML, 
+Mittels der \textit{JSON}-Datei sollen folgende Informationen der Zusatzinhalte übertragen werden:
 
+\begin{itemize}
+\item Dateiname
+\item Name des Zusatzinhaltes
+\item Kurseinheit
+\item Betroffene Seiten innerhalb der Kurseinheit
+\item Beschreibung des Zusatzinhaltes
+\item Anfangszeitpunkt der Annotation
+\item Endzeitpunkt der Annotation
+\end{itemize}
+
+Entscheidend ist hierbei der Dateiname, anhand des Dateinamens wird anschließend die Zuordnung der weiteren Informationen zu dem entsprechenden Eintrag in der Datenbank vorgenommen. Eine beispielhaft befüllte \textit{JSON}-Datei ist in Auflistung \ref{lst:JSON} dargestellt.
+
+\begin{lstlisting}[basicstyle=\small,
+             inputencoding={utf8}, 
+             extendedchars=false,
+             commentstyle=\color{black}, 
+             keywordstyle=\color{black}, 
+             escapeinside=``,
+             linewidth=\textwidth,
+             caption={Beispielhafte \textit{JSON}-Datei},
+             label={lst:JSON}]             
+{
+  `''`additional_contents`''`: {
+    `''`additional_content`''`: [
+      {`''`filename`''`: `''`Bronnamberg.png`''`, `''`name`''`: `''`Sonnenuntergang Bronnamberg`''`, `''`course_unit`''`: `''`1`''`, `''`page`''`: `''`10-20`''`, `''`description`''`: `''`asdf`''`, `''`begin`''`: `''`5`''`, `''`end`''`: `''`10`''`},
+      {`''`filename`''`: `''`Apple.JPG`''`, `''`name`''`: `''`Apple Rechnung`''`, `''`course_unit`''`: `''`2`''`, `''`page`''`: `''`40-50`''`, `''`description`''`: `''`asdf`''`, `''`begin`''`: `''`15`''`, `''`end`''`: `''`25`''`}
+    ]
+  }
+}
+\end{lstlisting}
+\todo[inline]{JSON Beispieldaten austauschen}
 
 %%%%%%%%%%
-\section{Definition des Schnittstellenformats für Hyperaudio-Dokumente}
-\dots
+\section{Datenbankentwurf}
+Grundlage für die folgende Implementieren stellt der Datenbankentwurf (siehe Abbildung \ref{fig:ERDiagramm}) für das Moodle-Plugin dar. Hierfür wird auf die Erkenntnisse aus Abschnitt \ref{sec:komponenten_zusammenhänge} und Abbildung \ref{fig:UMLAufbau} zurückgegriffen.
+
+Im Mittelpunkt steht die Tabelle \textit{hyperaudio}. Diese repräsentiert das Hyperaudio-Dokument und die Audio-Datei aus Abbildung \ref{fig:UMLAufbau}. Um dies zu bewerkstelligen wird in dieser Tabelle der Name des Hyperaudio-Dokuments, die ID des Moodle-Kurses in dem das Hyperaudio-Dokument verwendet wird, der Dateiname der Audio-Datei, der Ersteller, eine optionale Beschreibung und Informationen zum Erstellungs- und Änderungsdatum festgehalten.
+
+In der Tabelle \textit{additional\_content} werden die Metadaten (Name, Beschreibung, Kurseinheit, Seite, Dateiname, Startzeitpunkt der Annotation und Endzeitpunkt der Annotation) des annotierten Zusatzinhaltes festgehalten. Ergänzt werden diese durch den Fremdschlüssel \textit{hyperaudio\_id} mittels dessen Hilfe die 1-zu-n Beziehung mit der Tabelle \textit{hyperaudio} hergestellt wird. Die Attribute Erstellungs- und Änderungsdatum sind obligatorisch 
+
+Die Tabelle \textit{hyperaudio\_comments} dient der Speicherung der vier in Abbildung \ref{fig:UMLAufbau} modulierten Kommentararten. Das Attribut \textit{hyperaudio\_id} stellt erneut den Fremdschlüssel für die  1-zu-n Beziehung mit der Tabelle \textit{hyperaudio} dar. Zum Sichern der Kommentare werden Attribute für die User-ID des Verfassers, den Kommentartext, den Kommentartyp und den Annotationszeitpunkt zur Verfügung gestellt. Mittels des Attributs \textit{comment\_id} ist es möglich Antworten zu Kommentaren zu realisieren.
+
+Bei der Tabelle \textit{hyperaudio\_config} handelt es sich um eine Tabelle in welcher die nötigen Informationen der Konfigurations-Datei für die zu annotierenden Zusatzinhalte abgespeichert werden können, um später auf die Datei zugreifen zu können. Dementsprechend werden hier nur der Dateiname, der Fremdschlüssel für die 1-zu-1 Beziehung zur Tabelle \textit{hyperaudio} und zeitliche Informationen festgehalten.
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth,center]{ERDiagramm.png}
+\caption{\label{fig:ERDiagramm}ER-Diagramm der Datenbank des Moodle-Plugins}
+\end{figure}
+
+
+
+
 
 %%%%%%%%%%
 \section{Zusammenfassung}
