@@ -37,38 +37,38 @@
 \contentsline {subsubsection}{\nonumberline BAT - BMAT Annotation Tool}{28}{section*.106}
 \contentsline {subsubsection}{\nonumberline wavesurfer.js f\IeC {\"u}r Hyperaudio-Dokumente}{28}{section*.109}
 \contentsline {subsubsection}{\nonumberline timesheets.js}{28}{section*.110}
-\contentsline {section}{\numberline {3.5}Zusammenh\IeC {\"a}nge der Komponenten von Hyperaudio-Dokument und Annotationen}{28}{section.112}
-\contentsline {subsection}{\numberline {3.5.1}Komponenten}{29}{subsection.114}
-\contentsline {subsection}{\numberline {3.5.2}Zusammenh\IeC {\"a}nge}{29}{subsection.115}
-\contentsline {section}{\numberline {3.6}Zusammenfassung}{29}{section.118}
-\contentsline {chapter}{\numberline {4}Konzept}{31}{chapter.119}
-\contentsline {section}{\numberline {4.1}Gestaltung der Benutzeroberfl\IeC {\"a}che}{31}{section.121}
-\contentsline {subsubsection}{\nonumberline Player}{31}{section*.123}
-\contentsline {subsubsection}{\nonumberline Galerie}{32}{section*.126}
-\contentsline {subsubsection}{\nonumberline Kommentarsektion}{34}{section*.128}
-\contentsline {subsubsection}{\nonumberline Zusammenf\IeC {\"u}hren der Elemente}{34}{section*.130}
-\contentsline {section}{\numberline {4.2}Definition des Schnittstellenformats f\IeC {\"u}r Hyperaudio-Dokumente}{35}{section.132}
-\contentsline {section}{\numberline {4.3}Datenbankentwurf}{37}{section.145}
-\contentsline {section}{\numberline {4.4}Zusammenfassung}{38}{section.148}
-\contentsline {chapter}{\numberline {5}Implementierung}{41}{chapter.149}
-\contentsline {section}{\numberline {5.1}Architektur des Moodle-Plugins}{41}{section.150}
-\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{41}{section.152}
-\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{41}{subsection.153}
-\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{42}{subsection.154}
-\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{42}{subsection.155}
-\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{42}{subsection.156}
-\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{42}{subsection.157}
-\contentsline {subsection}{\numberline {5.2.6}Galerie der Zusatzinhalte}{42}{subsection.158}
-\contentsline {subsection}{\numberline {5.2.7}Visualisierung der Annotationen in der Timeline}{42}{subsection.159}
-\contentsline {section}{\numberline {5.3}Zusammenfassung}{42}{section.160}
-\contentsline {chapter}{\numberline {6}Evaluation}{43}{chapter.161}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{44}{chapter.162}
-\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{45}{appendix.164}
-\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{47}{appendix.166}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{49}{chapter*.167}
-\contentsline {chapter}{Abbildungsverzeichnis}{51}{section*.168}
-\contentsline {chapter}{Tabellenverzeichnis}{53}{section*.169}
-\contentsline {chapter}{Auflistungsverzeichnis}{55}{section*.170}
-\contentsline {chapter}{Verzeichnis der Algorithmen}{57}{section*.172}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{59}{section*.174}
+\contentsline {section}{\numberline {3.5}Zusammenfassung}{28}{section.112}
+\contentsline {chapter}{\numberline {4}Konzept}{29}{chapter.113}
+\contentsline {section}{\numberline {4.1}Zusammenh\IeC {\"a}nge der Komponenten von Hyperaudio-Dokument und Annotationen}{29}{section.115}
+\contentsline {subsection}{\numberline {4.1.1}Komponenten}{29}{subsection.117}
+\contentsline {subsection}{\numberline {4.1.2}Zusammenh\IeC {\"a}nge}{30}{subsection.118}
+\contentsline {section}{\numberline {4.2}Definition des Schnittstellenformats f\IeC {\"u}r Hyperaudio-Dokumente}{31}{section.120}
+\contentsline {section}{\numberline {4.3}Datenbankentwurf}{31}{section.133}
+\contentsline {section}{\numberline {4.4}Gestaltung der Benutzeroberfl\IeC {\"a}che}{32}{section.136}
+\contentsline {subsubsection}{\nonumberline Player}{33}{section*.138}
+\contentsline {subsubsection}{\nonumberline Galerie}{34}{section*.141}
+\contentsline {subsubsection}{\nonumberline Kommentarsektion}{37}{section*.143}
+\contentsline {subsubsection}{\nonumberline Zusammenf\IeC {\"u}hren der Elemente}{37}{section*.145}
+\contentsline {section}{\numberline {4.5}Zusammenfassung}{37}{section.147}
+\contentsline {chapter}{\numberline {5}Implementierung}{40}{chapter.148}
+\contentsline {section}{\numberline {5.1}Architektur des Moodle-Plugins}{40}{section.149}
+\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{40}{section.151}
+\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{40}{subsection.152}
+\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{41}{subsection.153}
+\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{41}{subsection.154}
+\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{41}{subsection.155}
+\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{41}{subsection.156}
+\contentsline {subsection}{\numberline {5.2.6}Galerie der Zusatzinhalte}{41}{subsection.157}
+\contentsline {subsection}{\numberline {5.2.7}Visualisierung der Annotationen in der Timeline}{41}{subsection.158}
+\contentsline {section}{\numberline {5.3}Zusammenfassung}{41}{section.159}
+\contentsline {chapter}{\numberline {6}Evaluation}{42}{chapter.160}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{43}{chapter.161}
+\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{44}{appendix.163}
+\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{46}{appendix.165}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{48}{chapter*.166}
+\contentsline {chapter}{Abbildungsverzeichnis}{51}{section*.167}
+\contentsline {chapter}{Tabellenverzeichnis}{53}{section*.168}
+\contentsline {chapter}{Auflistungsverzeichnis}{55}{section*.169}
+\contentsline {chapter}{Verzeichnis der Algorithmen}{57}{section*.171}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{59}{section*.173}
 \contentsfinish 

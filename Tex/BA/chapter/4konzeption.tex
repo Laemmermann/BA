@@ -2,6 +2,110 @@ Mit den Erkenntnissen des vorherigen Kapitels können wir uns nun der Konzeption
 \todo[inline]{komplett überarbeiten}
 Der in Abbildung \ref{fig:UMLAufbau} dargestellte Zusammenhang zwischen Zusatzinhalt und Hyperaudio-Dokument kann mittels einer Schnittstellendatei umgesetzt werden. Diese wird im laufe des Kapitels genauer erörtert.
 
+%%%%%%%%%%
+\section{Zusammenhänge der Komponenten von Hyperaudio-Dokument und Annotationen}
+Basierend auf der Definition eines Hyperaudio-Dokuments aus Abschnitt \ref{sec:hyperaudio} und der in Abschnitt \ref{sec:anforderungsdefinition} erarbeiteten Anforderungen werden die Zusammenhänge der medialen Komponenten weiter analysiert. Hierbei soll vor allem geklärt werden, wie die einzelnen Komponenten von Hyperaudio-Dokument und Annotationen zusammenhängen und welche Möglichkeiten dadurch gegeben beziehungsweise nicht gegeben sind.
+
+
+%%%%%%%%%%
+\subsection{Komponenten}
+Im Mittelpunkt eines Hyperaudio-Dokuments steht eine Audio-Datei. Inhaltlich kann es sich hierbei beispielsweise um einen Vorlesungsvortrag handeln. Man könnte sich auch vorstellen, dass ein Hyperaudio-Dokument aus mehreren aneinandergereihten Audio-Dateien besteht. Dies würde an der grundsätzlichen Problemstellung jedoch nichts ändern und kann im Nachhinein jederzeit als Erweiterung umgesetzt werden. Aus diesem Grund wird in dieser Arbeit nur ein Plugin für ein Hyperaudio-Dokument bestehend aus einer Audio-Datei entwickelt.
+
+Neben dieser zentralen Audio-Datei besteht das Hyperaudio-Dokument aus mehreren Zusatzinhalten, wobei es sich um Bilder, Graphen, Tabellen usw. handeln kann. Entscheidend ist aber, dass diese Zusatzinhalte immer nur eine rein grafische Darstellung verkörpern. Videos mit Ton sind somit beispielsweise nicht als Zusatzinhalt verwendbar, reine Animationen ohne Ton sind aber durchaus möglich.
+
+Als besondere, nämlich externe Komponente, sind die Kommentare zu nennen. Diese gehören nicht zum eigentlichen Hyperaudio-Dokument, sollen aber mit diesem verknüpft werden. Es wird drei verschiedene Arten von Kommentaren geben, nämlich  öffentliche Kommentare, persönliche Notizen und persönliche Markierungen. Innerhalb der öffentlichen Kommentare muss noch zwischen den Original-Kommentaren und den Antworten auf diese unterschieden werden. 
+
+
+%%%%%%%%%%
+\subsection{Zusammenhänge}
+\label{sec:komponenten_zusammenhänge}
+Diese Zusammenhänge der soeben genannten Komponenten sind im UML-Diagramm in Abbildung \ref{fig:UMLAufbau} ersichtlich. Zunächst werden die Zusammenhänge zwischen der Audio-Datei und den Zusatzinhalten betrachtet. Nach dem Master-Slave-Prinzip werden Zusatzinhalte der Audio-Datei untergeordnet. Zu jedem beliebigen Zeitpunkt innerhalb der Abspieldauer der Audio-Datei kann maximal ein Zusatzinhalt gleichzeitig annotiert werden. Es sind also auch Phasen möglich, zu denen keinerlei Zusatzinhalt dargestellt wird. Das Zeitfenster für die Annotation soll mittels einer Start- und Endzeit pro Zusatzinhalt definiert werden, wobei nur die Minuten und Sekunden anzugeben sind. Bei dem Zeitfenster sollte natürlich bedacht werden, dass dieses nicht zu kurz sein sollte. Zwar soll, sobald ein Zusatzinhalt im Player des Hyperaudio-Dokuments angezeigt wird, ein entsprechender Audio Cue abgespielt werden, dennoch können bereits einige Sekunden vergehen bis der Studierende seinen Blick dem Player zuwendet.
+
+Auch die Kommentare stehen als externe Komponente in einer gewissen Art und Weise im Zusammenhang mit der Audio-Datei. Dies ergibt sich daraus, dass Kommentare zu einem bestimmten Zeitpunkt innerhalb der Audio-Datei erfasst werden. Während Antworten auf Original-Kommentare erfasst werden können, sind Antworten auf Antworten nicht möglich.
+
+Zwischen Kommentaren und Zusatzinhalten gibt es jedoch keinen direkten Zusammenhang. Solche Zusammenhänge ergeben sich alleine aus den Zeitpunkten der Annotationen. Zusatzinhalte können wiederum in keinem Zusammenhang mit einem anderen Zusatzinhalt stehen.
+
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth,center]{UMLZusammenhaenge.pdf}
+\caption{\label{fig:UMLAufbau}Zusammenhänge der Komponenten}
+\end{figure}
+
+
+%%%%%%%%%%
+\section{Definition des Schnittstellenformats für Hyperaudio-Dokumente}
+\label{sec:konfigurationsdatei}
+\todo[inline]{Grobe Beschreibung der Struktur und des Ablaufs...u.A. warum Schnittstellendatei notwendig ist}
+\todo[inline]{Metainformationen zu Zusatzinhalten}
+Wie in der Einleitung dieses Kapitels beschrieben, kann die Konfiguration zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll mittels einer Konfigurationsdatei durchgeführt werden. Diese Vorgehensweise wird nun umgesetzt und die Konfigurationsdatei ist entsprechend zu definieren.
+Auf Grund des Einsatzes von \textit{PHP} und \textit{JavaScript} innerhalb der Moodle Plugin-Entwicklung bietet sich der Einsatz von \textit{JSON} (JavaScript Object Notation) an. \textit{JSON} wird direkt durch \textit{JavaScript} unterstützt, ist somit am besten für \textit{JavaScript} geeignet und bietet im Vergleich zu \textit{XML} erhebliche Geschwindigkeitsvorteile \citep{nurseitov2009comparison}.
+%JSON is directly supported inside JavaScript [7] and is best suited for JavaScript applications; thus providing significant performance gains over XML, 
+Mittels der \textit{JSON}-Datei sollen folgende Informationen der Zusatzinhalte übertragen werden:
+
+\begin{itemize}
+\item Dateiname
+\item Name des Zusatzinhaltes
+\item Kurseinheit
+\item Betroffene Seiten innerhalb der Kurseinheit
+\item Beschreibung des Zusatzinhaltes
+\item Anfangszeitpunkt der Annotation
+\item Endzeitpunkt der Annotation
+\end{itemize}
+
+Entscheidend ist hierbei der Dateiname, anhand des Dateinamens wird anschließend die Zuordnung der weiteren Informationen zu dem entsprechenden Eintrag in der Datenbank vorgenommen. Eine beispielhaft befüllte \textit{JSON}-Datei ist in Auflistung \ref{lst:JSON} dargestellt.
+
+\begin{lstlisting}[basicstyle=\small,
+             inputencoding={utf8}, 
+             extendedchars=false,
+             commentstyle=\color{black}, 
+             keywordstyle=\color{black}, 
+             escapeinside=``,
+             linewidth=\textwidth,
+             caption={Beispielhafte \textit{JSON}-Datei},
+             label={lst:JSON}]             
+{
+  `''`additional_contents`''`: {
+    `''`additional_content`''`: [
+      {`''`filename`''`: `''`Bronnamberg.png`''`, `''`name`''`: `''`Sonnenuntergang Bronnamberg`''`, `''`course_unit`''`: `''`1`''`, `''`page`''`: `''`10-20`''`, `''`description`''`: `''`asdf`''`, `''`begin`''`: `''`5`''`, `''`end`''`: `''`10`''`},
+      {`''`filename`''`: `''`Apple.JPG`''`, `''`name`''`: `''`Apple Rechnung`''`, `''`course_unit`''`: `''`2`''`, `''`page`''`: `''`40-50`''`, `''`description`''`: `''`asdf`''`, `''`begin`''`: `''`15`''`, `''`end`''`: `''`25`''`}
+    ]
+  }
+}
+\end{lstlisting}
+\todo[inline]{JSON Beispieldaten austauschen}
+
+%%%%%%%%%%
+\section{Datenbankentwurf}
+Um die dem Plugin zugrundeliegende Datenbank zu gestalten wird auf die Erkenntnisse aus Abschnitt \ref{sec:komponenten_zusammenhänge} und Abbildung \ref{fig:UMLAufbau} zurückgegriffen. Das Ergebnis ist dem ER-Diagramm in Abbildung \ref{fig:ERDiagramm} zu entnehmen.
+
+Jede der Tabellen verfügt über den Primärschlüssel \textit{id}. Darüber hinaus wird zu jedem Eintrag gespeichert, wann dieser erstellt (\textit{timecreated}) und zuletzt bearbeitet (\textit{timemodified}) wurde. Für das Abspeichern von Dateien stellt Moodle die Tabelle \textit{files} bereit \citep{moodle2018file}. Dort kann die Datei abgelegt und an anderer Stelle darauf referenziert werden.
+
+Im Mittelpunkt des Hyperaudio-Plugins steht die Tabelle \textit{hyperaudio}. Diese repräsentiert das Hyperaudio-Dokument und die Audio-Datei aus Abbildung \ref{fig:UMLAufbau}. Zunächst wird die ID des Moodle-Kurses (\textit{course}) abgelegt, dem das Hyperaudio-Dokument zugeordnet ist. Während die Audio-Datei selbst in der bereits erwähnten Tabelle \textit{files} zu finden ist, wird in der Tabelle \textit{hyperaudio} deren Dateiname (\textit{audiofile}) festgehalten. Zum Hyperaudio-Dokument können außerdem Name und Ersteller in den Spalten \textit{name} und \textit{author} hinterlegt werden. Eine optionale Beschreibung kann entsprechend dem de-facto-Standard der Moodle-Plugin-Entwicklung über \textit{introformat} und \textit{intro} hinzugefügt werden \citep{moodle2016activity}.
+
+Bei der Tabelle \textit{hyperaudio\_config} handelt es sich um eine Tabelle, in welcher die in Abschnitt \ref{sec:konfigurationsdatei} beschriebene Konfigurationsdatei gespeichert wird (\textit{file} enthält den Dateinamen als Referenz auf die \textit{files}-Tabelle). Daneben wird nur noch der Fremdschlüssel \textit{hyperaudio\_id} auf die Tabelle \textit{hyperaudio} als Zuordnung zum Hyperaudio-Dokument benötigt.
+
+\todo[inline]{name in hyperaudio\_config entfernen}
+
+Zur Ablage der annotierten Zusatzinhalte dient die Tabelle \textit{additional\_content}. Auch hier steht der Name der Datei in der Spalte \textit{file} als Referenz auf die \textit{files}-Tabelle. Ebenso dient der Fremdschlüssel \textit{hyperaudio\_id} zur Verknüpfung des Zusatzinhalts mit dem Hyperaudio-Dokument. Des Weiteren werden folgende Metainformationen zum Zusatzinhalt abgespeichert:
+
+\begin{itemize}
+
+\item Name des Zusatzinhalts (\textit{name})
+\item optional: Beschreibung (\textit{description})
+\item optional: Kurseinheit (\textit{course\_unit})
+\item optional: Seitenangabe (\textit{page})
+\item Startzeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments (\textit{begin})
+\item Endzeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments (\textit{end})
+
+\end{itemize}
+
+Die Tabelle \textit{hyperaudio\_comments} dient der Speicherung der vier in Abbildung \ref{fig:UMLAufbau} modellierten Kommentararten. Der Zusammenhang zum Hyperaudio-Dokument wird analog per Fremdschlüssel \textit{hyperaudio\_id} hergestellt. Neben dem textuellen Kommentar (\textit{commenttext}), werden auch der Verfasser in Form der \textit{userid}, die Art des Kommentars (\textit{comment\_type}) und der Annotationszeitpunkt (\textit{timeannotated}) gespeichert. Für den Fall, dass es sich um einen Antwortkommentar handelt, wird in der Spalte \textit{comment\_id} die Referenz auf den Original-Kommentar festgehalten.
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth,center]{ERDiagramm.png}
+\caption{\label{fig:ERDiagramm}ER-Diagramm der Datenbank des Moodle-Plugins}
+\end{figure}
+
 
 %%%%%%%%%%
 \section{Gestaltung der Benutzeroberfläche}
@@ -202,79 +306,7 @@ Im ersten Schritt führen wir die jeweils favorisierten Elemente in ein Layout z
 %\dots
 
 
-%%%%%%%%%%
-\section{Definition des Schnittstellenformats für Hyperaudio-Dokumente}
-\label{sec:konfigurationsdatei}
-\todo[inline]{Grobe Beschreibung der Struktur und des Ablaufs...u.A. warum Schnittstellendatei notwendig ist}
-\todo[inline]{Metainformationen zu Zusatzinhalten}
-Wie in der Einleitung dieses Kapitels beschrieben, kann die Konfiguration zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll mittels einer Konfigurationsdatei durchgeführt werden. Diese Vorgehensweise wird nun umgesetzt und die Konfigurationsdatei ist entsprechend zu definieren.
-Auf Grund des Einsatzes von \textit{PHP} und \textit{JavaScript} innerhalb der Moodle Plugin-Entwicklung bietet sich der Einsatz von \textit{JSON} (JavaScript Object Notation) an. \textit{JSON} wird direkt durch \textit{JavaScript} unterstützt, ist somit am besten für \textit{JavaScript} geeignet und bietet im Vergleich zu \textit{XML} erhebliche Geschwindigkeitsvorteile \citep{nurseitov2009comparison}.
-%JSON is directly supported inside JavaScript [7] and is best suited for JavaScript applications; thus providing significant performance gains over XML, 
-Mittels der \textit{JSON}-Datei sollen folgende Informationen der Zusatzinhalte übertragen werden:
 
-\begin{itemize}
-\item Dateiname
-\item Name des Zusatzinhaltes
-\item Kurseinheit
-\item Betroffene Seiten innerhalb der Kurseinheit
-\item Beschreibung des Zusatzinhaltes
-\item Anfangszeitpunkt der Annotation
-\item Endzeitpunkt der Annotation
-\end{itemize}
-
-Entscheidend ist hierbei der Dateiname, anhand des Dateinamens wird anschließend die Zuordnung der weiteren Informationen zu dem entsprechenden Eintrag in der Datenbank vorgenommen. Eine beispielhaft befüllte \textit{JSON}-Datei ist in Auflistung \ref{lst:JSON} dargestellt.
-
-\begin{lstlisting}[basicstyle=\small,
-             inputencoding={utf8}, 
-             extendedchars=false,
-             commentstyle=\color{black}, 
-             keywordstyle=\color{black}, 
-             escapeinside=``,
-             linewidth=\textwidth,
-             caption={Beispielhafte \textit{JSON}-Datei},
-             label={lst:JSON}]             
-{
-  `''`additional_contents`''`: {
-    `''`additional_content`''`: [
-      {`''`filename`''`: `''`Bronnamberg.png`''`, `''`name`''`: `''`Sonnenuntergang Bronnamberg`''`, `''`course_unit`''`: `''`1`''`, `''`page`''`: `''`10-20`''`, `''`description`''`: `''`asdf`''`, `''`begin`''`: `''`5`''`, `''`end`''`: `''`10`''`},
-      {`''`filename`''`: `''`Apple.JPG`''`, `''`name`''`: `''`Apple Rechnung`''`, `''`course_unit`''`: `''`2`''`, `''`page`''`: `''`40-50`''`, `''`description`''`: `''`asdf`''`, `''`begin`''`: `''`15`''`, `''`end`''`: `''`25`''`}
-    ]
-  }
-}
-\end{lstlisting}
-\todo[inline]{JSON Beispieldaten austauschen}
-
-%%%%%%%%%%
-\section{Datenbankentwurf}
-Um die dem Plugin zugrundeliegende Datenbank zu gestalten wird auf die Erkenntnisse aus Abschnitt \ref{sec:komponenten_zusammenhänge} und Abbildung \ref{fig:UMLAufbau} zurückgegriffen. Das Ergebnis ist dem ER-Diagramm in Abbildung \ref{fig:ERDiagramm} zu entnehmen.
-
-Jede der Tabellen verfügt über den Primärschlüssel \textit{id}. Darüber hinaus wird zu jedem Eintrag gespeichert, wann dieser erstellt (\textit{timecreated}) und zuletzt bearbeitet (\textit{timemodified}) wurde. Für das Abspeichern von Dateien stellt Moodle die Tabelle \textit{files} bereit \citep{moodle2018file}. Dort kann die Datei abgelegt und an anderer Stelle darauf referenziert werden.
-
-Im Mittelpunkt des Hyperaudio-Plugins steht die Tabelle \textit{hyperaudio}. Diese repräsentiert das Hyperaudio-Dokument und die Audio-Datei aus Abbildung \ref{fig:UMLAufbau}. Zunächst wird die ID des Moodle-Kurses (\textit{course}) abgelegt, dem das Hyperaudio-Dokument zugeordnet ist. Während die Audio-Datei selbst in der bereits erwähnten Tabelle \textit{files} zu finden ist, wird in der Tabelle \textit{hyperaudio} deren Dateiname (\textit{audiofile}) festgehalten. Zum Hyperaudio-Dokument können außerdem Name und Ersteller in den Spalten \textit{name} und \textit{author} hinterlegt werden. Eine optionale Beschreibung kann entsprechend dem de-facto-Standard der Moodle-Plugin-Entwicklung über \textit{introformat} und \textit{intro} hinzugefügt werden \citep{moodle2016activity}.
-
-Bei der Tabelle \textit{hyperaudio\_config} handelt es sich um eine Tabelle, in welcher die in Abschnitt \ref{sec:konfigurationsdatei} beschriebene Konfigurationsdatei gespeichert wird (\textit{file} enthält den Dateinamen als Referenz auf die \textit{files}-Tabelle). Daneben wird nur noch der Fremdschlüssel \textit{hyperaudio\_id} auf die Tabelle \textit{hyperaudio} als Zuordnung zum Hyperaudio-Dokument benötigt.
-
-\todo[inline]{name in hyperaudio\_config entfernen}
-
-Zur Ablage der annotierten Zusatzinhalte dient die Tabelle \textit{additional\_content}. Auch hier steht der Name der Datei in der Spalte \textit{file} als Referenz auf die \textit{files}-Tabelle. Ebenso dient der Fremdschlüssel \textit{hyperaudio\_id} zur Verknüpfung des Zusatzinhalts mit dem Hyperaudio-Dokument. Des Weiteren werden folgende Metainformationen zum Zusatzinhalt abgespeichert:
-
-\begin{itemize}
-
-\item Name des Zusatzinhalts (\textit{name})
-\item optional: Beschreibung (\textit{description})
-\item optional: Kurseinheit (\textit{course\_unit})
-\item optional: Seitenangabe (\textit{page})
-\item Startzeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments (\textit{begin})
-\item Endzeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments (\textit{end})
-
-\end{itemize}
-
-Die Tabelle \textit{hyperaudio\_comments} dient der Speicherung der vier in Abbildung \ref{fig:UMLAufbau} modellierten Kommentararten. Der Zusammenhang zum Hyperaudio-Dokument wird analog per Fremdschlüssel \textit{hyperaudio\_id} hergestellt. Neben dem textuellen Kommentar (\textit{commenttext}), werden auch der Verfasser in Form der \textit{userid}, die Art des Kommentars (\textit{comment\_type}) und der Annotationszeitpunkt (\textit{timeannotated}) gespeichert. Für den Fall, dass es sich um einen Antwortkommentar handelt, wird in der Spalte \textit{comment\_id} die Referenz auf den Original-Kommentar festgehalten.
-
-\begin{figure}[h!]
-\includegraphics[width=\textwidth,center]{ERDiagramm.png}
-\caption{\label{fig:ERDiagramm}ER-Diagramm der Datenbank des Moodle-Plugins}
-\end{figure}
 
 
 
