@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{41}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -48,6 +48,14 @@ Pierre Dillenbourg, Michael~J Baker, Agnes Blaye, und Claire O'Malley.
 \newblock
   \url{https://wiki.fernuni-hagen.de/helpdesk/index.php/Das_Kursportal}, 2014.
 \newblock abgerufen am 28.07.2018.
+
+\bibitem[{FernUniversität in Hagen}(2016)]{fernuniversitaet2018mensch}
+{FernUniversität in Hagen}.
+\newblock {Kurs: WS16/17 - Kurs 01697 Einführung in
+  Mensch-Computer-Interaktion}.
+\newblock \url{https://moodle-wrm.fernuni-hagen.de/course/view.php?id=949},
+  2016.
+\newblock abgerufen am 15.08.2018.
 
 \bibitem[{FernUniversität in
   Hagen}(2018{\natexlab{a}})]{fernuniversitaet2018kommunikationstools}
@@ -119,6 +127,12 @@ Marshall McLuhan.
   2015{\natexlab{b}}.
 \newblock abgerufen am 28.07.2018.
 
+\bibitem[{Moodle}(2016)]{moodle2016activity}
+{Moodle}.
+\newblock {Activity Modules - MoodleDocs}.
+\newblock \url{https://docs.moodle.org/dev/Activity_modules}, 2016.
+\newblock abgerufen am 15.08.2018.
+
 \bibitem[{Moodle}(2017)]{moodle2017plugin}
 {Moodle}.
 \newblock {Moodle.org: Moodle Statistics}.
@@ -133,10 +147,16 @@ Marshall McLuhan.
 \newblock \url{https://docs.moodle.org/35/en/About_Moodle}, 2018{\natexlab{a}}.
 \newblock abgerufen am 28.07.2018.
 
-\bibitem[{Moodle}(2018{\natexlab{b}})]{moodle2018stats}
+\bibitem[{Moodle}(2018{\natexlab{b}})]{moodle2018file}
+{Moodle}.
+\newblock {File API - MoodleDocs}.
+\newblock \url{https://docs.moodle.org/dev/File_API}, 2018{\natexlab{b}}.
+\newblock abgerufen am 15.08.2018.
+
+\bibitem[{Moodle}(2018{\natexlab{c}})]{moodle2018stats}
 {Moodle}.
 \newblock {Moodle.org: Moodle Statistics}.
-\newblock \url{https://moodle.net/stats/}, 2018{\natexlab{b}}.
+\newblock \url{https://moodle.net/stats/}, 2018{\natexlab{c}}.
 \newblock abgerufen am 28.07.2018.
 
 \bibitem[Moos und Marroquin(2010)]{moos2010multimedia}

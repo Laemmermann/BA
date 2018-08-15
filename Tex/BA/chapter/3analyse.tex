@@ -18,11 +18,7 @@ Im nächsten Schritt soll die Zielgruppe anhand von \textit{Personas} und deren 
 \subsection{Personas}
 \label{sec:personas}
 %https://dl.gi.de/bitstream/handle/20.500.12116/5888/Holt_Winter_Thomaschewski_2011.pdf?sequence=2
-Bevor sich den \textit{User Stories} zugewendet werden kann, müssen vorab die dafür nötigen \textit{Personas} entwickelt werden. Unter \textit{Personas} werden fiktive Benutzer verstanden, für welche das Programm, in unserem Fall das Moodle-Plugin, designt wird \citep{cooper2004inmates}. Jeder Persona wird eine Rolle im Zusammenhang mit der Anwendung zugewiesen. Darüber hinaus wird die Persona ausreichend beschrieben, damit sich leicht in die Person hineinversetzt werden kann \citep{cohn2004user}. Dieses Vorgehen hilft dabei, möglichst authentische \textit{User Stories} zu generieren, ohne auf echte Benutzer zurückgreifen zu müssen.
-
-\todo[inline]{Die Personas sind ein guter Anfang. Beschreiben Sie die Lebenssituation der Studierenden noch besser. Zeigen Sie auf, wann die Leute etwa Pendeln, Autofahren oder unbezahlte Arbeit daheim verrichten. }
-
-
+Bevor sich den \textit{User Stories} zugewendet werden kann, müssen vorab die dafür nötigen \textit{Personas} entwickelt werden. Unter \textit{Personas} werden fiktive Benutzer verstanden, für welche das Programm, in unserem Fall das Moodle-Plugin, designt wird \citep{cooper2004inmates}. Jeder Persona wird eine Rolle im Zusammenhang mit der Anwendung zugewiesen. Darüber hinaus wird die Persona ausreichend beschrieben, damit sich leicht in die Person hineinversetzt werden kann \citep{cohn2004user}. Dieses Vorgehen hilft dabei, möglichst authentische \textit{User Stories} zu generieren, ohne auf echte Benutzer zurückgreifen zu müssen. Darüber hinaus ist festzustellen, dass die realen Anwender zwar Problemstellungen identifizieren können, aber nicht unbedingt in der Lage sind, Anforderungen zur Lösung dieser Probleme zu formulieren \citep{cooper2004inmates}.
 
 \par
 \begingroup
@@ -36,10 +32,10 @@ Bevor sich den \textit{User Stories} zugewendet werden kann, müssen vorab die d
 {\Large\emph{Dr. Julian Schmidt}} ist wissenschaftlicher Mitarbeiter und Betreuer für den Kurs \glqq Marketing\grqq{}. Nachdem der Kurs auch das Lernen mittels Hyperaudio-Dokument anbietet, ist er unter anderem für die Betreuung dieser verantwortlich und ist derjenige, der hier Rede und Antwort steht.
 \vspace{.5cm}
 
-{\Large\emph{Laura Ebert}} \textbf{ist 35 Jahre alt, verheiratet und hat drei Kinder. Sie geht halbtags einem Beruf nach, zu dem sie 30 Minuten mit dem Bus pendelt. Neben der Arbeit kümmert sie sich zusammen mit ihrem Mann um den Haushalt und die Kinder. Laura studiert in Teilzeit den Bachelorstudiengang Informatik im ersten Semester.} Das Semester hat erst vor einigen Wochen begonnen und sie entdeckt gerade Moodle für sich. Hierbei ist sie auf die Hyperaudio-Dokumente gestoßen und hat sich fest vorgenommen, sich im Laufe des Semsters mit deren Hilfe mit den Lerninhalten auseinanderzusetzen.
+{\Large\emph{Laura Ebert}} ist 35 Jahre alt, verheiratet und hat drei Kinder. Sie geht halbtags einem Beruf nach, zu dem sie 30 Minuten mit dem Bus pendelt. Neben der Arbeit kümmert sie sich zusammen mit ihrem Mann um den Haushalt und die Kinder. Laura studiert in Teilzeit den Bachelorstudiengang Informatik im ersten Semester. Das Semester hat erst vor einigen Wochen begonnen und sie entdeckt gerade Moodle für sich. Hierbei ist sie auf die Hyperaudio-Dokumente gestoßen und hat sich fest vorgenommen, sich im Laufe des Semsters mit deren Hilfe mit den Lerninhalten auseinanderzusetzen.
 \vspace{.5cm}
  
-{\Large\emph{Max Lustig}} \textbf{ist 24 Jahre alt, ledig und hat sich nach einer abgeschlossenen Ausbildung dazu entschlossen, neben dem Beruf zu studieren. Sein Berufsweg besteht aus einem 20 minütigen Gang zu Fuß. Neben der Arbeit ist Max ein begeistertet Fitnessstudiogänger.} Er absolviert ein Vollzeitbachelorstudium in Wirtschaftsinformatik und befindet sich kurz vor der Prüfungsphase zum Ende des dritten Semesters. Max möchte sich nun auf die Klausur des Moduls \glqq Investition und Finanzierung (BWL II)\grqq{}, welche in zwei Wochen stattfindet, intensiv vorbereiten. Im Laufe des Semsters hat er bereits ausgiebig die neuen Hyperaudio-Dokumente zum Erreichen des Lernziels genutzt.
+{\Large\emph{Max Lustig}} ist 24 Jahre alt, ledig und hat sich nach einer abgeschlossenen Ausbildung zum Informatikkaufmann dazu entschlossen, neben dem Beruf zu studieren. Zur Arbeit kommt er in wenigen Minuten zu Fuß. Viel Zeit verbringt er jedoch im Fitnesstudio mit Kraft- und Ausdauertraining. Er absolviert ein Vollzeitbachelorstudium in Wirtschaftsinformatik und befindet sich kurz vor der Prüfungsphase zum Ende des dritten Semesters. Max möchte sich nun auf die Klausur des Moduls \glqq Investition und Finanzierung (BWL II)\grqq{}, welche in zwei Wochen stattfindet, intensiv vorbereiten. Im Laufe des Semsters hat er bereits ausgiebig die neuen Hyperaudio-Dokumente zum Erreichen des Lernziels genutzt.
 
 \par
 \endgroup
@@ -77,67 +73,69 @@ Für die Konzeption des Moodle-Plugins ergeben sich im Wesentlichen zwei Benutze
 
 Für das Angebot einer alternativen Repräsentation von Lerninhalten als Hyperaudio-Dokumente lassen sich folgende \textit{User Stories} festhalten.
 
-\todo[inline]{Sehr gut. Es gibt natürlich noch dutzende User Storys. Versuchen Sie die Storys gleich zu nummerieren. Anschließend können Sie die Nummer einzelnen Komponenten zuordnen und dann gebündelt bearbeiten. Feature: Sie können Stories natürlich auch mit der Zielgruppe zusammen entwickeln oder diese bewerten lassen. Somit hätten Sie eine Absicherung, nicht am Nutzer vorbei zu entwickeln. 
-}
-\todo[inline]{Lehrend möchten außerdem den Inhalt ihrer bestehenden Kurse vollständig als Audio/Hyperaudio abbilden können. Formeln, Tabellen, Bilder, ...
-Sie möchten bei der Konvertierung/Produktion wenig arebeit haben. Sie möchten Inhalte nachträglich editieren (auch Audio?!). }
+\begin{enumerate}[label=US-\arabic*:,ref=US-\arabic*]
 
+\item \label{US-Admin-Erstellen} Als Administrierende möchte Prof. Dr. Karolin Schröder ein neues Hyperaudio-Dokument in ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} zur Verfügung stellen, um den Studierenden neue Lerninhalte bereitzustellen.
 
-\begin{enumerate}
+\item \label{US-Admin-Loeschen} Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} löschen können, um veraltete Informationen zu entfernen.
 
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder ein neues Hyperaudio-Dokument in ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} zur Verfügung stellen, um den Studierenden neue Lerninhalte bereitzustellen.
+\item \label{US-Admin-Semester} Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} im Sommersemester in den darauffolgenden Kurs im Wintersemester übernehmen, um diese nicht erneut erstellen zu müssen.
 
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} löschen können, um veraltete Informationen zu entfernen.
+\item \label{US-Admin-Kurs} Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente anderer Kurse in ihren Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} übernehmen, um auf die hervorragende Arbeit anderer Lehrender zurückgreifen zu können, da sich die Themen mit ihrem Kurs überschneiden.
 
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} im Sommersemester in den darauffolgenden Kurs im Wintersemester übernehmen\textbf{, um diese nicht erneut hochladen zu müssen.}
+\item \label{US-Admin-Statistik} Als Administrierende möchte Prof. Dr. Karolin Schröder Erkenntnisse daraus gewinnen, wie die Hyperaudio-Dokumente des Kurses \glqq Einführung in die Wirtschaftsinformatik\grqq{} von Studierenden genutzt werden, um Verbesserungspotenzial auszumachen.
 
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente anderer Kurse in ihren Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} übernehmen\textbf{, um sich nicht selbst die Arbeit machen zu müssen, da sich die Themen mit ihrem Kurs überschneiden und wiederverwendet werden können.}
+\item \label{US-Admin-Bearbeiten} Als Administrierender möchte Dr. Julian Schmidt ein vorhandenes Hyperaudio-Dokument in dem von ihm betreuten Kurs \glqq Marketing\grqq{} überarbeiten, um einen Fehler zu beseitigen.
 
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder Erkenntnisse daraus gewinnen, wie die Hyperaudio-Dokumente des Kurses \glqq Einführung in die Wirtschaftsinformatik\grqq{} von Studierenden genutzt werden, um Verbesserungspotenzial auszumachen.
+\item \label{US-Wiedergabe} Als Nutzende möchte Prof. Dr. Karolin Schröder die bereits vorhandenen Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} wiedergeben, um diese auf ihre Richtigkeit zu überprüfen.
 
-\item Als Administrierender möchte Dr. Julian Schmidt ein vorhandenes Hyperaudio-Dokument in dem von ihm betreuten Kurs \glqq Marketing\grqq{} überarbeiten, um einen Fehler zu beseitigen.
+\item \label{US-Antwort-L} Als Nutzende möchte Prof. Dr. Karolin Schröder die Kommentare zu einem Hyperaudio-Dokument lesen und beantworten können, um auf Fragen von Studierenden einzugehen.
 
-\item Als Nutzende möchte Prof. Dr. Karolin Schröder die bereits vorhandenen Hyperaudio-Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} wiedergeben, um diese auf ihre Richtigkeit zu überprüfen.
+\item \label{US-Notiz-L} Als Nutzende möchte Prof. Dr. Karolin Schröder eine Notiz zu einem Hyperaudio-Dokument machen, um ihren Gedanken festzuhalten und später darauf zurückgreifen zu können.
 
-\item Als Nutzende möchte Prof. Dr. Karolin Schröder die Kommentare zu einem Hyperaudio-Dokument lesen und beantworten können, um auf Fragen von Studierenden einzugehen.
-
-\item Als Nutzende möchte Prof. Dr. Karolin Schröder eine Notiz zu einem Hyperaudio-Dokument machen, um ihren Gedanken festzuhalten und später darauf zurückgreifen zu können.
-
-\item Als Nutzender möchte Dr. Julian Schmidt eine gefundene Erklärungslücke in einem Hyperaudio-Dokument durch einen Kommentar zum entsprechenden Zeitpunkt schließen.
+\item \label{US-Kommentar-L} Als Nutzender möchte Dr. Julian Schmidt eine gefundene Erklärungslücke in einem Hyperaudio-Dokument durch einen Kommentar zum entsprechenden Zeitpunkt schließen, um eventuellen Fragen der Studierenden zuvorzukommen.
 
 %\item \textit{Dr. Julian Schmidt stellt eine Erklärungslücke in einem Hyperaudio-Dokument fest und möchte diese durch einen Kommentar zum entsprechenden Zeitpunkt schließen.}
 
-\item \textbf{Als Nutzende möchte Laura Ebert mittels Hyperaudio-Dokument lernen, um die Zeit während Haushaltsarbeiten, wie dem Bügeln, Kochen oder Putzen, und dem Pendeln sinnvoller zu nutzen.}
+\item \label{US-Zeit} Als Nutzende möchte Laura Ebert mittels Hyperaudio-Dokument lernen, um die Zeit während Haushaltsarbeiten, wie dem Bügeln, Kochen oder Putzen, und dem Pendeln sinnvoller zu nutzen.
 
-\item Als Nutzende möchte Laura Ebert erfahren, welche Hyperaudio-Dokumente in den von ihr belegten Kursen angeboten werden.
+\item \label{US-Uebersicht-Kurse} Als Nutzende möchte Laura Ebert erfahren, welche Hyperaudio-Dokumente in den von ihr belegten Kursen angeboten werden, um herauszufinden, mit welchen Mitteln sie sich auf die anstehenden Prüfungen vorbereiten kann.
 
-\item Als Nutzende möchte Laura Ebert einen Kommentar verfassen, um dem Kursbetreuer und den anderen Studierenden eine Frage zu stellen.
+\item \label{US-Kommentar-S} Als Nutzende möchte Laura Ebert einen Kommentar verfassen, um dem Kursbetreuer und den anderen Studierenden eine Frage zu stellen.
 
-\item Als Nutzende möchte Laura Ebert eine Markierung setzen, wenn eine klausurrelevante Thematik erklärt wird. Bei der Prüfungsvorbereitung möchte sie anhand dieser Markierungen diejenigen Themen erkennen, mit welchen sie sich besonders intensiv beschäftigen möchte.
+\item \label{US-Markierung} Als Nutzende möchte Laura Ebert eine Markierung setzen, wenn eine klausurrelevante Thematik erklärt wird. Bei der Prüfungsvorbereitung möchte sie anhand dieser Markierungen diejenigen Themen erkennen, mit welchen sie sich besonders intensiv beschäftigen möchte.
 
-\item Als Nutzende möchte Laura Ebert eine Markierung löschen, da sie den markierten Lerninhalt inzwischen beherrscht. Anhand der übrigen Markierungen möchte sie schnell erkennen, wo für sie noch Lernbedarf besteht.
+\item \label{US-Markierung-Loeschen} Als Nutzende möchte Laura Ebert eine Markierung löschen, da sie den markierten Lerninhalt inzwischen beherrscht. Anhand der übrigen Markierungen möchte sie schnell erkennen, wo für sie noch Lernbedarf besteht.
 
-\item Als Nutzende möchte Laura Ebert eine Notiz erstellen, um ein Beispiel zu dem genannten Sachverhalt festzuhalten, sodass sie die Thematik beim nächsten Mal einfacher nachvollziehen kann.
+\item \label{US-Notiz-S} Als Nutzende möchte Laura Ebert eine Notiz erstellen, um ein Beispiel zu dem genannten Sachverhalt festzuhalten, sodass sie die Thematik beim nächsten Mal einfacher nachvollziehen kann.
 
-\item Als Nutzende möchte Laura Ebert die Wiedergabe eines Hyperaudio-Dokuments beenden und am nächsten Tag an derselben Stelle fortsetzen.
+\item \label{US-Fortsetzen} Als Nutzende möchte Laura Ebert die Wiedergabe eines Hyperaudio-Dokuments beenden und am nächsten Tag automatisch an derselben Stelle fortsetzen können, um das Lernen schnell wiederaufnehmen zu können.
 
-\item Als Nutzende möchte Laura Ebert die Hyperaudio-Angebote auch unterwegs mit ihrem Smartphone in Anspruch nehmen.
+\item \label{US-Mobil} Als Nutzende möchte Laura Ebert die Hyperaudio-Angebote mit ihrem Smartphone in Anspruch nehmen, um auch die Zeit während des Pendelns zum Lernen nutzen zu können.
 
-\item Als Nutzender möchte Max Lustig eine alte Notiz bearbeiten, um einen Schreibfehler zu korrigieren.
+\item \label{US-Notiz-Bearbeiten} Als Nutzender möchte Max Lustig eine alte Notiz bearbeiten, um einen Schreibfehler zu korrigieren.
 
-\item Als Nutzender möchte Max Lustig eine alte Notiz löschen, da er inzwischen Lernfortschritte gemacht hat und auf diese Notiz verzichten kann.
+\item \label{US-Notiz-Loeschen} Als Nutzender möchte Max Lustig eine alte Notiz löschen, da er inzwischen Lernfortschritte gemacht hat und auf diese Notiz verzichten kann.
 
-\item Als Nutzender möchte Max Lustig nach Inhalten in Hyperaudio-Dokumenten suchen können, um schneller das Hyperaudio-Dokument zu finden, in dem ein bestimmtes Thema behandelt wird.
+\item \label{US-Galerie} Als Nutzender möchte Max Lustig nach Inhalten in Hyperaudio-Dokumenten suchen können, um schneller das Hyperaudio-Dokument zu finden, in dem ein bestimmtes Thema behandelt wird.
 
-\item Als Nutzender möchte Max Lustig nach Textinhalten in Kommentaren suchen können, um schnell Erklärungen zu finden.
+\item \label{US-Suche} Als Nutzender möchte Max Lustig nach Textinhalten in Kommentaren suchen können, um schnell Erklärungen zu finden.
 
-\item Als Nutzender möchte Max Lustig auf Kommentare antworten können, um sich mit den Studierenden und Lehrenden auszutauschen.
+\item \label{US-Sortierung-Erstellungsdatum} Als Nutzender möchte Max Lustig die Kommentare nach Erstellungsdatum sortieren können, um sich einen Überblick über die neuesten Aktionen zu verschaffen.
 
-\item Als Nutzender möchte Max Lustig erkennen, welche Hyperaudio-Dokumente er zuletzt abgespielt hat, um seinen Lernfortschritt im Auge zu behalten.
+\item \label{US-Sortierung-Zeitpunkt} Als Nutzender möchte Max Lustig die Kommentare und persönlichen Notizen zu den Annotationszeitpunkten zuordnen können, um diese bei der Wiedergabe verfolgen zu können.
 
-\item Als Nutzender möchte Max Lustig besonders hilfreiche Hyperaudio-Dokumente als Favoriten speichern, um diese schnell als solche identifizieren zu können.
+\item \label{US-Filter} Als Nutzender möchte Max Lustig öffentliche Kommentare und persönliche Notizen getrennt betrachten können, um die öffentliche Diskussion verfolgen beziehungsweise die eigenen Anmerkungen isoliert betrachten zu können.
 
-\item Als Nutzender möchte Max Lustig die Markierung als Favorit entfernen können, wenn es für ihn nicht mehr von Interesse ist.
+\item \label{US-Antwort-S} Als Nutzender möchte Max Lustig auf Kommentare antworten können, um sich mit den Studierenden und Lehrenden auszutauschen.
+
+\item \label{US-Uebersicht-Letzte} Als Nutzender möchte Max Lustig erkennen, welche Hyperaudio-Dokumente er zuletzt abgespielt hat, um seinen Lernfortschritt im Auge zu behalten.
+
+\item \label{US-Favoriten} Als Nutzender möchte Max Lustig besonders hilfreiche Hyperaudio-Dokumente als Favoriten speichern, um diese schnell als solche identifizieren zu können.
+
+\item \label{US-Favoriten-Loeschen} Als Nutzender möchte Max Lustig die Markierung als Favorit entfernen können, wenn es für ihn nicht mehr von Interesse ist.
+
+\item \label{US-Zeit-Mobil} Als Nutzender möchte Max Ebert auf seinem Tablet Zugang zu Hyperaudio-Dokumenten haben, um die Zeit auf dem Laufband gleichzeitig zum Lernen nutzen zu können.
 
 \end{enumerate}
 
@@ -159,6 +157,8 @@ Sie möchten bei der Konvertierung/Produktion wenig arebeit haben. Sie möchten 
 %Thirdparty Frameworks einbinden kann
 %LAMP/WAMP
 %Mobile
+\todo[inline]{Plugin-Typen beschreiben => Activity Plugin}
+% => Zusammenfassung => Einleitung Konzept
 
 %%%%%%%%%%
 \section{Aktueller Stand der Technik}

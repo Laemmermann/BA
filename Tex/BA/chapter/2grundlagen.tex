@@ -17,13 +17,21 @@ Mit diesen Gedanken im Hinterkopf werden nun die Grundlagen für diese Arbeit be
 \label{sec:moodle}
 Bei Moodle (Modular Object-Oriented Dynamic Learning Environment) handelt es sich im Wesentlichem um eine frei verfügbares Open Source Learningmanagementsystem (GNU Public License) mit welchem Internet basierte Kurse entwickelt und durchgeführt werden können \citep{moodle2015was}. Ziel der Lernplattform ist es denen Lehrenden, Administratoren und Lernenden ein robustes, sicheres und integriertes System zu liefern, mit dessen Hilfe sie eine personalisierte Lernumgebung gestalten können \citep{moodle2018about}. Unter dieser Zielsetzung hat  Moodle weltweit als Lernplattform eine sehr weite Verbreitung und hat aktuell 101.447 registrierte Seiten in 232 Ländern mit insgesamt mehr als 130 Millionen Benutzern \citep{moodle2018stats}. Im Folgenden wird der Aufbau von einer Moodle Seite geschildert.
 
-Zugriff auf Moodle erhält man über die Startseite, diese kann auf die eigenen Bedürfnisse angepasst werden. Auch kann Moodle so konfiguriert werden, dass die Startseite erst nach Anmeldung an der Login-Seite erfolgen kann. Die Grundstruktur von Moodle ist, wie in Abbildung \ref{fig:MoodleAufbau} zu sehen, anhand von Kursbereichen und Kursen organisiert. Kurse werden wiederum als Seiten repräsentiert, auf welchen die Lehrenden Arbeitsmaterialien und Aktivitäten für die Studierenden bereitstellen können. Kurse werden üblicherweise in einzelne Kursabschnitte unterteilt, in welchen die Arbeitsmaterialien und Aktivitäten eingebunden werden. Kursseiten können mittels Blöcken noch um weitere zusätzliche Informationen angereichert werden. Diese Kurse werden dann innerhalb von Kursbereichen organisiert. Hierbei ist auch ein mehrstufiges Kursbereichssystem umsetzbar \citep{moodle2015aufbau}.
+Zugriff auf Moodle erhält man über die Startseite, diese kann auf die eigenen Bedürfnisse angepasst werden. Auch kann Moodle so konfiguriert werden, dass die Startseite erst nach Anmeldung an der Login-Seite erfolgen kann. Die Grundstruktur von Moodle ist, wie in Abbildung \ref{fig:MoodleAufbau} zu sehen, anhand von Kursbereichen und Kursen organisiert. Kurse werden wiederum als Seiten repräsentiert, auf welchen die Lehrenden Arbeitsmaterialien und Aktivitäten für die Studierenden bereitstellen können. Kurse werden üblicherweise in einzelne Kursabschnitte unterteilt, in welchen die Arbeitsmaterialien und Aktivitäten eingebunden werden. Kursseiten können mittels Blöcken noch um weitere zusätzliche Informationen angereichert werden.
+
+Ein Beispiel für eine Kursseite ist in Abbildung \ref{fig:MoodleKursseitenbeispiel} an Hand des Kurses \glqq Einführung in Mensch-Computer-Interaktion\grqq{} zu sehen. Auf der linken Seite sind innerhalb der Navigation die einzelnen Kursabschnitte, hier als Kurseinheiten beziehungsweise Einführung  benannt, sichtbar. Unterhalb der Navigation, sowie auf der rechten Seit sind die verschiedenen Blöcke (z.B. \glqq Aktivitäten\grqq{}, \glqq Suche in Foren\grqq{} oder \glqq Neue Ankündigungen\grqq{} innerhalb des Kurses sichtbar. Im mittleren Bereich befinden sich untereinander die Beschreibungen der einzelnen Kursabschnitte, mit Links zu den innerhalb dieser verwendeten Arbeitsmaterialien und Aktivitäten.
+
+Kurse werden dann innerhalb von Kursbereichen organisiert. Hierbei ist auch ein mehrstufiges Kursbereichssystem umsetzbar \citep{moodle2015aufbau}.
 
 \begin{figure}[h!]
 \includegraphics[width=.5\textwidth,center]{MoodleAufbau.pdf}
 \caption{\label{fig:MoodleAufbau}Schematischer Aufbau einer Moodle Seite}
 \end{figure}
-\todo[inline]{Abb 2.1 Da die Blöcke zumeist rechts oder links in einer Spalte angeordnet sind, könnten Sie das entsprechend auch darstellen. Alternativ könnten Sie dies auch anhand eines Screenshots }
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth,center]{MoodleKursseitenbeispiel.png}
+\caption{\label{fig:MoodleKursseitenbeispiel}Kursseite des Kurses \glqq Einführung in Mensch-Computer-Interaktion\grqq{} \citep{fernuniversitaet2018mensch}}
+\end{figure}
 
 Technisch baut Moodle auf den für eine Webanwendung üblichen Aufbau aus Webserver und Datenbank unter Verwendung von PHP auf. Um die zum Ziel gesetzt Personalisierbarkeit zu erreichen setzt auf Moodle unter anderem auf ein Plugin System. Jedes Plugin wird in einem von über 50 verschiedenen Plugin Typen einkategorisiert, jeder dieser Typen dient dazu einen speziellen Bereich von Moodle zu erweitern beziehungsweise anzupassen \citep{moodle2017plugin}.
 
@@ -31,14 +39,11 @@ Technisch baut Moodle auf den für eine Webanwendung üblichen Aufbau aus Webser
 %%%%%%%%%%
 \section{Kooperation im Lernumfeld}
 \glqq Lernen ist in vieler Hinsicht ein sozialer Prozess, der kulturelle Einflüsse einschließt sowie soziale Aktivitäten und gemeinsames Problemlösen umfasst\grqq{} \citep{reinmann1995kooperation}. Diese Aussage macht die Bedeutung von Kooperation im Lernumfeld klar. 
-Während in dieser Arbeit, wie für den deutschsprachigen Raum üblich, keine Unterscheidung zwischen dem kooperativen und dem kollaborativen Lernen vorgenommen wird, werden die Begriffe ansonsten häufig differenziert betrachtet \citep{reinmann2002analyse}. Hier handelt es sich um Kooperation, wenn eine Problemlösung, durch die Arbeitsteilung unter den Mitgliedern einer Gruppe, erreicht wird, wobei jedes Mitglied für einen Teil der Problemlösung verantwortlich ist.
+Während in dieser Arbeit, wie für den deutschsprachigen Raum üblich, keine Unterscheidung zwischen dem kooperativen und dem kollaborativen Lernen vorgenommen wird, werden die Begriffe ansonsten häufig differenziert betrachtet \citep{reinmann2002analyse}. Bei dieser Betrachtungsweise handelt es sich um Kooperation, wenn eine Problemlösung, durch die Arbeitsteilung unter den Mitgliedern einer Gruppe, erreicht wird, wobei jedes Mitglied für einen Teil der Problemlösung verantwortlich ist.
 %cooperation "... is accomplished by the division of labor among participants, as an activity where each person is responsible for a portion of the problem solving..."
 Bei Kollaboration wird die Problemlösung hingegen durch ein gemeinsames Engagement der Gruppenmitglieder bei einem koordinierten Vorgehen zur Problemlösung erreicht \citep{dillenbourg1995evolution}.
 %collaboration "... mutual engagement of participants in a coordinated effort to solve the problem together"
-
-Im Folgenden wird, wie für den deutschsprachigen Raum üblich, keine Unterscheidung zwischen dem kooperativen und dem kollaborativen Lernen vorgenommen \citep{reinmann2002analyse}. 
-
-Weitgefasst versteht man unter kooperativen Lernen eine Situation in der zwei oder mehrere Personen zusammen lernen oder versuchen zusammen zu lernen \citep{dillenbourg1999collaborative}. Da Kooperation auch ein zentraler Aspekt des zu entwickelnden Moodle Plugins darstellt, wird nochmals auf die Kooperation beim Lernen in offline als auch in online Lernumgebungen betrachtet.
+Im Folgenden wird, wie für den deutschsprachigen Raum üblich, keine Unterscheidung zwischen dem kooperativen und dem kollaborativen Lernen vorgenommen \citep{reinmann2002analyse}. Weitgefasst versteht man unter kooperativen Lernen eine Situation in der zwei oder mehrere Personen zusammen lernen oder versuchen zusammen zu lernen \citep{dillenbourg1999collaborative}. Da Kooperation auch ein zentraler Aspekt des zu entwickelnden Moodle Plugins darstellt, wird nochmals auf die Kooperation beim Lernen in offline als auch in online Lernumgebungen betrachtet.
 
 %Variety of Scale
 %Variety of Meaning for Learning
