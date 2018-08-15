@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.23)  15 AUG 2018 10:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.23)  15 AUG 2018 12:25
 entering extended mode
 **./BA.tex
 (BA.tex
@@ -1763,7 +1763,7 @@ Package hyperref Info: Reference (link) `section.152' on input line 51.
 Package hyperref Info: Reference (link) `section.154' on input line 52.
 Package hyperref Info: Reference (link) `chapter.155' on input line 53.
 Package hyperref Info: Reference (link) `section.156' on input line 54.
-Package hyperref Info: Reference (link) `section.157' on input line 55.
+Package hyperref Info: Reference (link) `section.158' on input line 55.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 56.
 Package babel Info: Redefining german shorthand "|
@@ -1814,24 +1814,24 @@ Package `hyperref' Info: End of reference (link) `section.154', line 52.
 Package `hyperref' Info: End of reference (link) `chapter.155', line 53.
 Package `hyperref' Info: End of reference (link) `section.156', line 54.
 ]
-Package hyperref Info: Reference (link) `subsection.158' on input line 56.
-Package hyperref Info: Reference (link) `subsection.159' on input line 57.
-Package hyperref Info: Reference (link) `subsection.160' on input line 58.
-Package hyperref Info: Reference (link) `subsection.161' on input line 59.
-Package hyperref Info: Reference (link) `subsection.162' on input line 60.
-Package hyperref Info: Reference (link) `subsection.163' on input line 61.
-Package hyperref Info: Reference (link) `subsection.164' on input line 62.
-Package hyperref Info: Reference (link) `section.165' on input line 63.
-Package hyperref Info: Reference (link) `chapter.166' on input line 64.
-Package hyperref Info: Reference (link) `chapter.167' on input line 65.
-Package hyperref Info: Reference (link) `appendix.168' on input line 66.
-Package hyperref Info: Reference (link) `appendix.170' on input line 67.
-Package hyperref Info: Reference (link) `chapter*.171' on input line 68.
-Package hyperref Info: Reference (link) `section*.172' on input line 69.
-Package hyperref Info: Reference (link) `section*.173' on input line 70.
-Package hyperref Info: Reference (link) `section*.174' on input line 71.
-Package hyperref Info: Reference (link) `section*.176' on input line 72.
-Package hyperref Info: Reference (link) `section*.178' on input line 73.
+Package hyperref Info: Reference (link) `subsection.159' on input line 56.
+Package hyperref Info: Reference (link) `subsection.160' on input line 57.
+Package hyperref Info: Reference (link) `subsection.161' on input line 58.
+Package hyperref Info: Reference (link) `subsection.162' on input line 59.
+Package hyperref Info: Reference (link) `subsection.163' on input line 60.
+Package hyperref Info: Reference (link) `subsection.164' on input line 61.
+Package hyperref Info: Reference (link) `subsection.165' on input line 62.
+Package hyperref Info: Reference (link) `section.166' on input line 63.
+Package hyperref Info: Reference (link) `chapter.167' on input line 64.
+Package hyperref Info: Reference (link) `chapter.168' on input line 65.
+Package hyperref Info: Reference (link) `appendix.169' on input line 66.
+Package hyperref Info: Reference (link) `appendix.171' on input line 67.
+Package hyperref Info: Reference (link) `chapter*.172' on input line 68.
+Package hyperref Info: Reference (link) `section*.173' on input line 69.
+Package hyperref Info: Reference (link) `section*.174' on input line 70.
+Package hyperref Info: Reference (link) `section*.175' on input line 71.
+Package hyperref Info: Reference (link) `section*.177' on input line 72.
+Package hyperref Info: Reference (link) `section*.179' on input line 73.
 )
 \tf@toc=\write4
 \openout4 = `BA.toc'.
@@ -1844,25 +1844,25 @@ Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 104.
 Package hyperref Info: Anchor `page.8' on input line 104.
  [8
-Package `hyperref' Info: End of reference (link) `section.157', line 55.
-Package `hyperref' Info: End of reference (link) `subsection.158', line 56.
-Package `hyperref' Info: End of reference (link) `subsection.159', line 57.
-Package `hyperref' Info: End of reference (link) `subsection.160', line 58.
-Package `hyperref' Info: End of reference (link) `subsection.161', line 59.
-Package `hyperref' Info: End of reference (link) `subsection.162', line 60.
-Package `hyperref' Info: End of reference (link) `subsection.163', line 61.
-Package `hyperref' Info: End of reference (link) `subsection.164', line 62.
-Package `hyperref' Info: End of reference (link) `section.165', line 63.
-Package `hyperref' Info: End of reference (link) `chapter.166', line 64.
-Package `hyperref' Info: End of reference (link) `chapter.167', line 65.
-Package `hyperref' Info: End of reference (link) `appendix.168', line 66.
-Package `hyperref' Info: End of reference (link) `appendix.170', line 67.
-Package `hyperref' Info: End of reference (link) `chapter*.171', line 68.
-Package `hyperref' Info: End of reference (link) `section*.172', line 69.
-Package `hyperref' Info: End of reference (link) `section*.173', line 70.
-Package `hyperref' Info: End of reference (link) `section*.174', line 71.
-Package `hyperref' Info: End of reference (link) `section*.176', line 72.
-Package `hyperref' Info: End of reference (link) `section*.178', line 73.
+Package `hyperref' Info: End of reference (link) `section.158', line 55.
+Package `hyperref' Info: End of reference (link) `subsection.159', line 56.
+Package `hyperref' Info: End of reference (link) `subsection.160', line 57.
+Package `hyperref' Info: End of reference (link) `subsection.161', line 58.
+Package `hyperref' Info: End of reference (link) `subsection.162', line 59.
+Package `hyperref' Info: End of reference (link) `subsection.163', line 60.
+Package `hyperref' Info: End of reference (link) `subsection.164', line 61.
+Package `hyperref' Info: End of reference (link) `subsection.165', line 62.
+Package `hyperref' Info: End of reference (link) `section.166', line 63.
+Package `hyperref' Info: End of reference (link) `chapter.167', line 64.
+Package `hyperref' Info: End of reference (link) `chapter.168', line 65.
+Package `hyperref' Info: End of reference (link) `appendix.169', line 66.
+Package `hyperref' Info: End of reference (link) `appendix.171', line 67.
+Package `hyperref' Info: End of reference (link) `chapter*.172', line 68.
+Package `hyperref' Info: End of reference (link) `section*.173', line 69.
+Package `hyperref' Info: End of reference (link) `section*.174', line 70.
+Package `hyperref' Info: End of reference (link) `section*.175', line 71.
+Package `hyperref' Info: End of reference (link) `section*.177', line 72.
+Package `hyperref' Info: End of reference (link) `section*.179', line 73.
 ]
 Package hyperref Info: Anchor `chapter.3' on input line 104.
 
@@ -1997,7 +1997,7 @@ put line 32.
 Package hyperref Info: Reference (link) `section.23' on input line 32.
 Package hyperref Info: Reference (link) `Hfootnote.11' on input line 32.
 Package hyperref Info: Anchor `Hfootnote.11' on input line 32.
-Package hyperref Info: Reference (link) `figure.caption.169' on input line 32.
+Package hyperref Info: Reference (link) `figure.caption.170' on input line 32.
 Package hyperref Info: Anchor `section*.12' on input line 34.
 Package hyperref Info: bookmark on input line 34:
 (hyperref)             thecounter {\thetodo }
@@ -2060,7 +2060,7 @@ Package `hyperref' Info: End of reference (cite) `cite.fernuniversitaet2018komm
 unikationstools', line 38.
 Package `hyperref' Info: End of reference (cite) `cite.fernuniversitaet2018komm
 unikationstools', line 38.
-Package `hyperref' Info: End of reference (link) `figure.caption.169', line 32.
+Package `hyperref' Info: End of reference (link) `figure.caption.170', line 32.
 
 ]
 Package hyperref Info: Reference (cite) `cite.schmidt2013physical' on input lin
@@ -2178,7 +2178,7 @@ Package hyperref Info: Reference (cite) `cite.mcluhan1977laws' on input line 11
 .
 Package hyperref Info: Reference (cite) `cite.mcluhan1977laws' on input line 11
 .
-Package hyperref Info: Reference (link) `chapter.166' on input line 13.
+Package hyperref Info: Reference (link) `chapter.167' on input line 13.
 Package hyperref Info: Anchor `section.23' on input line 16.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 16.
@@ -2254,7 +2254,7 @@ Package `hyperref' Info: End of reference (cite) `cite.mcluhan1977laws', line 1
 1.
 Package `hyperref' Info: End of reference (cite) `cite.mcluhan1977laws', line 1
 1.
-Package `hyperref' Info: End of reference (link) `chapter.166', line 13.
+Package `hyperref' Info: End of reference (link) `chapter.167', line 13.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2015was', line 18.
 
 Package `hyperref' Info: End of reference (cite) `cite.moodle2015was', line 18.
@@ -4080,105 +4080,14 @@ Package hyperref Info: bookmark on input line 2:
 (hyperref)             reference {section.156}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `section.157' on input line 7.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 7.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 7.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 7.
-Package hyperref Info: bookmark on input line 7:
-(hyperref)             thecounter {5.2}
-(hyperref)             text {\protect \numberline {\csname thesection\endcsname
- }\@currenttocentry }
-(hyperref)             reference {section.157}
-(hyperref)             toclevel {1}
-(hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.158' on input line 10.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 10.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 10.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 10.
-Package hyperref Info: bookmark on input line 10:
-(hyperref)             thecounter {5.2.1}
-(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
-ame }\@currenttocentry }
-(hyperref)             reference {subsection.158}
-(hyperref)             toclevel {2}
-(hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.159' on input line 13.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 13.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 13.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 13.
-Package hyperref Info: bookmark on input line 13:
-(hyperref)             thecounter {5.2.2}
-(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
-ame }\@currenttocentry }
-(hyperref)             reference {subsection.159}
-(hyperref)             toclevel {2}
-(hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.160' on input line 16.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 16.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 16.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 16.
-Package hyperref Info: bookmark on input line 16:
-(hyperref)             thecounter {5.2.3}
-(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
-ame }\@currenttocentry }
-(hyperref)             reference {subsection.160}
-(hyperref)             toclevel {2}
-(hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.161' on input line 19.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 19.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 19.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 19.
-Package hyperref Info: bookmark on input line 19:
-(hyperref)             thecounter {5.2.4}
-(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
-ame }\@currenttocentry }
-(hyperref)             reference {subsection.161}
-(hyperref)             toclevel {2}
-(hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.162' on input line 22.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 22.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 22.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 22.
-Package hyperref Info: bookmark on input line 22:
-(hyperref)             thecounter {5.2.5}
-(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
-ame }\@currenttocentry }
-(hyperref)             reference {subsection.162}
-(hyperref)             toclevel {2}
-(hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.163' on input line 25.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 25.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 25.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 25.
+Package hyperref Info: Anchor `section*.157' on input line 25.
 Package hyperref Info: bookmark on input line 25:
-(hyperref)             thecounter {5.2.6}
-(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
-ame }\@currenttocentry }
-(hyperref)             reference {subsection.163}
-(hyperref)             toclevel {2}
-(hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.164' on input line 28.
+(hyperref)             thecounter {\thetodo }
+(hyperref)             text {\@todonotes@caption }
+(hyperref)             reference {section*.157}
+(hyperref)             toclevel {0}
+(hyperref)             type {tdo}.
+Package hyperref Info: Anchor `section.158' on input line 28.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 28.
 Package babel Info: Redefining german shorthand "|
@@ -4186,24 +4095,132 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 28.
 Package hyperref Info: bookmark on input line 28:
-(hyperref)             thecounter {5.2.7}
+(hyperref)             thecounter {5.2}
+(hyperref)             text {\protect \numberline {\csname thesection\endcsname
+ }\@currenttocentry }
+(hyperref)             reference {section.158}
+(hyperref)             toclevel {1}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.159' on input line 31.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 31.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 31.
+Package hyperref Info: bookmark on input line 31:
+(hyperref)             thecounter {5.2.1}
+(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
+ame }\@currenttocentry }
+(hyperref)             reference {subsection.159}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.160' on input line 34.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 34.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 34.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 34.
+Package hyperref Info: bookmark on input line 34:
+(hyperref)             thecounter {5.2.2}
+(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
+ame }\@currenttocentry }
+(hyperref)             reference {subsection.160}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 37.
+Package hyperref Info: Anchor `page.41' on input line 37.
+ [41
+
+]
+Package hyperref Info: Anchor `subsection.161' on input line 37.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 37.
+Package hyperref Info: bookmark on input line 37:
+(hyperref)             thecounter {5.2.3}
+(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
+ame }\@currenttocentry }
+(hyperref)             reference {subsection.161}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.162' on input line 40.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 40.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 40.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 40.
+Package hyperref Info: bookmark on input line 40:
+(hyperref)             thecounter {5.2.4}
+(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
+ame }\@currenttocentry }
+(hyperref)             reference {subsection.162}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.163' on input line 43.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 43.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 43.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 43.
+Package hyperref Info: bookmark on input line 43:
+(hyperref)             thecounter {5.2.5}
+(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
+ame }\@currenttocentry }
+(hyperref)             reference {subsection.163}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `subsection.164' on input line 46.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 46.
+Package hyperref Info: bookmark on input line 46:
+(hyperref)             thecounter {5.2.6}
 (hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
 ame }\@currenttocentry }
 (hyperref)             reference {subsection.164}
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `section.165' on input line 32.
+Package hyperref Info: Anchor `subsection.165' on input line 49.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 32.
-Package hyperref Info: bookmark on input line 32:
+(babel)             in language  on input line 49.
+Package hyperref Info: bookmark on input line 49:
+(hyperref)             thecounter {5.2.7}
+(hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
+ame }\@currenttocentry }
+(hyperref)             reference {subsection.165}
+(hyperref)             toclevel {2}
+(hyperref)             type {toc}.
+Package hyperref Info: Anchor `section.166' on input line 53.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 53.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 53.
+Package hyperref Info: bookmark on input line 53:
 (hyperref)             thecounter {5.3}
 (hyperref)             text {\protect \numberline {\csname thesection\endcsname
  }\@currenttocentry }
-(hyperref)             reference {section.165}
+(hyperref)             reference {section.166}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
 )
@@ -4213,19 +4230,9 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 135.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 135.
-Package hyperref Info: Anchor `page.41' on input line 135.
- [41
-
-]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 135.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 135.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 135.
 Package hyperref Info: Anchor `page.42' on input line 135.
  [42]
-Package hyperref Info: Anchor `chapter.166' on input line 135.
+Package hyperref Info: Anchor `chapter.167' on input line 135.
 
 chapter 6.
 Package babel Info: Redefining german shorthand "f
@@ -4238,7 +4245,7 @@ Package hyperref Info: bookmark on input line 135:
 (hyperref)             thecounter {6}
 (hyperref)             text {\protect \numberline {\csname thechapter\endcsname
  }\@currenttocentry }
-(hyperref)             reference {chapter.166}
+(hyperref)             reference {chapter.167}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
 (chapter/6evaluation.tex)
@@ -4252,7 +4259,7 @@ Package hyperref Info: Anchor `page.43' on input line 141.
  [43
 
 ]
-Package hyperref Info: Anchor `chapter.167' on input line 141.
+Package hyperref Info: Anchor `chapter.168' on input line 141.
 
 chapter 7.
 Package babel Info: Redefining german shorthand "f
@@ -4265,7 +4272,7 @@ Package hyperref Info: bookmark on input line 141:
 (hyperref)             thecounter {7}
 (hyperref)             text {\protect \numberline {\csname thechapter\endcsname
  }\@currenttocentry }
-(hyperref)             reference {chapter.167}
+(hyperref)             reference {chapter.168}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
 (chapter/7zusammenfassung.tex)
@@ -4279,7 +4286,7 @@ Package hyperref Info: Anchor `page.44' on input line 150.
  [44
 
 ]
-Package hyperref Info: Anchor `appendix.168' on input line 150.
+Package hyperref Info: Anchor `appendix.169' on input line 150.
 
 chapter A.
 Package babel Info: Redefining german shorthand "f
@@ -4292,15 +4299,15 @@ Package hyperref Info: bookmark on input line 150:
 (hyperref)             thecounter {A}
 (hyperref)             text {\protect \numberline {\csname thechapter\endcsname
  }\@currenttocentry }
-(hyperref)             reference {appendix.168}
+(hyperref)             reference {appendix.169}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `figure.caption.169' on input line 152.
+Package hyperref Info: Anchor `figure.caption.170' on input line 152.
 
 
 pdfTeX warning: pdflatex (file ./images/VerwendungMoodle.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<./images/VerwendungMoodle.pdf, id=764, 844.95674pt x 597.432pt>
+<./images/VerwendungMoodle.pdf, id=765, 844.95674pt x 597.432pt>
 File: ./images/VerwendungMoodle.pdf Graphic file (type pdf)
 <use ./images/VerwendungMoodle.pdf>
 Package pdftex.def Info: ./images/VerwendungMoodle.pdf  used on input line 152.
@@ -4312,7 +4319,7 @@ Package hyperref Info: bookmark on input line 153:
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces \label {fig:VerwendungMoodle} 
 Verwendung von Moodle in den Pflichtmodulen des Bachelorstudiengangs Wirtschaft
 sinformatik (Sommersemester 2018)\relax }}
-(hyperref)             reference {figure.caption.169}
+(hyperref)             reference {figure.caption.170}
 (hyperref)             toclevel {1}
 (hyperref)             type {lof}.
 Package babel Info: Redefining german shorthand "f
@@ -4333,7 +4340,7 @@ Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 157.
 Package hyperref Info: Anchor `page.46' on input line 157.
  [46 <./images/VerwendungMoodle.pdf>]
-Package hyperref Info: Anchor `appendix.170' on input line 157.
+Package hyperref Info: Anchor `appendix.171' on input line 157.
 
 chapter B.
 Package babel Info: Redefining german shorthand "f
@@ -4346,7 +4353,7 @@ Package hyperref Info: bookmark on input line 157:
 (hyperref)             thecounter {B}
 (hyperref)             text {\protect \numberline {\csname thechapter\endcsname
  }\@currenttocentry }
-(hyperref)             reference {appendix.170}
+(hyperref)             reference {appendix.171}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
 Package babel Info: Redefining german shorthand "f
@@ -4370,7 +4377,7 @@ Package hyperref Info: Anchor `page.48' on input line 1.
 
 ]
 chapter without number
-Package hyperref Info: Anchor `chapter*.171' on input line 1.
+Package hyperref Info: Anchor `chapter*.172' on input line 1.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 1.
 Package babel Info: Redefining german shorthand "|
@@ -4380,7 +4387,7 @@ Package babel Info: Redefining german shorthand "~
 Package hyperref Info: bookmark on input line 1:
 (hyperref)             thecounter {B}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
-(hyperref)             reference {chapter*.171}
+(hyperref)             reference {chapter*.172}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
 Package hyperref Info: Anchor `cite.cohn2004user' on input line 8.
@@ -4498,7 +4505,7 @@ Package `hyperref' Info: End of reference (link) `figure.caption.125', line 253
 Package `hyperref' Info: End of reference (link) `figure.caption.125', line 253
 .
 ]
-Package hyperref Info: Anchor `section*.172' on input line 178.
+Package hyperref Info: Anchor `section*.173' on input line 178.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 178.
 Package babel Info: Redefining german shorthand "|
@@ -4508,7 +4515,7 @@ Package babel Info: Redefining german shorthand "~
 Package hyperref Info: bookmark on input line 178:
 (hyperref)             thecounter {B}
 (hyperref)             text {Abbildungsverzeichnis}
-(hyperref)             reference {section*.172}
+(hyperref)             reference {section*.173}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
  (BA.lof
@@ -4590,7 +4597,7 @@ Overfull \hbox (15.0pt too wide) detected at line 16
  
  []
 
-Package hyperref Info: Reference (link) `figure.caption.169' on input line 21.
+Package hyperref Info: Reference (link) `figure.caption.170' on input line 21.
 
 Overfull \hbox (15.0pt too wide) detected at line 21
  
@@ -4639,7 +4646,7 @@ Package `hyperref' Info: End of reference (link) `figure.caption.139', line 15.
 
 Package `hyperref' Info: End of reference (link) `figure.caption.153', line 16.
 
-Package `hyperref' Info: End of reference (link) `figure.caption.169', line 21.
+Package `hyperref' Info: End of reference (link) `figure.caption.170', line 21.
 
 ]
 Package babel Info: Redefining german shorthand "f
@@ -4653,7 +4660,7 @@ Package hyperref Info: Anchor `page.52' on input line 180.
 
 
 ]
-Package hyperref Info: Anchor `section*.173' on input line 184.
+Package hyperref Info: Anchor `section*.174' on input line 184.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 184.
 Package babel Info: Redefining german shorthand "|
@@ -4663,7 +4670,7 @@ Package babel Info: Redefining german shorthand "~
 Package hyperref Info: bookmark on input line 184:
 (hyperref)             thecounter {B}
 (hyperref)             text {Tabellenverzeichnis}
-(hyperref)             reference {section*.173}
+(hyperref)             reference {section*.174}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
  (BA.lot
@@ -4705,7 +4712,7 @@ Package hyperref Info: Anchor `page.54' on input line 186.
 
 
 ]
-Package hyperref Info: Anchor `section*.174' on input line 190.
+Package hyperref Info: Anchor `section*.175' on input line 190.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 190.
 Package babel Info: Redefining german shorthand "|
@@ -4715,7 +4722,7 @@ Package babel Info: Redefining german shorthand "~
 Package hyperref Info: bookmark on input line 190:
 (hyperref)             thecounter {B}
 (hyperref)             text {Auflistungsverzeichnis}
-(hyperref)             reference {section*.174}
+(hyperref)             reference {section*.175}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
 
@@ -4733,7 +4740,7 @@ Class scrbook Warning: \float@listhead detected!
 (scrbook)              deprecated \float@listhead interface  on input line 192.
 
 
-Package hyperref Info: Anchor `chapter*.175' on input line 192.
+Package hyperref Info: Anchor `chapter*.176' on input line 192.
 (BA.lol
 Package hyperref Info: Reference (link) `lstlisting.142' on input line 5.
 )
@@ -4762,7 +4769,7 @@ Package hyperref Info: Anchor `page.56' on input line 193.
 
 
 ]
-Package hyperref Info: Anchor `section*.176' on input line 197.
+Package hyperref Info: Anchor `section*.177' on input line 197.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 197.
 Package babel Info: Redefining german shorthand "|
@@ -4772,10 +4779,10 @@ Package babel Info: Redefining german shorthand "~
 Package hyperref Info: bookmark on input line 197:
 (hyperref)             thecounter {B}
 (hyperref)             text {Verzeichnis der Algorithmen}
-(hyperref)             reference {section*.176}
+(hyperref)             reference {section*.177}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `chapter*.177' on input line 199.
+Package hyperref Info: Anchor `chapter*.178' on input line 199.
  (BA.loa)
 \tf@loa=\write8
 \openout8 = `BA.loa'.
@@ -4801,7 +4808,7 @@ Package hyperref Info: Anchor `page.58' on input line 200.
 
 
 ]
-Package hyperref Info: Anchor `section*.178' on input line 204.
+Package hyperref Info: Anchor `section*.179' on input line 204.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 204.
 Package babel Info: Redefining german shorthand "|
@@ -4811,10 +4818,10 @@ Package babel Info: Redefining german shorthand "~
 Package hyperref Info: bookmark on input line 204:
 (hyperref)             thecounter {B}
 (hyperref)             text {Abkürzungsverzeichnis}
-(hyperref)             reference {section*.178}
+(hyperref)             reference {section*.179}
 (hyperref)             toclevel {0}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `chapter*.179' on input line 205.
+Package hyperref Info: Anchor `chapter*.180' on input line 205.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 214.
 Package babel Info: Redefining german shorthand "|
@@ -4836,7 +4843,7 @@ Package hyperref Info: Anchor `page.60' on input line 214.
 
 
 ]
-Package hyperref Info: Anchor `section*.180' on input line 219.
+Package hyperref Info: Anchor `section*.181' on input line 219.
 
 
 Package caption Warning: Unused \captionsetup[formeln] on input line 127.
@@ -4864,10 +4871,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31085 strings out of 492973
- 562747 string characters out of 3124034
+ 31088 strings out of 492973
+ 562802 string characters out of 3124034
  943398 words of memory out of 3000000
- 33933 multiletter control sequences out of 15000+200000
+ 33935 multiletter control sequences out of 15000+200000
  112213 words of font info for 88 fonts, out of 3000000 for 9000
  1166 hyphenation exceptions out of 8191
  80i,11n,80p,9084b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -4893,9 +4900,9 @@ sers/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso1
 c/lm/lmsso9.pfb><C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmsy10.pfb><C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/lm/lmtt9.pfb>
-Output written on BA.pdf (61 pages, 3376776 bytes).
+Output written on BA.pdf (61 pages, 3378794 bytes).
 PDF statistics:
- 1190 PDF objects out of 1200 (max. 8388607)
- 280 named destinations out of 1000 (max. 500000)
+ 1191 PDF objects out of 1200 (max. 8388607)
+ 281 named destinations out of 1000 (max. 500000)
  577 words of extra memory for PDF output out of 10000 (max. 10000000)
 

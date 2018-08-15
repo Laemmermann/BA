@@ -52,23 +52,23 @@
 \contentsline {section}{\numberline {4.4}Zusammenfassung}{38}{section.154}
 \contentsline {chapter}{\numberline {5}Implementierung}{41}{chapter.155}
 \contentsline {section}{\numberline {5.1}Architektur des Moodle-Plugins}{41}{section.156}
-\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{41}{section.157}
-\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{41}{subsection.158}
-\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{41}{subsection.159}
-\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{41}{subsection.160}
-\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{41}{subsection.161}
-\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{41}{subsection.162}
-\contentsline {subsection}{\numberline {5.2.6}Galerie der Zusatzinhalte}{41}{subsection.163}
-\contentsline {subsection}{\numberline {5.2.7}Visualisierung der Annotationen in der Timeline}{41}{subsection.164}
-\contentsline {section}{\numberline {5.3}Zusammenfassung}{42}{section.165}
-\contentsline {chapter}{\numberline {6}Evaluation}{43}{chapter.166}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{44}{chapter.167}
-\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{45}{appendix.168}
-\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{47}{appendix.170}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{49}{chapter*.171}
-\contentsline {chapter}{Abbildungsverzeichnis}{51}{section*.172}
-\contentsline {chapter}{Tabellenverzeichnis}{53}{section*.173}
-\contentsline {chapter}{Auflistungsverzeichnis}{55}{section*.174}
-\contentsline {chapter}{Verzeichnis der Algorithmen}{57}{section*.176}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{59}{section*.178}
+\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{41}{section.158}
+\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{41}{subsection.159}
+\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{42}{subsection.160}
+\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{42}{subsection.161}
+\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{42}{subsection.162}
+\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{42}{subsection.163}
+\contentsline {subsection}{\numberline {5.2.6}Galerie der Zusatzinhalte}{42}{subsection.164}
+\contentsline {subsection}{\numberline {5.2.7}Visualisierung der Annotationen in der Timeline}{42}{subsection.165}
+\contentsline {section}{\numberline {5.3}Zusammenfassung}{42}{section.166}
+\contentsline {chapter}{\numberline {6}Evaluation}{43}{chapter.167}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{44}{chapter.168}
+\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{45}{appendix.169}
+\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{47}{appendix.171}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{49}{chapter*.172}
+\contentsline {chapter}{Abbildungsverzeichnis}{51}{section*.173}
+\contentsline {chapter}{Tabellenverzeichnis}{53}{section*.174}
+\contentsline {chapter}{Auflistungsverzeichnis}{55}{section*.175}
+\contentsline {chapter}{Verzeichnis der Algorithmen}{57}{section*.177}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{59}{section*.179}
 \contentsfinish 
