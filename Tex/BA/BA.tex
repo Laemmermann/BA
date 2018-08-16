@@ -24,6 +24,7 @@
 %%%%%%%%%%
 \usepackage{rotating}
 \usepackage{enumitem}
+\usepackage{longtable}
 %%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -153,6 +154,7 @@ Datum: \today\\
 \includegraphics[width=0.8\textwidth,center]{VerwendungMoodle.pdf}
 \caption{\label{fig:VerwendungMoodle} Verwendung von Moodle in den Pflichtmodulen des Bachelorstudiengangs Wirtschaftsinformatik (Sommersemester 2018)}
 \end{sidewaysfigure}
+\todo[inline]{geht das lesbarer?}
 
 %%
 \chapter{Zweiter Teil des Anhangs}
@@ -205,13 +207,26 @@ Datum: \today\\
 \phantomsection\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
 \chapter*{Abkürzungsverzeichnis}
 
-\begin{description}
-\item[AJAX] Asynchronous JavaScript and XML
-\item[API] Application Programing Interface
-\item[BMBF] Bundesministerium für Bildung und Forschung
-\item[JSON] JavaScript Object Notation
-\item[XML] Extensible Markup Language
-\end{description}
+%\begin{description}
+%\item[AJAX] Asynchronous JavaScript and XML
+%\item[API] Application Programing Interface
+%\item[BMBF] Bundesministerium für Bildung und Forschung
+%\item[JSON] JavaScript Object Notation
+%\item[Moodle] Modular Object-Oriented Dynamic Learning Environment
+%\item[XML] Extensible Markup Language
+%\end{description}
+
+\renewcommand*{\arraystretch}{1.4}
+\setlength{\LTleft}{0pt}
+\begin{longtable}[l]{p{2cm}p{15cm}}
+\textbf{AJAX} & Asynchronous JavaScript and XML \\
+\textbf{API} & Application Programing Interface \\
+\textbf{BMBF} & Bundesministerium für Bildung und Forschung \\
+\textbf{JSON} & JavaScript Object Notation \\
+\textbf{Moodle} & Modular Object-Oriented Dynamic Learning Environment \\
+\textbf{XML} & Extensible Markup Language \\
+\end{longtable}
+
 \cleardoublepage
 
 
