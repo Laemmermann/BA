@@ -1,4 +1,4 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{50}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -108,6 +108,24 @@ Pierre Dillenbourg, Michael~J Baker, Agnes Blaye, und Claire O'Malley.
   2018{\natexlab{b}}.
 \newblock abgerufen am 28.07.2018.
 
+\bibitem[{H5P}(2013)]{h5p2013video}
+{H5P}.
+\newblock {Interactive Video | H5P}.
+\newblock \url{https://h5p.org/interactive-video}, 2013.
+\newblock abgerufen am 15.08.2018.
+
+\bibitem[{H5P}(o.D.)]{wavesurfer}
+{H5P}.
+\newblock {wavesurfer.js}.
+\newblock \url{https://wavesurfer-js.org/}, o.D.
+\newblock abgerufen am 15.08.2018.
+
+\bibitem[Kerres und Jechle(2002)]{kerres2002didaktische}
+Michael Kerres und Thomas Jechle.
+\newblock Didaktische konzeption des telelernens.
+\newblock \emph{Information und Lernen mit Multimedia und Internet},
+  3:\penalty0 267--281, 2002.
+
 \bibitem[McLuhan(1977)]{mcluhan1977laws}
 Marshall McLuhan.
 \newblock {Laws of the Media}.
@@ -120,11 +138,18 @@ Marshall McLuhan.
   2015{\natexlab{a}}.
 \newblock abgerufen am 28.07.2018.
 
-\bibitem[{Moodle}(2015{\natexlab{b}})]{moodle2015was}
+\bibitem[{Moodle}(2015{\natexlab{b}})]{moodle2015blocksettings}
+{Moodle}.
+\newblock {Block settings - MoodleDocs}.
+\newblock \url{https://docs.moodle.org/35/en/Block_settings},
+  2015{\natexlab{b}}.
+\newblock abgerufen am 18.08.2018.
+
+\bibitem[{Moodle}(2015{\natexlab{c}})]{moodle2015was}
 {Moodle}.
 \newblock {Was ist Moodle – MoodleDocs}.
 \newblock \url{https://docs.moodle.org/35/de/Was_ist_Moodle},
-  2015{\natexlab{b}}.
+  2015{\natexlab{c}}.
 \newblock abgerufen am 28.07.2018.
 
 \bibitem[{Moodle}(2016)]{moodle2016activity}
@@ -133,12 +158,18 @@ Marshall McLuhan.
 \newblock \url{https://docs.moodle.org/dev/Activity_modules}, 2016.
 \newblock abgerufen am 15.08.2018.
 
-\bibitem[{Moodle}(2017)]{moodle2017plugin}
+\bibitem[{Moodle}(2017{\natexlab{a}})]{moodle2017media}
 {Moodle}.
-\newblock {Moodle.org: Moodle Statistics}.
+\newblock {Media players - MoodleDocs}.
+\newblock \url{https://docs.moodle.org/dev/Media_players}, 2017{\natexlab{a}}.
+\newblock abgerufen am 18.08.2018.
+
+\bibitem[{Moodle}(2017{\natexlab{b}})]{moodle2017plugin}
+{Moodle}.
+\newblock {Plugin types - MoodleDocs}.
 \newblock
   \url{https://docs.moodle.org/dev/Plugin_types#List_of_Moodle_plugin_types},
-  2017.
+  2017{\natexlab{b}}.
 \newblock abgerufen am 28.07.2018.
 
 \bibitem[{Moodle}(2018{\natexlab{a}})]{moodle2018about}
@@ -147,16 +178,29 @@ Marshall McLuhan.
 \newblock \url{https://docs.moodle.org/35/en/About_Moodle}, 2018{\natexlab{a}}.
 \newblock abgerufen am 28.07.2018.
 
-\bibitem[{Moodle}(2018{\natexlab{b}})]{moodle2018file}
+\bibitem[{Moodle}(2018{\natexlab{b}})]{moodle2018blocks}
+{Moodle}.
+\newblock {Blocks - MoodleDocs}.
+\newblock \url{https://docs.moodle.org/35/en/Blocks}, 2018{\natexlab{b}}.
+\newblock abgerufen am 18.08.2018.
+
+\bibitem[{Moodle}(2018{\natexlab{c}})]{moodle2018file}
 {Moodle}.
 \newblock {File API - MoodleDocs}.
-\newblock \url{https://docs.moodle.org/dev/File_API}, 2018{\natexlab{b}}.
+\newblock \url{https://docs.moodle.org/dev/File_API}, 2018{\natexlab{c}}.
 \newblock abgerufen am 15.08.2018.
 
-\bibitem[{Moodle}(2018{\natexlab{c}})]{moodle2018stats}
+\bibitem[{Moodle}(2018{\natexlab{d}})]{moodle2018install}
+{Moodle}.
+\newblock {Installing Moodle - MoodleDocs}.
+\newblock \url{https://docs.moodle.org/35/en/Installing_Moodle},
+  2018{\natexlab{d}}.
+\newblock abgerufen am 18.08.2018.
+
+\bibitem[{Moodle}(2018{\natexlab{e}})]{moodle2018stats}
 {Moodle}.
 \newblock {Moodle.org: Moodle Statistics}.
-\newblock \url{https://moodle.net/stats/}, 2018{\natexlab{c}}.
+\newblock \url{https://moodle.net/stats/}, 2018{\natexlab{e}}.
 \newblock abgerufen am 28.07.2018.
 
 \bibitem[Moos und Marroquin(2010)]{moos2010multimedia}
@@ -270,6 +314,22 @@ Sheila Scutter, Ieva Stupans, Tim Sawyer, und Sharron King.
   \url{https://www.destatis.de/DE/PresseService/Presse/Pressekonferenzen/2015/zeitverwendung/Pressebroschuere_zeitverwendung.pdf?__blob=publicationFile},
   2015.
 \newblock abgerufen am 27.07.2018.
+
+\bibitem[Tremblay et~al.(2011)Tremblay, LeBlanc, Kho, Saunders, Larouche,
+  Colley, Goldfield, und Gorber]{tremblay2011systematic}
+Mark~S Tremblay, Allana~G LeBlanc, Michelle~E Kho, Travis~J Saunders, Richard
+  Larouche, Rachel~C Colley, Gary Goldfield, und Sarah~Connor Gorber.
+\newblock Systematic review of sedentary behaviour and health indicators in
+  school-aged children and youth.
+\newblock \emph{International Journal of Behavioral Nutrition and Physical
+  Activity}, 8\penalty0 (1):\penalty0 98, 2011.
+
+\bibitem[Wild(2017)]{wild2017moodle}
+I.~Wild.
+\newblock \emph{{Moodle 3.x Developer's Guide}}.
+\newblock Packt Publishing, 2017.
+\newblock ISBN 9781786469540.
+\newblock URL \url{https://books.google.de/books?id=EHg5DwAAQBAJ}.
 
 \bibitem[Wirdemann(2017)]{wirdemann2017scrum}
 Ralf Wirdemann.

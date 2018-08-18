@@ -6,13 +6,11 @@ Für die Konzeption und Implementierung des Moodle-Plugins ist zunächst eine An
 %\caption{\label{fig:MockupBereiche}Erste Skizze der Moodle-Repräsentation eines Hyperaudio-Dokuments}
 %\end{figure}
 
-\todo[inline]{Einleitung erweitern}
 
 %%%%%%%%%%
 \section{Zielgruppe}
 Im nächsten Schritt soll die Zielgruppe anhand von \textit{Personas} und deren \textit{User Stories} festgelegt werden. Dies soll dann die Grundlage für die Definition der Anforderungen im nächsten Abschnitt darstellen.
 
-\todo[inline]{Einleitung erweitern}
 
 %%%%%%%%%%
 \subsection{Personas}
@@ -42,6 +40,7 @@ Bevor sich den \textit{User Stories} zugewendet werden kann, müssen vorab die d
 
 %%%%%%%%%%
 \subsection{User Stories}
+\label{sec:UserStories}
 \textit{User Stories} beschreiben, wie die klassischen \textit{Use Cases}, Anforderungen an ein Softwaresystem. Diese sind dabei im Vergleich wesentlich oberflächlicher und ungenauer formuliert als \textit{Use Cases} \citep{wirdemann2017scrum}.
 
 Erst im Laufe der Entwicklung werden \textit{User Stories} konkreter und dienen am Ende dazu deren Ergebnis zu validieren. Beim Erstellen von \textit{User Stories} ist zu beachten, dass sogenannte \textit{Epics}, das sind \textit{User Stories} mit sehr großem Umfang, wenn möglich in kleinere \textit{User Stories} aufgesplittet werden. Unter anderem ist zu beachten, dass die \textit{User Stories} keine Abhängigkeiten untereinander aufweisen und dass deren Erfüllung überprüfbar ist. \textit{User Stories} können im \textit{Connextra Format} festgehalten werden, welches wie folgt aufgebaut ist \citep{cohn2004user}:
@@ -140,11 +139,23 @@ Für das Angebot einer alternativen Repräsentation von Lerninhalten als Hyperau
 \end{enumerate}
 
 
-
-
 %%%%%%%%%%
-\subsection{Umgebungsbedingungen}
-\todo[inline]{Rahmen in dem das Plugin durch Studierende genutzt werden können soll}
+%\subsection{Umgebungsbedingungen}
+%Aus den in Abschnitt \ref{sec:personas} beschriebenen \textit{Personas} und den in Abschnitt \ref{sec:UserStories} beschriebenen \textit{User Stories} können die Umgebungsbedingungen des \textit{Hyperaudio}-Plugins abgelesen werden. Diese stellen den Rahmen dar, in dem das Plugin durch die Studierenden genutzt werden können soll und spiegeln teilweise bereits Anforderungen wieder.
+%
+%So ergeben sich folgende Umgebungsbedingungen:
+%
+%\begin{itemize}
+%\item Möglichkeit zur Nutzung des Plugins während der Ausübung anderer Tätigkeiten (Hausarbeit, Sport, Pendeln etc.)
+%\item Unterstützung von verschiedenen Endgeräten (Desktop/Laptop, Tablet, Smartphone  etc.)
+%\end{itemize}
+%
+%
+%\todo[inline]{Rahmen in dem das Plugin durch Studierende genutzt werden können soll}
+%- Während unbezahlter Arbeit
+%- Beim Sport
+%- An mobilen Endgeräten
+
 
 %%%%%%%%%%
 \input{chapter/3banforderungen}
@@ -152,13 +163,35 @@ Für das Angebot einer alternativen Repräsentation von Lerninhalten als Hyperau
 
 %%%%%%%%%%
 \section{Möglichkeiten der Moodle Plugin-Entwicklung}
+Moodle setzt für den Betrieb einen Webserver, eine MySQL oder PostgreSQL Datenbank und PHP voraus \Citep{moodle2018install}. Moodle unterstützt die Verwendung von \textit{JavaScript} und die Einbindung von Thirdparty Frameworks \citep{wild2017moodle}. Dies gepaart mit den Möglichkeiten durch den Einsatz von \textit{PHP} bietet bei der Entwicklung ausreichend Möglichkeiten um das gewünschte Plugin umzusetzen.
 
-%Plugin Typen beschreiben, die in Frage kommen
-%Thirdparty Frameworks einbinden kann
-%LAMP/WAMP
-%Mobile
-\todo[inline]{Plugin-Typen beschreiben => Activity Plugin}
-% => Zusammenfassung => Einleitung Konzept
+Am Anfang einer Entwicklung eine Moodle Plugins steht zunächst die Frage um welche Art Plugin es sich handelt. Es werden nun die Plugin Typen, der über 50 vorhandenen, beschrieben, welche für das \textit{Hyperaudio}-Plugin in Frage kommen \citep{moodle2017plugin}.
+
+\subsubsection{Media Player}
+Mit diesem Plugin-Typ kann Moodle um alternative Player für Audio- und Videoformate, aber auch andere Medien (z.B. Diagramme, Formeln, etc.) ergänzt werden \citep{moodle2017media}. Player beziehen sich aber stets auf das reine Abspielen von Dateien oder Links zu externen Medieninhalten, wie zum Beispiel auf \textit{Youtube}.
+
+%Media players are used to automatically embed files in the pages. It is normally video or audio files or links to media sharing sites such as YouTube or Vimeo. However it is also possible to use media players for embedding other contents - diagrams, formulas, etc. Media players usually look at the file extension to match with the player but they can also make a URL match (this can be used for YouTube, Vimeo and similar sites links).
+
+\subsubsection{Blöcke}
+Blöcken dienen dazu Kursseiten um zusätzliche Informationen anzureichern, welche dann in der rechten oder linken Spalte angeheftet werden können (siehe \ref{fig:MoodleKursseitenbeispiel}). Blöcke können auch \glqq angeheftet\grqq{} werden \citep{moodle2018blocks}. Diese Anheftung kann auf verschiedene Bereiche erfolgen, beispielsweise auf der ganzen Moodle Seite, auf der Seite des User Profils oder der Startseite \citep{moodle2015blocksettings}. Blöcke sind also nicht dazu geeignet größere Inhalte darzustellen. Dementsprechend kommt dieser Plugin-Typ nicht für unser \textit{Hyperaudio}-Plugin in Frage. Es wäre aber durchaus denkbar, dass mit Hilfe von Blöcken die Anforderungen an die Übersicht über alle Hyperaudio-Dokumente der belegten Kurse sowie die Favoritenfunktion für Hyperaudio-Dokumente umgesetzt werden könnten.  
+
+
+\subsubsection{Ressourcen}
+Mittels eines Plugins dieses Typs ist es möglich dem Studierenden Inhalte zu präsentieren. Wichtig ist hierbei, dass diese Plugins keinerlei Eingabe oder Interaktion von Seiten des Studierenden erwarten und ausschließlich dazu dienen Informationen darzustellen \citep{wild2017moodle}.
+%A Moodle resource plugin transmits information to the learner--it expects nothing in return.
+%A resource plugin expects the learner to be passive. Obvious examples of resources are text
+%to read, videos to watch, and audio to listen to. That is not to say that the resource won't
+%form the basis of some form of interaction outside of Moodle, but we certainly don't expect
+%any aspect of that interaction to be captured in Moodle
+
+
+\subsubsection{Aktivitäten}
+Im Gegensatz zu Ressourcen erwarten Aktivitäten irgendeine Art von Interaktion vom Studierenden, neben der Darstellung von Inhalten. Dies kann in Form eines Quizen bei dem der Nutzer Antworten abhaken muss, oder in Form eines Forums in dem der Studierende Kommentare schreibt geschehen \citep{wild2017moodle}. Somit stellen Aktivitäten den richtigen Typen für das \textit{Hyperaudio}-Plugin dar.
+%Compared to a resource, an activity expects some form of learner interaction - this is
+%Moodle in receive mode. This could be an obvious example, such as a quiz where the
+%learner will type in a response for Moodle to mark, or it could be a forum where social
+%constructionist learning takes place.
+
 
 %%%%%%%%%%
 \section{Aktueller Stand der Technik}
@@ -202,7 +235,6 @@ In \citep{youtubeinfokarten,youtubeabspann} werden Möglichkeiten aufgezeigt, In
 \subsection{Technologien für den Einsatz in Moodle}
 Bevor mit der Konzeption und Implementierung des Moodle-Plugins begonnen wird, wird sich nun der Analyse der bestehender Komponenten zugewendet, die als Basis für das Plugin dienen können. Ziel ist es festzustellen, ob eventuell bereits Technologien existieren, mit deren Hilfe die Idee des Moodle-Plugins umgesetzt werden kann oder ob zumindest Teile davon - unter entsprechender Beachtung der Lizenzierung - sinnvoll wiederverwendet werden können. Hierbei wird so vorgegangen, dass die einzelnen vorhanden Technologien auf diesem Gebiet und ihre Funktionen vorgestellt und anschließend bewertet werden, inwiefern diese für die Umsetzung des Plugins relevant sind.
 
-\todo[inline]{Um Screenshots ergänzen}
 \todo[inline]{sollte nicht auf Moodle bezogen werden. Es bräuchte einen extra Teilabschnitt für Moodle.Plugins.}
 
 %%%%%%%%%%
@@ -211,7 +243,12 @@ Bei dem \textit{VideoJS Player}\footnote{GitHub-Projekt, Apache-Lizenz 2.0: http
 
 %%%%%%%%%%
 \subsubsection{H5P}
-Mit \textit{H5P} und dem bereits vorhanden Plugin für Moodle\footnote{GitHub-Projekt, GNU General Public License v2.0: https://github.com/h5p/h5p-moodle-plugin} ist es möglich, etliche verschieden Arten von interaktiven Lerninhalten zu gestalten. Dabei handelt es sich um eine Sammlung von interaktiven Komponenten, darunter Course Presentation, Timeline und Interactive Video. Course Presentation bietet die Möglichkeit, interaktive Präsentationen zu gestalten. Timeline kann genutzt werden um Inhalte anhand eines Zeitstrahls darzustellen. Interactive Video ermöglicht, ähnlich wie Course Presentation, die Interaktion während des Abspielens eines Videos. Besonders erwähnenswert ist, dass sich bei \textit{H5P} die interaktiven Inhalte innerhalb der Weboberfläche erstellen lassen. Es wäre also denkbar, eine eigene interaktive Komponente zu entwickeln, welche es ermöglicht, Hyperaudio-Dokumente als interaktiven Lerninhalt zu erstellen und abzuspielen.
+Mit \textit{H5P} und dem bereits vorhanden Plugin für Moodle\footnote{GitHub-Projekt, GNU General Public License v2.0: https://github.com/h5p/h5p-moodle-plugin} ist es möglich, etliche verschieden Arten von interaktiven Lerninhalten zu gestalten. Dabei handelt es sich um eine Sammlung von interaktiven Komponenten, darunter Course Presentation, Timeline und Interactive Video. Course Presentation bietet die Möglichkeit, interaktive Präsentationen zu gestalten. Timeline kann genutzt werden um Inhalte anhand eines Zeitstrahls darzustellen. Interactive Video ermöglicht, ähnlich wie Course Presentation, die Interaktion während des Abspielens eines Videos (siehe Abbildung \ref{fig:H5P}). Besonders erwähnenswert ist, dass sich bei \textit{H5P} die interaktiven Inhalte innerhalb der Weboberfläche erstellen lassen. Es wäre also denkbar, eine eigene interaktive Komponente zu entwickeln, welche es ermöglicht, Hyperaudio-Dokumente als interaktiven Lerninhalt zu erstellen und abzuspielen.
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth,center]{H5P.png}
+\caption{\label{fig:H5P} Auszug aus einem Interactive Video \citep{h5p2013video}}
+\end{figure}
 
 %%%%%%%%%%
 \subsubsection{Popcorn.js}
@@ -220,17 +257,22 @@ Die Mozilla Corporation bietet mit \textit{Popcorn.js}\footnote{GitHub-Projekt, 
 %%%%%%%%%%
 \subsubsection{wavesurfer.js}
 \label{sec:wavesurfer.js}
-Bei \textit{wavesurfer.js}\footnote{GitHub-Projekt, BSD-3-Clause: https://wavesurfer-js.org; https://github.com/katspaugh/wavesurfer.js} handelt es sich um ein JavaScript Framework, welches es ermöglicht, die Wellenform zu der abgespielten Audio-Datei in einem Audio-Player visualisieren zu lassen. Diese Basisfunktionalität wurde durch Weiterentwicklungen um nützliche Funktionen erweitert. Auf zwei dieser Weiterentwicklungen gehen wir im Folgenden ein.
+Bei \textit{wavesurfer.js}\footnote{GitHub-Projekt, BSD-3-Clause: https://wavesurfer-js.org; https://github.com/katspaugh/wavesurfer.js} handelt es sich um ein JavaScript Framework, welches es ermöglicht, die Wellenform zu der abgespielten Audio-Datei in einem Audio-Player visualisieren zu lassen (siehe Abbildung \ref{fig:Wavesurfer}. Diese Basisfunktionalität wurde durch Weiterentwicklungen um nützliche Funktionen erweitert. Auf zwei dieser Weiterentwicklungen gehen wir im Folgenden ein.
+
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth,center]{Wavesurfer.png}
+\caption{\label{fig:Wavesurfer} Der Audio-Player auf der \textit{wavesurfer.js} Webseite\citep{wavesurfer}}
+\end{figure}
+
 
 %%%%%%%%%%
 \subsubsection{audio-annotator}
-Der \textit{audio-annotator} stellt eine auf dem \textit{wavesurfer.js} Framework basierende Weiterentwicklung dar, welche es mittels Weboberfläche ermöglicht, Annotationen in Form von Text an eine Audio-Datei anzuheften. Es erweitert \textit{wavesurfer.js} also um die Möglichkeit, Annotationen an eine Datei anzuheften und bietet gleichzeitig noch eine Oberfläche, um ebendiese Annotationen vorzunehmen.
+Der \textit{audio-annotator}\footnote{GitHub-Projekt, BSD-2-Clause: https://github.com/CrowdCurio/audio-annotator} stellt eine auf dem \textit{wavesurfer.js} Framework basierende Weiterentwicklung dar, welche es mittels Weboberfläche ermöglicht, Annotationen in Form von Text an eine Audio-Datei anzuheften. Es erweitert \textit{wavesurfer.js} also um die Möglichkeit, Annotationen an eine Datei anzuheften und bietet gleichzeitig noch eine Oberfläche, um ebendiese Annotationen vorzunehmen.
 
 %%%%%%%%%%
 \subsubsection{BAT - BMAT Annotation Tool}
-Beim \textit{BAT - BMAT Annotation Tool}\footnote{GitHub-Projekt, GNU General Public License 3: https://wavesurfer-js.org; https://github.com/BlaiMelendezCatalan/BAT} handelt es sich um eine Entwicklung basierend auf der im Zusammenhang von \textit{audio-annotator} erweiterten Frameworks \textit{wavesurfer.js} und \textit{regions.js}. Es ermöglicht, ebenso wie \textit{audio-annotator}, dem Benutzer mittels Weboberfläche Annotationen an einer Audio-Datei vorzunehmen. Somit bietet \textit{BAT - BMAT Annotation Tool} logischerweise dieselben Vorzüge wie bereits der \textit{audio-annotator}. Im Vergleich zum \textit{audio-annotator} stellt \textit{BAT - BMAT Annotation Tool} jedoch ein weiterentwickelteres Framework dar.
-
-\todo[inline]{regions.js bereits bei audio-annotator in Verwendung?}
+Beim \textit{BAT - BMAT Annotation Tool}\footnote{GitHub-Projekt, GNU General Public License 3: https://wavesurfer-js.org; https://github.com/BlaiMelendezCatalan/BAT} handelt es sich um eine Entwicklung basierend auf dem im Zusammenhang von \textit{audio-annotator} erweiterten Frameworks \textit{wavesurfer.js}. Es ermöglicht, ebenso wie \textit{audio-annotator}, dem Benutzer mittels Weboberfläche Annotationen an einer Audio-Datei vorzunehmen. Somit bietet \textit{BAT - BMAT Annotation Tool} logischerweise dieselben Vorzüge wie bereits der \textit{audio-annotator}. Im Vergleich zum \textit{audio-annotator} stellt \textit{BAT - BMAT Annotation Tool} jedoch ein weiterentwickelteres Framework dar.
 
 \subsubsection{wavesurfer.js für Hyperaudio-Dokumente}
 Das \textit{wavesurfer.js} Framework - speziell mit seinen Weiterenticklungen - bietet einige Funktionen, die für das Abspielen von Hyperaudio-Dokumenten nützlich sein könnten. Zusätzlich bietet es auch die Funktion,  die entsprechenden Annotationen in einer Weboberfläche an die Audio-Dateien anzuheften. Grundsätzlich lässt sich feststellen, dass \textit{wavesurfer.js} und seine Ableger im Vergleich zu den zuvor betrachteten Entwicklungen einen wesentlich unausgereifteren Eindruck hinterlassen.
@@ -239,7 +281,7 @@ Das \textit{wavesurfer.js} Framework - speziell mit seinen Weiterenticklungen - 
 \subsubsection{timesheets.js}
 \textit{timesheets.js}\footnote{ehemaliges GitHub-Projekt, MIT Lizenz: http://wam.inrialpes.fr/timesheets} ist ebenfalls ein JavaScript Framemwork, welches analog zu \textit{audio-annotator} und \textit{BAT - BMAT Annotation Tool} die Annotation von zusätzlichen Inhalten ermöglicht. Leider befindet sich das Framework aktuell nicht mehr in der Entwicklung. Aufgrund der Ähnlichkeit zu den {wavesurfer.js} Ablegern und der eingestellten Entwicklung können hier zwar Ideen übernommen werden, als Basis für das zu entwickelnde Moodle-Plugin ist dieses Framework jedoch nicht geeignet.
 
-Zusammenfassend ist festzustellen, dass für die Entwicklung des Plugins für Hyperaudio-Dokumente vor allem \textit{VideoJS Player}, \textit{H5P} und \textit{Popcorn.js} die vielversprechendsten bestehenden Entwicklungen darstellen, da diese bereits einen sehr hohen Entwicklungsstand haben. Unter Anbetracht der benötigten Funktionen stellen aber speziell der \textit{VideoJS Player} und \textit{Popcorn.js} eine sehr gute Basis dar, da diese mit ihrem Kernelement als Player und durch die integrierten Plugin-Systeme für die Entwicklung von Multimedia-Elementen ausgelegt sind. Bei \textit{H5P} müsste die Playerfunktion mit der dazugehörigen Erweiterung für Hyperaudio-Dokumente von Grund auf entwickelt werden, um eine entsprechende interaktive Komponente für Hyperaudio-Dokumente bereitstellen zu können. Letztendlich ist \textit{Popcorn.js} die beste Grundlage für die Entwicklung des Plugins, da hier auch die Steuerung der Medieninhalte bereits von Grund auf ausgeprägt implementiert sind, woraus bei der Umsetzung einiger Funktionen großer Nutzen gezogen werden kann.
+Zusammenfassend ist festzustellen, dass für die Entwicklung des Plugins für Hyperaudio-Dokumente vor allem \textit{VideoJS Player}, \textit{H5P} und \textit{Popcorn.js} die vielversprechendsten bestehenden Entwicklungen darstellen, da diese bereits einen sehr hohen Entwicklungsstand haben. Unter Anbetracht der benötigten Funktionen stellen aber speziell der \textit{VideoJS Player} und \textit{Popcorn.js} eine sehr gute Basis dar, da diese mit ihrem Kernelement als Player und durch die integrierten Plugin-Systeme für die Entwicklung von Multimedia-Elementen ausgelegt sind. Bei \textit{H5P} müsste die Playerfunktion mit der dazugehörigen Erweiterung für Hyperaudio-Dokumente von Grund auf entwickelt werden, um eine entsprechende interaktive Komponente für Hyperaudio-Dokumente bereitstellen zu können. Letztendlich ist \textit{Popcorn.js} die beste Grundlage für die Entwicklung des Plugins, da hier auch die Steuerung der Medieninhalte bereits von Grund auf ausgeprägt implementiert sind, woraus bei der Umsetzung einiger Funktionen großer Nutzen gezogen werden kann. \textbf{Des weiteren ist \textit{Popcorn.js} ohne Probleme als Thirdparty Framework in Moodle integrierbar.}
 
 
 %%%%%%%%%%%
@@ -258,4 +300,4 @@ Zusammenfassend ist festzustellen, dass für die Entwicklung des Plugins für Hy
 
 %%%%%%%%%%
 \section{Zusammenfassung}
-\dots
+Nachdem die Zielgruppe mittels \textit{Personas} und den dazugehörigen \textit{User Stories} definiert wurden, dienten diese der Anforderungsdefinition. Diese Anforderungen wurden dann in Hinblick auf die Zielsetzung der Arbeit in drei Prioritätsstufen eingeordnet. Anschließend wurden anhand der genaueren Betrachtung der Möglichkeiten zur Entwicklung von Plugins in Moodle die Randbedingungen bestimmt. Hierbei wurde festgehalten, dass das Plugin als Aktivitäten Plugin umzusetzen ist und dass Übersichten und Favoritenfunktion innerhalb von Blocken umgesetzte werden könnten. Mit diesem Wissen im Hinterkopf wurde dann der aktuelle Stand der Technik im allgemeinen und im Bezug auf die Entwicklung des Plugins betrachtet. In diesem Zuge wurde entschieden, dass \textit{Popcorn.js} als gute Grundlage für die Entwicklung des Plugins dient, da dieses mit seinen vorhanden Steuerungsmöglichkeiten ein gutes Grundgerüst darstellt und als Thirdparty Framework problemlos in Moodle integriert werden kann.

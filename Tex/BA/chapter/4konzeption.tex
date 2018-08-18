@@ -1,4 +1,5 @@
-Mit den Erkenntnissen des vorherigen Kapitels können wir uns nun der Konzeption unseres Moodle-Plugins zuwenden. Dabei werden wir zu Beginn verschiedene Nutzungsszenarien basierend auf den bereits festgelegten Anforderungen definieren. Diese sollen dann im späteren Verlauf auch zur Evaluierung der Implementierung herangezogen werden. Mit diesen Nutzungsszenarien im Hinterkopf wenden wir uns dann im nächsten Schritt der Benutzeroberfläche und deren Gestaltung zu. Abschließend haben wir ausreichend Vorarbeiten geleistet, um die Architektur des Plugins festzulegen und das Schnittstellenformat zu definieren. Diese stellen dann die letzten Schritte vor der Implementierung des Plugins dar.
+Mit den Erkenntnissen des vorherigen Kapitels kann sich nun der Konzeption des Moodle-Plugins zugewendet werden. Dabei werden zu Beginn die Zusammenhänge der Komponenten von von Hyperaudio-Dokument und Annotationen analysiert und deren Zusammenhänge festgehalten. Darauf aufbauend wird zunächst die Definition des Schnittstellenformats und der Datenbankentwurf vorgenommen. Zum Ende der Konzeption wird dann die Benutzeroberfläche des Plugins gestaltet.
+
 \todo[inline]{komplett überarbeiten}
 Der in Abbildung \ref{fig:UMLAufbau} dargestellte Zusammenhang zwischen Zusatzinhalt und Hyperaudio-Dokument kann mittels einer Schnittstellendatei umgesetzt werden. Diese wird im laufe des Kapitels genauer erörtert.
 
@@ -37,7 +38,8 @@ Zwischen Kommentaren und Zusatzinhalten gibt es jedoch keinen direkten Zusammenh
 \label{sec:konfigurationsdatei}
 \todo[inline]{Grobe Beschreibung der Struktur und des Ablaufs...u.A. warum Schnittstellendatei notwendig ist}
 \todo[inline]{Metainformationen zu Zusatzinhalten}
-Wie in der Einleitung dieses Kapitels beschrieben, kann die Konfiguration zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll mittels einer Konfigurationsdatei durchgeführt werden. Diese Vorgehensweise wird nun umgesetzt und die Konfigurationsdatei ist entsprechend zu definieren.
+\textbf{Bei der Anlage eines neuen Hyperaudio-Dokuments in Moodle wird neben der Audio-Datei und den anzuzeigenden Zusatzinhalten auch eine Konfigurationsdatei hochgeladen. Diese wird beim Speichern des Hyperaudio-Dokuments abgespeichert und ausgelesen. Diese ausgelesenen Informationen sollen dazu dienen festzuhalten zu welchem Zeitpunk welcher Zusatzinhalt annotiert werden soll.}
+%Wie in der Einleitung dieses Kapitels beschrieben, kann die Konfiguration zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll mittels einer Konfigurationsdatei durchgeführt werden. Diese Vorgehensweise wird nun umgesetzt und die Konfigurationsdatei ist entsprechend zu definieren.
 Auf Grund des Einsatzes von \textit{PHP} und \textit{JavaScript} innerhalb der Moodle Plugin-Entwicklung bietet sich der Einsatz von \textit{JSON} (JavaScript Object Notation) an. \textit{JSON} wird direkt durch \textit{JavaScript} unterstützt, ist somit am besten für \textit{JavaScript} geeignet und bietet im Vergleich zu \textit{XML} erhebliche Geschwindigkeitsvorteile \citep{nurseitov2009comparison}.
 %JSON is directly supported inside JavaScript [7] and is best suited for JavaScript applications; thus providing significant performance gains over XML, 
 Mittels der \textit{JSON}-Datei sollen folgende Informationen der Zusatzinhalte übertragen werden:
@@ -83,8 +85,6 @@ Jede der Tabellen verfügt über den Primärschlüssel \textit{id}. Darüber hin
 Im Mittelpunkt des Hyperaudio-Plugins steht die Tabelle \textit{hyperaudio}. Diese repräsentiert das Hyperaudio-Dokument und die Audio-Datei aus Abbildung \ref{fig:UMLAufbau}. Zunächst wird die ID des Moodle-Kurses (\textit{course}) abgelegt, dem das Hyperaudio-Dokument zugeordnet ist. Während die Audio-Datei selbst in der bereits erwähnten Tabelle \textit{files} zu finden ist, wird in der Tabelle \textit{hyperaudio} deren Dateiname (\textit{audiofile}) festgehalten. Zum Hyperaudio-Dokument können außerdem Name und Ersteller in den Spalten \textit{name} und \textit{author} hinterlegt werden. Eine optionale Beschreibung kann entsprechend dem de-facto-Standard der Moodle-Plugin-Entwicklung über \textit{introformat} und \textit{intro} hinzugefügt werden \citep{moodle2016activity}.
 
 Bei der Tabelle \textit{hyperaudio\_config} handelt es sich um eine Tabelle, in welcher die in Abschnitt \ref{sec:konfigurationsdatei} beschriebene Konfigurationsdatei gespeichert wird (\textit{file} enthält den Dateinamen als Referenz auf die \textit{files}-Tabelle). Daneben wird nur noch der Fremdschlüssel \textit{hyperaudio\_id} auf die Tabelle \textit{hyperaudio} als Zuordnung zum Hyperaudio-Dokument benötigt.
-
-\todo[inline]{name in hyperaudio\_config entfernen}
 
 Zur Ablage der annotierten Zusatzinhalte dient die Tabelle \textit{additional\_content}. Auch hier steht der Name der Datei in der Spalte \textit{file} als Referenz auf die \textit{files}-Tabelle. Ebenso dient der Fremdschlüssel \textit{hyperaudio\_id} zur Verknüpfung des Zusatzinhalts mit dem Hyperaudio-Dokument. Des Weiteren werden folgende Metainformationen zum Zusatzinhalt abgespeichert:
 
