@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -41,6 +41,11 @@ Pierre Dillenbourg.
   O'Malley]{dillenbourg1995evolution}
 Pierre Dillenbourg, Michael~J Baker, Agnes Blaye, und Claire O'Malley.
 \newblock The evolution of research on collaborative learning, 1995.
+
+\bibitem[Donker und Blenn(2007)]{donker2007gestaltung}
+Hilko Donker und Norbert Blenn.
+\newblock Gestaltung von hyperlinks in einer hyperaudio-enzyklop{\"a}die.
+\newblock In \emph{Mensch \& Computer}, pages 139--148, 2007.
 
 \bibitem[{FernUniversität in Hagen}(2014)]{fernuniversitaet2018kurs}
 {FernUniversität in Hagen}.
@@ -125,6 +130,13 @@ Michael Kerres und Thomas Jechle.
 \newblock Didaktische konzeption des telelernens.
 \newblock \emph{Information und Lernen mit Multimedia und Internet},
   3:\penalty0 267--281, 2002.
+
+\bibitem[Mayer(2009)]{mayer2009multimedia}
+R.E. Mayer.
+\newblock \emph{Multimedia Learning}.
+\newblock Cambridge University Press, 2009.
+\newblock ISBN 9780521514125.
+\newblock URL \url{https://books.google.de/books?id=5g0AM1CHysgC}.
 
 \bibitem[McLuhan(1977)]{mcluhan1977laws}
 Marshall McLuhan.
@@ -242,12 +254,6 @@ Reinhard Oppermann.
 \newblock In \emph{Handbook on information technologies for education and
   training}, pages 233--248. Springer, 2002.
 
-\bibitem[Pauli und Reusser(2000)]{pauli2000rolle}
-Christine Pauli und Kurt Reusser.
-\newblock Zur rolle der lehrperson beim kooperativen lernen.
-\newblock \emph{Schweizerische Zeitschrift fur Bildungswissenschaften}, pages
-  421--442, 2000.
-
 \bibitem[{Rampl, Hansjörg}(2007)]{erwartungskonformitaet}
 {Rampl, Hansjörg}.
 \newblock {ISO 9241:10 Erwartungskonformität}.
@@ -314,6 +320,14 @@ Sheila Scutter, Ieva Stupans, Tim Sawyer, und Sharron King.
   \url{https://www.destatis.de/DE/PresseService/Presse/Pressekonferenzen/2015/zeitverwendung/Pressebroschuere_zeitverwendung.pdf?__blob=publicationFile},
   2015.
 \newblock abgerufen am 27.07.2018.
+
+\bibitem[{Stephan Augsten}(2018)]{augsten2018iterativ}
+{Stephan Augsten}.
+\newblock {Was ist iterative Entwicklung?}
+\newblock
+  \url{https://www.dev-insider.de/was-ist-iterative-entwicklung-a-707340/},
+  2018.
+\newblock abgerufen am 19.08.2018.
 
 \bibitem[Tremblay et~al.(2011)Tremblay, LeBlanc, Kho, Saunders, Larouche,
   Colley, Goldfield, und Gorber]{tremblay2011systematic}
