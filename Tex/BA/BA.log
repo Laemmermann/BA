@@ -1,28 +1,36 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.15)  20 AUG 2018 00:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.23)  20 AUG 2018 12:52
 entering extended mode
 **./BA.tex
 (BA.tex
 LaTeX2e <2018-04-01> patch level 5
 (fumi.cls
 Document Class: fumi 2018/05/14 v0.1, by Niels Seidel, Bonn
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrbook.cls"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\
+scrbook.cls"
 Document Class: scrbook 2018/03/30 v3.25 KOMA-Script document class (book)
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\
+scrkbase.sty"
 Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\
+scrbase.sty"
 Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\key
+val.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\
+scrlfile.sty"
 Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
 )))
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\tocbasic.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\
+tocbasic.sty"
 Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box26
@@ -42,11 +50,13 @@ Class scrbook Info: File `scrsize11pt.clo' used instead of
 (scrbook)           file `scrsize11.clo' to setup font sizes on input line 2331
 .
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrsize11pt.clo"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\
+scrsize11pt.clo"
 File: scrsize11pt.clo 2018/03/30 v3.25 KOMA-Script font size class option (11pt
 )
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\
+typearea.sty"
 Package: typearea 2018/03/30 v3.25 KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count80
@@ -102,19 +112,23 @@ Package tocbasic Info: omitting babel extension for `lot'
 Class scrbook Info: Redefining `\numberline' on input line 6445.
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputen
+c.sty"
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc
+.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.d
+ef"
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\lmodern.s
+ty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -149,23 +163,29 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eurosym\euro
+sym.sty"
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box28
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\selinput.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\sel
+input.sty"
 Package: selinput 2016/05/17 v1.4 Semi-automatic input encoding detection (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\k
+vsetkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\i
+nfwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\e
+texcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\i
+fluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -174,21 +194,26 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\stringenc.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\s
+tringenc.sty"
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\l
+txcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdfescape.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\p
+dfescape.sty"
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\p
+dftexcmds.sty"
 Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\i
+fpdf.sty"
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -196,27 +221,34 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )))
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvo
+ptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsm
+ath.sty"
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip58
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amst
+ext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsg
+en.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen103
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsb
+sy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amso
+pn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count90
@@ -257,20 +289,24 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ams
+symb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ams
+fonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\ma
+thtools.sty"
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.s
+ty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count102
 \calc@Bcount=\count103
@@ -283,7 +319,8 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count104
 \calc@Cskip=\skip63
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mh
+setup.sty"
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
@@ -300,7 +337,8 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen119
 \l_MT_below_shortintertext_sep=\dimen120
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amscls\amsth
+m.sty"
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks22
 \thm@bodyfont=\toks23
@@ -312,7 +350,8 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headsep=\skip67
 \dth@everypar=\toks27
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\latexsy
+m.sty"
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -320,18 +359,22 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 )
 \c@definition=\count106
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\enumer
+ate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks28
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geo
+metry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\i
+fvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\if
+xetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count107
@@ -347,45 +390,56 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen128
 \Gm@dimlist=\toks29
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geo
+metry.cfg"))
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\if
+oddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
 \c@checkoddpage=\count110
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lipsum\lipsu
+m.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count111
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\changepage\changepage.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\changepage\c
+hangepage.sty"
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count112
 \cp@tempcnt=\count113
 LaTeX Info: Redefining \checkoddpage on input line 59.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\gra
+phicx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\gra
+phics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\tri
+g.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg
+\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def
+\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen129
 \Gin@req@width=\dimen130
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\capt
+ion.sty"
 Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\capt
+ion3.sty"
 Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen131
@@ -399,20 +453,24 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 Package caption Info: KOMA-Script document class.
 \c@ContinuedFloat=\count114
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subc
+aption.sty"
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 \c@subfigure=\count115
 \c@subtable=\count116
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\chngcntr\chn
+gcntr.sty"
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\blindtext\blindtext.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\blindtext\bl
+indtext.sty"
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace
+.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 \c@blindtext=\count117
@@ -434,7 +492,8 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count133
 \c@blind@pangrammax=\count134
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\footmisc\foo
+tmisc.sty"
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks30
 \footnotemargin=\dimen138
@@ -448,62 +507,77 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babe
+l.sty"
 Package: babel 2018/06/05 3.22 The Babel package
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\swit
+ch.def"
 File: switch.def 2018/06/05 3.22 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopt
+s.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german
+\ngerman.ldf"
 Language: ngerman 2018/03/29 v2.10 German support for babel (post-1996 orthogra
 phy)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german
+\ngermanb.ldf"
 Language: ngermanb 2018/03/29 v2.10 German support for babel (post-1996 orthogr
 aphy)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babe
+l.def"
 File: babel.def 2018/06/05 3.22 Babel common definitions
 \babel@savecnt=\count136
 \U@D=\dimen139
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtb
+abel.def")
 \bbl@dirlevel=\count137
 )
 Package babel Info: Making " an active character on input line 121.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german
+\ngerman.ldf"
 Language: ngerman 2018/03/29 v2.10 German support for babel (post-1996 orthogra
 phy)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german
+\ngermanb.ldf"
 Language: ngermanb 2018/03/29 v2.10 German support for babel (post-1996 orthogr
 aphy)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german
+\ngerman.ldf"
 Language: ngerman 2018/03/29 v2.10 German support for babel (post-1996 orthogra
 phy)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german
+\ngermanb.ldf"
 Language: ngermanb 2018/03/29 v2.10 German support for babel (post-1996 orthogr
 aphy)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\german.ldf"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german
+\german.ldf"
 Language: german 2018/03/29 v2.10 German support for babel (pre-1996 orthograph
 y)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\germanb.ldf"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german
+\germanb.ldf"
 Language: germanb 2018/03/29 v2.10 German support for babel (pre-1996 orthograp
 hy)
 )))
-("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrap
+fig.sty"
 \wrapoverhang=\dimen140
 \WF@size=\dimen141
 \c@WF@wrappedlines=\count138
@@ -511,7 +585,8 @@ hy)
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.
+sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count139
 \float@exts=\toks32
@@ -519,50 +594,63 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks33
 \@floatcapt=\box33
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\datetime\datetime.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\dat
+etime.sty"
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\eto
+olbox.sty"
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count140
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\fmtcount\fmtcount.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fmt
+count.sty"
 Package: fmtcount 2017/12/24 v3.05
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.
+sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkey
+val.sty"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xk
+eyval.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xk
+vutils.tex"
 \XKV@toks=\toks34
 \XKV@tempa@toks=\toks35
 )
 \XKV@depth=\count141
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\fmtcount\fcprefix.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcp
+refix.sty"
 Package: fcprefix 2012/09/28
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fmtcount\fcnumparser.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fcn
+umparser.sty"
 Package: fcnumparser 2017/06/15
 \fc@digit@counter=\count142
 ))
 \c@padzeroesN=\count143
 \fc@tmpcatcode=\count144
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fmtcount\fc-german.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fc-
+german.def"
 File: fc-german.def 2016/01/12
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fmtcount\fc-germanb.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fc-
+germanb.def"
 File: fc-germanb.def 2013/08/17
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\fmtcount\fc-ngerman.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fc-
+ngerman.def"
 File: fc-ngerman.def 2012/06/18
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fmtcount\fc-ngermanb.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fmtcount\fc-
+ngermanb.def"
 File: fc-ngermanb.def 2013/08/17
 ))
 \@DT@modctr=\count145
@@ -573,7 +661,8 @@ File: fc-ngermanb.def 2013/08/17
 \@DT@loopN=\count150
 \@DT@X=\count151
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\datetime\datetime-defaults.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\dat
+etime-defaults.sty"
 Package: datetime-defaults 2013/09/10
 )
 \@day=\count152
@@ -595,22 +684,26 @@ put line 308.
 \dayofweek=\count166
 LaTeX Info: Redefining \today on input line 736.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\datetime\dt-german.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\dt-
+german.def"
 File: dt-german.def 2010/09/10
 LaTeX Info: Redefining \dategerman on input line 86.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\datetime\dt-ngerman.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datetime\dt-
+ngerman.def"
 File: dt-ngerman.def 2013/09/10
 LaTeX Info: Redefining \datengerman on input line 86.
 )
 \dt@a=\toks36
 \dt@b=\toks37
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titletoc.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\tit
+letoc.sty"
 Package: titletoc 2011/12/15 v1.6 TOC entries
 \ttl@leftsep=\dimen142
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\csquotes\csq
+uotes.sty"
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
 \csq@reset=\count167
 \csq@gtype=\count168
@@ -620,19 +713,23 @@ Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
 \csq@tshold=\count172
 \csq@ltx@everypar=\toks38
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\csquotes\csq
+uotes.def"
 File: csquotes.def 2018/04/13 v5.2d csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.cfg"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\csquotes\csq
+uotes.cfg"
 File: csquotes.cfg 
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabula
+rx.sty"
 Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.
+sty"
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen143
 \ar@mcellbox=\box34
@@ -650,19 +747,24 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \TX@cols=\count173
 \TX@ftn=\toks40
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pdf
+pages.sty"
 Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-
+pic.sty"
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\a
+tbegshi.sty"
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolo
+r.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg
+\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -679,7 +781,8 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \AM@pagewidth=\dimen150
 \AM@pageheight=\dimen151
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\ppp
+dftex.def"
 File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box36
@@ -688,40 +791,54 @@ File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count174
 \AM@templatesizebox=\box37
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\todonotes\todonotes.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\todonotes\to
+donotes.sty"
 Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
 Package: todonotes 2012/07/25
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontend
+layer\tikz.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclay
+er\pgf.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilitie
+s\pgfrcs.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
+ies\pgfutil-common.tex"
 \pgfutil@everybye=\toks43
 \pgfutil@tempdima=\dimen152
 \pgfutil@tempdimb=\dimen153
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.te
-x")) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
+ies\pgfutil-common-lists.tex"))
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
+ies\pgfutil-latex.def"
 \pgfutil@abb=\box38
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.
+sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
+ies\pgfrcs.code.tex"
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclay
+er\pgfcore.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemla
+yer\pgfsys.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\system
+layer\pgfsys.code.tex"
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
+ies\pgfkeys.code.tex"
 \pgfkeys@pathtoks=\toks44
 \pgfkeys@temptoks=\toks45
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.te
-x"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
+ies\pgfkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks46
 ))
 \pgf@x=\dimen154
@@ -741,33 +858,43 @@ x"
 \t@pgf@toka=\toks47
 \t@pgf@tokb=\toks48
 \t@pgf@tokc=\toks49
- ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\system
+layer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\system
+layer\pgfsys-pdftex.def"
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
-"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\system
+layer\pgfsys-common-pdf.def"
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.t
-ex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\system
+layer\pgfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count179
 \pgfsyssoftpath@bigbuffer@items=\count180
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.t
-ex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\system
+layer\pgfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-)) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex"
+))
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcore.code.tex"
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
- ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmath.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathcalc.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathutil.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathparser.code.tex"
 \pgfmath@dimen=\dimen162
 \pgfmath@count=\count181
 \pgfmath@box=\box39
@@ -775,28 +902,30 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 \pgfmath@stack@operand=\toks51
 \pgfmath@stack@operation=\toks52
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.
-tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometr
-ic.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code
-.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.
-code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.t
-ex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.
-tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.t
-ex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarit
-hmetics.code.tex")))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.basic.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.trigonometric.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.random.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.comparison.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.base.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.round.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.misc.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfunctions.integerarithmetics.code.tex")))
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmathfloat.code.tex"
 \c@pgfmathroundto@lastzeros=\count182
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
-"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen163
 \pgf@picmaxx=\dimen164
@@ -813,113 +942,128 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen175
 \pgf@zy=\dimen176
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
-ode.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen177
 \pgf@path@lasty=\dimen178
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
-tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen179
 \pgf@shorten@start@additional=\dimen180
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
-"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box40
 \pgf@hbox=\box41
 \pgf@layerbox@main=\box42
 \pgf@picture@serial@count=\count183
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
-de.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen181
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
-.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen182
 \pgf@pt@y=\dimen183
 \pgf@pt@temp=\dimen184
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.te
-x"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcoreobjects.code.tex"
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.
-code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorepathprocessing.code.tex"
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
-"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen185
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen186
 \pgf@sys@shading@range@num=\count184
-) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
-x"
+)
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.t
-ex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box43
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
-"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorelayers.code.tex"
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.co
-de.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcoretransparency.code.tex"
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.t
-ex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basicl
+ayer\pgfcorepatterns.code.tex"
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\module
+s\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box44
-) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
+)
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\module
+s\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
-sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatib
+ility\pgfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen187
 \pgf@nodesepend=\dimen188
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
-sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatib
+ility\pgfcomp-version-1-18.sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+))
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilitie
+s\pgffor.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilitie
+s\pgfkeys.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
+ies\pgfkeys.code.tex"))
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgf
+math.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmath.code.tex"))
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilit
+ies\pgffor.code.tex"
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\p
+gfmath.code.tex")
 \pgffor@iter=\dimen189
 \pgffor@skip=\dimen190
 \pgffor@stack=\toks53
 \pgffor@toks=\toks54
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fronte
+ndlayer\tikz\tikz.code.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.
-code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\librar
+ies\pgflibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count185
 \pgfplotmarksize=\dimen191
@@ -939,7 +1083,8 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count188
 \tikz@fig@count=\count189
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\module
+s\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count190
 \pgfmatrixcurrentcolumn=\count191
@@ -947,24 +1092,27 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count193
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-librarytopaths.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fronte
+ndlayer\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-librarypositioning.code.tex"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fronte
+ndlayer\tikz\libraries\tikzlibrarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 \c@@todonotes@numberoftodonotes=\count194
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyp
+erref.sty"
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\h
+obsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\h
+obsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -992,21 +1140,24 @@ Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\aux
+hook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen198
 \Hy@linkcounter=\count195
 \Hy@pagecounter=\count196
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1
+enc.def"
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count197
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyp
+erref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `bookmarks' set `true' on input line 4383.
@@ -1021,7 +1172,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
 \c@Hy@tempcnt=\count198
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -1045,48 +1196,59 @@ LaTeX Info: Redefining \pageref on input line 6443.
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpd
+ftex.def"
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
 \Fld@listcount=\count269
 \c@bookmark@seq@number=\count270
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rer
+unfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip70
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\boo
+kmark.sty"
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\bkm
+-pdftex.def"
 File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
 \BKM@id=\count271
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nam
+eref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\g
+ettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count272
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\marginnote\marginnote.sty"
-Package: marginnote 2018/07/01 v1.4 non floating margin notes for LaTeX
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\marginnote\m
+arginnote.sty"
+Package: marginnote 2018/07/01 v1.4a non floating margin notes for LaTeX
 \c@mn@abspage=\count273
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\ad
+justbox.sty"
 Package: adjustbox 2018/04/08 v1.1 Adjusting TeX boxes (trim, clip, ...)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\ad
+jcalc.sty"
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\tr
+imclip.sty"
 Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\collectbox\c
+ollectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box49
 )
@@ -1096,7 +1258,8 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@ury=\dimen261
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\tc
+-pdftex.def"
 File: tc-pdftex.def 2018/04/08 v2.1 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen262
@@ -1108,14 +1271,16 @@ File: tc-pdftex.def 2018/04/08 v2.1 Clipping driver for pdftex
 \adjbox@pdepth=\dimen268
 \adjbox@ptotalheight=\dimen269
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\varwidth\varwidth.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\varwidth\var
+width.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box50
 \sift@deathcycles=\count274
 \@vwid@loff=\dimen270
 \@vwid@roff=\dimen271
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\tocloft\tocloft.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tocloft\tocl
+oft.sty"
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip71
@@ -1155,7 +1320,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cfttabindent=\skip103
 \cfttabnumwidth=\skip104
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\newf
+loat.sty"
 Package: newfloat 2018/03/04 v1.1a Defining new floating environments (AR)
 )
 Package newfloat Info: New float `formel' with options `' on input line 126.
@@ -1180,7 +1346,9 @@ Class scrbook Warning: Usage of package `fancyhdr' together
 (scrbook)              Nevertheless, using requested
 (scrbook)              package `fancyhdr' on input line 132.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fan
+cyhdr.sty"
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip105
@@ -1193,12 +1361,14 @@ s
 \f@nch@O@olf=\skip112
 \f@nch@O@orf=\skip113
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithm2e\
+algorithm2e.sty"
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
 \c@AlgoLine=\count280
 \algocf@hangindent=\skip114
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\relsize\relsize.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\relsize\rels
+ize.sty"
 Package: relsize 2013/03/29 ver 4.1
 )
 \skiptotal=\skip115
@@ -1237,10 +1407,12 @@ Package: relsize 2013/03/29 ver 4.1
 \algocf@algoframe=\box57
 \algocf@algobox=\box58
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithmicx
+\algpseudocode.sty"
 Package: algpseudocode 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithmicx
+\algorithmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -1256,7 +1428,9 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip135
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+)
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lis
+tings.sty"
 \lst@mode=\count291
 \lst@gtempboxa=\box59
 \lst@token=\toks55
@@ -1270,28 +1444,33 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 \lst@lineno=\count296
 \lst@maxwidth=\dimen281
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lst
+misc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count297
 \lst@skipnumbers=\count298
 \lst@framebox=\box60
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lis
+tings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lst
+lang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbib\natbi
+b.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip136
 \bibsep=\skip137
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count299
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\rot
+ating.sty"
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \c@r@tfl@t=\count300
 \rotFPtop=\skip138
@@ -1299,7 +1478,8 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \rot@float@box=\box61
 \rot@mess@toks=\toks56
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enu
+mitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip140
 \enit@outerparindent=\dimen282
@@ -1307,7 +1487,8 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box62
 \enitdp@description=\count301
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longta
+ble.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip141
 \LTright=\skip142
@@ -1327,7 +1508,8 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 )
 Class scrbook Info: longtable captions redefined on input line 28.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\underscore\underscore.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\underscore\u
+nderscore.sty"
 Package: underscore 2006/09/13
 LaTeX Info: Redefining \_ on input line 42.
 )
@@ -1354,7 +1536,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 32.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 *geometry* driver: auto-detecting
@@ -1392,7 +1574,9 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-
+pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count307
 \scratchdimen=\dimen284
@@ -1405,10 +1589,13 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \MPnumerator=\count311
 \makeMPintoPDFobject=\count312
 \everyMPtoPDFconversion=\toks60
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+)
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\eps
+topdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grf
+ext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1423,7 +1610,8 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltca
+ption.sty"
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -1431,15 +1619,16 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box68
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdf
+lscape.sty"
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lsc
+ape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)
-ABD: EveryShipout initializing macros
+) ABD: EveryShipout initializing macros
 Package hyperref Info: Link coloring OFF on input line 32.
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
@@ -1448,7 +1637,8 @@ Package hyperref Info: Anchor `Doc-Start' on input line 32.
 \c@lstlisting=\count313
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 33.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmss.fd
+"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package babel Info: Redefining german shorthand "f
@@ -1460,8 +1650,7 @@ Package babel Info: Redefining german shorthand "~
 Package hyperref Info: Anchor `page.1' on input line 65.
  [1
 
-{C:/Users/Michael Lämmermann/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
-}]
+{C:/Users/laemmermann/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 65.
 Package babel Info: Redefining german shorthand "|
@@ -1469,7 +1658,8 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 65.
 Package hyperref Info: Anchor `page.2' on input line 65.
- [2]
+
+[2]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 68.
 Package babel Info: Redefining german shorthand "|
@@ -1495,8 +1685,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 75.
 Package hyperref Info: Anchor `page.5' on input line 75.
-
-[5]
+ [5]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 82.
 
@@ -1510,24 +1699,28 @@ File: ./images/logo-cc.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./images/logo-cc.pdf  used on input line 87.
 (pdftex.def)             Requested size: 89.67168pt x 28.45274pt.
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 93.
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd
+"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 93.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omllmm.fd
+"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 93.
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.f
+d"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMX+lmex on input line 93.
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omxlmex.f
+d"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1538,17 +1731,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 93.
 LaTeX Font Info:    Try loading font information for U+msa on input line 93.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ums
+a.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 93.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ums
+b.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 93.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.f
+d"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 Underfull \hbox (badness 10000) in paragraph at lines 92--98
@@ -2898,51 +3094,54 @@ Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 252
 .
 Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 252
 .
-Package hyperref Info: Anchor `section*.71' on input line 254.
-Package hyperref Info: bookmark on input line 254:
+Package hyperref Info: Anchor `section*.71' on input line 255.
+Package hyperref Info: bookmark on input line 255:
 (hyperref)             thecounter {\thetodo }
 (hyperref)             text {\@todonotes@caption }
 (hyperref)             reference {section*.71}
 (hyperref)             toclevel {0}
 (hyperref)             type {tdo}.
 Package hyperref Info: Reference (cite) `cite.moodle2017plugin' on input line 2
-56.
+57.
 Package hyperref Info: Reference (cite) `cite.moodle2017plugin' on input line 2
-56.
-Package hyperref Info: Anchor `section*.72' on input line 259.
-Package hyperref Info: bookmark on input line 259:
+57.
+Package hyperref Info: Anchor `section*.72' on input line 260.
+Package hyperref Info: bookmark on input line 260:
 (hyperref)             thecounter {3.3.0.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.72}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
 Package hyperref Info: Reference (cite) `cite.moodle2017media' on input line 26
-0.
+1.
 Package hyperref Info: Reference (cite) `cite.moodle2017media' on input line 26
-0.
-Package hyperref Info: Anchor `section*.73' on input line 264.
-Package hyperref Info: bookmark on input line 264:
+1.
+Package hyperref Info: Anchor `section*.73' on input line 265.
+Package hyperref Info: bookmark on input line 265:
 (hyperref)             thecounter {3.3.0.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.73}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `figure.caption.21' on input line 265.
+Package hyperref Info: Reference (link) `figure.caption.21' on input line 266.
 Package hyperref Info: Reference (cite) `cite.moodle2018blocks' on input line 2
-65.
+66.
 Package hyperref Info: Reference (cite) `cite.moodle2018blocks' on input line 2
-65.
+66.
 Package hyperref Info: Reference (cite) `cite.moodle2015blocksettings' on input
- line 265.
+ line 266.
 Package hyperref Info: Reference (cite) `cite.moodle2015blocksettings' on input
- line 265.
+ line 266.
+
+Underfull \vbox (badness 4467) has occurred while \output is active []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 266.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 266.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 266.
-Package hyperref Info: Anchor `page.24' on input line 266.
+(babel)             in language  on input line 267.
+Package hyperref Info: Anchor `page.24' on input line 267.
  [24
 Package `hyperref' Info: End of reference (link) `Item.56', line 206.
 Package `hyperref' Info: End of reference (link) `Item.43', line 206.
@@ -2975,80 +3174,80 @@ Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 25
 Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 25
 2.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2017plugin', line 
-256.
+257.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2017plugin', line 
-256.
+257.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2017media', line 2
-60.
+61.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2017media', line 2
-60.
-Package `hyperref' Info: End of reference (link) `figure.caption.21', line 265.
-
+61.
 ]
-Package hyperref Info: Anchor `section*.74' on input line 268.
-Package hyperref Info: bookmark on input line 268:
+Package hyperref Info: Anchor `section*.74' on input line 269.
+Package hyperref Info: bookmark on input line 269:
 (hyperref)             thecounter {3.3.0.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.74}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 269
+Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 270
 .
-Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 269
+Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 270
 .
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5189) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 275.
+(babel)             in language  on input line 276.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 275.
+(babel)             in language  on input line 276.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 275.
-Package hyperref Info: Anchor `page.25' on input line 275.
+(babel)             in language  on input line 276.
+Package hyperref Info: Anchor `page.25' on input line 276.
  [25
+Package `hyperref' Info: End of reference (link) `figure.caption.21', line 266.
+
 Package `hyperref' Info: End of reference (cite) `cite.moodle2018blocks', line 
-265.
+266.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2018blocks', line 
-265.
+266.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2015blocksettings'
-, line 265.
+, line 266.
 Package `hyperref' Info: End of reference (cite) `cite.moodle2015blocksettings'
-, line 265.
+, line 266.
 ]
-Package hyperref Info: Anchor `section*.75' on input line 277.
-Package hyperref Info: bookmark on input line 277:
+Package hyperref Info: Anchor `section*.75' on input line 278.
+Package hyperref Info: bookmark on input line 278:
 (hyperref)             thecounter {3.3.0.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.75}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 278
+Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 279
 .
-Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 278
+Package hyperref Info: Reference (cite) `cite.wild2017moodle' on input line 279
 .
-Package hyperref Info: Anchor `section.76' on input line 286.
+Package hyperref Info: Anchor `section.76' on input line 287.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 287.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 287.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 286.
-Package hyperref Info: bookmark on input line 286:
+(babel)             in language  on input line 287.
+Package hyperref Info: bookmark on input line 287:
 (hyperref)             thecounter {3.4}
 (hyperref)             text {\protect \numberline {\csname thesection\endcsname
  }\@currenttocentry }
 (hyperref)             reference {section.76}
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
-Package hyperref Info: Anchor `subsection.77' on input line 291.
+Package hyperref Info: Anchor `subsection.77' on input line 292.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 291.
+(babel)             in language  on input line 292.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 291.
+(babel)             in language  on input line 292.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 291.
-Package hyperref Info: bookmark on input line 291:
+(babel)             in language  on input line 292.
+Package hyperref Info: bookmark on input line 292:
 (hyperref)             thecounter {3.4.1}
 (hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
 ame }\@currenttocentry }
@@ -3056,29 +3255,29 @@ ame }\@currenttocentry }
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
 Package hyperref Info: Reference (cite) `cite.erwartungskonformitaet' on input 
-line 293.
+line 294.
 Package hyperref Info: Reference (cite) `cite.erwartungskonformitaet' on input 
-line 293.
-Package hyperref Info: Anchor `section*.78' on input line 297.
-Package hyperref Info: bookmark on input line 297:
+line 294.
+Package hyperref Info: Anchor `section*.78' on input line 298.
+Package hyperref Info: bookmark on input line 298:
 (hyperref)             thecounter {3.4.1.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.78}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (cite) `cite.soundcloudinfo' on input line 299
+Package hyperref Info: Reference (cite) `cite.soundcloudinfo' on input line 300
 .
-Package hyperref Info: Reference (cite) `cite.soundcloudinfo' on input line 299
+Package hyperref Info: Reference (cite) `cite.soundcloudinfo' on input line 300
 .
-Package hyperref Info: Reference (link) `figure.caption.79' on input line 299.
-Package hyperref Info: Anchor `figure.caption.79' on input line 301.
+Package hyperref Info: Reference (link) `figure.caption.79' on input line 300.
+Package hyperref Info: Anchor `figure.caption.79' on input line 302.
 <./images/SoundCloudPlayer.png, id=534, 916.92563pt x 269.50688pt>
 File: ./images/SoundCloudPlayer.png Graphic file (type png)
 <use ./images/SoundCloudPlayer.png>
-Package pdftex.def Info: ./images/SoundCloudPlayer.png  used on input line 302.
+Package pdftex.def Info: ./images/SoundCloudPlayer.png  used on input line 303.
 
 (pdftex.def)             Requested size: 409.71692pt x 120.4257pt.
-Package hyperref Info: bookmark on input line 303:
+Package hyperref Info: bookmark on input line 304:
 (hyperref)             thecounter {3.2}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces \label {fig:SoundCloudPlayer}P
@@ -3088,61 +3287,61 @@ layer der Musik- und Audio-Plattform \textit {SoundCloud} \citep {SoundCloud201
 (hyperref)             toclevel {1}
 (hyperref)             type {lof}.
 Package hyperref Info: Reference (cite) `cite.SoundCloud2015Panic' on input lin
-e 303.
+e 304.
 Package hyperref Info: Reference (cite) `cite.SoundCloud2015Panic' on input lin
-e 303.
+e 304.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package hyperref Info: Anchor `section*.80' on input line 306.
-Package hyperref Info: bookmark on input line 306:
+Package hyperref Info: Anchor `section*.80' on input line 307.
+Package hyperref Info: bookmark on input line 307:
 (hyperref)             thecounter {3.4.1.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.80}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
 Package hyperref Info: Reference (cite) `cite.statista2016video' on input line 
-308.
+309.
 Package hyperref Info: Reference (cite) `cite.statista2016video' on input line 
-308.
-Package hyperref Info: Reference (link) `Hfootnote.81' on input line 308.
-Package hyperref Info: Anchor `Hfootnote.81' on input line 308.
-Package hyperref Info: Reference (link) `figure.caption.82' on input line 308.
+309.
+Package hyperref Info: Reference (link) `Hfootnote.81' on input line 309.
+Package hyperref Info: Anchor `Hfootnote.81' on input line 309.
+Package hyperref Info: Reference (link) `figure.caption.82' on input line 309.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 309.
+(babel)             in language  on input line 310.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 309.
+(babel)             in language  on input line 310.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 309.
-Package hyperref Info: Anchor `page.26' on input line 309.
+(babel)             in language  on input line 310.
+Package hyperref Info: Anchor `page.26' on input line 310.
 [26
-Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 26
-9.
-Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 26
+Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 27
+0.
+Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 27
+0.
+Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 27
 9.
 Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 27
-8.
-Package `hyperref' Info: End of reference (cite) `cite.wild2017moodle', line 27
-8.
-Package `hyperref' Info: End of reference (cite) `cite.erwartungskonformitaet',
- line 293.
-Package `hyperref' Info: End of reference (cite) `cite.erwartungskonformitaet',
- line 293.
-Package `hyperref' Info: End of reference (cite) `cite.soundcloudinfo', line 29
 9.
-Package `hyperref' Info: End of reference (cite) `cite.soundcloudinfo', line 29
-9.
-Package `hyperref' Info: End of reference (link) `figure.caption.79', line 299.
+Package `hyperref' Info: End of reference (cite) `cite.erwartungskonformitaet',
+ line 294.
+Package `hyperref' Info: End of reference (cite) `cite.erwartungskonformitaet',
+ line 294.
+Package `hyperref' Info: End of reference (cite) `cite.soundcloudinfo', line 30
+0.
+Package `hyperref' Info: End of reference (cite) `cite.soundcloudinfo', line 30
+0.
+Package `hyperref' Info: End of reference (link) `figure.caption.79', line 300.
 
 ]
-Package hyperref Info: Anchor `figure.caption.82' on input line 310.
+Package hyperref Info: Anchor `figure.caption.82' on input line 311.
 <./images/YoutubePlayer1.png, id=551, 974.89218pt x 411.03563pt>
 File: ./images/YoutubePlayer1.png Graphic file (type png)
 <use ./images/YoutubePlayer1.png>
-Package pdftex.def Info: ./images/YoutubePlayer1.png  used on input line 311.
+Package pdftex.def Info: ./images/YoutubePlayer1.png  used on input line 312.
 (pdftex.def)             Requested size: 409.71692pt x 172.74667pt.
-Package hyperref Info: bookmark on input line 312:
+Package hyperref Info: bookmark on input line 313:
 (hyperref)             thecounter {3.3}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces \label {fig:YoutubePlayer1}Pla
@@ -3151,23 +3350,23 @@ yer der Video-Plattform \textit {Youtube} \citep {Youtube2015Panic}\relax }}
 (hyperref)             toclevel {1}
 (hyperref)             type {lof}.
 Package hyperref Info: Reference (cite) `cite.Youtube2015Panic' on input line 3
-12.
+13.
 Package hyperref Info: Reference (cite) `cite.Youtube2015Panic' on input line 3
-12.
-Package hyperref Info: Reference (cite) `cite.youtubeabspann' on input line 315
+13.
+Package hyperref Info: Reference (cite) `cite.youtubeabspann' on input line 316
 .
-Package hyperref Info: Reference (cite) `cite.youtubeabspann' on input line 315
+Package hyperref Info: Reference (cite) `cite.youtubeabspann' on input line 316
 .
 Package hyperref Info: Reference (cite) `cite.youtubeinfokarten' on input line 
-315.
-Package hyperref Info: Reference (link) `figure.caption.83' on input line 315.
-Package hyperref Info: Anchor `figure.caption.83' on input line 317.
+316.
+Package hyperref Info: Reference (link) `figure.caption.83' on input line 316.
+Package hyperref Info: Anchor `figure.caption.83' on input line 318.
 <./images/YoutubePlayer2.png, id=558, 970.3753pt x 410.2828pt>
 File: ./images/YoutubePlayer2.png Graphic file (type png)
 <use ./images/YoutubePlayer2.png>
-Package pdftex.def Info: ./images/YoutubePlayer2.png  used on input line 318.
+Package pdftex.def Info: ./images/YoutubePlayer2.png  used on input line 319.
 (pdftex.def)             Requested size: 409.71692pt x 173.23161pt.
-Package hyperref Info: bookmark on input line 319:
+Package hyperref Info: bookmark on input line 320:
 (hyperref)             thecounter {3.4}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces \label {fig:YoutubePlayer2}Anz
@@ -3176,21 +3375,21 @@ eige der Infokarte \citep {Youtube2015Panic}\relax }}
 (hyperref)             toclevel {1}
 (hyperref)             type {lof}.
 Package hyperref Info: Reference (cite) `cite.Youtube2015Panic' on input line 3
-19.
+20.
 Package hyperref Info: Reference (cite) `cite.Youtube2015Panic' on input line 3
-19.
+20.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package hyperref Info: Anchor `subsection.84' on input line 324.
+Package hyperref Info: Anchor `subsection.84' on input line 325.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 324.
+(babel)             in language  on input line 325.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 324.
+(babel)             in language  on input line 325.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 324.
-Package hyperref Info: bookmark on input line 324:
+(babel)             in language  on input line 325.
+Package hyperref Info: bookmark on input line 325:
 (hyperref)             thecounter {3.4.2}
 (hyperref)             text {\protect \numberline {\csname thesubsection\endcsn
 ame }\@currenttocentry }
@@ -3198,66 +3397,66 @@ ame }\@currenttocentry }
 (hyperref)             toclevel {2}
 (hyperref)             type {toc}.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 329.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 329.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 328.
-Package hyperref Info: Anchor `page.27' on input line 328.
+(babel)             in language  on input line 329.
+Package hyperref Info: Anchor `page.27' on input line 329.
 [27
 Package `hyperref' Info: End of reference (cite) `cite.SoundCloud2015Panic', li
-ne 303.
+ne 304.
 Package `hyperref' Info: End of reference (cite) `cite.SoundCloud2015Panic', li
-ne 303.
+ne 304.
 Package `hyperref' Info: End of reference (cite) `cite.statista2016video', line
- 308.
+ 309.
 Package `hyperref' Info: End of reference (cite) `cite.statista2016video', line
- 308.
-Package `hyperref' Info: End of reference (link) `Hfootnote.81', line 308.
-Package `hyperref' Info: End of reference (link) `figure.caption.82', line 308.
+ 309.
+Package `hyperref' Info: End of reference (link) `Hfootnote.81', line 309.
+Package `hyperref' Info: End of reference (link) `figure.caption.82', line 309.
 
 Package `hyperref' Info: End of reference (cite) `cite.Youtube2015Panic', line 
-312.
+313.
 Package `hyperref' Info: End of reference (cite) `cite.Youtube2015Panic', line 
-312.
+313.
 Package `hyperref' Info: End of reference (cite) `cite.youtubeabspann', line 31
-5.
+6.
 Package `hyperref' Info: End of reference (cite) `cite.youtubeabspann', line 31
-5.
+6.
 Package `hyperref' Info: End of reference (cite) `cite.youtubeinfokarten', line
- 315.
-Package `hyperref' Info: End of reference (link) `figure.caption.83', line 315.
+ 316.
+Package `hyperref' Info: End of reference (link) `figure.caption.83', line 316.
 
  <./images/SoundCloudPlayer.png> <./images/YoutubePlayer1.png>]
-Package hyperref Info: Anchor `section*.85' on input line 328.
-Package hyperref Info: bookmark on input line 328:
+Package hyperref Info: Anchor `section*.85' on input line 329.
+Package hyperref Info: bookmark on input line 329:
 (hyperref)             thecounter {3.4.2.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.85}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `Hfootnote.86' on input line 329.
-Package hyperref Info: Anchor `Hfootnote.86' on input line 329.
-Package hyperref Info: Reference (link) `Hfootnote.87' on input line 329.
-Package hyperref Info: Anchor `Hfootnote.87' on input line 329.
-Package hyperref Info: Reference (link) `section*.93' on input line 329.
-Package hyperref Info: Anchor `section*.88' on input line 332.
-Package hyperref Info: bookmark on input line 332:
+Package hyperref Info: Reference (link) `Hfootnote.86' on input line 330.
+Package hyperref Info: Anchor `Hfootnote.86' on input line 330.
+Package hyperref Info: Reference (link) `Hfootnote.87' on input line 330.
+Package hyperref Info: Anchor `Hfootnote.87' on input line 330.
+Package hyperref Info: Reference (link) `section*.93' on input line 330.
+Package hyperref Info: Anchor `section*.88' on input line 333.
+Package hyperref Info: bookmark on input line 333:
 (hyperref)             thecounter {3.4.2.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.88}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `Hfootnote.89' on input line 333.
-Package hyperref Info: Anchor `Hfootnote.89' on input line 333.
-Package hyperref Info: Reference (link) `figure.caption.90' on input line 333.
-Package hyperref Info: Anchor `figure.caption.90' on input line 335.
+Package hyperref Info: Reference (link) `Hfootnote.89' on input line 334.
+Package hyperref Info: Anchor `Hfootnote.89' on input line 334.
+Package hyperref Info: Reference (link) `figure.caption.90' on input line 334.
+Package hyperref Info: Anchor `figure.caption.90' on input line 336.
 <./images/H5P.png, id=581, 820.56563pt x 489.32813pt>
 File: ./images/H5P.png Graphic file (type png)
 <use ./images/H5P.png>
-Package pdftex.def Info: ./images/H5P.png  used on input line 336.
+Package pdftex.def Info: ./images/H5P.png  used on input line 337.
 (pdftex.def)             Requested size: 455.24411pt x 271.47578pt.
-Package hyperref Info: bookmark on input line 337:
+Package hyperref Info: bookmark on input line 338:
 (hyperref)             thecounter {3.5}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces \label {fig:H5P} Auszug aus ei
@@ -3265,57 +3464,57 @@ nem \textit {Interactive Video} \citep {h5p2013video}\relax }}
 (hyperref)             reference {figure.caption.90}
 (hyperref)             toclevel {1}
 (hyperref)             type {lof}.
-Package hyperref Info: Reference (cite) `cite.h5p2013video' on input line 337.
-Package hyperref Info: Reference (cite) `cite.h5p2013video' on input line 337.
+Package hyperref Info: Reference (cite) `cite.h5p2013video' on input line 338.
+Package hyperref Info: Reference (cite) `cite.h5p2013video' on input line 338.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package hyperref Info: Anchor `section*.91' on input line 341.
-Package hyperref Info: bookmark on input line 341:
+Package hyperref Info: Anchor `section*.91' on input line 342.
+Package hyperref Info: bookmark on input line 342:
 (hyperref)             thecounter {3.4.2.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.91}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `Hfootnote.92' on input line 342.
-Package hyperref Info: Anchor `Hfootnote.92' on input line 342.
+Package hyperref Info: Reference (link) `Hfootnote.92' on input line 343.
+Package hyperref Info: Anchor `Hfootnote.92' on input line 343.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 343.
+(babel)             in language  on input line 344.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 343.
+(babel)             in language  on input line 344.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 343.
-Package hyperref Info: Anchor `page.28' on input line 343.
+(babel)             in language  on input line 344.
+Package hyperref Info: Anchor `page.28' on input line 344.
 [28
 Package `hyperref' Info: End of reference (cite) `cite.Youtube2015Panic', line 
-319.
+320.
 Package `hyperref' Info: End of reference (cite) `cite.Youtube2015Panic', line 
-319.
-Package `hyperref' Info: End of reference (link) `Hfootnote.86', line 329.
-Package `hyperref' Info: End of reference (link) `Hfootnote.87', line 329.
-Package `hyperref' Info: End of reference (link) `section*.93', line 329.
-Package `hyperref' Info: End of reference (link) `Hfootnote.89', line 333.
-Package `hyperref' Info: End of reference (link) `figure.caption.90', line 333.
+320.
+Package `hyperref' Info: End of reference (link) `Hfootnote.86', line 330.
+Package `hyperref' Info: End of reference (link) `Hfootnote.87', line 330.
+Package `hyperref' Info: End of reference (link) `section*.93', line 330.
+Package `hyperref' Info: End of reference (link) `Hfootnote.89', line 334.
+Package `hyperref' Info: End of reference (link) `figure.caption.90', line 334.
 
  <./images/YoutubePlayer2.png>]
-Package hyperref Info: Anchor `section*.93' on input line 346.
-Package hyperref Info: bookmark on input line 346:
+Package hyperref Info: Anchor `section*.93' on input line 347.
+Package hyperref Info: bookmark on input line 347:
 (hyperref)             thecounter {3.4.2.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.93}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `Hfootnote.94' on input line 348.
-Package hyperref Info: Anchor `Hfootnote.94' on input line 348.
-Package hyperref Info: Reference (link) `figure.caption.95' on input line 348.
-Package hyperref Info: Anchor `figure.caption.95' on input line 350.
+Package hyperref Info: Reference (link) `Hfootnote.94' on input line 349.
+Package hyperref Info: Anchor `Hfootnote.94' on input line 349.
+Package hyperref Info: Reference (link) `figure.caption.95' on input line 349.
+Package hyperref Info: Anchor `figure.caption.95' on input line 351.
 <./images/Wavesurfer.png, id=598, 881.54344pt x 239.39438pt>
 File: ./images/Wavesurfer.png Graphic file (type png)
 <use ./images/Wavesurfer.png>
-Package pdftex.def Info: ./images/Wavesurfer.png  used on input line 351.
+Package pdftex.def Info: ./images/Wavesurfer.png  used on input line 352.
 (pdftex.def)             Requested size: 455.24411pt x 123.62737pt.
-Package hyperref Info: bookmark on input line 352:
+Package hyperref Info: bookmark on input line 353:
 (hyperref)             thecounter {3.6}
 (hyperref)             text {\protect \numberline {\caption@lstfmt {\@nameuse {
 p@figure}}{\@nameuse {thefigure}}}{\ignorespaces \label {fig:Wavesurfer} Der Au
@@ -3324,68 +3523,68 @@ dio-Player auf der \textit {wavesurfer.js}-Webseite\citep {wavesurfer}\relax }}
 (hyperref)             reference {figure.caption.95}
 (hyperref)             toclevel {1}
 (hyperref)             type {lof}.
-Package hyperref Info: Reference (cite) `cite.wavesurfer' on input line 352.
-Package hyperref Info: Reference (cite) `cite.wavesurfer' on input line 352.
+Package hyperref Info: Reference (cite) `cite.wavesurfer' on input line 353.
+Package hyperref Info: Reference (cite) `cite.wavesurfer' on input line 353.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package hyperref Info: Reference (link) `Hfootnote.96' on input line 356.
-Package hyperref Info: Anchor `Hfootnote.96' on input line 356.
-Package hyperref Info: Reference (link) `Hfootnote.97' on input line 358.
-Package hyperref Info: Anchor `Hfootnote.97' on input line 358.
+Package hyperref Info: Reference (link) `Hfootnote.96' on input line 357.
+Package hyperref Info: Anchor `Hfootnote.96' on input line 357.
+Package hyperref Info: Reference (link) `Hfootnote.97' on input line 359.
+Package hyperref Info: Anchor `Hfootnote.97' on input line 359.
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
 [][][]\T1/lmr/m/n/9 GitHub-Projekt, GNU Ge-ne-ral Pu-blic Li-cen-se 3: https://
 wavesurfer-js.org; htt-
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 359.
+(babel)             in language  on input line 360.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 359.
+(babel)             in language  on input line 360.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 359.
-Package hyperref Info: Anchor `page.29' on input line 359.
+(babel)             in language  on input line 360.
+Package hyperref Info: Anchor `page.29' on input line 360.
 [29
-Package `hyperref' Info: End of reference (cite) `cite.h5p2013video', line 337.
+Package `hyperref' Info: End of reference (cite) `cite.h5p2013video', line 338.
 
-Package `hyperref' Info: End of reference (cite) `cite.h5p2013video', line 337.
+Package `hyperref' Info: End of reference (cite) `cite.h5p2013video', line 338.
 
-Package `hyperref' Info: End of reference (link) `Hfootnote.92', line 342.
-Package `hyperref' Info: End of reference (link) `Hfootnote.94', line 348.
-Package `hyperref' Info: End of reference (link) `figure.caption.95', line 348.
+Package `hyperref' Info: End of reference (link) `Hfootnote.92', line 343.
+Package `hyperref' Info: End of reference (link) `Hfootnote.94', line 349.
+Package `hyperref' Info: End of reference (link) `figure.caption.95', line 349.
 
-Package `hyperref' Info: End of reference (link) `Hfootnote.96', line 356.
-Package `hyperref' Info: End of reference (link) `Hfootnote.97', line 358.
+Package `hyperref' Info: End of reference (link) `Hfootnote.96', line 357.
+Package `hyperref' Info: End of reference (link) `Hfootnote.97', line 359.
  <./images/H5P.png>]
-Package hyperref Info: Anchor `section*.98' on input line 363.
-Package hyperref Info: bookmark on input line 363:
+Package hyperref Info: Anchor `section*.98' on input line 364.
+Package hyperref Info: bookmark on input line 364:
 (hyperref)             thecounter {3.4.2.0}
 (hyperref)             text {\protect \nonumberline \@currenttocentry }
 (hyperref)             reference {section*.98}
 (hyperref)             toclevel {3}
 (hyperref)             type {toc}.
-Package hyperref Info: Reference (link) `Hfootnote.99' on input line 364.
-Package hyperref Info: Anchor `Hfootnote.99' on input line 364.
+Package hyperref Info: Reference (link) `Hfootnote.99' on input line 365.
+Package hyperref Info: Anchor `Hfootnote.99' on input line 365.
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--367
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--367
+Underfull \hbox (badness 10000) in paragraph at lines 365--368
 
  []
 
-Package hyperref Info: Anchor `section.100' on input line 372.
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--368
+
+ []
+
+Package hyperref Info: Anchor `section.100' on input line 373.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 372.
+(babel)             in language  on input line 373.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 372.
+(babel)             in language  on input line 373.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 372.
-Package hyperref Info: bookmark on input line 372:
+(babel)             in language  on input line 373.
+Package hyperref Info: bookmark on input line 373:
 (hyperref)             thecounter {3.5}
 (hyperref)             text {\protect \numberline {\csname thesection\endcsname
  }\@currenttocentry }
@@ -3393,19 +3592,19 @@ Package hyperref Info: bookmark on input line 372:
 (hyperref)             toclevel {1}
 (hyperref)             type {toc}.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 374.
+(babel)             in language  on input line 375.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 374.
+(babel)             in language  on input line 375.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 374.
-Package hyperref Info: Anchor `page.30' on input line 374.
+(babel)             in language  on input line 375.
+Package hyperref Info: Anchor `page.30' on input line 375.
 [30
-Package `hyperref' Info: End of reference (cite) `cite.wavesurfer', line 352.
-Package `hyperref' Info: End of reference (cite) `cite.wavesurfer', line 352.
-Package `hyperref' Info: End of reference (link) `Hfootnote.99', line 364.
+Package `hyperref' Info: End of reference (cite) `cite.wavesurfer', line 353.
+Package `hyperref' Info: End of reference (cite) `cite.wavesurfer', line 353.
+Package `hyperref' Info: End of reference (link) `Hfootnote.99', line 365.
  <./images/Wavesurfer.png>]
-Package hyperref Info: Anchor `section*.101' on input line 375.
-Package hyperref Info: bookmark on input line 375:
+Package hyperref Info: Anchor `section*.101' on input line 376.
+Package hyperref Info: bookmark on input line 376:
 (hyperref)             thecounter {\thetodo }
 (hyperref)             text {\@todonotes@caption }
 (hyperref)             reference {section*.101}
@@ -4496,7 +4695,8 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
 Package hyperref Info: Anchor `cite.constantine2006users' on input line 13.
 Package hyperref Info: Anchor `cite.Constantine1996usage' on input line 18.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 26.
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+("C:\Users\laemmermann\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd
+"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package hyperref Info: Anchor `cite.cooper2004inmates' on input line 28.
@@ -5002,50 +5202,50 @@ Package hyperref Info: bookmark on input line 208:
 Package hyperref Info: Anchor `chapter*.201' on input line 209.
 Package hyperref Info: Anchor `table.202' on input line 222.
 
-Overfull \hbox (52.45273pt too wide) in alignment at lines 222--232
+Overfull \hbox (52.45273pt too wide) in alignment at lines 222--233
 [] [] 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 234.
+(babel)             in language  on input line 235.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 234.
+(babel)             in language  on input line 235.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 234.
-Package hyperref Info: Anchor `page.65' on input line 234.
+(babel)             in language  on input line 235.
+Package hyperref Info: Anchor `page.65' on input line 235.
 [65
 
 ]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 234.
+(babel)             in language  on input line 235.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 234.
+(babel)             in language  on input line 235.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 234.
-Package hyperref Info: Anchor `page.66' on input line 234.
+(babel)             in language  on input line 235.
+Package hyperref Info: Anchor `page.66' on input line 235.
  [66
 
 
 ]
-Package hyperref Info: Anchor `section*.203' on input line 239.
+Package hyperref Info: Anchor `section*.203' on input line 240.
 
 
 Package caption Warning: Unused \captionsetup[formeln] on input line 127.
 See the caption package documentation for explanation.
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 247.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 247.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 247.
-Package hyperref Info: Anchor `page.67' on input line 247.
+(babel)             in language  on input line 248.
+Package hyperref Info: Anchor `page.67' on input line 248.
 [67]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 248.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
  (BA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 247.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 248.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -5056,29 +5256,36 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  31701 strings out of 492973
- 559871 string characters out of 3135888
- 1011640 words of memory out of 3000000
+ 573372 string characters out of 3124034
+ 1012398 words of memory out of 3000000
  34483 multiletter control sequences out of 15000+200000
  115015 words of font info for 89 fonts, out of 3000000 for 9000
  1172 hyphenation exceptions out of 8191
  80i,11n,80p,9084b,1246s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmro
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmss9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbo10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmsso12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmsso9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb>
-Output written on BA.pdf (67 pages, 4241270 bytes).
+{C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm
+-ec.enc}{C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-mathsy.enc}<C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/laemmermann/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Users/laemmermann/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/laemmermann/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/laemm
+ermann/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Use
+rs/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.p
+fb><C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
+m/lmro10.pfb><C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/lm/lmss10.pfb><C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmss17.pfb><C:/Users/laemmermann/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Users/laemmermann/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/laemmermann/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/laemme
+rmann/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/
+Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso
+10.pfb><C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmsso12.pfb><C:/Users/laemmermann/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/lm/lmsso9.pfb><C:/Users/laemmermann/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/laemmermann/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb>
+Output written on BA.pdf (67 pages, 4241510 bytes).
 PDF statistics:
  1383 PDF objects out of 1440 (max. 8388607)
  323 named destinations out of 1000 (max. 500000)

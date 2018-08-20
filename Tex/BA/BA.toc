@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Anforderungen der Nutzenden}{23}{subsection.68}
 \contentsline {section}{\numberline {3.3}M\IeC {\"o}glichkeiten der Moodle Plugin-Entwicklung}{24}{section.70}
 \contentsline {subsubsection}{\nonumberline Media Player}{24}{section*.72}
-\contentsline {subsubsection}{\nonumberline Bl\IeC {\"o}cke}{24}{section*.73}
+\contentsline {subsubsection}{\nonumberline Bl\IeC {\"o}cke}{25}{section*.73}
 \contentsline {subsubsection}{\nonumberline Ressourcen}{26}{section*.74}
 \contentsline {subsubsection}{\nonumberline Aktivit\IeC {\"a}ten}{26}{section*.75}
 \contentsline {section}{\numberline {3.4}Aktueller Stand der Technik}{26}{section.76}
