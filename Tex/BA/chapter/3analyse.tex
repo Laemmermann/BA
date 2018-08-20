@@ -1,5 +1,5 @@
 \label{cha:analyse}
-Für die Konzeption und Implementierung des Moodle-Plugins ist zunächst eine Analyse notwendig. Basierend auf einer Zielgruppenanalyse sollen Anforderungen an das Plugin bestimmt und priorisiert werden. Darauf aufbauend werden Möglichkeiten und Technologien zur Umsetzung des Hyperaudio-Plugins analysiert.
+Für die Konzeption und Implementierung des Hyperaudio-Plugins ist zunächst eine Analyse notwendig. Basierend auf einer Zielgruppenanalyse sollen Anforderungen an das Plugin bestimmt und priorisiert werden. Darauf aufbauend werden Möglichkeiten und Technologien zur Umsetzung des Hyperaudio-Plugins analysiert.
 
 %\begin{figure}[h!]
 %\includegraphics[width=.8\textwidth,center]{MockupBereiche.pdf}
@@ -251,10 +251,9 @@ Das Verlangen, Hyperaudio-Dokumente auch auf einem Smartphone oder Tablet nutzen
 \section{Möglichkeiten der Moodle Plugin-Entwicklung}
 Für den Betrieb von Moodle werden ein Webserver, eine MySQL- oder PostgreSQL-Datenbank und PHP vorausgesetzt \Citep{moodle2018install}. Moodle unterstützt die Verwendung von JavaScript und die Einbindung von Thirdparty-Frameworks \citep{wild2017moodle}. Dies gepaart mit den Möglichkeiten durch den Einsatz von PHP bietet bei der Entwicklung ausreichend Möglichkeiten um das gewünschte Plugin umzusetzen.
 
-Des Weiteren wird die Entwicklung von Moodle mithilfe der sogenannten \textit{Core APIs} (Application Programming Interface) unterstützt.
-\todo[inline]{APIs ergänzen}
+Des Weiteren wird die Plugin-Entwicklung von Moodle mithilfe der sogenannten \textit{Core APIs} (Application Programming Interfaces) unterstützt. Moodle bietet für fast jeden Anwendungszweck eine passende API, welche über ein Objekt angesprochen werden kann \citep{wild2017moodle}. So kann beispielsweise unter Verwendung der DML-API (Data Manipulation Language) und dem dazugehörigen Objekt \texttt{\$DB} Zugriffe auf die Datenbank vorgenommen werden.
 
-\textbf{Zu Beginn der Entwicklung eines Moodle-Plugins steht jedoch die Frage, um welche Art von Plugin es sich handelt.} Es werden nun diejenigen Plugin-Typen beschrieben, welche für das Hyperaudio-Plugin infrage kommen \citep{moodle2017plugin}.
+Zu Beginn der Entwicklung eines Moodle-Plugins steht jedoch die Frage, um welche Art von Plugin es sich handelt. Es werden nun diejenigen Plugin-Typen beschrieben, welche für das Hyperaudio-Plugin infrage kommen \citep{moodle2017plugin}.
 
 
 \subsubsection{Media Player}
@@ -285,7 +284,7 @@ Neben der Darstellung von Inhalten erwarten Aktivitäten im Gegensatz zu Ressour
 
 %%%%%%%%%%
 \section{Aktueller Stand der Technik}
-\textbf{Es wird zunächst der aktuelle Stand der Technik bezüglich der Zielsetzung dieser Arbeit betrachtet.} Hierbei werden im ersten Schritt bereits etablierte Plattformen für die Bereitstellung von Audio- und Videoinhalten begutachtet. Im zweiten Schritt werden dann vorhandene Technologien für die Umsetzung innerhalb von Moodle untersucht.
+Bevor mit der Konzeption und Implementierung des Hyperaudio-Plugins begonnen werden kann, ist der aktuelle Stand der Technik bezüglich der Zielsetzung dieser Arbeit zu betrachten. Hierbei werden im ersten Schritt bereits etablierte Plattformen für die Bereitstellung von Audio- und Videoinhalten begutachtet. Im zweiten Schritt werden dann vorhandene Technologien für die Umsetzung innerhalb von Moodle untersucht.
 
 
 %%%%%%%%%%
@@ -315,6 +314,8 @@ Im Bereich der Videoplattformen gilt \textit{Youtube} als die mit Abstand am wei
 
 In \citep{youtubeinfokarten,youtubeabspann} werden Möglichkeiten aufgezeigt, Informationen an ein Video zu annotieren. Die Informationen können Verweise auf andere Videos, Playlists und Kanäle, eine Abstimmung oder einen Link zu einer Webseite beinhalten. Einem Video können insgesamt maximal ein Abspann und bis zu fünf Infokarten mittels des integrierten Webeditors angeheftet werden. Bei Infokarten kann nur der jeweilige Startzeitpunkt für die Anzeige frei festgelegt werden, die Dauer wird durch \textit{Youtube} vorgegeben. Abbildung \ref{fig:YoutubePlayer2} zeigt, wie eine solche Infokarte im Player dargestellt wird. Ein Abspann kann hingegen nur während der letzten fünf bis 20 Sekunden eines Videos angezeigt werden.
 
+\todo[inline]{Inforkarten Beschreibung überarbeiten}
+
 \begin{figure}[h!]
 \includegraphics[width=.9\textwidth,center]{YoutubePlayer2.png}
 \caption{\label{fig:YoutubePlayer2}Anzeige der Infokarte \citep{Youtube2015Panic}}
@@ -323,7 +324,7 @@ In \citep{youtubeinfokarten,youtubeabspann} werden Möglichkeiten aufgezeigt, In
 
 %%%%%%%%%%
 \subsection{Technologien für den Einsatz in Moodle}
-Bevor mit der Konzeption und Implementierung des Moodle-Plugins begonnen wird, wird sich nun der Analyse bestehender Komponenten zugewendet, die als Basis für das Plugin dienen könnten. Ziel ist es festzustellen, ob bereits Technologien existieren, mit deren Hilfe die Idee des Hyperaudio-Plugins umgesetzt werden kann oder ob zumindest Teile davon - unter entsprechender Beachtung der Lizenzierung - sinnvoll wiederverwendet werden können. \textbf{Hierbei wird so vorgegangen, dass die einzelnen vorhanden Technologien auf diesem Gebiet und ihre Funktionen vorgestellt und anschließend bewertet werden, inwiefern diese für die Umsetzung des Plugins relevant sind.}
+Im zweiten Schritt wird sich nun der Analyse bestehender Komponenten zugewendet, die als Basis für das Moodle-Plugin dienen könnten. Ziel ist es festzustellen, ob bereits Technologien existieren, mit deren Hilfe die Idee des Hyperaudio-Plugins umgesetzt werden kann oder ob zumindest Teile davon - unter entsprechender Beachtung der Lizenzierung - sinnvoll wiederverwendet werden können. Im Zuge dessen wird so vorgegangen, dass die einzelnen vorhanden Technologien auf diesem Gebiet mit ihren Funktionen vorgestellt werden. Dabei wird deren Relevanz für die Umsetzung der Plugins begutachtet.
 
 %%%%%%%%%%
 \subsubsection{VideoJS Player}
@@ -367,10 +368,6 @@ Das \textit{wavesurfer.js} Framework - speziell mit seinen Weiterenticklungen - 
 Zusammenfassend ist festzustellen, dass für die Entwicklung des Plugins für Hyperaudio-Dokumente vor allem \textit{VideoJS Player}, \textit{H5P} und \textit{Popcorn.js} die vielversprechendsten bestehenden Entwicklungen darstellen, da diese bereits einen hohen Entwicklungsstand haben. Unter Anbetracht der benötigten Funktionen stellen aber speziell der \textit{VideoJS Player} und \textit{Popcorn.js} eine gute Basis dar, da diese mit ihrem Kernelement als Player und durch die integrierten Plugin-Systeme für die Entwicklung von Multimedia-Elementen ausgelegt sind. Bei \textit{H5P} müsste die Playerfunktion mit der dazugehörigen Erweiterung für Hyperaudio-Dokumente von Grund auf entwickelt werden, um eine entsprechende interaktive Komponente für Hyperaudio-Dokumente bereitstellen zu können. Letztlich scheint \textit{Popcorn.js} die beste Grundlage für die Entwicklung des Plugins darzustellen, da hier auch die Steuerung der Medieninhalte bereits von Grund auf ausgeprägt implementiert sind, woraus bei der Umsetzung einiger Funktionen großer Nutzen gezogen werden kann. Des Weiteren ist \textit{Popcorn.js} als JavaScript-Bibliothek mühelos als Thirdparty-Framework in Moodle integrierbar.
 
 
-
-
 %%%%%%%%%%
 \section{Zusammenfassung}
-Nachdem die Zielgruppe mittels \textit{Personas} und den dazugehörigen \textit{User Stories} definiert wurde, dienten diese der Anforderungsdefinition. Diese Anforderungen wurden dann in Hinblick auf die Zielsetzung der Arbeit in drei Prioritätsstufen eingeordnet. Anschließend wurden anhand der genaueren Betrachtung der Möglichkeiten zur Entwicklung von Plugins in Moodle die Randbedingungen bestimmt. Hierbei wurde festgehalten, dass das Plugin als Aktivitäten Plugin umzusetzen ist und dass Übersichten und Favoritenfunktion innerhalb von Blocken umgesetzte werden könnten. Mit diesem Wissen im Hinterkopf wurde dann der aktuelle Stand der Technik im allgemeinen und im Bezug auf die Entwicklung des Plugins betrachtet. In diesem Zuge wurde entschieden, dass \textit{Popcorn.js} als gute Grundlage für die Entwicklung des Plugins dient, da dieses mit seinen vorhanden Steuerungsmöglichkeiten ein gutes Grundgerüst darstellt und problemlos in Moodle integriert werden kann.
-
-\todo[inline]{Zusammenfassung überarbeiten - mehr Ergebnisse, z.B. Anforderungen für Rollen}
+Im ersten Schritt wurden Personas als mögliche Nutzer der Anwendung entwickelt. Anhand der Personas konnte die Aufteilung der Zielgruppe in Nutzende und Administrierende abgeleitet werden. Personas und Rollen wurden daraufhin zurate gezogen, um User Stories zu formulieren. Die daraus resultierenden rollenspezifischen Anforderungen wurden definiert und im Hinblick auf die Zielsetzung der Arbeit in drei Prioritätsstufen kategorisiert, welche die Basis für das Vorgehen im Implementierungsprozess bilden. Als Vorbereitung für die Implementierung dient ebenfalls die genauere Betrachtung der Möglichkeiten zur Plugin-Entwicklung in Moodle. Als Rahmenbedingung kann festgehalten werden, dass das Hyperaudio-Plugin primär als Aktivitäten-Plugin umzusetzen ist und dass Übersichten und Favoritenfunktion innerhalb von Blöcken realisiert werden können. Bei der Betrachtung des aktuellen Stands der Technik im Allgemeinen sowie im Bezug auf die Entwicklung des Plugins wurde entschieden, dass \textit{Popcorn.js} als Grundlage für das Hyperaudio-Plugin dienen soll, da dieses mit seinen vorhanden Steuerungs- und Annotationsmöglichkeiten ein gutes Grundgerüst darstellt und problemlos in Moodle integriert werden kann.

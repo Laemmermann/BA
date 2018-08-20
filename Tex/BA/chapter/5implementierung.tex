@@ -22,25 +22,18 @@ Im Ordner \textbf{/hyperaudio/lang} wird die Sprachlokalisierung vorgenommen. F�
 
 Das Icon, welches für das Plugin  verwendet werden soll, muss im Ordner \textbf{/hyperaudio/pix} mit dem Dateinamen \textbf{icon.gif} abgelegt werden und sollte eine Auflösung von 16x16 Pixel besitzen.
 
-Im Ordner \textbf{/hyperaudio} liegen darüber hinaus die Dateien \textbf{lib.php}, \textbf{mod\underline{{ }}form.php}, \textbf{index.php}, \textbf{view.php} und \textbf{version.php}. Die \textbf{lib.php} dient dazu, Standardfunktionen von Moodle zu überschreiben, wobei \texttt{add\underline{{ }}instance}, \texttt{update\underline{{ }}instance} und \texttt{delete\underline{{ }}instance} als essenzielle Funktionen zu nennen sind. Mit diesen Funktionen wird das Anlegen, Aktualisieren und Löschen von Instanzen des Plugins ermöglicht. Zum Anlegen und Aktualisieren wird in der \textbf{mod\underline{{ }}form.php} die dazugehörige Maske festgelegt.
+Im Ordner \textbf{/hyperaudio} liegen darüber hinaus die Dateien \textbf{lib.php}, \textbf{mod\underline{{ }}form.php}, \textbf{index.php}, \textbf{view.php} und \textbf{version.php}. Die \textbf{lib.php} dient dazu, Standardfunktionen von Moodle zu überschreiben, wobei \texttt{add\underline{{ }}instance}, \texttt{update\underline{{ }}instance} und \texttt{delete\underline{{ }}instance} als essenzielle Funktionen zu nennen sind. Mit diesen Funktionen wird das Anlegen, Aktualisieren und Löschen von Instanzen des Plugins ermöglicht. Zum Anlegen und Aktualisieren wird in der \textbf{mod\underline{{ }}form.php} die dazugehörige Maske festgelegt.Die \textbf{\textit{index.php}} dient der Auflistung aller Instanzen eines Plugins innerhalb eines Kurses. Je nach Umsetzung kann der Inhalt dieser Auflistung unterschiedlich viele Informationen zu den Instanzen bereitstellen. Auch ist es beispielsweise anhand von Berechtigungen aus der \textbf{access.php} möglich gewisse Inforationen nur bestimmten Usern anzuzeigen. Die erste Datei, die beim Öffnen der Aktivität geladen wird, ist die \textbf{view.php}, welche dementsprechend vornehmlich der Anzeige der Inhalte dient. In der \textbf{version.php} wird die Version des Plugins gepflegt. Erhöht sich die Versionsnummer in der \textbf{version.php}, wird der automatische Upgradeprozess von Moodle für das Plugin ausgelöst.
 
-
-\textbf{\textit{index.php}}
-
-\todo[inline]{index.php}
-
-Die \textbf{view.php} ist die erste Datei, die beim Öffnen der Aktivität geladen wird und dient dementsprechend vornehmlich der Anzeige der Inhalte. In der \textbf{version.php} wird die Version des Plugins gepflegt. Erhöht sich die Versionsnummer in der \textbf{version.php}, wird der automatische Upgradeprozess von Moodle für das Plugin ausgelöst.
-
-\todo[inline]{Best Practices - weitere Dateien: styles.css, renderer.php, locallib.php, ...}
+Neben diesen vorgegebenen Dateien kommen üblicherweise noch weitere Dateien bei der Entwicklung eines Moodle-Plugins zum Einsatz \citep{wild2017moodle}. Dazu gehört beispielsweise die \textbf{locallib.php}, in welcher üblicherweise alle plugineigenen PHP-Funktionen deklariert werden. Auch ist es Usus, die eigentliche Darstellung der Plugin-Inhalte innerhalb eines Kurses von der \textbf{view.php} in eine \textbf{renderer.php} zu verlagern. Dort können verschiedene Renderer-Klassen, welche durch Moodle bereitgestellt werden, für die eigenen Bedürfnisse überschrieben werden. Anpassungen optischer Natur können durch CSS (Cascading Style Sheets) in der \textbf{styles.css} vorgenommen werden. Eigene JavaScript-Module, welche beispielweise beim Laden der \textbf{view.php} automatisch aufgerufen werden, sind im Verzeichnis \textbf{/hyperaudio/AMD} (Asynchronous Module Definition) abzulegen.
 
 %%%%%%%%%%
 \section{Iterative Entwicklung}
-Die Entwicklung des Plugins wird in iterativer Form durchgeführt. In jeder Iteration soll das Plugin nur um einige wenige Funktionalitäten erweitert werden. Jede Iteration soll mit einem lauffähigen Plugin abgeschlossen werden. So kann direkt das Ergebnis betrachtet werden und gegebenenfalls in der nächsten Iteration nochmals angepasst werden \citep{augsten2018iterativ}.
+Die Entwicklung des Plugins wird in iterativer Form durchgeführt. In jeder Iteration soll das Plugin nur um einige wenige Funktionalitäten erweitert werden. Jede Iteration soll mit einem lauffähigen Plugin abgeschlossen werden. So kann direkt das Ergebnis betrachtet werden und gegebenenfalls in der nächsten Iteration nochmals angepasst werden \citep{augsten2018iterativ}. Die Reihenfolge, in welcher die Funktionalitäten umgesetzt werden, leitet sich aus der Priorisierung der Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} ab.
 
 \subsection{Speichern und Abspielen einer Audio-Datei}
 In der ersten Iteration wird zunächst die grundlegende Struktur des Plugins erstellt (vgl. Abschnitt \ref{sec:architektur}). Ziel der ersten Iteration soll es sein, eine Audio-Datei speichern und wiedergeben zu können.
 
-Dazu wird in der Maske zum Anlegen und Aktualisieren von Instanzen des Hyperaudio-Plugins (\textbf{mod\underline{{ }}form.php}), neben dem obligatorischen Namens-Feld noch ein Element zum Hinzufügen einer Audiodatei angelegt. Auflistung \ref{lst:it1:modform} zeigt einen Ausschnitt des Codes, der in der Funktion \texttt{definition} der Klasse \texttt{mod\underline{{ }}hyperaudio\underline{{ }}mod\underline{{ }}form}, die von der Klasse \texttt{moodleform\underline{{ }}mod} erbt, ergänzt werden muss. 
+Dazu wird in der Maske zum Anlegen und Aktualisieren von Instanzen des Hyperaudio-Plugins (\textbf{mod\underline{{ }}form.php}) neben dem obligatorischen Namens-Feld noch ein Element zum Hinzufügen einer Audiodatei angelegt. Auflistung \ref{lst:it1:modform} zeigt einen Ausschnitt des Codes, der in der Funktion \texttt{definition} der Klasse \texttt{mod\underline{{ }}hyperaudio\underline{{ }}mod\underline{{ }}form}, die von der Klasse \texttt{moodleform\underline{{ }}mod} erbt, ergänzt werden muss. 
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -65,9 +58,7 @@ $mform->addElement('filemanager', 'audiofile', get_string('hyperaudiodata',
 $mform->addRule('audiofile', get_string('required', 'hyperaudio'), 'required');
 \end{lstlisting}
 
-Der \texttt{\underline{{ }}form} der \texttt{moodleform\underline{{ }}mod} können durch \textit{addElement} neue Form-Elemente hinzugefügt werden. Mithilfe der Funktionen \texttt{setType} und \texttt{addRule} können den Elementen Datentypen und Regeln zugewiesen werden, die bei Auswertung der Form automatisch validiert werden.
-% im Fall von \textit{name} der Typ \textit{PARAM_TEXT} und die Bedingung \textit{required}.
-Zum Hochladen von Dateien kann der \textit{filemanager} eingesetzt werden. Mithilfe eines Arrays können dabei Einschränkungen für Anzahl und Eigenschaften der hochzuladenden Dateien festgelegt werden, in diesem Fall darf maximal eine Datei hinzugefügt werden, die vom Typ \textit{audio} sein muss. Die Funktion \texttt{get\underline{{ }}string} dient im Allgemeinen der Darstellung der lokalisierten Bezeichnungen.
+Der \texttt{\underline{{ }}form} der \texttt{moodleform\underline{{ }}mod} können durch \texttt{addElement} neue Form-Elemente hinzugefügt werden. Mithilfe der Funktionen \texttt{setType} und \texttt{addRule} können den Elementen Datentypen und Regeln zugewiesen werden, die bei Auswertung der Form automatisch validiert werden. Zum Hochladen von Dateien kann der \textit{filemanager} eingesetzt werden. Mithilfe eines Arrays können dabei Einschränkungen für Anzahl und Eigenschaften der hochzuladenden Dateien festgelegt werden. In diesem Fall darf maximal eine Datei hinzugefügt werden, die vom Typ \textit{audio} sein muss. Die Funktion \texttt{get\underline{{ }}string} dient im Allgemeinen der Darstellung der lokalisierten Bezeichnungen.
 
 Um die Daten aus der Form in der Datenbank speichern und später wieder löschen zu können, muss auch die \textbf{lib.php} bearbeitet werden. Dazu dienen die bereits erwähnten Funktionen \texttt{add\underline{{ }}instance}, \texttt{update\underline{{ }}instance} und \texttt{delete\underline{{ }}instance}. Beispielhaft wird in Auflistung \ref{lst:it1:lib} die Funktion \texttt{add\underline{{ }}instance} zum Hinzufügen eines neuen Hyperaudio-Dokuments betrachtet. 
 
@@ -150,10 +141,10 @@ $audiofileurl = moodle_url::make_pluginfile_url(
     $audio_fileinfo['contextid'], $audio_fileinfo['component'],
     $audio_fileinfo['filearea'], $audio_fileinfo['itemid'],
     $audio_fileinfo['filepath'], $audio_fileinfo['filename']);
-$audio_url = $audiofileurl->get_port() ? $audiofileurl->get_scheme() . '://' .
-    $audiofileurl->get_host() . $audiofileurl->get_path() . ':' .
-    $audiofileurl->get_port() : $audiofileurl->get_scheme() . '://' .
-    $audiofileurl->get_host() . $audiofileurl->get_path();
+$audio_url = $audiofileurl->get_scheme() . '://' . $audiofileurl->get_host() . $audiofileurl->get_path();
+if ($audiofileurl->get_port()){
+    $audio_url .= ':' . $audiofileurl->get_port();
+}
 
 $output = '<div id="hyperaudio" data-hyperaudio_id="'.$hyperaudio->id.'">';
 $output .= '<audio id="hyperaudio_audio" controls style="width:800px;">' .
@@ -179,11 +170,28 @@ Auf die beschriebene Art und Weise lässt sich ein Hyperaudio-Dokument, das vorl
 \subsection{Antworten auf Kommentare}
 \dots
 
+\subsection{Notizen}
+\dots
+
+\subsection{Audio Cues}
+\dots
+
 \subsection{Galerie der Zusatzinhalte}
 \dots
 
-\subsection{Visualisierung der Annotationen in der Timeline}
+\subsection{Zeitabhängige Visualisierung der Kommentare}
 \dots
+
+\subsection{Markierungen}
+\dots
+
+%\subsection{Suche, Filter und Sortierung bei Kommentaren}
+%\dots
+%
+%\subsection{Export-/Import-Funktion}
+%\dots
+
+%TODO: Wiedergabe von Videos
 
 %%%%%%%%%%
 \section{Zusammenfassung}

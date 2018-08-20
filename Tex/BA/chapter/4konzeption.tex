@@ -1,10 +1,8 @@
-Mit den Erkenntnissen des vorherigen Kapitels kann sich nun der Konzeption des Moodle-Plugins zugewendet werden. Dabei werden zu Beginn die Zusammenhänge der Komponenten von von Hyperaudio-Dokument und Annotationen analysiert und deren Zusammenhänge festgehalten. Darauf aufbauend wird zunächst die Definition des Schnittstellenformats und der Datenbankentwurf vorgenommen. Zum Ende der Konzeption wird dann die Benutzeroberfläche des Plugins gestaltet.
+Mit den Erkenntnissen des vorherigen Kapitels kann sich nun der Konzeption des Hyperaudio-Plugins zugewendet werden. Dabei werden zu Beginn die Zusammenhänge der Komponenten von Hyperaudio-Dokument und Annotationen analysiert und deren Zusammenhänge festgehalten. Diese Zusammenhänge können durch eine Schnittstellendatei abgebildet werden, deren Format in Abschnitt \ref{sec:konfigurationsdatei} definiert wird. Anschließend wird der Datenbankentwurf vorgenommen. Im Anschluss kann sich der Gestaltung der Benutzeroberfläche des Plugins gewidmet werden.
 
-\todo[inline]{komplett überarbeiten}
-Der in Abbildung \ref{fig:UMLAufbau} dargestellte Zusammenhang zwischen Zusatzinhalt und Hyperaudio-Dokument kann mittels einer Schnittstellendatei umgesetzt werden. Diese wird im laufe des Kapitels genauer erörtert.
 
 %%%%%%%%%%
-\section{Zusammenhänge der Komponenten von Hyperaudio-Dokument und Annotationen}
+\section{Zusammenhänge der Komponenten der Hyperaudio-Anwendung}
 Basierend auf der Definition eines Hyperaudio-Dokuments aus Abschnitt \ref{sec:hyperaudio} und der in Abschnitt \ref{sec:anforderungsdefinition} erarbeiteten Anforderungen werden die Zusammenhänge der medialen Komponenten weiter analysiert. Hierbei soll vor allem geklärt werden, wie die einzelnen Komponenten von Hyperaudio-Dokument und Annotationen zusammenhängen und welche Möglichkeiten dadurch gegeben beziehungsweise nicht gegeben sind.
 
 
@@ -36,27 +34,27 @@ Zwischen Kommentaren und Zusatzinhalten gibt es jedoch keinen direkten Zusammenh
 %%%%%%%%%%
 \section{Definition des Schnittstellenformats für Hyperaudio-Dokumente}
 \label{sec:konfigurationsdatei}
-\textbf{Bei der Anlage eines neuen Hyperaudio-Dokuments in Moodle wird neben der Audio-Datei und den anzuzeigenden Zusatzinhalten auch eine Konfigurationsdatei hochgeladen. Diese wird beim Speichern des Hyperaudio-Dokuments abgespeichert und ausgelesen. Diese ausgelesenen Informationen sollen dazu dienen festzuhalten zu welchem Zeitpunk welcher Zusatzinhalt annotiert werden soll. Zusätzlich ist es mittels der Konfigurationsdatei möglich Metadaten (Name des Zusatzinhalts, betroffene Kurseinheit, zugehörige Seiten innerhalb der Kurseinheit und eine Beschreibung) für die einzelnen Zusatzinhalte anzufügen.}
+Um ein Hyperaudio-Dokument zu erstellen, können mehrere Dateien hochgeladen werden. Verpflichtend ist das Bereitstellen einer Audio-Datei. Sollen Zusatzinhalte angezeigt werden, muss neben den Zusatzinhalten selbst auch eine Konfigurationsdatei hochgeladen werden. Darin wird festgehalten, zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll. Darüber hinaus ist es mittels der Konfigurationsdatei möglich Metadaten (Name und Beschreibung des Zusatzinhalts sowie die betroffene Kurseinheit und die zugehörigen Seiten) für die einzelnen Zusatzinhalte anzufügen.
 %Wie in der Einleitung dieses Kapitels beschrieben, kann die Konfiguration zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll mittels einer Konfigurationsdatei durchgeführt werden. Diese Vorgehensweise wird nun umgesetzt und die Konfigurationsdatei ist entsprechend zu definieren.
-Auf Grund des Einsatzes von PHP und JavaScript innerhalb der Moodle Plugin-Entwicklung bietet sich der Einsatz von JSON (JavaScript Object Notation) an. JSON wird direkt durch JavaScript unterstützt, ist somit am besten für JavaScript geeignet und bietet im Vergleich zu XML erhebliche Geschwindigkeitsvorteile \citep{nurseitov2009comparison}.
+Aufgrund des Einsatzes von PHP und JavaScript innerhalb der Moodle Plugin-Entwicklung bietet sich der Einsatz von JSON (JavaScript Object Notation) an. JSON wird direkt durch JavaScript unterstützt und bietet im Vergleich zu XML (Extensible Markup Language) erhebliche Geschwindigkeitsvorteile \citep{nurseitov2009comparison}.
 %JSON is directly supported inside JavaScript [7] and is best suited for JavaScript applications; thus providing significant performance gains over XML, 
 Mittels der JSON-Datei sollen folgende Informationen der Zusatzinhalte übertragen werden:
 
 \begin{itemize}
 \item Dateiname
 \item Name des Zusatzinhaltes
+\item Beschreibung des Zusatzinhaltes
 \item Kurseinheit
 \item Betroffene Seiten innerhalb der Kurseinheit
-\item Beschreibung des Zusatzinhaltes
 \item Startzeitpunkt der Annotation
 \item Endzeitpunkt der Annotation
 \end{itemize}
 
-Entscheidend ist hierbei vor allem der Dateiname. Anhand des Dateinamens wird anschließend die Zuordnung der weiteren Informationen zu der entsprechenden Audio-Datei in der Datenbank vorgenommen. Eine beispielhaft befüllte JSON-Datei ist in Auflistung \ref{lst:JSON} dargestellt.
+Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann anschließend die Zuordnung der weiteren Informationen zu der entsprechenden Audio-Datei in der Datenbank vorgenommen werden. Eine beispielhaft befüllte Konfigurationsdatei ist in Auflistung \ref{lst:JSON} dargestellt.
 
 \begin{lstlisting}[language=json,
              linewidth=\textwidth,
-             caption={Beispielhafte \textit{JSON}-Datei},
+             caption={Beispielhafte Konfigurationsdatei},
              label={lst:JSON}]             
 {
   "additional_contents": {
@@ -80,18 +78,19 @@ Entscheidend ist hierbei vor allem der Dateiname. Anhand des Dateinamens wird an
 }
 \end{lstlisting}
 \todo[inline]{JSON Beispieldaten Zeitpunkte korrigieren}
+\todo[inline]{JSON-Datei um Autor ergänzen}
 
 %%%%%%%%%%
 \section{Datenbankentwurf}
-Um die dem Plugin zugrundeliegende Datenbank zu gestalten, wird auf die Erkenntnisse aus Abschnitt \ref{sec:komponenten_zusammenhänge} und Abbildung \ref{fig:UMLAufbau} zurückgegriffen. Das Ergebnis ist dem ER-Diagramm in Abbildung \ref{fig:ERDiagramm} zu entnehmen.
+Um die dem Plugin zugrundeliegende Datenbank zu gestalten, wird auf die Erkenntnisse aus Abschnitt \ref{sec:komponenten_zusammenhänge} zurückgegriffen. Das Ergebnis ist dem ER-Diagramm in Abbildung \ref{fig:ERDiagramm} zu entnehmen.
 
-Jede der Tabellen verfügt über den Primärschlüssel \textit{id}. Darüber hinaus wird zu jedem Eintrag gespeichert, wann dieser erstellt (\textit{timecreated}) und zuletzt bearbeitet (\textit{timemodified}) wurde. Für das Abspeichern von Dateien stellt Moodle die Tabelle \textit{files} bereit \citep{moodle2018file}. Dort kann die Datei abgelegt und an anderer Stelle darauf referenziert werden.
+Jede der Datenbanktabellen verfügt über einen Primärschlüssel (\textit{id}). Darüber hinaus wird zu jedem Eintrag gespeichert, wann dieser erstellt (\textit{timecreated}) und zuletzt bearbeitet (\textit{timemodified}) wurde. Für das Abspeichern von Dateien stellt Moodle die Tabelle \textit{files} bereit \citep{moodle2018file}. Dort kann die Datei abgelegt und an anderer Stelle darauf referenziert werden.
 
 Im Mittelpunkt des Hyperaudio-Plugins steht die Tabelle \textit{hyperaudio}. Diese repräsentiert das Hyperaudio-Dokument und die Audio-Datei aus Abbildung \ref{fig:UMLAufbau}. Zunächst wird die ID des Moodle-Kurses (\textit{course}) abgelegt, dem das Hyperaudio-Dokument zugeordnet ist. Während die Audio-Datei selbst in der bereits erwähnten Tabelle \textit{files} zu finden ist, wird in der Tabelle \textit{hyperaudio} deren Dateiname (\textit{audiofile}) festgehalten. Zum Hyperaudio-Dokument können außerdem Name und Ersteller in den Spalten \textit{name} und \textit{author} hinterlegt werden. Eine optionale Beschreibung kann entsprechend dem de-facto-Standard der Moodle-Plugin-Entwicklung über \textit{introformat} und \textit{intro} hinzugefügt werden \citep{moodle2016activity}.
 
 Bei der Tabelle \textit{hyperaudio\underline{{ }}config} handelt es sich um eine Tabelle, in welcher die in Abschnitt \ref{sec:konfigurationsdatei} beschriebene Konfigurationsdatei gespeichert wird (\textit{file} enthält den Dateinamen als Referenz auf die \textit{files}-Tabelle). Daneben wird nur noch der Fremdschlüssel \textit{hyperaudio\underline{{ }}id} auf die Tabelle \textit{hyperaudio} als Zuordnung zum Hyperaudio-Dokument benötigt.
 
-Zur Ablage der annotierten Zusatzinhalte dient die Tabelle \textit{additional\underline{{ }}content}. Auch hier steht der Name der Datei in der Spalte \textit{file} als Referenz auf die \textit{files}-Tabelle. Ebenso dient der Fremdschlüssel \textit{hyperaudio\underline{{ }}id} zur Verknüpfung des Zusatzinhalts mit dem Hyperaudio-Dokument. Des Weiteren werden folgende Metainformationen zum Zusatzinhalt abgespeichert:
+Zur Ablage der annotierten Zusatzinhalte dient die Tabelle \textit{additional\underline{{ }}content}. Auch hier steht der Name der Datei in der Spalte \textit{file} als Referenz auf die \textit{files}-Tabelle. Ebenso dient der Fremdschlüssel \textit{hyperaudio\underline{{ }}id} zur Verknüpfung des Zusatzinhalts mit der Audio-Datei. Des Weiteren werden folgende Metainformationen zum Zusatzinhalt abgespeichert:
 
 \begin{itemize}
 
@@ -104,7 +103,7 @@ Zur Ablage der annotierten Zusatzinhalte dient die Tabelle \textit{additional\un
 
 \end{itemize}
 
-Die Tabelle \textit{hyperaudio\underline{{ }}comments} dient der Speicherung der vier in Abbildung \ref{fig:UMLAufbau} modellierten Kommentararten. Der Zusammenhang zum Hyperaudio-Dokument wird analog per Fremdschlüssel \textit{hyperaudio\underline{{ }}id} hergestellt. Neben dem textuellen Kommentar (\textit{commenttext}), werden auch der Verfasser in Form der \textit{userid}, die Art des Kommentars (\textit{comment\underline{{ }}type}) und der Annotationszeitpunkt (\textit{timeannotated}) gespeichert. Für den Fall, dass es sich um einen Antwortkommentar handelt, wird in der Spalte \textit{comment\underline{{ }}id} die Referenz auf den Original-Kommentar festgehalten.
+Die Tabelle \textit{hyperaudio\underline{{ }}comments} dient der Speicherung der vier in Abbildung \ref{fig:UMLAufbau} modellierten Kommentararten. Der Zusammenhang zum Hyperaudio-Dokument wird analog per Fremdschlüssel \textit{hyperaudio\underline{{ }}id} hergestellt. Neben dem textuellen Kommentar (\textit{commenttext}), werden auch der Verfasser in Form der \textit{userid}, die Art des Kommentars (\textit{comment\underline{{ }}type}\footnote{\texttt{COMMENT}, \texttt{NOTE} oder \texttt{MARK}}) und der Annotationszeitpunkt (\textit{timeannotated}) gespeichert. Für den Fall, dass es sich um einen Antwortkommentar handelt, wird in der Spalte \textit{comment\underline{{ }}id} die Referenz auf den Original-Kommentar festgehalten.
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth,center]{ERDiagramm.png}
