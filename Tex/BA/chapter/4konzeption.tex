@@ -14,7 +14,7 @@ Im Mittelpunkt eines Hyperaudio-Dokuments steht eine Audio-Datei. Inhaltlich kan
 
 Neben dieser zentralen Audio-Datei besteht das Hyperaudio-Dokument aus mehreren Zusatzinhalten, wobei es sich um Bilder, Graphen, Tabellen usw. handeln kann. Entscheidend ist aber, dass diese Zusatzinhalte immer nur eine rein grafische Darstellung verkörpern. Videos mit Ton sind somit beispielsweise nicht als Zusatzinhalt verwendbar, reine Animationen ohne Ton sind aber durchaus möglich.
 
-Als besondere, nämlich externe Komponente, sind die Kommentare zu nennen. Diese gehören nicht zum eigentlichen Hyperaudio-Dokument, sollen aber mit diesem verknüpft werden. Es wird drei verschiedene Arten von Kommentaren geben, nämlich  öffentliche Kommentare, persönliche Notizen und persönliche Markierungen. Innerhalb der öffentlichen Kommentare muss noch zwischen den Original-Kommentaren und den Antworten auf diese unterschieden werden. 
+Als besondere, nämlich externe Komponente, sind die Kommentare zu nennen. Diese gehören nicht zum eigentlichen Hyperaudio-Dokument, sollen aber mit diesem verknüpft werden. Es wird drei verschiedene Arten von Kommentaren geben, nämlich  öffentliche Kommentare, persönliche Notizen und Markierungen. Innerhalb der öffentlichen Kommentare muss noch zwischen den Original-Kommentaren und den Antworten auf diese unterschieden werden. 
 
 
 %%%%%%%%%%
@@ -54,20 +54,27 @@ Mittels der JSON-Datei sollen folgende Informationen der Zusatzinhalte übertrag
 
 Entscheidend ist hierbei vor allem der Dateiname. Anhand des Dateinamens wird anschließend die Zuordnung der weiteren Informationen zu der entsprechenden Audio-Datei in der Datenbank vorgenommen. Eine beispielhaft befüllte JSON-Datei ist in Auflistung \ref{lst:JSON} dargestellt.
 
-\begin{lstlisting}[basicstyle=\small,
-             inputencoding={utf8}, 
-             extendedchars=false,
-             commentstyle=\color{black}, 
-             keywordstyle=\color{black}, 
-             escapeinside=``,
+\begin{lstlisting}[language=json,
              linewidth=\textwidth,
              caption={Beispielhafte \textit{JSON}-Datei},
              label={lst:JSON}]             
 {
-  `''`additional_contents`''`: {
-    `''`additional_content`''`: [
-      {`''`filename`''`: `''`Abbildung_1_4.png`''`, `''`name`''`: `''`Abbildung 1.4`''`, `''`course_unit`''`: `''`1`''`, `''`page`''`: `''`31`''`, `''`description`''`: `''`Ein kooperativer Editor zur Visualisierung von gemeinsam zu lernenden Vokabeln.`''`, `''`begin`''`: `''`5`''`, `''`end`''`: `''`10`''`},
-      {`''`filename`''`: `''`Abbildung_1_5.png`''`, `''`name`''`: `''`Abbildung 1.5`''`, `''`course_unit`''`: `''`1`''`, `''`page`''`: `''`32`''`, `''`description`''`: `''`Verschiedene Komponenten des Papierprototyps.`''`, `''`begin`''`: `''`15`''`, `''`end`''`: `''`25`''`}
+  "additional_contents": {
+    "additional_content": [
+      {"filename": "Abbildung_1_4.png",
+      "name": "Abbildung 1.4",
+      "course_unit": 1", 
+      "page": "31",
+      "description": "Ein kooperativer Editor zur Visualisierung von gemeinsam zu lernenden Vokabeln.",
+      "begin": "5",
+      "end": "10"},
+      {"filename": "Abbildung_1_5.png",
+      "name": "Abbildung 1.5",
+      "course_unit": "1",
+      "page": "32",
+      "description": "Verschiedene Komponenten des Papierprototyps.",
+      "begin": "15",
+      "end": "25"}
     ]
   }
 }
@@ -76,7 +83,7 @@ Entscheidend ist hierbei vor allem der Dateiname. Anhand des Dateinamens wird an
 
 %%%%%%%%%%
 \section{Datenbankentwurf}
-Um die dem Plugin zugrundeliegende Datenbank zu gestalten wird auf die Erkenntnisse aus Abschnitt \ref{sec:komponenten_zusammenhänge} und Abbildung \ref{fig:UMLAufbau} zurückgegriffen. Das Ergebnis ist dem ER-Diagramm in Abbildung \ref{fig:ERDiagramm} zu entnehmen.
+Um die dem Plugin zugrundeliegende Datenbank zu gestalten, wird auf die Erkenntnisse aus Abschnitt \ref{sec:komponenten_zusammenhänge} und Abbildung \ref{fig:UMLAufbau} zurückgegriffen. Das Ergebnis ist dem ER-Diagramm in Abbildung \ref{fig:ERDiagramm} zu entnehmen.
 
 Jede der Tabellen verfügt über den Primärschlüssel \textit{id}. Darüber hinaus wird zu jedem Eintrag gespeichert, wann dieser erstellt (\textit{timecreated}) und zuletzt bearbeitet (\textit{timemodified}) wurde. Für das Abspeichern von Dateien stellt Moodle die Tabelle \textit{files} bereit \citep{moodle2018file}. Dort kann die Datei abgelegt und an anderer Stelle darauf referenziert werden.
 

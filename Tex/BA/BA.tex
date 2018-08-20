@@ -22,16 +22,69 @@
    \ifthenelse{\equal{#1}{}}{}{-\subref{#1}}%
    )}
 %%%%%%%%%%
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\colorlet{punct}{red!60!black}
+\definecolor{delim}{RGB}{20,105,176}
+\lstdefinelanguage{json}{
+    literate=
+     *{:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+\definecolor{commentgreen}{RGB}{2,112,10}
+\definecolor{eminence}{RGB}{108,48,130}
+\definecolor{weborange}{RGB}{255,165,0}
+\definecolor{frenchplum}{RGB}{129,20,83}
+\lstset {
+    language=php,
+    aboveskip=15pt,
+    columns=fullflexible,
+    basicstyle=\ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false
+    breaklines=true,
+    frame=lines,
+    extendedchars=false,
+    upquote=true,
+    %escapeinside=\``,
+    inputencoding={utf8}, 
+    commentstyle=\color{commentgreen},
+    keywordstyle=\color{eminence},
+    stringstyle=\color{blue},
+    emph={int,char,double,float,unsigned,void,bool},
+    emphstyle={\color{blue}},
+    classoffset=1, % starting new class
+    otherkeywords={.,;,-,!,~,null,function},
+    morekeywords={.,;,-,!,~,null,function},
+    deletekeywords={header},
+    classoffset=0,
+}
+\usepackage{letltxmacro}
+% https://tex.stackexchange.com/q/88001/5764
+\LetLtxMacro\oldttfamily\ttfamily
+\DeclareRobustCommand{\ttfamily}{\oldttfamily\csname ttsize\endcsname}
+\newcommand{\setttsize}[1]{\def\ttsize{#1}}%
+%%%%%%%%%%
 \usepackage{rotating}
 \usepackage{enumitem}
 \usepackage{longtable}
 \usepackage{underscore}
+%\usepackage{microtype}
 %%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \sffamily
 \pagestyle{empty}
+\setttsize{\small}
 
 
 %% Titelseite (optional für die PDF-Version des Textes)
@@ -152,10 +205,9 @@ Datum: \today\\
 %%
 \chapter{Erster Teil des Anhangs}
 \begin{sidewaysfigure}
-\includegraphics[width=\textwidth,center]{VerwendungMoodleZuschnitt.pdf}
+\includegraphics[width=0.95\textwidth,center]{VerwendungMoodleZuschnitt.pdf}
 \caption{\label{fig:VerwendungMoodle} Verwendung von Moodle in den Pflichtmodulen des Bachelorstudiengangs Wirtschaftsinformatik (Sommersemester 2018)}
 \end{sidewaysfigure}
-\todo[inline]{geht das lesbarer?}
 
 %%
 \chapter{Zweiter Teil des Anhangs}
@@ -228,6 +280,7 @@ Datum: \today\\
 \textbf{LVU} & Lernraum Virtuelle Universität \\
 \textbf{Moodle} & Modular Object-Oriented Dynamic Learning Environment \\
 \textbf{PHP} & PHP: Hypertext Preprocessor \\
+\textbf{URL} & Uniform Resource Locator \\
 \textbf{VU} & Virtuelle Universität \\
 \textbf{XML} & Extensible Markup Language \\
 \end{longtable}
