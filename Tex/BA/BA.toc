@@ -53,23 +53,23 @@
 \contentsline {section}{\numberline {5.2}Iterative Entwicklung}{44}{section.148}
 \contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{45}{subsection.149}
 \contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{47}{subsection.234}
-\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{47}{subsection.235}
-\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{47}{subsection.236}
-\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{47}{subsection.237}
-\contentsline {subsection}{\numberline {5.2.6}Notizen}{47}{subsection.238}
-\contentsline {subsection}{\numberline {5.2.7}Audio Cues}{47}{subsection.239}
-\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{47}{subsection.240}
-\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare}{48}{subsection.241}
-\contentsline {subsection}{\numberline {5.2.10}Markierungen}{48}{subsection.242}
-\contentsline {section}{\numberline {5.3}Zusammenfassung}{48}{section.243}
-\contentsline {chapter}{\numberline {6}Evaluation}{49}{chapter.244}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{50}{chapter.246}
-\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{51}{appendix.248}
-\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{53}{appendix.250}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{55}{chapter*.251}
-\contentsline {chapter}{Abbildungsverzeichnis}{59}{section*.252}
-\contentsline {chapter}{Tabellenverzeichnis}{61}{section*.253}
-\contentsline {chapter}{Auflistungsverzeichnis}{63}{section*.254}
-\contentsline {chapter}{Verzeichnis der Algorithmen}{65}{section*.256}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{67}{section*.258}
+\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{49}{subsection.317}
+\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{50}{subsection.353}
+\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{54}{subsection.513}
+\contentsline {subsection}{\numberline {5.2.6}Notizen}{54}{subsection.514}
+\contentsline {subsection}{\numberline {5.2.7}Audio Cues}{54}{subsection.515}
+\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{54}{subsection.516}
+\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare}{54}{subsection.517}
+\contentsline {subsection}{\numberline {5.2.10}Markierungen}{54}{subsection.518}
+\contentsline {section}{\numberline {5.3}Zusammenfassung}{54}{section.519}
+\contentsline {chapter}{\numberline {6}Evaluation}{55}{chapter.520}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{56}{chapter.522}
+\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{57}{appendix.524}
+\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{59}{appendix.526}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{61}{chapter*.527}
+\contentsline {chapter}{Abbildungsverzeichnis}{65}{section*.528}
+\contentsline {chapter}{Tabellenverzeichnis}{67}{section*.529}
+\contentsline {chapter}{Auflistungsverzeichnis}{69}{section*.530}
+\contentsline {chapter}{Verzeichnis der Algorithmen}{71}{section*.532}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{73}{section*.534}
 \contentsfinish 

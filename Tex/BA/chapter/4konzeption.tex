@@ -82,6 +82,7 @@ Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann ansc
 
 %%%%%%%%%%
 \section{Datenbankentwurf}
+\label{sec:datenbank}
 Um die dem Plugin zugrundeliegende Datenbank zu gestalten, wird auf die Erkenntnisse aus Abschnitt \ref{sec:komponenten_zusammenhänge} zurückgegriffen. Das Ergebnis ist dem ER-Diagramm in Abbildung \ref{fig:ERDiagramm} zu entnehmen.
 
 Jede der Datenbanktabellen verfügt über einen Primärschlüssel (\textit{id}). Darüber hinaus wird zu jedem Eintrag gespeichert, wann dieser erstellt (\textit{timecreated}) und zuletzt bearbeitet (\textit{timemodified}) wurde. Für das Abspeichern von Dateien stellt Moodle die Tabelle \textit{files} bereit \citep{moodle2018file}. Dort kann die Datei abgelegt und an anderer Stelle darauf referenziert werden.
