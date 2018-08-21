@@ -471,6 +471,7 @@ class mod_hyperaudio_external extends external_api {
 	}
 }             
 \end{lstlisting}
+\todo[inline]{Listing anpassen, speziell SQL-Statement auf die nur Kommentare-Variante kürzen}
 
 Auf die mittels \textbf{services.php} und \textbf{external.php} bereitgestellten Webservice wird letztlich in der \textbf{comments.js} zugegriffen, um die im Renderer definierten Elemente zu befüllen, beziehungsweise deren Inhalte auszulesen. Die Funktion zum Speichern eines Kommentars ist exemplarisch in Auflistung \ref{lst:it5:comments} dargestellt. Zunächst werden die im Renderer erstellten Elemente zum Erstellen eines Kommentars ausgelesen, dann wird mittels eines AJAX-Calls der Webservice \texttt{mod_hyperaudio_save_comment} aufgerufen und die benötigten Parameter übergeben. Hierbei ist hervorzuheben, dass der Zeitpunkt zu dem der Kommentar an das Hyperaudio-Dokument annotiert wird über die Funktion \texttt{currentTime} des \textit{Popcorn.js}-Frameworks ermittelt wird. Bei der Funktion zum Darstellen der Kommentare wird analog vorgegangen, nur dass mittels des Webservices die Kommentare für das betroffene Hyperaudio-Dokumente aufgerufen werden und dann innerhalb des entsprechenden Elements des Renderers dargestellt werden.
 
@@ -504,10 +505,103 @@ function save_comment(comment_type){
 Mit dem Abschluss dieser Iteration wurde die Möglichkeit geschaffen Kommentar zu erstellen und den Zeitpunkt innerhalb des Hyperaduio-Dokuments festzuhalten, zu dem der Kommentar erstellt wurde. Im gleichen Zuge wurde auch die Darstellung dieser Kommentare ermöglicht.
 
 \subsection{Antworten auf Kommentare}
-\dots
+Während bereits Kommentare verfasst und angezeigt werden können, fehlt noch die Möglichkeit auf diese zu antworten. Diese Funktionalität wird in dieser Iteration ergänzt. Zu diesem Zweck wird ein neuer Webservices zum Speichern von Antworten erstellt und der Webservice zum Darstellen der Kommentare um die Antworten erweitert. Demzufolge wird in der \textbf{services.php} eine Beschreibung für den neuen Webservice zum Erstellen von Antworten ergänzt und in der \textbf{external.php} werden die vier Funktionen analog zum Webservice zum Speichern Kommentaren ergänzt. Bei der \textbf{comments.js} bedarf es ebenfalls nur kleinere Anpassungen, unter anderem um die Anzeige eines Antworten Buttons und eines Textfeldes bei dessen Betätigung zu ermöglichen. Die hierfür notwendige Erweiterung innerhalb der Funktion \texttt{show_comments} ist in der Auflistung \ref{lst:it6:comments} zu sehen.
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{comments.js} in der 6. Iteration},
+             label={lst:it6:comments}]
+if (this.comment_type === CommentType.Comment && !this.comment_id){
+	output = output + '<div class="comment_answer comment_actions" data-comment_id="'+this.id+'">';
+	output = output + '<a href="javascript:void(0);" class="comment_answer_link comment_link" onclick="show_answer_input(this)" data-comment_id="'+this.id+'">' + string_answer + '</a>';
+	output = output + '<input type="text" class="comment_answer_text comment_hidden_element" data-comment_id="'+this.id+'"/>';
+	output = output + '<button type="button" class="comment_answer_button comment_hidden_element" data-comment_id="'+this.id+'">' + string_answer + '</button>';
+	output = output + '</div>';
+\end{lstlisting}
+
+Die Darstellung der Antworten und deren Zuordnung zu den dazugehörigen Kommentaren wird durch die in Auflistung \ref{lst:it6:external} ersichtlichen Anpassung des SQL-Statements \texttt{load_comments}-Funktion innerhalb der \textbf{external.php} erreicht.
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{external.php} in der 6. Iteration},
+             label={lst:it6:external}]
+$comments = $DB->get_records_sql(
+	'SELECT comments.id, comments.comment_type, comments.commenttext, comments.timeannotated, comments.timecreated, user.username, comments.comment_id'.
+	' FROM mdl_hyperaudio_comments comments'.
+	' INNER JOIN mdl_user user ON comments.userid = user.id'.
+	' LEFT JOIN mdl_hyperaudio_comments original_comment ON original_comment.id = comments.comment_id'.
+	' WHERE comments.hyperaudio_id = ?'.
+	' AND (comments.comment_type = ? OR (comments.comment_type =? AND comments.userid = ?))'.
+	' ORDER BY IFNULL(original_comment.timecreated, comments.timecreated)*POWER(10, 11) + comments.timecreated',
+	array($hyperaudio_id, CommentType::Comment, CommentType::Note, $USER->id)
+);
+\end{lstlisting}
+
+Durch die Erweiterungen und Anpassungen innerhalb dieser Iteration ist es nun möglich auf Kommentare zu antworten und diese Antwort bei dem zugehörigen Kommentar darzustellen.
+
+\todo[inline]{SQL-Statement auf Kommentare und Antworten kürzen}
+\todo[inline]{Abkürzung SQL muss schon früher kommen}
 
 \subsection{Notizen}
-\dots
+Nachdem durch die vorangegangen Iterationen nun die Funktionen für die Kommunikation zwischen Studierenden und Lehrenden geschaffen wurden, zielt diese Iteration auf das Erstellen und Darstellen von Notizen ab.
+
+Im ersten Schritt wird hierfür in der \textbf{renderer.php} die Erweiterung um einen weiteren dedizierten Button entsprechend der Auflistung \ref{lst:it7:renderer} vorgenommen.
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{renderer.php} in der 7. Iteration},
+             label={lst:it7:renderer}]
+$output .=
+	'<div>
+		<label>'.get_string('mod_hyperaudio_renderer_comment', 'hyperaudio').':
+			<input type="text" id="hyperaudio_comment" name="comment" autocomplete="off"/>
+			<button type="button" class="comment_submit" data-comment_type="'.CommentType::Comment.'">'.get_string('mod_hyperaudio_renderer_submit_comment', 'hyperaudio').'</button>
+			<button type="button" class="comment_submit" data-comment_type="'.CommentType::Note.'">'.get_string('mod_hyperaudio_renderer_submit_note', 'hyperaudio').'</button>
+		 </label>
+	</div>';
+\end{lstlisting}
+
+Nachdem diese Anpassung vorgenommen wurde, können zum Speichern der Notizen die gleichen Webservices und Funktionen, wie zum Speichern der Kommentare verwendet werden. Dies rührt daher, dass Notizen als eine bestimmte Art von Kommentaren angesehen wird (vgl. Abschnitt \ref{sec:komponenten_zusammenhaenge}). Zum Darstellen der Notizen wird, wie bereits in der vorherigen Iteration für die Antworten, das SQL-Statement in der \texttt{load_comments} der \textbf{external.php} angepasst.
+
+Da Notizen im Gegensatz zu Kommentaren geändert und gelöscht werden können sollen, müssen hierfür entsprechende Webservices bereitgestellt werden (siehe Auflistung \ref{lst:it7:services}).
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{services.php} in der 7. Iteration},
+             label={lst:it7:services}]
+'mod_hyperaudio_save_note_edit' => array(
+        'classname'   => 'mod_hyperaudio_external',
+        'methodname'  => 'save_note_edit',
+        'classpath'   => 'mod/hyperaudio/classes/external.php',
+        'description' => 'Save note edit',
+        'type'        => 'write'
+    ),
+    'mod_hyperaudio_delete_comment' => array(
+        'classname'   => 'mod_hyperaudio_external',
+        'methodname'  => 'delete_comment',
+        'classpath'   => 'mod/hyperaudio/classes/external.php',
+        'description' => 'Delete comment',
+        'type'        => 'write'
+    )
+\end{lstlisting}
+
+ Wie bereits am Namen des Webservices erkennbar, wird dieser theoretisch in der Lage sein, alle Arten von Kommentaren löschen zu können. Der dazugehörig Button wird jedoch nur bei Notizen dargestellt. Dies wird mittels der Bedingung aus Auflistung \ref{lst:it7:comments} innerhalb der \textbf{comments.js} erreicht.
+ 
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{comments.js} in der 7. Iteration},
+             label={lst:it7:comments}]
+else if (this.comment_type === CommentType.Note){
+	output = output + '<div class="comment_note comment_actions" data-comment_id="'+this.id+'">';
+	output = output + '<a href="javascript:void(0);" class="comment_note_edit_link comment_link" onclick="show_note_edit_input(this)" data-comment_id="'+this.id+'">' + string_edit + '</a>';
+	output = output + '<a href="javascript:void(0);" class="comment_note_delete_link comment_link" data-comment_id="'+this.id+'">' + string_delete + '</a>';
+	output = output + '<input type="text" class="comment_note_edit_text comment_hidden_element" data-comment_id="'+this.id+'"/>';
+	output = output + '<button type="button" class="comment_note_edit_button comment_hidden_element" data-comment_id="'+this.id+'">' + string_edit + '</button>';
+	output = output + '</div>';
+}
+\end{lstlisting}
+
+Entsprechend der Webservices werden innerhalb der \textbf{external.php} Funktionen zum Editieren von Notizen und dem Löschen von Kommentaren erstellt. Damit sind alle nötigen Schritte durchgeführt um Notizen erstellen, anzeigen und löschen zu können.
 
 \subsection{Audio Cues}
 \dots

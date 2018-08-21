@@ -16,7 +16,12 @@
 \contentsline {lstlisting}{\numberline {5.10}Ausschnitt der \textbf {renderer.php} in der 4. Iteration}{50}{lstlisting.355}
 \contentsline {lstlisting}{\numberline {5.11}\textbf {services.php} in der 5. Iteration}{51}{lstlisting.364}
 \contentsline {lstlisting}{\numberline {5.12}\textbf {external.php} in der 5. Iteration}{51}{lstlisting.381}
-\contentsline {lstlisting}{\numberline {5.13}Ausschnitt der \textbf {comments.js} in der 5. Iteration}{53}{lstlisting.491}
+\contentsline {lstlisting}{\numberline {5.13}Ausschnitt der \textbf {comments.js} in der 5. Iteration}{53}{lstlisting.492}
+\contentsline {lstlisting}{\numberline {5.14}Ausschnitt der \textbf {comments.js} in der 6. Iteration}{54}{lstlisting.515}
+\contentsline {lstlisting}{\numberline {5.15}Ausschnitt der \textbf {external.php} in der 6. Iteration}{55}{lstlisting.522}
+\contentsline {lstlisting}{\numberline {5.16}Ausschnitt der \textbf {renderer.php} in der 7. Iteration}{55}{lstlisting.536}
+\contentsline {lstlisting}{\numberline {5.17}Ausschnitt der \textbf {services.php} in der 7. Iteration}{55}{lstlisting.545}
+\contentsline {lstlisting}{\numberline {5.18}Ausschnitt der \textbf {comments.js} in der 7. Iteration}{56}{lstlisting.560}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
