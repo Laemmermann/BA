@@ -604,7 +604,22 @@ else if (this.comment_type === CommentType.Note){
 Entsprechend der Webservices werden innerhalb der \textbf{external.php} Funktionen zum Editieren von Notizen und dem Löschen von Kommentaren erstellt. Damit sind alle nötigen Schritte durchgeführt um Notizen erstellen, anzeigen und löschen zu können.
 
 \subsection{Audio Cues}
-\dots
+Das Abspielen der Audio Cues im Moment der Darstellung eines Zusatzinhaltes wird durch eine Anpassung an dem verwendeten \textit{Popcorn.js}-Plugins \textit{Images} erreicht. Zu diesem Zweck wird der Code aus Zeile 6 bis 7  aus Auflistung \ref{lst:it8:popcorn.image} ergänzt. Mit diesen Zeilen wird ein Audio Element erstellt und abgespielt. Diese Anpassung wird innerhalb der Funktion \texttt{start} vorgenommen, also in der Funktion, die ausgeführt wird, wenn die Darstellung des Zusatzinhalts beginnen soll.
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{popcorn.image.js} in der 8. Iteration},
+             label={lst:it8:popcorn.image}]
+start: function( event, options ) {
+	options.anchor.style.display = "inline";
+	if ( options.trackedContainer ) {
+		options.trackedContainer.start();
+	}
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('src', '../hyperaudio/ding.mp3');
+	audioElement.play();
+}
+\end{lstlisting}
 
 \subsection{Galerie der Zusatzinhalte}
 \dots

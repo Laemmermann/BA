@@ -58,18 +58,18 @@
 \contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{54}{subsection.514}
 \contentsline {subsection}{\numberline {5.2.6}Notizen}{55}{subsection.535}
 \contentsline {subsection}{\numberline {5.2.7}Audio Cues}{56}{subsection.569}
-\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{56}{subsection.570}
-\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare}{56}{subsection.571}
-\contentsline {subsection}{\numberline {5.2.10}Markierungen}{56}{subsection.572}
-\contentsline {section}{\numberline {5.3}Zusammenfassung}{57}{section.573}
-\contentsline {chapter}{\numberline {6}Evaluation}{58}{chapter.574}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{59}{chapter.576}
-\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{60}{appendix.578}
-\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{62}{appendix.580}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{64}{chapter*.581}
-\contentsline {chapter}{Abbildungsverzeichnis}{67}{section*.582}
-\contentsline {chapter}{Tabellenverzeichnis}{69}{section*.583}
-\contentsline {chapter}{Auflistungsverzeichnis}{71}{section*.584}
-\contentsline {chapter}{Verzeichnis der Algorithmen}{73}{section*.586}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{75}{section*.588}
+\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{57}{subsection.580}
+\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare}{57}{subsection.581}
+\contentsline {subsection}{\numberline {5.2.10}Markierungen}{57}{subsection.582}
+\contentsline {section}{\numberline {5.3}Zusammenfassung}{57}{section.583}
+\contentsline {chapter}{\numberline {6}Evaluation}{58}{chapter.584}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{59}{chapter.586}
+\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{60}{appendix.588}
+\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{62}{appendix.590}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{64}{chapter*.591}
+\contentsline {chapter}{Abbildungsverzeichnis}{67}{section*.592}
+\contentsline {chapter}{Tabellenverzeichnis}{69}{section*.593}
+\contentsline {chapter}{Auflistungsverzeichnis}{71}{section*.594}
+\contentsline {chapter}{Verzeichnis der Algorithmen}{73}{section*.596}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{75}{section*.598}
 \contentsfinish 
