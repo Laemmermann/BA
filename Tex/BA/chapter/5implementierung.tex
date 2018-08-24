@@ -501,6 +501,8 @@ function save_comment(comment_type){
 }
 \end{lstlisting}
 \todo[inline]{Sprache des Listings anpassen}
+\todo[inline]{Rückkopplung ergänzen, locallib.js einführen?}
+
 
 Mit dem Abschluss dieser Iteration wurde die Möglichkeit geschaffen Kommentar zu erstellen und den Zeitpunkt innerhalb des Hyperaduio-Dokuments festzuhalten, zu dem der Kommentar erstellt wurde. Im gleichen Zuge wurde auch die Darstellung dieser Kommentare ermöglicht.
 
@@ -622,13 +624,58 @@ start: function( event, options ) {
 \end{lstlisting}
 
 \subsection{Galerie der Zusatzinhalte}
-\dots
+Der Anforderung nach einer Übersicht über annotierte Zusatzinhalte wird mittels einer Galerie begegnet, welche in dieser Iteration umgesetzt wird. Hierfür wird der Code aus Auflistung \ref{lst:it9:renderer} in der \textbf{renderer.php} ergänzt.
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{renderer.php} in der 9. Iteration},
+             label={lst:it9:renderer}]
+$output .= '</div>';
+$output .= '<div id="gallery">';
+foreach ($files as $file) {
+	$additional_content = $DB->get_record('additional_content', array('hyperaudio_id' => $hyperaudio->id, 'file' => $file->get_filename()), '*', IGNORE_MISSING);
+                    
+		if ($additional_content == false){
+                        continue;
+		}
+                    
+		$additional_content_fileinfo = array(
+			'component' => 'mod_hyperaudio',
+			'filearea' => 'additional_content',
+			'itemid' => $hyperaudio->id,
+			'contextid' => $context->id,
+			'filepath' => '/',
+			'filename' => $additional_content->file
+		);
+                    
+	$additional_content_fileurl = moodle_url::make_pluginfile_url($additional_content_fileinfo['contextid'], $additional_content_fileinfo['component'], $additional_content_fileinfo['filearea'],
+	$additional_content_fileinfo['itemid'], $additional_content_fileinfo['filepath'], $additional_content_fileinfo['filename']);
+	$additional_content_url = $additional_content_fileurl->get_scheme() . '://' . $additional_content_fileurl->get_host() . $additional_content_fileurl->get_path();
+	if ($additional_content_fileurl->get_port()){
+		$additional_content_url .= ':' . $additional_content_fileurl->get_port();
+	}
+                    
+	$output .= '<div id="gallery_additional_content">';
+	$output .= '<div id="gallery_additional_content_image"><img src="'.$additional_content_url.'" border="5"></div>' ;
+	$output .= '<div id="gallery_additional_content_meta">';
+	$output .= '<span class="additional_content_name">'.get_string('additional_content_course_name', 'hyperaudio').': '.$additional_content->name.'</span>';
+	$output .= '<span class="additional_content_description">'.get_string('additional_content_description', 'hyperaudio').': '.$additional_content->description.'</span>';
+	$output .= '<span class="additional_content_course_unit">'.get_string('additional_content_course_unit', 'hyperaudio').': '.$additional_content->course_unit.'</span>';
+	$output .= '<span class="additional_content_page>"'.get_string('additional_content_pages', 'hyperaudio').': '.$additional_content->page.'</span>';
+	$output .= '<a href="javascript:void(0);" class="additional_content_begin" onclick="jump_to_time(this)" data-annotated_time="'.$additional_content->begin.'">'.get_string('additional_content_begin', 'hyperaudio').': '.$additional_content->begin.'</a>';
+	$output .= '<a href="javascript:void(0);" class="additional_content_end" onclick="jump_to_time(this)" data-annotated_time="'.$additional_content->end.'">'.get_string('additional_content_end', 'hyperaudio').': '.$additional_content->end.'</a>';
+	$output .= '</div>';
+	$output .= '</div>';
+}
+$output .= '</div>';
+}
+\end{lstlisting}
 
 \subsection{Zeitabhängige Visualisierung der Kommentare}
 \dots
 
 \subsection{Markierungen}
-\dots
+Mit der Möglichkeiten der Visualisierung der Kommentare aus der vorherigen Iteration, könnten nun auch Markierungen mithilfe dieser Funktion visualisiert werden. Dementsprechend wird in dieser Iteration das Erstellen und Visualisieren von Markierungen behandelt.
 
 %\subsection{Suche, Filter und Sortierung bei Kommentaren}
 %\dots

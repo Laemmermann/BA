@@ -1,5 +1,44 @@
 \label{cap:evaluation}
-\dots
+Nachdem die Implementierung des Hyperaudio-Plugins abgeschlossen ist, kann nun die Evaluation anhand der definierten Anforderungen und den dazugehörigen User Stories erfolgen. In diesem Zug werden analog zur Anforderungsdefinition die Bereiche unter Rücksichtnahme der Rollen Administrierende und Nutzende aufgeteilt. Innerhalb dieser beiden Bereiche wird dann analysiert in welchem Umfang die Anforderungen und User Stories durch die Implementierung erfüllt wurden. Die Reihenfolge der Analyse erfolgt unter Zuhilfenahme der festgelegten Prioritäten.
+
+\section{Administration}
+Die Anforderungen der Administrierenden wurden in Tabelle \ref{tab:AnforderungenAdministrierenden} festgehalten.
+
+Die erste Anforderung besteht darin Hyperaudio-Dokumente erstellen zu können. Die Erstellung von Hyperaudio-Dokumenten, wie es auch in \ref{US-Admin-Erstellen} gefordert wurde, ist durch das Hochladen einer Audio-Datei, der Zusatzinhalte sowie einer Konfigurationsdatei möglich. Somit kann diese Anforderung als erfolgreich implementiert betrachtet werden.
+
+Die nächste Anforderung stellt die Möglichkeit zum Bearbeiten von Hyperaudio-Dokumenten dar. Diese Anforderung wurde insofern umgesetzt, als dass es möglich ist im Nachhinein die Audio-Datei, Zusatzinhalte oder Konfigurationsdatei auszutauschen und hierüber Änderungen am Hyperaudio-Dokument vorzunehmen. Ein direkte Bearbeitung des Hyperaudio-Dokuments innerhalb von Moodle kann beim Namen und der Beschreibung erfolgen. Insofern ist eine Bearbeitung von Hyperaudio-Dokumenten möglich, diese beschränkt sich aber darauf, dass die dazugehörigen Dateien ausgetauscht werden können. Dementsprechend ist die Anforderung aus \ref{US-Admin-Bearbeiten} erfüllt.
+
+Das Löschen von Hyperaudio-Dokumenten wurde vollständig implementiert, somit kann die dazugehörige Anforderung und \ref{US-Admin-Loeschen} als erfolgreich Umgesetzt betrachtet werden.
+\todo[inline]{Export \ref{US-Admin-Kurs} und \ref{US-Admin-Statistik}}
+\todo[inline]{Statistik \ref{US-Admin-Statistik}}
+
+ 
+\section{Nutzung}
+In Tabelle \ref{tab:AnforderungenNutzenden} sind die Anforderungen der Nutzenden definiert.
+
+Als erste Anforderung wird die zum Abspielen von Hyperaudio-Dokumenten betrachtet. Durch die Implementierung wurde dieses Ziel erreicht. Es kann eine Audio-Datei abgespielt werden und zu den festgelegten Zeitpunkten wird der annotierte Zusatzinhalt dargestellt. Gleichzeitig mit der Darstellung wird auch eine Audio Cue abgespielt. Demzufolge kann neben der Anforderung an das Abspielen auch die Anforderung an die Hinweise auf Zusatzinhalte als erfüllt betrachtet werden.
+\todo[inline]{User Stories}
+
+Neben dem Abspielen wurden auch den Anforderungen zum Erstellen, Anzeigen und Beantworten von Kommentaren eine hohe Priorität zugewiesen. Diesen Anforderungen wurde genüge getan, insofern alle drei Funktionalitäten gegeben sind. Dies ist ebenfalls der Fall für die Anforderung zum Erstellen, Anzeigen, Bearbeiten und Löschen persönlicher Notizen. Die Funktionalitäten wurden um eine Möglichkeit zu Rückkopplung an den Player erweitert, um den Nutzen der Funktion weiter zu erhöhen.
+
+Der Übersicht über annotierte Zusatzinhalte wurde durch die Implementierung einer Galerie für Zusatzinhalte Sorge getragen. Durch die Erweiterung der Galerie um zusätzliche Metadaten und einer Rückkopplung an den Player wurde die Funktionalität der Galerie zusätzlich über die eigentliche Anforderung hinaus erweitert.
+
+\todo[inline]{Suchfunktion}
+
+\todo[inline]{Markierung}
+
+Die gewünschte Filter- und Sortierfunktion wurde ebenso implementiert. Durch die Implementierung ist es möglich zu filtern, ob Kommentare, Notizen oder beides dargestellt werden sollen. Auch eine Sortierung nach Erstelldatum (auf- und absteigend) sowie nach Annotationszeitpunkt ist umgesetzt worden.
+
+\todo[inline]{Mobile Endgeräte}
+\todo[inline]{Favoriten}
+\todo[inline]{Übersicht belegte Kurse}
+\todo[inline]{Übersicht zuletzt abgespielt}
+\todo[inline]{Fortsetzen}
+
+
+
+\section{Zusammenfassung}
+
 \todo[inline]{Entwicklung von Kurseinheit zu Hyperaudio -> Rückschluss auf Tetrade der Medieneffekte}
 
 %%%%%%%%%%
