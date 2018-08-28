@@ -43,36 +43,39 @@
 \contentsline {section}{\numberline {4.2}Definition des Schnittstellenformats f\IeC {\"u}r Hyperaudio-Dokumente}{33}{section.104}
 \contentsline {section}{\numberline {4.3}Datenbankentwurf}{34}{section.128}
 \contentsline {section}{\numberline {4.4}Gestaltung der Benutzeroberfl\IeC {\"a}che}{35}{section.131}
-\contentsline {subsubsection}{\nonumberline Player}{36}{section*.133}
-\contentsline {subsubsection}{\nonumberline Galerie}{37}{section*.136}
-\contentsline {subsubsection}{\nonumberline Kommentarsektion}{37}{section*.138}
-\contentsline {subsubsection}{\nonumberline Zusammenf\IeC {\"u}hren der Elemente}{40}{section*.140}
-\contentsline {section}{\numberline {4.5}Zusammenfassung}{40}{section.142}
-\contentsline {chapter}{\numberline {5}Implementierung}{43}{chapter.143}
-\contentsline {section}{\numberline {5.1}Architektur des Moodle-Plugins}{43}{section.145}
-\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{44}{section.148}
-\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{45}{subsection.149}
-\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{47}{subsection.234}
-\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{49}{subsection.317}
-\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{50}{subsection.353}
-\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{54}{subsection.515}
-\contentsline {subsection}{\numberline {5.2.6}Notizen}{55}{subsection.536}
-\contentsline {subsection}{\numberline {5.2.7}Audio Cues}{56}{subsection.570}
-\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{57}{subsection.581}
-\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare}{58}{subsection.622}
-\contentsline {subsection}{\numberline {5.2.10}Markierungen}{58}{subsection.623}
-\contentsline {section}{\numberline {5.3}Zusammenfassung}{58}{section.624}
-\contentsline {chapter}{\numberline {6}Evaluation}{59}{chapter.625}
-\contentsline {section}{\numberline {6.1}Administration}{59}{section.626}
-\contentsline {section}{\numberline {6.2}Nutzung}{59}{section.629}
-\contentsline {section}{\numberline {6.3}Zusammenfassung}{60}{section.638}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{61}{chapter.640}
-\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{62}{appendix.642}
-\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{64}{appendix.644}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{66}{chapter*.645}
-\contentsline {chapter}{Abbildungsverzeichnis}{69}{section*.646}
-\contentsline {chapter}{Tabellenverzeichnis}{71}{section*.647}
-\contentsline {chapter}{Auflistungsverzeichnis}{73}{section*.648}
-\contentsline {chapter}{Verzeichnis der Algorithmen}{75}{section*.650}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{77}{section*.652}
+\contentsline {subsection}{\numberline {4.4.1}Zusatzinhalte}{36}{subsection.134}
+\contentsline {subsection}{\numberline {4.4.2}Mediensteuerung inklusive Visualisierungen der Annotationen}{37}{subsection.139}
+\contentsline {subsection}{\numberline {4.4.3}Galerie}{38}{subsection.141}
+\contentsline {subsection}{\numberline {4.4.4}Kommentare und Notizen}{39}{subsection.143}
+\contentsline {subsection}{\numberline {4.4.5}Zusammenf\IeC {\"u}hren der Elemente}{41}{subsection.145}
+\contentsline {subsection}{\numberline {4.4.6}Mobile Version}{41}{subsection.147}
+\contentsline {section}{\numberline {4.5}Zusammenfassung}{41}{section.149}
+\contentsline {chapter}{\numberline {5}Implementierung}{45}{chapter.150}
+\contentsline {section}{\numberline {5.1}Architektur des Moodle-Plugins}{45}{section.152}
+\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{46}{section.155}
+\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{47}{subsection.156}
+\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{49}{subsection.249}
+\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{51}{subsection.352}
+\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{52}{subsection.394}
+\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{56}{subsection.525}
+\contentsline {subsection}{\numberline {5.2.6}Notizen}{57}{subsection.558}
+\contentsline {subsection}{\numberline {5.2.7}Audio Cues}{58}{subsection.617}
+\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{59}{subsection.641}
+\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare und Notizen}{60}{subsection.708}
+\contentsline {subsection}{\numberline {5.2.10}Lesezeichen}{63}{subsection.835}
+\contentsline {subsection}{\numberline {5.2.11}Suche, Filter und Sortierung bei Kommentaren}{64}{subsection.857}
+\contentsline {section}{\numberline {5.3}Zusammenfassung}{65}{section.902}
+\contentsline {chapter}{\numberline {6}Evaluation}{66}{chapter.903}
+\contentsline {section}{\numberline {6.1}Administration}{66}{section.904}
+\contentsline {section}{\numberline {6.2}Nutzung}{66}{section.910}
+\contentsline {section}{\numberline {6.3}Zusammenfassung}{67}{section.919}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{68}{chapter.921}
+\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{69}{appendix.923}
+\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{71}{appendix.925}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{73}{chapter*.926}
+\contentsline {chapter}{Abbildungsverzeichnis}{77}{section*.927}
+\contentsline {chapter}{Tabellenverzeichnis}{79}{section*.928}
+\contentsline {chapter}{Auflistungsverzeichnis}{81}{section*.929}
+\contentsline {chapter}{Verzeichnis der Algorithmen}{83}{section*.931}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{85}{section*.933}
 \contentsfinish 

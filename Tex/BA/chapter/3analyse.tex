@@ -102,9 +102,9 @@ Für das Angebot einer Hyperaudio-Lernumgebung lassen sich folgende \textit{User
 
 \item \label{US-Kommentar-S} Als Nutzende möchte Laura Ebert einen Kommentar verfassen, um dem Kursbetreuer und den anderen Studierenden eine Frage zu stellen.
 
-\item \label{US-Markierung} Als Nutzende möchte Laura Ebert eine Markierung setzen, wenn eine klausurrelevante Thematik erklärt wird. Bei der Prüfungsvorbereitung möchte sie anhand dieser Markierungen diejenigen Themen erkennen, mit welchen sie sich besonders intensiv beschäftigen möchte.
+\item \label{US-Lesezeichen} Als Nutzende möchte Laura Ebert ein Lesezeichen setzen, wenn eine klausurrelevante Thematik erklärt wird. Bei der Prüfungsvorbereitung möchte sie anhand dieser Lesezeichen diejenigen Themen erkennen, mit welchen sie sich besonders intensiv beschäftigen möchte.
 
-\item \label{US-Markierung-Loeschen} Als Nutzende möchte Laura Ebert eine Markierung löschen, da sie den markierten Lerninhalt inzwischen beherrscht. Anhand der übrigen Markierungen möchte sie schnell erkennen, wo für sie noch Lernbedarf besteht.
+\item \label{US-Lesezeichen-Loeschen} Als Nutzende möchte Laura Ebert ein Lesezeichen löschen, da sie den markierten Lerninhalt inzwischen beherrscht. Anhand der übrigen Lesezeichen möchte sie schnell erkennen, wo für sie noch Lernbedarf besteht.
 
 \item \label{US-Notiz-S} Als Nutzende möchte Laura Ebert eine Notiz erstellen, um ein Beispiel zu dem genannten Sachverhalt festzuhalten, sodass sie die Thematik beim nächsten Mal einfacher nachvollziehen kann.
 
@@ -164,6 +164,7 @@ Basierend auf den \textit{Personas}, Rollen und \textit{User Stories} können nu
 
 %%%%%%%%%%
 \subsection{Anforderungen der Administrierenden}
+\label{sub:AnforderungenDerAdministrierenden}
 Es wird mit der Definition der Anforderungen der Administrierenden begonnen, welche in Tabelle \ref{tab:AnforderungenAdministrierenden} festgehalten werden. 
 
 Aus \ref{US-Admin-Erstellen} kann die Anforderung des Erstellens von Hyperaudio-Dokumenten abgeleitet werden. Dass bestehende Hyperaudio-Dokumente auch bearbeitet und gelöscht werden können sollen, ergibt sich aus \ref{US-Admin-Bearbeiten} und \ref{US-Admin-Loeschen}. Zusammen stellen diese Anforderungen die Grundfunktionalitäten für die alternative Repräsentation der Lerninhalte dar und werden dementsprechend mit der Prioritätsstufe \textit{hoch} versehen.
@@ -192,6 +193,7 @@ Der Wunsch, Erkenntnisse aus der Nutzung von Hyperaudio-Dokumenten durch die Stu
 
 %%%%%%%%%%
 \subsection{Anforderungen der Nutzenden}
+\label{sub:AnforderungenDerNutzenden}
 Die aus den \textit{User Stories} der Nutzenden abgeleiteten Anforderungen sind in Tabelle \ref{tab:AnforderungenNutzenden} festgehalten. Die Priorisierung wird dabei nach folgenden Kriterien vorgenommen:
 
 \begin{itemize}
@@ -203,7 +205,7 @@ Die aus den \textit{User Stories} der Nutzenden abgeleiteten Anforderungen sind 
 
 Aus \ref{US-Wiedergabe}, \ref{US-Zeit}, \ref{US-Mobil} und \ref{US-Zeit-Mobil} ergibt sich die grundlegende Andorderung, Hyperaudio-Dokumente abspielen zu können. \ref{US-Zeit}, \ref{US-Mobil} und \ref{US-Zeit-Mobil} führen zudem zur Anforderung der Audio Cues, mithilfe derer auf annotierte Zusatzinhalte hingewiesen wird. Auch diese zählen neben der Wiedergabe zu den Basisfunktionalitäten, da erst dadurch das Ziel der größeren zeitlichen Flexibilität beim Lernen erreichbar wird (vgl. Abschnitte \ref{sec:zielsetzung} und \ref{sec:audiocues}). Um Inhalte schnell auffinden zu können, wie in \ref{US-Galerie} gefordert, ist eine Übersicht über annotierte Zusatzinhalte nützlich.
 
-Basierend auf \ref{US-Antwort-L}, \ref{US-Kommentar-L}, \ref{US-Kommentar-S}, \ref{US-Antwort-S} und \ref{US-Sortierung-Zeitpunkt} lässt sich die Anforderung an eine Kommentarfunktion ableiten, die über Möglichkeiten zum Erstellen, Anzeigen und Beantworten von Kommentaren verfügen muss. An dieser Stelle kann die Interaktion durch eine Suchfunktion innerhalb der Kommentare verbessert werden (vgl. \ref{US-Suche}). In den \textit{User Stories} \ref{US-Notiz-L}, \ref{US-Notiz-S}, \ref{US-Notiz-Bearbeiten}, \ref{US-Notiz-Loeschen} und \ref{US-Sortierung-Zeitpunkt} werden Wünsche bezüglich einer Notizfunktion formuliert. Diese lässt sich aufschlüsseln in die Anforderungen zum Erstellen, Anzeigen, Bearbeiten und Löschen von Notizen. Die Notizfunktion spiegelt das Ziel der Erhaltung typischer Nutzerinteraktionen mit textuellen Lernmedien wieder und kann das Lernen für die Studierenden erleichtern \citep{scutter2010students}. Ähnlich sind die Anforderung zum Erstellen, Anzeigen und Löschen von persönlichen Markierungen aus \ref{US-Markierung} und \ref{US-Markierung-Loeschen} zu bewerten. Obwohl Markierungen, ebenso wie die Notizfunktion, zu den Basisfunktionalitäten des Plugins gezählt werden können, wird die Markierungsfunktion mit der Priorität \textit{mittel} versehen. Das Herabsetzen der Priorität wird dadurch begründet, dass eine Markierung im Wesentlichen einer Notiz ohne textuellen Inhalt entspricht und durch die höher priorisierte Notizfunktion abgebildet werden kann. Aus \ref{US-Sortierung-Erstellungsdatum}, \ref{US-Sortierung-Zeitpunkt} und \ref{US-Filter} ergibt sich zudem der Wunsch nach Filter- und Sortiermöglichkeiten. 
+Basierend auf \ref{US-Antwort-L}, \ref{US-Kommentar-L}, \ref{US-Kommentar-S}, \ref{US-Antwort-S} und \ref{US-Sortierung-Zeitpunkt} lässt sich die Anforderung an eine Kommentarfunktion ableiten, die über Möglichkeiten zum Erstellen, Anzeigen und Beantworten von Kommentaren verfügen muss. An dieser Stelle kann die Interaktion durch eine Suchfunktion innerhalb der Kommentare verbessert werden (vgl. \ref{US-Suche}). In den \textit{User Stories} \ref{US-Notiz-L}, \ref{US-Notiz-S}, \ref{US-Notiz-Bearbeiten}, \ref{US-Notiz-Loeschen} und \ref{US-Sortierung-Zeitpunkt} werden Wünsche bezüglich einer Notizfunktion formuliert. Diese lässt sich aufschlüsseln in die Anforderungen zum Erstellen, Anzeigen, Bearbeiten und Löschen von Notizen. Die Notizfunktion spiegelt das Ziel der Erhaltung typischer Nutzerinteraktionen mit textuellen Lernmedien wieder und kann das Lernen für die Studierenden erleichtern \citep{scutter2010students}. Ähnlich sind die Anforderung zum Erstellen, Anzeigen und Löschen von Lesezeichen aus \ref{US-Lesezeichen} und \ref{US-Lesezeichen-Loeschen} zu bewerten. Obwohl Lesezeichen, ebenso wie die Notizfunktion, zu den Basisfunktionalitäten des Plugins gezählt werden können, wird die Lesezeichenfunktion mit der Priorität \textit{mittel} versehen. Das Herabsetzen der Priorität wird dadurch begründet, dass ein Lesezeichen im Wesentlichen einer Notiz ohne textuellen Inhalt entspricht und durch die höher priorisierte Notizfunktion abgebildet werden kann. Aus \ref{US-Sortierung-Erstellungsdatum}, \ref{US-Sortierung-Zeitpunkt} und \ref{US-Filter} ergibt sich zudem der Wunsch nach Filter- und Sortiermöglichkeiten. 
 
 Der Wunsch nach einer Favoritenfunktion für Hyperaudio-Dokumente ergibt sich aus \ref{US-Favoriten} und \ref{US-Favoriten-Loeschen}. Daraus resultieren die Anforderungen, Favoriten zu setzen, anzuzeigen und zu löschen. Übersichten über Hyperaudio-Dokumente werden in \ref{US-Uebersicht-Kurse} und \ref{US-Uebersicht-Letzte} gefordert: im ersten Fall eine Übersicht über alle Hyperaudio-Dokumente der belegten Kurse und im zweiten Fall eine Übersicht über die zuletzt abgespielten Hyperaudio-Dokumente. Sowohl die Favoritenfunktion als auch die Übersichten stellen eine reine Optimierung der Navigation dar und verhelfen somit zu einem vereinfachten Zugriff auf Hyperaudio-Dokumente. \ref{US-Fortsetzen} bringt die Anforderung für eine Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle hervor. Auch diese Funktion vereinfacht die Navigation zum gewünschten Hyperaudio-Dokument beziehungsweise dessen Inhalt.
 
@@ -230,10 +232,10 @@ Das Verlangen, Hyperaudio-Dokumente auch auf einem Smartphone oder Tablet nutzen
     5.2 & \hspace*{0.5cm} Anzeigen von Notizen & hoch\\
     5.3 & \hspace*{0.5cm} Bearbeiten von Notizen & hoch\\
    	5.4 & \hspace*{0.5cm} Löschen von Notizen & hoch\\
-    6 & Markierungsfunktion bei Hyperaudio-Dokumenten & \\
-    6.1 & \hspace*{0.5cm} Erstellen von Markierungen & mittel\\
-    6.2 & \hspace*{0.5cm} Anzeigen von Markierungen & mittel\\
-   	6.3 & \hspace*{0.5cm} Löschen von Markierungen & mittel\\
+    6 & Lesezeichenfunktion bei Hyperaudio-Dokumenten & \\
+    6.1 & \hspace*{0.5cm} Erstellen von Lesezeichen & mittel\\
+    6.2 & \hspace*{0.5cm} Anzeigen von Lesezeichen & mittel\\
+   	6.3 & \hspace*{0.5cm} Löschen von Lesezeichen & mittel\\
    	7 & Filter- und Sortiermöglichkeiten & mittel\\
     8 & Favoritenfunktion für Hyperaudio-Dokumente & \\
     8.1 & \hspace*{0.5cm} Erstellen von Favoriten & niedrig\\
@@ -325,6 +327,7 @@ In \citep{youtubeinfokarten,youtubeabspann} werden Möglichkeiten aufgezeigt, In
 
 %%%%%%%%%%
 \subsection{Technologien für den Einsatz in Moodle}
+\label{sub:TechnologienMoodle}
 Im zweiten Schritt wird sich nun der Analyse bestehender Komponenten zugewendet, die als Basis für das Moodle-Plugin dienen könnten. Ziel ist es festzustellen, ob bereits Technologien existieren, mit deren Hilfe die Idee des Hyperaudio-Plugins umgesetzt werden kann oder ob zumindest Teile davon - unter entsprechender Beachtung der Lizenzierung - sinnvoll wiederverwendet werden können. Im Zuge dessen wird so vorgegangen, dass die einzelnen vorhanden Technologien auf diesem Gebiet mit ihren Funktionen vorgestellt werden. Dabei wird deren Relevanz für die Umsetzung der Plugins begutachtet.
 
 %%%%%%%%%%

@@ -12,13 +12,13 @@ Im Mittelpunkt eines Hyperaudio-Dokuments steht eine Audio-Datei. Inhaltlich kan
 
 Neben dieser zentralen Audio-Datei besteht das Hyperaudio-Dokument aus mehreren Zusatzinhalten, wobei es sich um Bilder, Graphen, Tabellen usw. handeln kann. Entscheidend ist aber, dass diese Zusatzinhalte immer nur eine rein grafische Darstellung verkörpern. Videos mit Ton sind somit beispielsweise nicht als Zusatzinhalt verwendbar, reine Animationen ohne Ton sind aber durchaus möglich.
 
-Als besondere, nämlich externe Komponente, sind die Kommentare zu nennen. Diese gehören nicht zum eigentlichen Hyperaudio-Dokument, sollen aber mit diesem verknüpft werden. Es wird drei verschiedene Arten von Kommentaren geben, nämlich  öffentliche Kommentare, persönliche Notizen und Markierungen. Innerhalb der öffentlichen Kommentare muss noch zwischen den Original-Kommentaren und den Antworten auf diese unterschieden werden. 
+Als besondere, nämlich externe Komponente, sind die Kommentare zu nennen. Diese gehören nicht zum eigentlichen Hyperaudio-Dokument, sollen aber mit diesem verknüpft werden. Es wird drei verschiedene Arten von Kommentaren geben, nämlich  öffentliche Kommentare, persönliche Notizen und Lesezeichen. Innerhalb der öffentlichen Kommentare muss noch zwischen den Original-Kommentaren und den Antworten auf diese unterschieden werden. 
 
 
 %%%%%%%%%%
 \subsection{Zusammenhänge}
 \label{sec:komponenten_zusammenhaenge}
-Diese Zusammenhänge der soeben genannten Komponenten sind im UML-Diagramm in Abbildung \ref{fig:UMLAufbau} ersichtlich. Zunächst werden die Zusammenhänge zwischen der Audio-Datei und den Zusatzinhalten betrachtet. Nach dem Master-Slave-Prinzip werden Zusatzinhalte der Audio-Datei untergeordnet. Zu jedem beliebigen Zeitpunkt innerhalb der Abspieldauer der Audio-Datei kann maximal ein Zusatzinhalt gleichzeitig annotiert werden. Es sind also auch Phasen möglich, zu denen keinerlei Zusatzinhalt dargestellt wird. Das Zeitfenster für die Annotation soll mittels einer Start- und Endzeit pro Zusatzinhalt definiert werden, wobei nur die Minuten und Sekunden anzugeben sind. Bei dem Zeitfenster sollte natürlich bedacht werden, dass dieses nicht zu kurz sein sollte. Zwar soll, sobald ein Zusatzinhalt im Player des Hyperaudio-Dokuments angezeigt wird, ein entsprechender \textit{Audio Cue} abgespielt werden, dennoch können bereits einige Sekunden vergehen bis der Studierende seinen Blick dem Player zuwendet.
+Diese Zusammenhänge der soeben genannten Komponenten sind im UML-Diagramm in Abbildung \ref{fig:UMLAufbau} ersichtlich. Zunächst werden die Zusammenhänge zwischen der Audio-Datei und den Zusatzinhalten betrachtet. Nach dem Master-Slave-Prinzip werden Zusatzinhalte der Audio-Datei untergeordnet. Zu jedem beliebigen Zeitpunkt innerhalb der Abspieldauer der Audio-Datei kann maximal ein Zusatzinhalt gleichzeitig annotiert werden. Es sind also auch Phasen möglich, zu denen keinerlei Zusatzinhalt dargestellt wird. Das Zeitfenster für die Annotation soll mittels einer Start- und Endzeit pro Zusatzinhalt definiert werden, wobei nur die Minuten und Sekunden anzugeben sind. Bei dem Zeitfenster sollte natürlich bedacht werden, dass dieses nicht zu kurz sein sollte. Zwar soll, sobald ein Zusatzinhalt des Hyperaudio-Dokuments angezeigt wird, ein entsprechender \textit{Audio Cue} abgespielt werden, dennoch können bereits einige Sekunden vergehen bis der Studierende seinen Blick dem Zusatzinhalt zuwendet.
 
 Auch die Kommentare stehen als externe Komponente in einer gewissen Art und Weise im Zusammenhang mit der Audio-Datei. Dies ergibt sich daraus, dass Kommentare zu einem bestimmten Zeitpunkt innerhalb der Audio-Datei erfasst werden. Während Antworten auf Original-Kommentare erfasst werden können, sind Antworten auf Antworten nicht möglich.
 
@@ -114,89 +114,82 @@ Die Tabelle \textit{hyperaudio\underline{{ }}comments} dient der Speicherung der
 
 %%%%%%%%%%
 \section{Gestaltung der Benutzeroberfläche}
-Damit den Lehrenden und Studierenden die im vorherigen Abschnitt beschriebenen Nutzungsszenarien möglichst leicht fallen, wenden wir uns nun der Gestaltung der Benutzeroberfläche zu. \glqq Das Design der Benutzeroberfläche stellt einen zentralen Aspekt für die Gebrauchstauglichkeit eines Softwareprodukts dar\grqq{} \citep[S. 1]{oppermann2002user}. Einen dementsprechend hohen Stellenwert wollen wir der Benutzeroberfläche unseres Moodle-Plugins zuschreiben. Bei der Gestaltung der Benutzeroberfäche gehen wir wie bereits bei der Analyse in Kapitel \ref{cha:analyse} vor und teilen die Benutzeroberfläche in Teilbereiche auf. Im ersten Schritt betrachten wir zunächst die Seite eines Hyperaudio-Dokuments innerhalb eines Kurses. Danach widmen wir uns der Administrationsseite eines Hyperaudio-Dokuments innerhalb eines Kurses. Im letzten Schritt wenden wir uns den verschiedenen Integrationsmöglichkeiten innerhalb der allgemeinen Moodle-Oberfläche zu.
+Damit den Lehrenden und Studierenden die im vorherigen Kapitel beschriebenen Nutzungsszenarien möglichst leicht fallen, wird sich nun der Gestaltung der Benutzeroberfläche zugewandt. \glqq Das Design der Benutzeroberfläche stellt einen zentralen Aspekt für die Gebrauchstauglichkeit eines Softwareprodukts dar\grqq{} \citep[S. 1]{oppermann2002user}. Ein entsprechend hoher Stellenwert soll der Benutzeroberfläche des Hyperaudio-Plugins zugeschrieben werden. Bei der Gestaltung der Benutzeroberfäche für die Darstellung innerhalb eines Kursabschnittes (vgl. Abbildung \ref{fig:MoodleAufbau}) wird. Der Bereich des Kursabschnittes in die vier Bereiche aufgeteilt, welche in Abbildung \ref{fig:MockupBereiche} dargestellt sind. 
 
-Generell erfolgen alle Entscheidungen bezüglich der Oberfläche auf Basis von Skizzen. Diese wurden mittels des Programms \textit{Balsamiq Mockups 3.5.15}\footnote{https://balsamiq.com/} erstellt. Anhand der Skizzen können Vor- und Nachteile der verschiedenen Designansätze schnell erkannt und auf Grund dessen sachliche Entscheidungen getroffen werden. 
-%Durch das Arbeiten mit Skizzen erkennt man schneller welche Vor- und Nachteile die verschiedenen Designansätze bieten und kann auf Grund dessen dann sachliche Entscheidungen treffen.
+\begin{figure}[h!]
+\includegraphics[width=0.8\textwidth,center]{MockupBereiche.pdf}
+\caption{\label{fig:MockupBereiche} Bereiche des Kursabschnittes einer Hyperaduio-Aktivität}
+\end{figure}
+
+Die Hyperaudio-Kursabschnitte lassen sich grob in die Bereiche Zusatzinhalte, Mediensteuerung inklusive Visualisierungen der Annotationen, Kommentare und Notizen und Galerie aufteilen. Zunächst werden nun für jeden dieser Bereiche verschiedene Designs erarbeitet und dann eines für die Verwendung im Hyperaudio-Plugin festgelegt.
+
+Generell erfolgen alle Entscheidungen bezüglich der Oberfläche auf Basis von Mockups. Diese wurden mithilfe des Programms \textit{Balsamiq Mockups 3.5.15}\footnote{https://balsamiq.com/} erstellt. Anhand der Skizzen können Vor- und Nachteile der verschiedenen Designansätze schnell erkannt und auf Grund dessen sachliche Entscheidungen getroffen werden. 
+
+%%%%%%%%%%
+\subsection{Zusatzinhalte}
+\label{sub:zusatzinhalte}
+Im Bereich der Zusatzinhalte beschränkt sich die Diskussion auf die Darstellung jener im vorhergesehen Bereich. So ist zu entscheiden, inwiefern die darzustellenden Zusatzinhalte auf die Größe des Bereichs skaliert werden sollen. Dabei ergeben sich folgende Möglichkeiten:
+
+\begin{enumerate}
+\item Beibehalten der originalen Größe
+\item Anpassen auf die Größe des Bereichs ohne Berücksichtigung des Seitenverhältnisses
+\item Anpassen auf die Größe des Bereichs unter Berücksichtigung des Seitenverhältnisses
+\end{enumerate}
+
+Die erste Variante ist unpraktisch, da dies bei Inhalten, welche größer sind als der Bereich, dazu führt, dass nur ein Ausschnitt des Inhaltes dargestellt wird. Bei Inhalten, welche kleiner sind als der Bereich, wird hingegen nicht der volle Platz ausgenutzt und der Inhalt wird unnötig klein dargestellt. Bei der Variante 2 wird zwar stets der gesamte Bereich ausgenutzt und der Zusatzinhalt wird vollständig dargestellt, doch kann dies dazu zu unschönen Verzerrungen des dargestellten Inhaltes führen. Im Vergleich dazu bietet die dritte Variante den Vorteil, dass diese den Bereich möglichst gut ausnutzt ohne unschöne Verzerrungen zu verursachen.
+\todo[inline]{Mockup ergänzen}
+
+\textbf{Neben der Entscheidung für Variante 3 muss auch die Entscheidung getroffen werden, wie sich der Bereich verhält, wenn gerade keine Zusatzinhalte dargestellt werden müssen. In diesem Fall sind verschiedenen Szenarien denkbar. Zum einen wäre denkbar, dass der Bereich minimiert wird, sobald keine Zusatzinhalt dargestellt wird. Dies hätte aber den Nachteil, dass sich die Position der Kommentare mehrmals ändert und somit das Lesen erschwert wird. Zum anderen wäre auch die Darstellung eines Standardbildes oder einer einfarbigen Fläche vorstellbar. Es wäre aber auch möglich, innerhalb der Fläche die Metadaten des Hyperaudio-Dokuments darzustellen, sprich Titel, Autor und Beschreibung. Die letzte Variante stellt einen guten Kompromiss dar, da somit auch keine weitere Fläche für die Darstellung dieser Informationen benötigt wird.}
+
+Neben der Nutzung der Fläche während keine Zusatzinhalte dargestellt werden, muss auch über das Format für die Darstellung entschieden werden. Hierbei bieten sich dir Formate 16:9 und 4:3 für die Darstellung an. Nachdem vornehmlich vorhandene Abbildungen, Formeln und Bilder aus bestehenden Kurseinheiten dargestellt werden sollen, fällt die Wahl auf das 4:3 Format. Dies bietet sich an, da das 4:3 Format mehr Ähnlichkeiten mit dem DIN A4 Format von Kurseinheiten hat, als das 16:9 Format. Dieses würde sich vor allem bei der Darstellung von Videos anbieten.
 
 
 %%%%%%%%%%
-%\subsection{Seite eines Hyperaudio-Dokuments}
-Die Seite eines Hyperaudio-Dokuments lässt sich grob, wie bereits in Abbildung \ref{fig:MockupBereiche} dargestellt, in die Bereiche Player, Galerie und Kommentarsektion aufteilen. Wir werden nun zunächst für jeden dieser Bereiche verschiedene Designs diskutieren und uns dann für eines entscheiden. Danach erfolgt die Entscheidung über die Anordnung dieser Bereiche auf der Seite eines Hyperaudio-Dokuments.
+\subsection{Mediensteuerung inklusive Visualisierungen der Annotationen}
+Bei der Mediensteuerung für Hyperaudio-Dokumente müssen neben den üblichen Mediensteuerungselementen zusätzliche Elemente visualisiert werden. So sollen auch die annotierten öffentlichen Kommentare, persönlichen Notizen und Lesezeichen dargestellt werden.
 
+Der erste Entwurf der Mediensteuerung ist in Abbildung \ref{fig:MockupMediensteuerungV1} dargestellt. Es ist zu erkennen, dass neben den üblichen Steuerungselementen die Visualisierung der Annotationen in der Timeline erfolgt. Hierzu wird für die drei verschiedenen Kommentar-Arten jeweils ein andersfarbiger Punkt (Kommentar: blau, Notiz: orange und Lesezeichen: grün) innerhalb der Timeline des Players dargestellt. Durch einen Klick auf einen Punkt, welcher einen Kommentar oder eine Notiz repräsentiert, soll dann zu der dazugehörigen Stelle innerhalb des Bereichs für Kommentare und Notizen gesprungen werden. Das Löschen und Anlegen von Lesezeichen soll durch eine Betätigung des Rechtsklicks auf den Punkt bzw. die Timeline möglich sein. Es wird ersichtlich, dass diese Variante den Nachteil hat, dass bei einer hohen Anzahl an Kommentaren und Notizen die Timeline unübersichtlich und schwer bedienbar wird.
 
-%%%%%%%%%%
-\subsubsection{Player}
-Beim Player für Hyperaudio-Dokumente müssen, neben den üblichen Mediensteuerungselementen, gleich mehrere zusätzliche Elemente visualisiert werden. Zum einen müssen zu den entsprechenden Zeitpunkten die annotierten Zusatzinhalte dargestellt werden. Auf der anderen Seiten sollen auch die annotierten öffentlichen Kommentare, persönlichen Notizen und Markierungen veranschaulicht werden. Dem Wunsch, direkt über den Player öffentliche Kommentare, persönlichen Notizen und Markierungen erstellen und in letzterem Fall sogar löschen zu können, muss auch Sorge getragen werden.
-
-Der Player für Hyperaudio-Dokumente wird, wie in Abbildung \ref{fig:MockupPlayerVersion1} zusehen ist, als Videoplayer umgesetzt. Somit werden die Zusatzinhalte an Stelle eines Videos dargestellt. Die persönlichen Notizen und Markierungen werden innerhalb der Abspielleiste mittels unterschiedlich gefärbter Kreisen illustriert. In diesem Fall sollen die roten Kreise Markierungen und der blaue Kreis eine persönliche Notiz widerspiegeln. Unterhalb der Mediensteuerung ist ein Bereich zu finden, in dem die Kommentare grafisch sichtbar gemacht werden sollen. Hierfür wird jedes Hyperaudio-Dokument in die gleiche fixe Anzahl an Zeitfenstern aufgeteilt. Diese Zeitfenster werden durch senkrecht orientierte Balken dargestellt, deren Höhe für die Anzahl der zu diesem Zeitfenster erfassten Kommentare stehen soll. Unter dem Bereich für die Kommentare befindet sich eine Eingabemaske, mit welcher öffentliche Kommentare und persönliche Notizen erfasst werden können. Das Erstellen und Löschen von Markierungen soll mittels Rechtsklick auf die entsprechende Stelle innerhalb der Abspielleiste in einem dazugehörigen Kontextmenü umgesetzt werden. Dies ist in Abbildung \ref{fig:MockupPlayerVersion1} mittels der beiden Mauszeiger, den Pfeilen und den entsprechenden Buttons symbolisiert.
-
-\todo[inline]{Unterscheidung nicht nur durch Farbe (Barrierefreiheit)}
-
-%\begin{figure}[h!]
-%\includegraphics[width=0.8\textwidth,center]{MockupPlayerVersion1.pdf}
-%\caption{\label{fig:MockupPlayerVersion1} Erster Entwurf des Players}
-%\end{figure}
-
-In einer zweiten Variante des Players wird die Visualisierung der persönlichen Notizen von der Abspielleiste in den Bereich der Kommentare verschoben. Wie in Abbildung \ref{fig:MockupPlayerVersion2} ersichtlich,  wird der Balken für den Zeitraum, in dem die persönlichen Notiz liegt, zu einem gewissen Teil blau eingefärbt. Dadurch wird nebenbei das Handling der Punkte in der Abspielleiste vereinheitlicht, da es hier nur noch die Markierungen mit Interaktionsmöglichkeit gibt.
+In einem zweiten Entwurf der Mediensteuerung in Abbildung \ref{fig:MockupMediensteuerungV2} wird die Visualisierung der Notizen und Kommentare in eine Box unterhalb der Timeline verschoben. Diese werden nun in einer Waveform dargestellt. Hierfür wird jedes Hyperaudio-Dokument in die gleiche fixe Anzahl an Zeitfenstern aufgeteilt. Diese Zeitfenster werden durch senkrecht orientierte Balken dargestellt, deren Höhe für die Anzahl der zu diesem Zeitfenster erfassten Kommentare und Notizen stehen soll. Die Balken werden anteilig nach Anzahl von Kommentaren und Notizen unterschiedlich eingefärbt. Dadurch wird nebenbei das Handling der Punkte in der Timeline vereinheitlicht, da es hier nur noch die Lesezeichen mit ihren Interaktionsmöglichkeiten gibt. Wenn mit der Maus über einen einzelnen Balken gefahren wird, soll jeweils eine Vorschau eines Kommentars mittels Tooltip dargestellt werden. Bei dem in der Vorschau angezeigten Kommentar handelt es sich um den jenigen Kommentar mit den meisten Antworten, also den meist diskutierten Kommentar, innerhalb dieses Blockes. Wird hierbei kein eindeutiges Ergebnis gefunden, wird derjenige Kommentar mit dem den frühesten Annotatioszeitpunkt herangezogen. Wenn weiterhin kein eindeutiges Ergebnis erzielt ist, wird der neuste dieser Kommentare in der Vorschau angezeigt. Bei einem Klick auf den Block des Kommentars wird zu der dazugehörigen Stelle innerhalb des Bereichs für Kommentare und Notizen gesprungen. Diese Version bietet somit auch bei einer hohen Anzahl an Kommentaren und Notizen eine übersichtliche Darstellung.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{\textwidth}
-\includegraphics[width=0.8\textwidth,center]{MockupPlayerVersion1.pdf}
+\includegraphics[width=0.8\textwidth,center]{MockupMediensteuerungV1.pdf}
 \subcaption{Erste Version}
-\label{fig:MockupPlayerVersion1}
+\label{fig:MockupMediensteuerungV1}
 \end{subfigure}
 \par\bigskip
 \begin{subfigure}[c]{\textwidth}
-\includegraphics[width=0.8\textwidth,center]{MockupPlayerVersion2.pdf}
-\subcaption{Finale Version}
-\label{fig:MockupPlayerVersion2}
+\includegraphics[width=0.8\textwidth,center]{MockupMediensteuerungV2.pdf}
+\subcaption{Zweite Version}
+\label{fig:MockupMediensteuerungV2}
 \end{subfigure}
-\caption{Benutzeroberfläche - Player}
-\label{fig:MockupPlayerVersion}
+\par\bigskip
+\begin{subfigure}[c]{\textwidth}
+\includegraphics[width=0.8\textwidth,center]{MockupMediensteuerungV3.pdf}
+\subcaption{Finale Version}
+\label{fig:MockupMediensteuerungV3}
+\end{subfigure}
+\caption{Benutzeroberfläche - MockupMediensteuerung}
+\label{fig:MockupMediensteuerung}
 \end{figure}
 
-%\begin{figure}[h!]
-%\includegraphics[width=.8\textwidth,center]{MockupPlayerVersion2.pdf}
-%\caption{\label{fig:MockupPlayerVersion22}Zweiter Entwurf des Players}
-%\end{figure}
-
+In der dritten und finalen Variante wird die Waveform an die Timeline gedockt und in zwei Teile aufgeteilt (siehe Abbildung \ref{fig:MockupMediensteuerungV3}). Der obere Teil repräsentiert die Kommentare, während der untere Teil die Notizen wiederspiegelt. Des Weiteren wurde ein Button zum Erstellen der Lesezeichen in der Mediensteuerung ergänzt. Somit ist nur noch zum Löschen der Lesezeichen die Verwendung des Rechtsklicks notwendig. Darüber hinaus wurde der Punkt für Lesezeichen durch das entsprechende Symbol ersetzt. Diese Version bietet den Vorteil, dass die Interaktion, welche in der vorherigen Version ausschließlich für Kommentaren vorbehalten wurde, ebenfalls für Notizen eingebettet werden kann. Somit ist es auch möglich, in der Mediensteuerung mittels Mouse over eine Vorschau einer Notiz anzeigen zu lassen und mit Klick zu dieser zu springen. \textbf{Aufgrund der neuen Anordnung der Visualisierung von Kommentaren, Notizen und Lesezeichen wird die Barrierefreiheit der Anwendung verbessert, da die Kommentar-Arten nicht nur anhand der Farbe zu unterscheiden sind.}
 
 %%%%%%%%%%
-\subsubsection{Galerie}
-Die Galerie soll dazu dienen, einen Überblick über die vorhanden Zusatzinhalte zu bieten. Die Zusatzinhalte stellen alle einen grafischen Inhalt dar. Dementsprechend kann jeder Zusatzinhalt durch ein kleines Vorschaubild repräsentiert werden. 
-Eine weitere Grundfunktionalität einer Galerie ist die vergrößerte Anzeige der in der Vorschau dargestellten Inhalte, die auch in unserer Galerie zur Verfügung stehen soll. Beim Erstellen des Designs muss zusätzlich auch die Anforderung der Rückkopplung zum Player bedacht werden (siehe Abschnitt \ref{sub:AnforderungenOberflaeche}). 
-%Neben der Grundfunktionalität einer Galerie, dass der ausgewählte Zusatzinhalt vergrößert angezeigt werden können soll, muss beim Erstellen des Designs auch die Anforderung der Rückkopplung zum Player bedacht werden (siehe Abschnitt \ref{sub:AnforderungenOberflaeche}). 
+\subsection{Galerie}
+Die Galerie soll dazu dienen, einen Überblick über die vorhanden Zusatzinhalte zu bieten. Da die Zusatzinhalte alle einen grafischen Inhalt darstellen, kann jeder Zusatzinhalt durch ein kleines Vorschaubild repräsentiert werden. Hier wird in Fragen der Skalierung die gleiche Entscheidung getroffen wie bereits bei der Darstellung von Zusatzinhalten (vgl. Abschnitt \ref{sub:zusatzinhalte}).
+Eine weitere Grundfunktionalität einer Galerie ist die vergrößerte Anzeige der in der Vorschau dargestellten Inhalte, die auch in der Hyperaudio-Galerie zur Verfügung stehen soll. Um den Komfort zu erhöhen und den Hyperaudio-Gedanken zu stärken, ist eine Rückkopplung an die Mediensteuerung vorgesehen.
 
-Die einfachste Umsetzung der Galerie ist eine Darstellung der Zusatzinhalte in einem einfachen Grid  mit Scrollbalken, wie es in Abbildung \ref{fig:MockupGalerieGrid} zu sehen ist. Zusätzlich wird das Grid um zwei Buttons für eine vergrößerte Ansicht des Zusatzinhalts sowie für die Rückkopplung zum Player ergänzt. Um eine dieser beiden Aktionen auszuführen, müsste also der gewünschte Zusatzinhalt markiert und der entsprechende Button betätigt werden.
+Die einfachste Umsetzung der Galerie ist eine Darstellung der Zusatzinhalte in einem einfachen Grid  mit Scrollbalken, wie es in Abbildung \ref{fig:MockupGalerieGrid} zu sehen ist. Zusätzlich wird das Grid um zwei Buttons für eine vergrößerte Ansicht des Zusatzinhalts sowie für die Rückkopplung zur Mediensteuerung ergänzt. Um eine dieser beiden Aktionen auszuführen, müsste also der gewünschte Zusatzinhalt markiert und der entsprechende Button betätigt werden.
 
-%\begin{figure}[h!]
-%\includegraphics[width=.5\textwidth,center]{MockupGalerieGrid.pdf}
-%\caption{\label{fig:MockupGalerieGrid}Garlerie als einfaches Grid}
-%\end{figure}
+Diese Variante hat den Vorteil, dass besonders viele Zusatzinhalte gleichzeitig angezeigt werden können. Auf der anderen Seite erhalten wir aber keinerlei Informationen zu den Zusatzinhalten. In der zweiten Variante, bei dem das Grid um einen Bereich für Details ergänzt wurde, kann der Nutzer zumindest die Details des ausgewählten Zusatzinhaltes einsehen. Diese in Abbildung \ref{fig:MockupGalerieGridErweitert} erkennbaren Details sind natürlich von den vorhandenen Metadaten abhängig. Nachteil ist in diesem Fall aber, dass durch den zusätzlichen Bereich für die Details bei gleicher Größe der Galerie weniger Zusatzinhalte zur selben Zeit dargestellt werden können. Das führt dazu, dass die Verwendung des Scrollbalkens häufiger notwendig wird.
 
-Diese Variante hat den Vorteil, dass besonders viele Zusatzinhalte gleichzeitig angezeigt werden können. Auf der anderen Seite erhalten wir aber keinerlei Informationen zu den Zusatzinhalten. In der zweiten Variante, bei dem das Grid um einen Bereich für Details ergänzt wurde, kann man zumindest die Details des ausgewählten Zusatzinhaltes einsehen. Diese in Abbildung \ref{fig:MockupGalerieGridErweitert} erkennbaren Details sind natürlich von den vorhandenen Metadaten abhängig. Nachteil ist in diesem Fall aber, dass, durch den Bereich für die Details, bei gleicher Größe der Galerie weniger Zusatzinhalte zur selben Zeit dargestellt werden können. Das führt dazu, dass die Verwendung des Scrollbalkens häufiger notwendig wird.
+Bei einer Darstellung der Zusatzinhalte als Kacheln, wie in Abbildung \ref{fig:MockupGalerieKacheln} zu sehen, können gleichzeitig für alle vorhandenen Zusatzinhalte Details angezeigt werden. Durch diese Art der Darstellung passen jedoch noch weniger Zusatzinhalte auf die gleiche Fläche.
 
-%\begin{figure}[h!]
-%\includegraphics[width=.5\textwidth,center]{MockupGalerieGridErweitert.pdf}
-%\caption{\label{fig:MockupGalerieGridErweitert}Galerie als Grid mit Bereich für Details}
-%\end{figure}
+Eine besonders elegante Art der Darstellung wäre die des Cover Flows, bekannt aus verschiedenen Musikplayern, wie beispielsweise iTunes. In Abbildung \ref{fig:MockupGalerieCoverFlow} ist zu erkennen, dass auch hier ausschließlich Details des aktuell ausgewählten Zusatzinhaltes sichtbar sind. Des Weiteren hat diese Darstellungsweise den großen Nachteil, dass nicht auf einen Blick alle verfügbaren Zusatzinhalte ersichtlich sind, was das Durchsuchen der Zusatzinhalte ungemein erschwert. Somit ist diese Art der Darstellung zwar schön anzusehen, aber nicht sonderlich gebrauchstauglich im Zusammenhang mit Hyperaudio-Dokumenten.
 
-Bei einer Darstellung der Zusatzinhalte als Kacheln, wie in Abbildung \ref{fig:MockupGalerieKacheln} zu sehen, können gleichzeitig für alle vorhandenen Zusatzinhalte die Details angezeigt werden. Durch diese Art der Darstellung passen jedoch noch weniger Zusatzinhalte auf die gleiche Fläche.
-
-%\begin{figure}[h!]
-%\includegraphics[width=.5\textwidth,center]{MockupGalerieKacheln.pdf}
-%\caption{\label{fig:MockupGalerieKacheln}Galerie mit Darstellung in Kachelform}
-%\end{figure}
-
-Eine besonders schicke Art der Darstellung wäre die des Cover Flows, bekannt aus verschiedenen Musikplayern. In Abbildung \ref{fig:MockupGalerieCoverFlow} ist zu erkennen, dass auch hier ausschließlich Details des aktuell ausgewählten Zusatzinhaltes sichtbar sind. Des Weiteren hat diese Darstellungsweise den großen Nachteil, dass auch nicht auf einen Blick alle verfügbaren Zusatzinhalte ersichtlich sind. Dies erschwert das Durchsuchen der Zusatzinhalte ungemein. Somit ist diese Art der Darstellung zwar schön anzusehen, aber nicht sonderlich gebrauchstauglich im Zusammenhang dieser Arbeit.
-
-%\begin{figure}[h!]
-%\includegraphics[width=.5\textwidth,center]{MockupGalerieCoverFlow.pdf}
-%\caption{\label{fig:MockupGalerieCoverFlow}Galerie als Cover Flow}
-%\end{figure}
-
-Letztlich stellt sich die optimierte Variante der Kachel Darstellung aus Abbildung \ref{fig:MockupGalerieFinal} als beste Lösung heraus. Die Optimierung besteht daraus, dass die beiden Buttons obsolet gemacht werden. Dies kann zum einen erreicht werden, indem die vergrößerte Darstellung durch einen Klick auf die Abbildung des Zusatzinhaltes ausgelöst wird. Zum anderen bietet der Bereich der Details noch ausreichend Platz, um hier die Funktion zur Rückkopplung an den Player einzufügen. Durch diese Verbesserungen wird nicht nur mehr Platz geschaffen, sondern auch die Benutzerfreundlichkeit erhöht, indem der Vorgang zum Anzeigen der vergrößerten Ansicht beziehungsweise des Springens an den entsprechenden Zeitpunkt jeweils um einen Klick reduziert wurde.
+Letztlich stellt sich die optimierte Variante der Kachel-Darstellung in Abbildung \ref{fig:MockupGalerieFinal} als beste Lösung heraus. Die Optimierung besteht darin, dass die beiden Buttons obsolet gemacht werden. Dies kann zum einen dadurch erreicht werden, dass die vergrößerte Darstellung durch einen Klick auf die Abbildung des Zusatzinhaltes ausgelöst wird. Zum anderen bietet der Bereich der Details noch ausreichend Platz, um hier die Funktion zur Rückkopplung an die Mediensteuerung einzufügen. Durch diese Verbesserungen wird nicht nur mehr Platz geschaffen, sondern auch die Benutzerfreundlichkeit erhöht, da der Vorgang zum Anzeigen der vergrößerten Ansicht beziehungsweise des Springens an den entsprechenden Zeitpunkt jeweils um einen Klick reduziert wurde.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{0.5\textwidth}
@@ -230,24 +223,13 @@ Letztlich stellt sich die optimierte Variante der Kachel Darstellung aus Abbildu
 \label{fig:MockupGalerie}
 \end{figure}
 
-
-%\begin{figure}[h!]
-%\includegraphics[width=.5\textwidth,center]{MockupGalerieFinal.pdf}
-%\caption{\label{fig:MockupGalerieFinal}Finale Version der Galerie}
-%\end{figure}
-
 %%%%%%%%%%
-\subsubsection{Kommentarsektion}
-Die Kommentarsektion ist für die Anzeige der öffentlichen Kommentare sowie der persönlichen Notizen zuständig. Zusätzlich muss eine Suchmaske auf Basis der Anforderungen aus Abschnitt \ref{sub:AnforderungenKommentarsektion} in die Oberfläche integriert werden.
+\subsection{Kommentare und Notizen}
+Dieser Bereich ist für das Erstellen und Anzeigen der öffentlichen Kommentare sowie der persönlichen Notizen zuständig. Zusätzlich müssen eine Suche, Filter- und Sortiermöglichkeiten auf Basis der Anforderungen aus Abschnitt \ref{sub:AnforderungenDerNutzenden} in die Oberfläche integriert werden.
 
-Abbildung \ref{fig:MockupKommentarsektionVersion1} zeigt eine erste Version der Kommentarsektion. Neben der Suchmaske im Kopfbereich befinden sich zwei Checkboxen. Diese ermöglichen es dem Betrachter nach öffentlichen Kommentaren und persönlichen Notizen zu filtern. Im benachbarten Dropdown-Menü kann die Grundlage der Sortierung bestimmt werden. Die Sortierung kann nach Erstellungsdatum beziehungsweise nach Zeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments erfolgen. Unterhalb dieser Funktionen befindet sich die Anzeige der Kommentare und Notizen. Sowohl bei Kommentaren als auch bei Notizen wird neben dem Erstellungsdatum auch der Annotationszeitpunkt festgehalten. Dieser wird als Link umgesetzt, sodass bei einem Klick die Rückkopplung an den Player erfolgen kann. Bei Kommentaren gibt es nach Betätigung der \textit{Antworten}-Schaltfläche noch eine zusätzliche Eingabemaske zum Verfassen von Antworten. Persönliche Notizen werden durch ein Schloss-Symbol hinter dem Erstellungsdatum visualisiert. Zusätzlich befinden sich noch jeweils zwei Buttons zum Bearbeiten und Löschen auf der rechten Seite einer Notiz.
+Abbildung \ref{fig:MockupKommentarsektionVersion1} zeigt eine erste Version des Kommentarbereichs. An oberste Stelle befinden sich eine Eingabemaske für Kommentare mit zwei Buttons, um den Inhalt der Eingabemaske als Kommentar oder als Notiz abzuspeichern. Neben der Suchmaske befinden sich zwei Checkboxen unterhalb der Eingabemaske und den Buttons. Diese ermöglichen es dem Betrachter nach öffentlichen Kommentaren und persönlichen Notizen zu filtern. Im benachbarten Dropdown-Menü kann die Grundlage der Sortierung bestimmt werden. Die Sortierung kann nach Erstellungsdatum beziehungsweise nach Zeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments erfolgen. Unterhalb dieser Funktionen befindet sich die Anzeige der Kommentare und Notizen. Sowohl bei Kommentaren als auch bei Notizen wird neben dem Erstellungsdatum auch der Annotationszeitpunkt festgehalten. Dieser wird als Link umgesetzt, sodass bei einem Klick die Rückkopplung an die Mediensteuerung erfolgen kann. Bei Kommentaren gibt es nach Betätigung der \textit{Antworten}-Schaltfläche noch eine zusätzliche Eingabemaske zum Verfassen von Antworten. Persönliche Notizen werden durch ein Schloss-Symbol hinter dem Erstellungsdatum visualisiert. Zusätzlich befinden sich noch jeweils zwei Buttons zum Bearbeiten und Löschen auf der rechten Seite einer Notiz.
 
-%\begin{figure}[h!]
-%\includegraphics[width=\textwidth,center]{MockupKommentarsektionVersion1.pdf}
-%\caption{\label{fig:MockupKommentarsektionVersion1}Erste Version der Kommentarsektion}
-%\end{figure}
-
-Im nochmals verbesserten Design der Kommentarsektion, welches in Abbildung \ref{fig:MockupKommentarsektionFinal} abgebildet ist, werden die Antworten auf Kommentare eingerückt dargestellt. Diese Darstellung führt zu einer besseren Übersichtlichkeit und ist auch aus anderen modernen Anwendungen bekannt.
+Im nochmals verbesserten Design, welches in Abbildung \ref{fig:MockupKommentarsektionFinal} abgebildet ist, werden die Antworten auf Kommentare eingerückt dargestellt. Diese Darstellung führt zu einer besseren Übersichtlichkeit und ist auch aus anderen modernen Anwendungen bekannt.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{\textwidth}
@@ -265,25 +247,10 @@ Im nochmals verbesserten Design der Kommentarsektion, welches in Abbildung \ref{
 \label{fig:MockupKommentarsektion}
 \end{figure}
 
-%\begin{figure}[h!]
-%\includegraphics[width=\textwidth,center]{MockupKommentarsektionFinal.pdf}
-%\caption{\label{fig:MockupKommentarsektionFinal}Finale Version der Kommentarsektion}
-%\end{figure}
-
 
 %%%%%%%%%%
-\subsubsection{Zusammenführen der Elemente}
-Im ersten Schritt führen wir die jeweils favorisierten Elemente in ein Layout zusammen. Dabei orientieren wir uns zunächst an unserer grobe Skizze aus Kapitel \ref{cha:analyse}. Wie nun in Abbildung \ref{fig:MockupSeiteLayoutVersion1} zu erkennen ist, ist die Kommentarsektion so in die Breite gezogen, dass das Lesen der Inhalte unangenehm werden kann. Aus diesem Grund wird in der finalen Version (siehe Abbildung \ref{fig:MockupSeiteLayoutFinal}) die Breite der Kommentarsektion auf die Breite des Players beschränkt. Dies hat zeitgleich zur Folge, dass der nun vorhandene freie Platz für die Galerie verwendet werden kann. Spätestens hiermit wird der Nachteil der gewählten Darstellungsweise der Galerie egalisiert, da nun ausreichend viele Zusatzinhalte ohne die Verwendung des Scrollbalkens eingesehen werden können.
-
-%\begin{figure}[h!]
-%\includegraphics[width=\textwidth,center]{MockupSeiteLayoutVersion1.pdf}
-%\caption{\label{fig:MockupSeiteLayoutVersion1}Erstes Layout der Seite für Hyperaudio-Dokumente}
-%\end{figure}
-
-%\begin{figure}[h!]
-%\includegraphics[width=\textwidth,center]{MockupSeiteLayoutFinal.pdf}
-%\caption{\label{fig:MockupSeiteLayoutFinal}Finales Layout der Seite für Hyperaudio-Dokumente}
-%\end{figure}
+\subsection{Zusammenführen der Elemente}
+Im ersten Schritt werden die jeweils favorisierten Elemente in ein Layout zusammengeführt. Dabei  wird sich zunächst an der groben Skizze aus Abbildung \ref{fig:MockupBereiche} orientiert. Wie nun in Abbildung \ref{fig:MockupSeiteLayoutVersion1} zu erkennen ist, ist der Bereich der Kommentare und Notizen so in die Breite gezogen, dass das Lesen der Inhalte unangenehm werden kann. Aus diesem Grund wird in der finalen Version (siehe Abbildung \ref{fig:MockupSeiteLayoutFinal}) die Breite dieses Bereichs auf die Breite der Zusatzinhalte und Mediensteuerung beschränkt. Dies hat zeitgleich zur Folge, dass der nun vorhandene freie Platz für die Galerie verwendet werden kann. Spätestens hiermit wird der Nachteil der gewählten Darstellungsweise der Galerie egalisiert, da nun ausreichend viele Zusatzinhalte ohne die Verwendung des Scrollbalkens eingesehen werden können.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{\textwidth}
@@ -302,20 +269,15 @@ Im ersten Schritt führen wir die jeweils favorisierten Elemente in ein Layout z
 \end{figure}
 
 %%%%%%%%%%
-%\subsection{Administrationsseite eines Hyperaudio-Dokuments}
-%\dots
+\subsection{Mobile Version}
+Für mobile Endgeräte wird keine neue Benutzeroberfläche entworfen. Stattdessen wird die vorhandene Oberfläche so angepasst (siehe Abbildung \ref{fig:MockupMobile}), dass diese für die Darstellung auf mobilen Geräten geeignet ist. Dazu wird die Strategie eines responsiven Grid-Layouts angewandt, das dafür sorgt, dass Inhalte bei kleineren Bildschirmgrößen anhand definierter Breakpoints umgebrochen werden \citep{hellichtresponsive}.
 
+So wird beispielsweise die Galerie auf kleinen Displays unterhalb des Bereichs für Kommentare und Notizen platziert. Dasselbe Vorgehen erstreckt sich auf weitere Bedienelemente, wie zum Beispiel die Filtermöglichkeiten. Zudem wird die Anzahl der Balken zur Visualisierung von Annotationen im Bereich der Mediensteuerung abhängig von der zur Verfügung stehenden Bildschirmgröße gewählt, sodass diese jeweils gut erkennbar bleiben und dabei möglichst viel Information liefern. Die Mediensteuerung selbst sowie die Anzeige der Zusatzinhalte skaliert mit der Bildschirmbreite, jedoch nur bis zu einer definierten Maximalbreite.
 
-%%%%%%%%%%
-%\subsection{Moodle-Oberfläche im Allgemeinen}
-%\dots
-
-
-
-
-
-
-
+\begin{figure}[h!]
+\includegraphics[width=0.8\textwidth,center]{MockupMobile.pdf}
+\caption{\label{fig:MockupMobile} Mobile Darstellung der Benutzeroberfläche}
+\end{figure}
 
 %%%%%%%%%%
 \section{Zusammenfassung}

@@ -14,8 +14,6 @@ Bei Activity Plugins, wie dem Plugin für Hyperaudio-Dokumente, ist als Speicher
 
 \todo[inline]{Ordnerstruktur aktualisieren}
 
-Im Ordner \textbf{/hyperaudio/backup} werden die Dateien abgelegt, welche Anwendung finden, wenn ein Backup oder eine Wiederherstellung eines Kurses vorgenommen wird.
-
 Der Ordner \textbf{/hyperaudio/db} beherbergt die Dateien \textbf{access.php}, \textbf{events.php}, \textbf{install.xml} und \textbf{upgrade.php}. Die Datei \textbf{access.php} dient zur Steuerung der Berechtigungen innerhalb des Moodle-Plugins, wobei den verschiedenen Moodle-Rollen verschiedene Rechte für die einzelnen Funktionen zugewiesen werden können. In der \textbf{events.php} können Beobachter eingerichtet werden, welche auf bestimmte Ereignisse warten. Bei der Installation des Plugins wird die \textbf{install.xml} zur Erstellung der Datenbanktabellen für das Plugin verwendet. Es ist mindestens eine Tabelle mit dem Namen des Plugins anzulegen. Sollten die Datenbanktabellen nach Veröffentlichung des Plugins um Spalten erweitert werden, so kommt die Datei \textbf{upgrade.php} zum Einsatz. Hierin werden die notwendigen Schritte für einen Versionsabgleich definiert.
 
 Im Ordner \textbf{/hyperaudio/lang} wird die Sprachlokalisierung vorgenommen. Für jede Sprache wird innerhalb des \textbf{lang}-Ordners ein eigener Unterordner angelegt. Darin befindet sich jeweils eine PHP-Datei, in welcher die Übersetzungen definiert werden. Der Name dieser Datei entspricht wiederum dem Namen des Plugins.
@@ -40,26 +38,29 @@ Dazu wird in der Maske zum Anlegen und Aktualisieren von Instanzen des Hyperaudi
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{mod\underline{{ }}form.php} in der 1. Iteration},
              label={lst:it1:modform}]
-$mform = $this->_form;             
+$mform = $this->_form;
 $mform->addElement('text', 'name', get_string('hyperaudio_mod_form_name',
     'hyperaudio'));
+$mform->addHelpButton('name', 'hyperaudio_mod_form_name', 'hyperaudio');
 $mform->setType('name', PARAM_TEXT);
 $mform->addRule('name', get_string('error_wrong_hyperaudio_name_input',
     'hyperaudio'), 'required');
 $mform->addElement('filemanager', 'audiofile', get_string('hyperaudiodata',
     'hyperaudio'), null,
     array(
-       'subdirs' => 0,
-       'maxbytes' => 0,
-       'areamaxbytes' => 10485760,
-       'maxfiles' => 1,
-       'accepted_types' => array('audio')
-    )
-);
+        'subdirs' => 0,
+        'maxbytes' => 0,
+        'areamaxbytes' => 524288000,
+        'maxfiles' => 1,
+        'accepted_types' => array(
+            'audio'
+        )
+    ));
+$mform->addHelpButton('audiofile', 'hyperaudiodata', 'hyperaudio');
 $mform->addRule('audiofile', get_string('required', 'hyperaudio'), 'required');
 \end{lstlisting}
 
-Der \texttt{\underline{{ }}form} der \texttt{moodleform\underline{{ }}mod} können durch \texttt{addElement} neue Form-Elemente hinzugefügt werden. Mithilfe der Funktionen \texttt{setType} und \texttt{addRule} können den Elementen Datentypen und Regeln zugewiesen werden, die bei Auswertung der Form automatisch validiert werden. Zum Hochladen von Dateien kann der \textit{filemanager} eingesetzt werden. Mithilfe eines Arrays können dabei Einschränkungen für Anzahl und Eigenschaften der hochzuladenden Dateien festgelegt werden. In diesem Fall darf maximal eine Datei hinzugefügt werden, die vom Typ \textit{audio} sein muss. Die Funktion \texttt{get\underline{{ }}string} dient im Allgemeinen der Darstellung der lokalisierten Bezeichnungen.
+Der \texttt{\underline{{ }}form} der \texttt{moodleform\underline{{ }}mod} können durch \texttt{addElement} neue Form-Elemente hinzugefügt werden. Mithilfe der Funktionen \texttt{setType}, \texttt{addHelpButton} und \texttt{addRule} können den Elementen Datentypen, Hilfebutton und Regeln zugewiesen werden, die bei Auswertung der Form automatisch validiert werden. Zum Hochladen von Dateien kann der \textit{filemanager} eingesetzt werden. Mithilfe eines Arrays können dabei Einschränkungen für Anzahl und Eigenschaften der hochzuladenden Dateien festgelegt werden. In diesem Fall darf maximal eine Datei hinzugefügt werden, die vom Typ \textit{audio} sein muss. Die Funktion \texttt{get\underline{{ }}string} dient im Allgemeinen der Darstellung der lokalisierten Bezeichnungen.
 
 Um die Daten aus der Form in der Datenbank speichern und später wieder löschen zu können, muss auch die \textbf{lib.php} bearbeitet werden. Dazu dienen die bereits erwähnten Funktionen \texttt{add\underline{{ }}instance}, \texttt{update\underline{{ }}instance} und \texttt{delete\underline{{ }}instance}. Beispielhaft wird in Auflistung \ref{lst:it1:lib} die Funktion \texttt{add\underline{{ }}instance} zum Hinzufügen eines neuen Hyperaudio-Dokuments betrachtet. 
 
@@ -88,7 +89,7 @@ function hyperaudio_add_instance($data) {
 }
 \end{lstlisting}
 
-Der Parameter \texttt{\$data} enthält bereits die in der Form eingegebenen Daten. Das Attribut \mbox{\texttt{audiofile}} enthält nicht die Audio-Datei selbst, sondern die ID der \textit{draft file area} und soll im ersten Schritt nicht in der Tabelle \textit{hyperaudio} abgespeichert werden (vgl. Zeilen 7-8). Vor dem Speichern wird noch der aktuelle Zeitstempel hinterlegt (vgl. Zeilen 10-12). Mithilfe der Funktion \mbox{\texttt{\$DB->insert_record}} kann das \texttt{\$data}-Objekt mit seinen Attributen in der Tabelle \textit{hyperaudio} abgelegt werden. Im Nachhinein sorgt die in der \textbf{locallib.php} definierte Funktion \mbox{\texttt{hyperaudio_update_audiofile}} dafür, dass die Audio-Datei in der \textit{files}-Tabelle abgespeichert und in der \textit{hyperaudio}-Tabelle korrekt referenziert wird (vgl. Auflistung \ref{lst:it1:locallib}).
+Der Parameter \texttt{\$data} enthält bereits die in der Form eingegebenen Daten. Das Attribut \mbox{\texttt{audiofile}} enthält nicht die Audio-Datei selbst, sondern die ID der \textit{draft file area} und soll im ersten Schritt nicht in der Tabelle \textit{hyperaudio} abgespeichert werden (vgl. Zeilen 7-8). Vor dem Speichern wird noch der aktuelle Zeitstempel hinterlegt (vgl. Zeilen 10-12). Mithilfe der Funktion \mbox{\texttt{\$DB->insert\underline{{ }}record}} kann das \texttt{\$data}-Objekt mit seinen Attributen in der Tabelle \textit{hyperaudio} abgelegt werden. Im Nachhinein sorgt die in der \textbf{locallib.php} definierte Funktion \mbox{\texttt{hyperaudio\underline{{ }}update\underline{{ }}audiofile}} dafür, dass die Audio-Datei in der \textit{files}-Tabelle abgespeichert und in der \textit{hyperaudio}-Tabelle korrekt referenziert wird (vgl. Auflistung \ref{lst:it1:locallib}).
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -98,10 +99,10 @@ function hyperaudio_update_audiofile($hyperaudioid, $context, $draftitemid) {
     global $DB;
     
     file_save_draft_area_files($draftitemid, $context->id, 'mod_hyperaudio',
-    'audiofile', $hyperaudioid);
+        'audiofile', $hyperaudioid);
     $fs = get_file_storage();
     $files = $fs->get_area_files($context->id, 'mod_hyperaudio', 'audiofile',
-    $hyperaudioid, 'itemid, filepath, filename', false);
+        $hyperaudioid, 'itemid, filepath, filename', false);
 
     $file = reset($files);
     $DB->set_field('hyperaudio', 'audiofile', $file->get_filename(), array(
@@ -123,7 +124,7 @@ echo $output->display($hyperaudio, $context);
 echo $output->footer();
 \end{lstlisting}
 
-In der Funktion \texttt{display} der Klasse \mbox{\texttt{mod_hyperaudio_renderer}}, die von der Klasse \mbox{\texttt{plugin_renderer_base}} erbt, werden die HTML-Inhalte erzeugt. Dabei handelt es sich in der 1. Iteration um einen Container, der ein \texttt{<audio>}-Element beinhaltet. Als Quelle wird im \texttt{<source>}-Element eine URL (Uniform Resource Locator) angegeben, die zuvor mit Moodle-Standardmitteln erzeugt wurde und auf die in der Datenbank abgelegte Audio-Datei verweist.
+In der Funktion \texttt{display} der Klasse \mbox{\texttt{mod\underline{{ }}hyperaudio\underline{{ }}renderer}}, die von der Klasse \mbox{\texttt{plugin\underline{{ }}renderer\underline{{ }}base}} erbt, werden die HTML-Inhalte erzeugt. Dabei handelt es sich in der 1. Iteration um einen Container, der ein \texttt{<audio>}-Element beinhaltet. Als Quelle wird im \texttt{<source>}-Element eine URL (Uniform Resource Locator) angegeben, die zuvor mit Moodle-Standardmitteln erzeugt wurde und auf die in der Datenbank abgelegte Audio-Datei verweist.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -142,13 +143,18 @@ $audiofileurl = moodle_url::make_pluginfile_url(
     $audio_fileinfo['contextid'], $audio_fileinfo['component'],
     $audio_fileinfo['filearea'], $audio_fileinfo['itemid'],
     $audio_fileinfo['filepath'], $audio_fileinfo['filename']);
-$audio_url = $audiofileurl->get_scheme() . '://' . $audiofileurl->get_host() . $audiofileurl->get_path();
+$audio_url = $audiofileurl->get_scheme() . '://' . $audiofileurl->get_host() .
+    $audiofileurl->get_path();
 if ($audiofileurl->get_port()){
     $audio_url .= ':' . $audiofileurl->get_port();
 }
-
-$output = '<div id="hyperaudio" data-hyperaudio_id="'.$hyperaudio->id.'">';
-$output .= '<audio id="hyperaudio_audio" controls style="width:800px;">' .
+$output = '<div id="hyperaudio" 
+    data-hyperaudio_id="'.$hyperaudio->id.'"
+    data-context_id="'.$context->id.'"
+    data-hyperaudio_titel="'.$hyperaudio->name.'"
+    data-hyperaudio_author="'.$hyperaudio->author.'"
+    data-hyperaudio_description="'.$hyperaudio->intro.'">';
+$output .= '<audio id="hyperaudio_audio" controls>' .
     '<source src="' . $audio_url . '"/>' .
     '</audio>';
 $output .= '</div>';
@@ -160,51 +166,55 @@ Auf die beschriebene Art und Weise lässt sich ein Hyperaudio-Dokument, das vorl
 
 
 \subsection{Speichern und Anzeige von Zusatzinhalten}
-Bei der zweiten Iteration wird das Plugin um die Möglichkeit zum Speichern und zeitabhängigen Anzeigen der Zusatzinhalte erweitert. Für das Speichern wird analog zu Abschnitt \ref{sec:it1} vorgegangen. Es wird ein Filemanager (\textbf{mod\underline{{ }}form}) ergänzt, welcher das Hochladen von beliebig vielen Bilddateien erlaubt. Zusätzlich wird die \textbf{locallib.php} um die Funktionen \mbox{\texttt{hyperaudio_update_additional_content}} und \mbox{\texttt{hyperaudio_delete_additional_content}} erweitert. Die Löschfunktion dient dazu zu verhindern, dass beispielsweise beim Ergänzen von Zusatzinhalten, die bereits vorhanden Zusatzinhalte erneut abgespeichert werden. Dementsprechend wird diese Funktion, wie in Auflistung \ref{lst:it2:locallib} zu sehen, innerhalb der Funktion \mbox{\texttt{hyperaudio_update_additional_content}} aufgerufen. Die Zeilen 19 bis 24 dienen dazu die Metadaten des Zusatzinhaltes festzuhalten, in dieser Iteration werden diese noch manuelle mit Beispieldaten befüllt. Die Funktion \mbox{\texttt{hyperaudio_update_additional_content}} wird dann entsprechend bei den Funktionen \texttt{add\underline{{ }}instance} und \texttt{update\underline{{ }}instance} innerhalb der \textbf{lib.php} ergänzt.
+Bei der zweiten Iteration wird das Plugin um die Möglichkeit zum Speichern und zeitabhängigen Anzeigen der Zusatzinhalte erweitert. Für das Speichern wird analog zu Abschnitt \ref{sec:it1} vorgegangen. Es wird ein \textit{filemanager} (\textbf{mod\underline{{ }}form.php}) ergänzt, welcher das Hochladen von beliebig vielen Bilddateien erlaubt. Zusätzlich wird die \textbf{locallib.php} um die Funktionen \mbox{\texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content}} und \mbox{\texttt{hyperaudio\underline{{ }}delete\underline{{ }}additional\underline{{ }}content}} erweitert. Die Löschfunktion dient dazu zu verhindern, dass beispielsweise beim Ergänzen von Zusatzinhalten die bereits vorhanden Zusatzinhalte erneut abgespeichert werden. Dementsprechend wird diese Funktion, wie in Auflistung \ref{lst:it2:locallib} zu sehen, zu Beginn der Funktion \mbox{\texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content}} aufgerufen. Die Zeilen 22 bis 27 dienen dazu, die Metadaten des Zusatzinhaltes festzuhalten. In dieser Iteration werden diese noch mit fixen Beispieldaten befüllt. Die Funktion \mbox{\texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content}} wird nun von den Funktionen \texttt{add\underline{{ }}instance} und \texttt{update\underline{{ }}instance} aufgerufen.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{locallib.php} in der 2. Iteration},
              label={lst:it2:locallib}]
-function hyperaudio_update_additional_content($hyperaudioid, $context, $draftitemid, $configfile) {
-	global $DB;
+function hyperaudio_update_additional_content
+    ($hyperaudioid, $context, $draftitemid, $configfile) {
+    global $DB;
     
-	hyperaudio_delete_additional_content($hyperaudioid, $context);
+    hyperaudio_delete_additional_content($hyperaudioid, $context);
     
-	file_save_draft_area_files($draftitemid, $context->id, 'mod_hyperaudio', 'additional_content', $hyperaudioid);
-	$fs = get_file_storage();
+    file_save_draft_area_files($draftitemid, $context->id,
+        'mod_hyperaudio', 'additional_content', $hyperaudioid);
+    $fs = get_file_storage();
     
-	$files = $fs->get_area_files($context->id, 'mod_hyperaudio', 'additional_content', $hyperaudioid, 'itemid, filepath, filename',
-            false);
-	$counter=1;
-	$begin=0;
-	$end=10;
-	foreach ($files as $file) {        
-		$additional_content = new \stdClass();
-		$additional_content->file = $file->get_filename();
-		$additional_content->hyperaudio_id = $hyperaudioid;
+    $files = $fs->get_area_files($context->id, 'mod_hyperaudio',
+        'additional_content', $hyperaudioid, 'itemid, filepath, filename',
+        false);
+    $counter=1;
+    $begin=0;
+    $end=10;
+    foreach ($files as $file) {        
+        $additional_content = new \stdClass();
+        $additional_content->file = $file->get_filename();
+        $additional_content->hyperaudio_id = $hyperaudioid;
         
-		$additional_content->name = 'Name: '.$counter;
-		$additional_content->course_unit = 'Kurseinheit: '.$counter;
-		$additional_content->page = 'Seite: '.$counter;
-		$additional_content->description = 'Beschreibung: '$counter;
-		$additional_content->begin = $begin;
-		$additional_content->end = $end;
+        $additional_content->name = 'Name '.$counter;
+        $additional_content->course_unit = 'Kurseinheit '.$counter;
+        $additional_content->page = 'Seite '.$counter;
+        $additional_content->description = 'Beschreibung '$counter;
+        $additional_content->begin = $begin;
+        $additional_content->end = $end;
         
-		$now = time();
-		$additional_content->timecreated = $now;
-		$additional_content->timemodified = $now;
+        $now = time();
+        $additional_content->timecreated = $now;
+        $additional_content->timemodified = $now;
         
-		$additional_content_id = $DB->insert_record('additional_content', $additional_content);
+        $additional_content_id = $DB->insert_record('additional_content',
+            $additional_content);
 		
-		$counter++;
-		$begin+=15;
-		$end+=15;
+        $counter++;
+        $begin+=15;
+        $end+=15;
     }
 }
 \end{lstlisting}
 
-Nachdem nun die Zusatzinhalte samt der Metadaten gespeichert sind, kann sich der zeitabhänigen Darstellung dieser beim Abspielen der Audio-Datei zugewendet werden. An dieser Stelle findet nun das JavaScript-Framework \textit{Popcorn.js} seine Anwendung, da dies wie bereits in Abschnitt \ref{sec:Technik} beschrieben, das zeitabhängige Annotieren von Inhalten ermöglicht. Um \textit{Popcorn.js} und dessen \textit{Images}-Plugin nutzen zu können, werden beide JavaScript Dateien in dem Ordner \textbf{/hyperaudio/thirdparty} abgelegt. Anschließend werden diese in die \textbf{view.php} eingebunden (siehe Auflistung \ref{lst:it2:view}).
+Um die gespeicherten Zusatzinhalte zeitabhängig anzeigen zu können, kommt nun das JavaScript-Framework \textit{Popcorn.js} zum Einsatz. Dazu werden die JavaScript-Dateien von \textit{Popcorn.js} und dessen \textit{Images}-Plugin im Ordner \textbf{/hyperaudio/thirdparty} abgelegt und in die \textbf{view.php} eingebunden (siehe Auflistung \ref{lst:it2:view}).
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -214,47 +224,63 @@ $PAGE->requires->js('/mod/hyperaudio/thirdparty/popcorn.js', true);
 $PAGE->requires->js('/mod/hyperaudio/thirdparty/popcorn.image.js', true);
 \end{lstlisting}
 
-Der eigentliche Einsatz von \textit{Popcorn.js} findet im Renderer statt. Hierfür wird der Code aus der ersten Iteration um ein neues \texttt{div} erweitert, in welchem die Zusatzinhalte angezeigt werden sollen. Darauf werden zunächst alle zugehörigen Zusatzinhalte geladen und ein Link zu diesem generiert (Zielen 9 bis 32 in Abbildung \ref{lst:it2:renderer}). Beim Aufruf des \textit{Popcorn.js} \textit{Images}-Plugins werden in Zeile 35 die Metadaten über Beginn und Ende der Anzeige sowie der generierte Link verwendet, um den Zusatzinhalt zum gewünschten Zeitpunkt im dafür erstellten \texttt{div} darzustellen.
+Im Renderer wird ein weiteres \texttt{<div>}-Element ergänzt, in welchem die Zusatzinhalte angezeigt werden sollen. Diese werden aus der Datenbank geladen und in einer Schleife abgearbeitet. Dabei wird zunächst eine URL zur Bilddatei generiert. Über \texttt{popcorn.image} sorgt das \textit{Popcorn.js} \textit{Images}-Plugin dafür, dass diese URL zu den definierten Zeitpunkten abgerufen und das entsprechende Bild angezeigt wird (vgl. Zeilen 46-51).
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{renderer.php} in der 2. Iteration},
              label={lst:it2:renderer}]
 $output = '<div id="hyperaudio" data-hyperaudio_id="'.$hyperaudio->id.'">';
-$output .= '<div id="hyperaudio_additional_content" style="height:600px; width:800px;"></div>';
-$output .= '<audio id="hyperaudio_audio" controls style="width:800px;">' . '<source src="' . $audio_url . '"/>' . '</audio>';
+$output .= '<div id="hyperaudio_additional_content"></div>';
+$output .= '<audio id="hyperaudio_audio" controls>' .
+    '<source src="' . $audio_url . '"/>' . '</audio>';
 
-$output .= '<script type="text/javascript">' . 'document.addEventListener("DOMContentLoaded", function() {' .
-		'var popcorn = Popcorn("#hyperaudio_audio");';
+$output .= '<script type="text/javascript">' .
+    'document.addEventListener("DOMContentLoaded", function() {' .
+        'var popcorn = Popcorn("#hyperaudio_audio");';
 
 $files = hyperaudio_get_additional_content($hyperaudio->id, $context);
 foreach ($files as $file) {
-	$additional_content = $DB->get_record('additional_content', array(
-		'hyperaudio_id' => $hyperaudio->id,
-		'file' => $file->get_filename()
-	), '*', IGNORE_MISSING);
+    $additional_content = $DB->get_record('additional_content',
+        array(
+            'hyperaudio_id' => $hyperaudio->id,
+            'file' => $file->get_filename()
+	    ),
+        '*', IGNORE_MISSING);
 	
-	if ($additional_content == false){
-		continue;
+    if ($additional_content == false){
+        continue;
 	}
 	
-	$additional_content_fileinfo = array(
-		'component' => 'mod_hyperaudio',
-		'filearea' => 'additional_content',
-		'itemid' => $hyperaudio->id,
-		'contextid' => $context->id,
-		'filepath' => '/',
-		'filename' => $additional_content->file
-	);
+    $additional_content_fileinfo = array(
+        'component' => 'mod_hyperaudio',
+        'filearea' => 'additional_content',
+        'itemid' => $hyperaudio->id,
+        'contextid' => $context->id,
+        'filepath' => '/',
+        'filename' => $additional_content->file
+    );
 	
-	$additional_content_fileurl = moodle_url::make_pluginfile_url($additional_content_fileinfo['contextid'], $additional_content_fileinfo['component'], $additional_content_fileinfo['filearea'],
-		$additional_content_fileinfo['itemid'], $additional_content_fileinfo['filepath'], $additional_content_fileinfo['filename']);
-	$additional_content_url = $additional_content_fileurl->get_scheme() . '://' . $additional_content_fileurl->get_host() . $additional_content_fileurl->get_path();
-	if ($additional_content_fileurl->get_port()){
-		$additional_content_url .= ':' . $additional_content_fileurl->get_port();
-	}
+    $additional_content_fileurl = moodle_url::make_pluginfile_url(
+        $additional_content_fileinfo['contextid'],
+        $additional_content_fileinfo['component'],
+        $additional_content_fileinfo['filearea'],
+		$additional_content_fileinfo['itemid'],
+		$additional_content_fileinfo['filepath'],
+		$additional_content_fileinfo['filename']);
+    $additional_content_url = $additional_content_fileurl->get_scheme() . '://' .
+        $additional_content_fileurl->get_host() . 
+        $additional_content_fileurl->get_path();
+    if ($additional_content_fileurl->get_port()){
+        $additional_content_url .= ':' . $additional_content_fileurl->get_port();
+    }
 	
-	$output .= 'popcorn.image({start: '.$additional_content->begin.', end: '.$additional_content->end.', href: "javascript:void(0);", src: "'.$additional_content_url.'", target: "hyperaudio_additional_content"});';
+    $output .= 'popcorn.image({
+        start: '.$additional_content->begin.',
+        end: '.$additional_content->end.',
+        href: "javascript:void(0);",
+        src: "'.$additional_content_url.'",
+        target: "hyperaudio_additional_content"});';
 }
 
 $output .= '}, false);</script>';
@@ -263,35 +289,31 @@ $output .= '</div>';
 echo $output;
 \end{lstlisting}
 
-Mit diesen Erweiterungen wurde das Ziel dieser Iteration erreicht. Es ist nun möglich Zusatzinhalte abzuspeichern und diese unter Verwendung von \textit{Popcorn.js} zeitabhängig zur Audi-Datei darstellen zu lassen
+Mit diesen Erweiterungen wurde das Ziel der zweiten Iteration erreicht. Es ist nun möglich, Zusatzinhalte abzuspeichern und diese unter Verwendung von \textit{Popcorn.js} zeitabhängig zur Audio-Datei darstellen zu lassen.
 
 \subsection{Einbindung der Konfigurationsdatei}
-Während zum aktuellen Stand die Metadaten der Zusatzinhalte noch manuell im Code gepflegt werden, sollen dies mittels dieser Iteration aus einer Konfigurationsdatei ausgelesen werden. Am Anfang dieser Iteration steht erneut die Erweiterung der \textbf{mod\underline{{ }}form} um einen weiteren Filemanger. Die Speicherung verläuft analog zu der der Zusatzinhalte, mit der Einschränkung, dass nur eine Konfigurationsdatei im JSON-Format gespeichert werden kann. In diesem Zuge wird also erneut die \textbf{lib.php} entsprechend erweitert. Innerhalb der \textbf{lib.php} werden die Funktionen \texttt{hyperaudio\underline{{ }}update\underline{{ }}hyperaudio\underline{{ }}config} und \texttt{hyperaudio\underline{{ }}delete\underline{{ }}hyperaudio\underline{{ }}config} ergänzt. Des Weiteren wird, wie in Auflistung \ref{lst:it3:locallib} zu erkennen, die Funktion \texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content} erweitert. Es ist ersichtlich, dass zunächst in Zeile 4 die Inhalte der Konfigurationsdatei ausgelesen werden, um diese Metadaten dann beim Abspeichern der Zusatzinhalte zu verwenden.
+Damit die Beispieldaten durch tatsächliche Metadateninformationen ausgetauscht werden können, ist in der dritten Iteration die Einbindung der Konfigurationsdatei notwendig. Zu Beginn dieser Iteration steht erneut die Erweiterung der \textbf{mod\underline{{ }}form.php} um einen weiteren \textit{filemanager}, der maximal eine Konfigurationsdatei im JSON-Format entgegennimmt. Neben den nötigen Anpassungen in der \textbf{lib.php} wird auch die Funktion \texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content} erweitert (siehe Auflistung \ref{lst:it3:locallib}).
 
-\todo[inline]{warum ist hier die delete Funktion notwendig?}
+
+
+Die Speicherung verläuft analog zu der der Zusatzinhalte, mit der Einschränkung, dass nur eine Konfigurationsdatei im JSON-Format gespeichert werden kann. In diesem Zuge wird also erneut die \textbf{lib.php} entsprechend erweitert. Innerhalb der \textbf{lib.php} werden die Funktionen \texttt{hyperaudio\underline{{ }}update\underline{{ }}hyperaudio\underline{{ }}config} und \texttt{hyperaudio\underline{{ }}delete\underline{{ }}hyperaudio\underline{{ }}config} ergänzt. Des Weiteren wird, wie in Auflistung \ref{lst:it3:locallib} zu erkennen, die Funktion \texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content} erweitert. Es ist ersichtlich, dass zunächst die Inhalte der Konfigurationsdatei mithilfe der Funktion \texttt{parse\underline{{ }}hyperaudio\underline{{ }}config} ausgelesen werden, um diese Metadaten dann beim Abspeichern der Zusatzinhalte zu verwenden.
+
+\todo[inline]{parse\underline{{ }}hyperaudio\underline{{ }}config}
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{locallib.php} in der 3. Iteration},
              label={lst:it3:locallib}]
-function hyperaudio_update_additional_content($hyperaudioid, $context, $draftitemid, $configfile) {
-    global $DB;
+    $additional_contents_data = 
+        parse_hyperaudio_config($hyperaudioid, $context, $configfile);
     
-    $additional_contents_data = parse_hyperaudio_config($hyperaudioid, $context, $configfile);
-    
-    hyperaudio_delete_additional_content($hyperaudioid, $context);
-    
-    file_save_draft_area_files($draftitemid, $context->id, 'mod_hyperaudio', 'additional_content', $hyperaudioid);
-    $fs = get_file_storage();
-    
-    $files = $fs->get_area_files($context->id, 'mod_hyperaudio', 'additional_content', $hyperaudioid, 'itemid, filepath, filename',
-            false);
+    //...
+	
     foreach ($files as $file) {        
-        $additional_content = new \stdClass();
-        $additional_content->file = $file->get_filename();
-        $additional_content->hyperaudio_id = $hyperaudioid;
+        //...
         
-        $additional_content_data = $additional_contents_data[$additional_content->file];
+        $additional_content_data =
+            $additional_contents_data[$additional_content->file];
         
         $additional_content->name = $additional_content_data->name;
         $additional_content->course_unit = $additional_content_data->course_unit;
@@ -300,206 +322,208 @@ function hyperaudio_update_additional_content($hyperaudioid, $context, $draftite
         $additional_content->begin = $additional_content_data->begin;
         $additional_content->end = $additional_content_data->end;
         
-        $now = time();
-        $additional_content->timecreated = $now;
-        $additional_content->timemodified = $now;
-        
-        $additional_content_id = $DB->insert_record('additional_content', $additional_content);
-    }
+        //...
+    }    
+}
+
+//...
+
+function parse_hyperaudio_config($hyperaudio_id, $context, $configfile) {
+    
+    $fs = get_file_storage();
+    $file = $fs->get_file(
+        $context->id, 'mod_hyperaudio', 'hyperaudio_config',
+        $hyperaudio_id, '/', $configfile);
+    $jsontext = $file->get_content();
+    $json = json_decode ($jsontext);
+    
+    $additional_contents = $json->additional_contents->additional_content;
+    $additional_contents_by_filename =
+        array_column($additional_contents, NULL, 'filename');
+    
+    return $additional_contents_by_filename;
 }
 \end{lstlisting}
 
-Nachdem nun also die Zusatzinhalte mit den korrekten Metadaten versorgt sind, können diese im Renderer für die gesteuerte Darstellung mittels \textit{Popcorn.js} verwendet werden. Somit werden dank dieser Iteration die Zusatzinhalte nun zu den Zeitpunkten dargestellt, welche in der Konfigurationsdatei festgelegt sind.
+
+
+Als Ergebnis dieser Iteration können nun Zusatzinhalte zu den Zeitpunkten dargestellt werden, welche in der Konfigurationsdatei definiert sind.
 
 \subsection{Speichern und Anzeige von Kommentaren}
-Nachdem in den vorherigen Iterationen die Pflege und das Abspielen von Hyperaduio-Dokumenten im Fokus lag, konzentriert sich diese Iteration auf die Kommentarfunktion. Zu diesem Zweck wird im ersten Schritt der Renderer um entsprechende Elemente ergänzt, welche in Auflistung \ref{lst:it4:renderer} zu sehen sind. Bei den Elementen handelt es sich zum einen um ein Input-Feld mit dazugehörigen Submit-Button. Diese Elemente dienen dem Erstellen von Kommentaren. Das Element \texttt{<div id="hyperaudio_comments"></div>} soll der Anzeige der Kommentare dienen.
-\todo[inline]{Problem mit "> lösen}
+\label{sub:SpeichernKommentare}
+Nachdem in den vorherigen Iterationen die Pflege und das Abspielen von Hyperaudio-Dokumenten im Fokus lag, konzentriert sich diese Iteration auf die Kommentarfunktion. Zu diesem Zweck wird im ersten Schritt der Renderer um entsprechende Elemente ergänzt, welche in Auflistung \ref{lst:it4:renderer} zu sehen sind. Dabei handelt es sich zum einen um ein Input-Feld mit dazugehörigem Submit-Button. Diese Elemente dienen dem Erstellen von Kommentaren. Das \texttt{<div>}-Element mit der ID \mbox{\textit{hyperaudio\underline{{ }}comments}} soll der Anzeige der Kommentare dienen.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{renderer.php} in der 4. Iteration},
              label={lst:it4:renderer}]
 $output .=
-	'<div>
-		<label>'.get_string('mod_hyperaudio_renderer_comment', 'hyperaudio').':
-			<input type="text" id="hyperaudio_comment" name="comment" autocomplete="off"/>
-			<button type="button" class="comment_submit" data-comment_type="'.CommentType::Comment.'">'.get_string('mod_hyperaudio_renderer_submit_comment', 'hyperaudio').'</button>
-		</label>
-	</div>';
+    '<div id="comment_creation_container" class="textarea_container">
+        <textarea id="hyperaudio_comment" name="hyperaudio_comment"
+            class="hyperaudio_textarea" autocomplete="off"
+            placeholder="
+                '.get_string('mod_hyperaudio_renderer_comment', 'hyperaudio')
+            .'...'.'">
+        </textarea>
+        <button type="button" class="comment_submit"
+            data-comment_type="'.CommentType::Comment.'">
+            '.get_string('mod_hyperaudio_renderer_submit_comment', 'hyperaudio').'
+        </button>
+    </div>';
 $output .= '<div id="hyperaudio_comments"></div>';
 \end{lstlisting}
 
-Das Speichern als auch das Anzeigen der Kommentare wird unter dem Einsatzes von Webservices, welche durch ein JavaScrip-Modul (\textbf{/hyperaudio/AMD/src/comnments.js}) angesprochen werden, umgesetzt. Hierfür werden zusätzlich die \textbf{services.php} (\textbf{/hyperaudio/db}) und \textbf{external.php} (\textbf{/hyperaudio/classes}) für die Bereitstellung der Webservices benötigt.
+Das Speichern als auch das Anzeigen der Kommentare wird unter dem Einsatz von Webservices, welche durch ein JavaScript-Modul (\textbf{/hyperaudio/AMD/src/hyperaudio.js}) angesprochen werden, realisiert. Hierfür werden zusätzlich die \textbf{services.php} (\textbf{/hyperaudio/db}) und \textbf{external.php} (\textbf{/hyperaudio/classes}) für die Bereitstellung der Webservices benötigt.
 
-In der \textbf{services.php} werden zunächst die benötigten Webservices beschrieben (siehe Auflistung \ref{lst:it5:services}). Wie zu erkennen ist, wird hier lediglich auf die \textbf{external.php} verwiesen, in welcher der eigentliche Code des Webservices erstellt werden muss.
+In der \textbf{services.php} werden zunächst die nötigen Webservices deklariert (siehe Auflistung \ref{lst:it4:services}). Hier wird lediglich auf die \textbf{external.php} verwiesen, in welcher der eigentliche Code der Webservices zu finden ist.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={\textbf{services.php} in der 5. Iteration},
-             label={lst:it5:services}]
+             caption={\textbf{services.php} in der 4. Iteration},
+             label={lst:it4:services}]
 $functions = array(
-	'mod_hyperaudio_save_comment' => array(
-		'classname'   => 'mod_hyperaudio_external',
-		'methodname'  => 'save_comment',
-		'classpath'   => 'mod/hyperaudio/classes/external.php',
-		'description' => 'Save comment',
-		'type'        => 'write'
-	),
-	'mod_hyperaudio_load_comments' => array(
-		'classname'   => 'mod_hyperaudio_external',
-		'methodname'  => 'load_comments',
-		'classpath'   => 'mod/hyperaudio/classes/external.php',
-		'description' => 'Load comments',
-		'type'        => 'read'
-	)
+    'mod_hyperaudio_save_comment' => array(
+        'classname'   => 'mod_hyperaudio_external',
+        'methodname'  => 'save_comment',
+        'classpath'   => 'mod/hyperaudio/classes/external.php',
+        'description' => 'Save comment',
+        'type'        => 'write'
+    ),
+    'mod_hyperaudio_load_comments' => array(
+        'classname'   => 'mod_hyperaudio_external',
+        'methodname'  => 'load_comments',
+        'classpath'   => 'mod/hyperaudio/classes/external.php',
+        'description' => 'Load comments',
+        'type'        => 'read'
+    )
 );
 \end{lstlisting}
 
-In der \textbf{external.php} werden in der \texttt{mod_hyperaudio_external extends}, welche von der Klasse \texttt{external_api} erbt (vgl. Auflistung \ref{lst:it5:external}), die nötigen Funktionen definiert. Beim Speichern von Kommentaren sind dies die Funktionen \texttt{save_comment_parameters}, \texttt{save_comment_is_allowed_from_ajax}, \texttt{save_comment} und \texttt{save_comment_returns}. In der ersten Funktion werden die Parameter, welche benötigt werden definiert. In der zweiten Funktion wird festgelegt, ob die Funktion durch \textit{AJAX} ( Asynchronous JavaScript and XML) aufgerufen werden darf, dies ist für das geplante Vorgehen innerhalb des Hyperaudio-Plugins nötigt. In der Funktion \texttt{save_comment} wird die eigentliche Funktionalität des Webservices programmiert. In diesem Fall also das Speichern des Kommentars in der Datenbank. In der vierten Funktion werden die Rückgabeparamter des Webservices beschrieben. Im Fall der Funktion \texttt{load_comments_returns} also die Kommentare, welche angezeigt werden sollen.
+In der \textbf{external.php} werden in der Funktion \texttt{mod\underline{{ }}hyperaudio\underline{{ }}external}, welche von der Klasse \texttt{external\underline{{ }}api} erbt, die Webservice-Funktionen definiert. Dabei sind für einen Webservice jeweils 4 Funktionen von Nöten:
+
+\begin{itemize}
+\item \texttt{<webservice\underline{{ }}name>\underline{{ }}parameters}: definiert die Eingabe-Parameter des Webservices
+\item \texttt{<webservice\underline{{ }}name>\underline{{ }}is\underline{{ }}allowed\underline{{ }}from\underline{{ }}ajax}: definiert, ob der Webservice über AJAX (Asynchronous JavaScript and XML) aufgerufen werden kann
+\item \texttt{<webservice\underline{{ }}name>}: Hauptfunktion, welche die Eingabe-Parameter verarbeitet und ein Ergebnis zurückliefert
+\item \texttt{<webservice\underline{{ }}name>\underline{{ }}returns}: definiert die Struktur der Rückgabewerte des Webservices
+\end{itemize}
+
+Auflistung \ref{lst:it4:external} zeigt exemplarisch die Umsetzung des Webservices \texttt{load\underline{{ }}comments}. Anhand der übergebenen \texttt{\$hyperaudio\underline{{ }}id} werden die Kommentare mittels SQL (Structured Query Language) aus der Datenbank gelesen und in einer aufbereiteten Struktur zurückgegeben.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={\textbf{external.php} in der 5. Iteration},
-             label={lst:it5:external}]
+             caption={Ausschnitt der \textbf{external.php} in der 4. Iteration},
+             label={lst:it4:external}]
 class mod_hyperaudio_external extends external_api {
     
-	public static function load_comments_parameters() {
-		return new external_function_parameters(
-			array(
-				'hyperaudio_id' => new external_value(PARAM_INT, 'hyperaudio_id')
-			)
-		);
-	}
-    
-	public static function load_comments_is_allowed_from_ajax() {
-		return true;
-	}
-    
-	public static function load_comments($hyperaudio_id) {
-		global $CFG, $DB, $USER;
-        
-		require_once ($CFG->dirroot . '/mod/hyperaudio/locallib.php');
-		require_once ($CFG->dirroot . '/mod/hyperaudio/classes/enums.php');
-        
-		$comments = $DB->get_records_sql(
-			'SELECT comments.id, comments.comment_type, comments.commenttext, comments.timeannotated, comments.timecreated, user.username, comments.comment_id'.
-			' FROM mdl_hyperaudio_comments comments'.
-			' INNER JOIN mdl_user user ON comments.userid = user.id'.
-			' LEFT JOIN mdl_hyperaudio_comments original_comment ON original_comment.id = comments.comment_id'.
-			' WHERE comments.hyperaudio_id = ?'.
-			' AND (comments.comment_type = ? OR (comments.comment_type =? AND comments.userid = ?))'.
-			' ORDER BY IFNULL(original_comment.timecreated, comments.timecreated)*POWER(10, 11) + comments.timecreated',
-			array($hyperaudio_id, CommentType::Comment, CommentType::Note, $USER->id)
-			);
-        
-		$result_comments = array();
-		foreach ($comments as $comment) {
-			$result_comment = array(
-				'id' => $comment->id,
-				'username' => $comment->username,
-				'date' => date('d.m.Y H:i', $comment->timecreated),
-				'time' => format_time_annotated($comment->timeannotated),
-				'text' => $comment->commenttext,
-				'comment_type_display' => CommentType::get_comment_type($comment->comment_type),
-				'comment_type' => $comment->comment_type,
-				'comment_id' => $comment->comment_id
-			);
-			$result_comments[] = $result_comment;
-		}
-        
-		return $result_comments;
+    public static function load_comments_parameters() {
+        return new external_function_parameters(
+            array(
+            'hyperaudio_id' => new external_value(PARAM_INT, 'hyperaudio_id')
+            )
+        );
     }
     
-	public static function load_comments_returns() {
-		return new external_multiple_structure(
-			new external_single_structure(
-				array(
-					'id' => new external_value(PARAM_INT, 'id'),
-					'username' => new external_value(PARAM_TEXT, 'username'),
-					'date' => new external_value(PARAM_TEXT, 'date'),
-					'time' => new external_value(PARAM_TEXT, 'time'),
-					'text' => new external_value(PARAM_TEXT, 'text'),
-					'comment_type_display' => new external_value(PARAM_TEXT, 'comment_type_display'),
-					'comment_type' => new external_value(PARAM_TEXT, 'comment_type'),
-					'comment_id' => new external_value(PARAM_INT, 'comment_id')
-				)
-			)
-		);
-	}
-
-	public static function save_comment_parameters() {
-		return new external_function_parameters(
-			array(
-				'comment' => new external_value(PARAM_TEXT, 'comment'),
-				'hyperaudio_id' => new external_value(PARAM_INT, 'hyperaudio_id'),    
-				'timeannotated' => new external_value(PARAM_INT, 'timeannotated'),
-				'comment_type' => new external_value(PARAM_TEXT, 'comment_type')                                               
-			)
-		);
-	}
-
-	public static function save_comment_is_allowed_from_ajax() {
-		return true;
-	}
-
-	public static function save_comment($comment, $hyperaudio_id, $timeannotated, $comment_type) {
-		global $CFG, $DB, $USER;
-        
-		require_once ($CFG->dirroot . '/mod/hyperaudio/classes/enums.php');
-                    
-		$hyperaudio_comment = new \stdClass();
-		$hyperaudio_comment->hyperaudio_id = $hyperaudio_id;
-		$hyperaudio_comment->userid = $USER->id;
-		$hyperaudio_comment->timeannotated = $timeannotated;
-		$hyperaudio_comment->comment_type = $comment_type;
-        
-		if ($comment_type == CommentType::Comment || $comment_type == CommentType::Note){
-			$hyperaudio_comment->commenttext = $comment;
-		}
-        
-		$now = time();
-		$hyperaudio_comment->timecreated = $now;
-		$hyperaudio_comment->timemodified = $now;
-        
-		$DB->insert_record('hyperaudio_comments', $hyperaudio_comment);
-        
-		return 0;
+    public static function load_comments_is_allowed_from_ajax() {
+        return true;
     }
     
-	public static function save_comment_returns() {
-		return new external_value(PARAM_INT, '0 = ok, 1 = error');
-	}
+    public static function load_comments($hyperaudio_id) {
+        global $CFG, $DB;
+        
+        require_once ($CFG->dirroot . '/mod/hyperaudio/locallib.php');
+        require_once ($CFG->dirroot . '/mod/hyperaudio/classes/enums.php');
+        
+        $comments = $DB->get_records_sql(
+            'SELECT comments.id, comments.comment_type,
+            comments.commenttext, comments.timeannotated,
+            comments.timecreated, user.username'.
+            ' FROM mdl_hyperaudio_comments comments'.
+            ' INNER JOIN mdl_user user ON comments.userid = user.id'.
+            ' WHERE comments.hyperaudio_id = ?'.
+            ' AND (comments.comment_type = ? )'.
+            ' ORDER BY comments.timecreated',
+            array($hyperaudio_id, CommentType::Comment)
+        );
+        
+        $result_comments = array();
+        foreach ($comments as $comment) {
+            $result_comment = array(
+                'id' => $comment->id,
+                'username' => $comment->username,
+                'date' => date('d.m.Y H:i', $comment->timecreated),
+                'time' => format_time_annotated($comment->timeannotated),
+                'text' => $comment->commenttext,
+                'comment_type' => $comment->comment_type
+            );
+            $result_comments[] = $result_comment;
+        }
+        
+        return $result_comments;
+    }
+    
+    public static function load_comments_returns() {
+        return new external_multiple_structure(
+            new external_single_structure(
+                array(
+                    'id' => new external_value(PARAM_INT, 'id'),
+                    'username' => new external_value(PARAM_TEXT, 'username'),
+                    'date' => new external_value(PARAM_TEXT, 'date'),
+                    'time' => new external_value(PARAM_TEXT, 'time'),
+                    'text' => new external_value(PARAM_TEXT, 'text'),
+                    'comment_type' => new external_value(PARAM_TEXT, 'comment_type')
+                )
+            )
+        );
+    }
 }             
 \end{lstlisting}
-\todo[inline]{Listing anpassen, speziell SQL-Statement auf die nur Kommentare-Variante kürzen}
 
-Auf die mittels \textbf{services.php} und \textbf{external.php} bereitgestellten Webservice wird letztlich in der \textbf{comments.js} zugegriffen, um die im Renderer definierten Elemente zu befüllen, beziehungsweise deren Inhalte auszulesen. Die Funktion zum Speichern eines Kommentars ist exemplarisch in Auflistung \ref{lst:it5:comments} dargestellt. Zunächst werden die im Renderer erstellten Elemente zum Erstellen eines Kommentars ausgelesen, dann wird mittels eines AJAX-Calls der Webservice \texttt{mod_hyperaudio_save_comment} aufgerufen und die benötigten Parameter übergeben. Hierbei ist hervorzuheben, dass der Zeitpunkt zu dem der Kommentar an das Hyperaudio-Dokument annotiert wird über die Funktion \texttt{currentTime} des \textit{Popcorn.js}-Frameworks ermittelt wird. Bei der Funktion zum Darstellen der Kommentare wird analog vorgegangen, nur dass mittels des Webservices die Kommentare für das betroffene Hyperaudio-Dokumente aufgerufen werden und dann innerhalb des entsprechenden Elements des Renderers dargestellt werden.
+Auf die mittels \textbf{services.php} und \textbf{external.php} bereitgestellten Webservice wird letztlich in der \textbf{hyperaudio.js} zugegriffen, um die im Renderer definierten Elemente zu befüllen, beziehungsweise deren Inhalte auszulesen. Die Funktion zum Speichern eines Kommentars ist exemplarisch in Auflistung \ref{lst:it4:hyperaudio} dargestellt. Zunächst werden die im Renderer erstellten Elemente zum Erstellen eines Kommentars ausgelesen, hierbei wird auch die Funktion \texttt{get\underline{{ }}hyperaudio\underline{{ }}id} aufgerufen. Da diese Funktion mehrfach benötigt wurde, wurde diese in die Datei \textbf{locallib.js} ausgegliedert (siehe Auflistung \ref{lst:it4:locallib.js}).Diese Datei befindet sich im Ordner \textbf{/hyperaudio/thirdparty} und soll der Auslagerung mehrfach benötigter Funktionen dienen. Nachdem die Elemente ausgelesen wurden, wird mittels eines AJAX-Calls der Webservice \texttt{mod\underline{{ }}hyperaudio\underline{{ }}save\underline{{ }}comment} aufgerufen und die benötigten Parameter übergeben. Hierbei ist hervorzuheben, dass der Zeitpunkt zu dem der Kommentar an das Hyperaudio-Dokument annotiert wird über die Funktion \texttt{currentTime} des \textit{Popcorn.js}-Frameworks ermittelt wird. Bei der Funktion zum Darstellen der Kommentare wird analog vorgegangen, nur dass mittels des Webservices die Kommentare für das betroffene Hyperaudio-Dokumente aufgerufen werden und dann innerhalb des entsprechenden Elements des Renderers dargestellt werden.
+\todo[inline]{kontrollieren}
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{comments.js} in der 5. Iteration},
-             label={lst:it5:comments}]
+             caption={Ausschnitt der \textbf{hyperaudio.js} in der 4. Iteration},
+             label={lst:it4:hyperaudio}]
 function save_comment(comment_type){
-	var comment = $("#hyperaudio_comment").val();
-	var hyperaudio_id = get_hyperaudio_id();
-	var popcorn = Popcorn("#hyperaudio_audio");
-	var timeannotated = popcorn.currentTime();
-	timeannotated = parseInt(timeannotated);
+    var comment = $("#hyperaudio_comment").val();
+    var hyperaudio_id = get_hyperaudio_id();
+    var popcorn = Popcorn("#hyperaudio_audio");
+    var timeannotated = popcorn.currentTime();
+    timeannotated = parseInt(timeannotated);
 	    
-	var promises = ajax.call([{
-		methodname: 'mod_hyperaudio_save_comment',
-		args:{
-			'comment': comment,
-			'hyperaudio_id': hyperaudio_id,       
-			'timeannotated': timeannotated,
-			'comment_type': comment_type
-		}
-	}]);
-	promises[0].done(function(data) {
-		show_comments();
-	});
+    var promises = ajax.call([{
+        methodname: 'mod_hyperaudio_save_comment',
+        args:{
+            'comment': comment,
+            'hyperaudio_id': hyperaudio_id,       
+            'timeannotated': timeannotated,
+            'comment_type': comment_type
+        }
+    }]);
+    promises[0].done(function(data) {
+        show_comments();
+    });
 }
 \end{lstlisting}
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{locallib.js} in der 4. Iteration},
+             label={lst:it4:locallib.js}]
+function get_hyperaudio_id(){
+    return $("#hyperaudio").attr("data-hyperaudio_id");
+}
+function jump_to_time(element){
+    var time = $(element).attr("data-annotated_time");
+    var popcorn = get_popcorn();
+    popcorn.currentTime(time);
+    popcorn.play();
+}
+\end{lstlisting}
+
+In der \textbf{locallib.js} ist darüber hinaus eine mit \texttt{jump\underline{{ }}to\underline{{ }}time} eine Funktion enthalten, mit welcher die Rückkopplung an die Mediensteuerung ermöglicht wird. Zur Nutzung der Funktion muss nur sichergestellt sein, dass das verwendete Element ein Attribut mit der Annotationszeit besitzt.
 \todo[inline]{Sprache des Listings anpassen}
 \todo[inline]{Rückkopplung ergänzen, locallib.js einführen?}
 
@@ -507,71 +531,95 @@ function save_comment(comment_type){
 Mit dem Abschluss dieser Iteration wurde die Möglichkeit geschaffen Kommentar zu erstellen und den Zeitpunkt innerhalb des Hyperaduio-Dokuments festzuhalten, zu dem der Kommentar erstellt wurde. Im gleichen Zuge wurde auch die Darstellung dieser Kommentare ermöglicht.
 
 \subsection{Antworten auf Kommentare}
-Während bereits Kommentare verfasst und angezeigt werden können, fehlt noch die Möglichkeit auf diese zu antworten. Diese Funktionalität wird in dieser Iteration ergänzt. Zu diesem Zweck wird ein neuer Webservices zum Speichern von Antworten erstellt und der Webservice zum Darstellen der Kommentare um die Antworten erweitert. Demzufolge wird in der \textbf{services.php} eine Beschreibung für den neuen Webservice zum Erstellen von Antworten ergänzt und in der \textbf{external.php} werden die vier Funktionen analog zum Webservice zum Speichern Kommentaren ergänzt. Bei der \textbf{comments.js} bedarf es ebenfalls nur kleinere Anpassungen, unter anderem um die Anzeige eines Antworten Buttons und eines Textfeldes bei dessen Betätigung zu ermöglichen. Die hierfür notwendige Erweiterung innerhalb der Funktion \texttt{show_comments} ist in der Auflistung \ref{lst:it6:comments} zu sehen.
+Während bereits Kommentare verfasst und angezeigt werden können, fehlt noch die Möglichkeit auf diese zu antworten. Diese Funktionalität wird in dieser Iteration ergänzt. Zu diesem Zweck wird ein neuer Webservices zum Speichern von Antworten erstellt und der Webservice zum Darstellen der Kommentare um die Antworten erweitert. Demzufolge wird in der \textbf{services.php} eine Beschreibung für den neuen Webservice zum Erstellen von Antworten ergänzt und in der \textbf{external.php} werden die vier Funktionen analog zum Webservice zum Speichern Kommentaren ergänzt. Bei der \textbf{hyperaudio.js} bedarf es ebenfalls nur kleinere Anpassungen, unter anderem um die Anzeige eines Antworten Buttons und eines Textfeldes bei dessen Betätigung zu ermöglichen. Die hierfür notwendige Erweiterung innerhalb der Funktion \texttt{show\underline{{ }}comments} ist in der Auflistung \ref{lst:it5:hyperaudio} zu sehen.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{comments.js} in der 6. Iteration},
-             label={lst:it6:comments}]
+             caption={Ausschnitt der \textbf{hyperaudio.js} in der 5. Iteration},
+             label={lst:it5:hyperaudio}]
 if (this.comment_type === CommentType.Comment && !this.comment_id){
-	output = output + '<div class="comment_answer comment_actions" data-comment_id="'+this.id+'">';
-	output = output + '<a href="javascript:void(0);" class="comment_answer_link comment_link" onclick="show_answer_input(this)" data-comment_id="'+this.id+'">' + string_answer + '</a>';
-	output = output + '<input type="text" class="comment_answer_text comment_hidden_element" data-comment_id="'+this.id+'"/>';
-	output = output + '<button type="button" class="comment_answer_button comment_hidden_element" data-comment_id="'+this.id+'">' + string_answer + '</button>';
-	output = output + '</div>';
+    output = output + '<div
+        class="comment_answer comment_actions"
+        data-comment_id="'+this.id+'">';
+    output = output + '<a href="javascript:void(0);"
+        class="comment_answer_link comment_link"
+        onclick="show_answer_input(this)"
+        data-comment_id="'+this.id+'">' + string_answer + '</a>';
+    output = output + '<input type="text"
+        class="comment_answer_text comment_hidden_element"
+        data-comment_id="'+this.id+'"/>';
+    output = output + '<button type="button"
+        class="comment_answer_button comment_hidden_element"
+        data-comment_id="'+this.id+'">' + string_answer + '</button>';
+    output = output + '</div>';
+}
 \end{lstlisting}
 
-Die Darstellung der Antworten und deren Zuordnung zu den dazugehörigen Kommentaren wird durch die in Auflistung \ref{lst:it6:external} ersichtlichen Anpassung des SQL-Statements \texttt{load_comments}-Funktion innerhalb der \textbf{external.php} erreicht.
+Die Darstellung der Antworten und deren Zuordnung zu den dazugehörigen Kommentaren wird durch die in Auflistung \ref{lst:it5:external} ersichtlichen Anpassung des SQL-Statements \texttt{load\underline{{ }}comments}-Funktion innerhalb der \textbf{external.php} erreicht.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{external.php} in der 6. Iteration},
-             label={lst:it6:external}]
+             caption={Ausschnitt der \textbf{external.php} in der 5. Iteration},
+             label={lst:it5:external}]
 $comments = $DB->get_records_sql(
-	'SELECT comments.id, comments.comment_type, comments.commenttext, comments.timeannotated, comments.timecreated, user.username, comments.comment_id'.
-	' FROM mdl_hyperaudio_comments comments'.
-	' INNER JOIN mdl_user user ON comments.userid = user.id'.
-	' LEFT JOIN mdl_hyperaudio_comments original_comment ON original_comment.id = comments.comment_id'.
-	' WHERE comments.hyperaudio_id = ?'.
-	' AND (comments.comment_type = ? OR (comments.comment_type =? AND comments.userid = ?))'.
-	' ORDER BY IFNULL(original_comment.timecreated, comments.timecreated)*POWER(10, 11) + comments.timecreated',
-	array($hyperaudio_id, CommentType::Comment, CommentType::Note, $USER->id)
+    'SELECT comments.id, comments.comment_type,
+	    comments.commenttext, comments.timeannotated,
+	    comments.timecreated, user.username, comments.comment_id'.
+    ' FROM mdl_hyperaudio_comments comments'.
+    ' INNER JOIN mdl_user user ON comments.userid = user.id'.
+    ' LEFT JOIN mdl_hyperaudio_comments original_comment
+        ON original_comment.id = comments.comment_id'.
+    ' WHERE comments.hyperaudio_id = ?'.
+    ' AND comments.comment_type = ?'.
+    ' ORDER BY IFNULL(original_comment.timecreated, comments.timecreated),
+        comments.timecreated',
+	array($hyperaudio_id, CommentType::Comment)
 );
 \end{lstlisting}
 
 Durch die Erweiterungen und Anpassungen innerhalb dieser Iteration ist es nun möglich auf Kommentare zu antworten und diese Antwort bei dem zugehörigen Kommentar darzustellen.
 
-\todo[inline]{SQL-Statement auf Kommentare und Antworten kürzen}
-\todo[inline]{Abkürzung SQL muss schon früher kommen}
-
 \subsection{Notizen}
+\label{sub:notizen}
 Nachdem durch die vorangegangen Iterationen nun die Funktionen für die Kommunikation zwischen Studierenden und Lehrenden geschaffen wurden, zielt diese Iteration auf das Erstellen und Darstellen von Notizen ab.
 
-Im ersten Schritt wird hierfür in der \textbf{renderer.php} die Erweiterung um einen weiteren dedizierten Button entsprechend der Auflistung \ref{lst:it7:renderer} vorgenommen.
+Im ersten Schritt wird hierfür in der \textbf{renderer.php} die Erweiterung um einen weiteren dedizierten Button entsprechend der Auflistung \ref{lst:it6:renderer} vorgenommen.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{renderer.php} in der 7. Iteration},
-             label={lst:it7:renderer}]
+             caption={Ausschnitt der \textbf{renderer.php} in der 6. Iteration},
+             label={lst:it6:renderer}]
 $output .=
-	'<div>
-		<label>'.get_string('mod_hyperaudio_renderer_comment', 'hyperaudio').':
-			<input type="text" id="hyperaudio_comment" name="comment" autocomplete="off"/>
-			<button type="button" class="comment_submit" data-comment_type="'.CommentType::Comment.'">'.get_string('mod_hyperaudio_renderer_submit_comment', 'hyperaudio').'</button>
-			<button type="button" class="comment_submit" data-comment_type="'.CommentType::Note.'">'.get_string('mod_hyperaudio_renderer_submit_note', 'hyperaudio').'</button>
-		 </label>
-	</div>';
+    '<div id="comment_creation_container" class="textarea_container">
+        <textarea id="hyperaudio_comment" name="hyperaudio_comment"
+            class="hyperaudio_textarea" autocomplete="off"
+            placeholder="
+            '.get_string('mod_hyperaudio_renderer_comment', 'hyperaudio').'
+            ...'.'">
+        </textarea>
+        <button type="button" class="comment_submit"
+            data-comment_type="'.CommentType::Comment.'">
+            '.get_string('mod_hyperaudio_renderer_submit_comment', 'hyperaudio').'
+        </button>
+        <button type="button" class="comment_submit hyperaudio_comment_button"
+            data-comment_type="'.CommentType::Note.'">'.'
+            <span>
+                '.get_string('mod_hyperaudio_renderer_submit_note', 'hyperaudio').'
+            </span>
+            <i class="fa fa-lock"></i>
+        </button>
+    </div>';
 \end{lstlisting}
 
-Nachdem diese Anpassung vorgenommen wurde, können zum Speichern der Notizen die gleichen Webservices und Funktionen, wie zum Speichern der Kommentare verwendet werden. Dies rührt daher, dass Notizen als eine bestimmte Art von Kommentaren angesehen wird (vgl. Abschnitt \ref{sec:komponenten_zusammenhaenge}). Zum Darstellen der Notizen wird, wie bereits in der vorherigen Iteration für die Antworten, das SQL-Statement in der \texttt{load_comments} der \textbf{external.php} angepasst.
+Nachdem diese Anpassung vorgenommen wurde, können zum Speichern der Notizen die gleichen Webservices und Funktionen, wie zum Speichern der Kommentare verwendet werden. Dies rührt daher, dass Notizen als eine bestimmte Art von Kommentaren angesehen wird (vgl. Abschnitt \ref{sec:komponenten_zusammenhaenge}). Zum Darstellen der Notizen wird, wie bereits in der vorherigen Iteration für die Antworten, das SQL-Statement in der \texttt{load\underline{{ }}comments} der \textbf{external.php} angepasst.
 
-Da Notizen im Gegensatz zu Kommentaren geändert und gelöscht werden können sollen, müssen hierfür entsprechende Webservices bereitgestellt werden (siehe Auflistung \ref{lst:it7:services}).
+Da Notizen im Gegensatz zu Kommentaren geändert und gelöscht werden können sollen, müssen hierfür entsprechende Webservices bereitgestellt werden (siehe Auflistung \ref{lst:it6:services}).
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{services.php} in der 7. Iteration},
-             label={lst:it7:services}]
-'mod_hyperaudio_save_note_edit' => array(
+             caption={Ausschnitt der \textbf{services.php} in der 6. Iteration},
+             label={lst:it6:services}]
+    'mod_hyperaudio_save_note_edit' => array(
         'classname'   => 'mod_hyperaudio_external',
         'methodname'  => 'save_note_edit',
         'classpath'   => 'mod/hyperaudio/classes/external.php',
@@ -587,99 +635,397 @@ Da Notizen im Gegensatz zu Kommentaren geändert und gelöscht werden können so
     )
 \end{lstlisting}
 
- Wie bereits am Namen des Webservices erkennbar, wird dieser theoretisch in der Lage sein, alle Arten von Kommentaren löschen zu können. Der dazugehörig Button wird jedoch nur bei Notizen dargestellt. Dies wird mittels der Bedingung aus Auflistung \ref{lst:it7:comments} innerhalb der \textbf{comments.js} erreicht.
+ Wie bereits am Namen des Webservices erkennbar, wird dieser theoretisch in der Lage sein, alle Arten von Kommentaren löschen zu können. Der dazugehörig Button wird jedoch nur bei Notizen dargestellt. Dies wird mittels der Bedingung aus Auflistung \ref{lst:it6:hyperaudio} innerhalb der \textbf{hyperaudio.js} erreicht.
  
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{comments.js} in der 7. Iteration},
-             label={lst:it7:comments}]
+             caption={Ausschnitt der \textbf{hyperaudio.js} in der 6. Iteration},
+             label={lst:it6:hyperaudio}]
 else if (this.comment_type === CommentType.Note){
-	output = output + '<div class="comment_note comment_actions" data-comment_id="'+this.id+'">';
-	output = output + '<a href="javascript:void(0);" class="comment_note_edit_link comment_link" onclick="show_note_edit_input(this)" data-comment_id="'+this.id+'">' + string_edit + '</a>';
-	output = output + '<a href="javascript:void(0);" class="comment_note_delete_link comment_link" data-comment_id="'+this.id+'">' + string_delete + '</a>';
-	output = output + '<input type="text" class="comment_note_edit_text comment_hidden_element" data-comment_id="'+this.id+'"/>';
-	output = output + '<button type="button" class="comment_note_edit_button comment_hidden_element" data-comment_id="'+this.id+'">' + string_edit + '</button>';
-	output = output + '</div>';
-}
+    output = output + '<div
+        class="comment_note comment_actions" data-comment_id="'+this.id+'">';
+    output = output + '<a href="javascript:void(0);"
+        class="comment_note_edit_link comment_link active"
+        onclick="show_note_edit_textarea(this)"
+        data-comment_id="'+this.id+'">' + string_edit + '</a>';
+    output = output + '<a href="javascript:void(0);"
+        class="comment_note_delete_link comment_link active"
+        data-comment_id="'+this.id+'">' + string_delete + '</a>';
+    output = output + '<div class="textarea_container">';
+    output = output + '<textarea
+        class="comment_note_edit_text comment_hidden_element hyperaudio_textarea"
+        data-comment_id="'+this.id+'">' + this.text + '</textarea>';
+    output = output + '<button type="button"
+        class="comment_note_edit_button comment_hidden_element
+            hyperaudio_comment_button"
+        data-comment_id="'+this.id+'">' + string_edit + '</button>';
+    output = output + '</div>';
+    output = output + '</div>';
+}		
 \end{lstlisting}
 
 Entsprechend der Webservices werden innerhalb der \textbf{external.php} Funktionen zum Editieren von Notizen und dem Löschen von Kommentaren erstellt. Damit sind alle nötigen Schritte durchgeführt um Notizen erstellen, anzeigen und löschen zu können.
 
+
 \subsection{Audio Cues}
-Das Abspielen der Audio Cues im Moment der Darstellung eines Zusatzinhaltes wird durch eine Anpassung an dem verwendeten \textit{Popcorn.js}-Plugins \textit{Images} erreicht. Zu diesem Zweck wird der Code aus Zeile 6 bis 7  aus Auflistung \ref{lst:it8:popcorn.image} ergänzt. Mit diesen Zeilen wird ein Audio Element erstellt und abgespielt. Diese Anpassung wird innerhalb der Funktion \texttt{start} vorgenommen, also in der Funktion, die ausgeführt wird, wenn die Darstellung des Zusatzinhalts beginnen soll.
+Das Abspielen der Audio Cues im Moment der Darstellung eines Zusatzinhaltes wird durch eine Anpassung an dem verwendeten \textit{Popcorn.js}-Plugins \textit{Images} erreicht. In diesem Zug wird das Plugin \textit{Images} zu einem \textit{Hyperaudio} \textit{Popcorn.js}-Plugin umgebaut.
+
+Hierfür wird der zusätzliche Parameter \texttt{cue} aus Auflistung \ref{lst:it7:popcorn.hyperaudio} eingeführt. Mit diesem Parameter kann die abzuspielende Audio-Datei an \textit{Popcorn.js} übermittelt werden. Durch Ergänzung der Zeilen 25 bis 28 wird die Audio-Datei abgespielt, sofern der Ton mittels der Mediensteuerung nicht auf stumm geschaltet wurde oder die Wiedergabe pausiert wurde. Diese Anpassung wird innerhalb der Funktion \texttt{start} vorgenommen, also in der Funktion, die ausgeführt wird, wenn die Darstellung des Zusatzinhalts beginnen soll.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{popcorn.image.js} in der 8. Iteration},
-             label={lst:it8:popcorn.image}]
-start: function( event, options ) {
-	options.anchor.style.display = "inline";
-	if ( options.trackedContainer ) {
-		options.trackedContainer.start();
-	}
-	var audioElement = document.createElement('audio');
-	audioElement.setAttribute('src', '../hyperaudio/ding.mp3');
-	audioElement.play();
+             caption={Ausschnitt der \textbf{popcorn.hyperaudio.js} in der 7. Iteration},
+             label={lst:it7:popcorn.hyperaudio}]
+options: {
+
+    //...
+    
+    cue: "audio-cue",
+
+    //...    
+    
 }
+
+//...
+
+start: function( event, options ) {
+    options.anchor.style.display = "inline";
+    if ( options.trackedContainer ) {
+        options.trackedContainer.start();
+    }
+    var audioElement = document.getElementById( options.cue );
+    if (!this.media.muted && !this.media.paused){
+        audioElement.play();
+    }
+},
 \end{lstlisting}
+
+Durch die Weiterentwicklung des \textit{Images}-Plugins zum Hyperaudio-\textit{Popcorn.js}-Plugin wurde in dieser Iteration die Wiedergabe der Audio Cues implementiert.
 
 \subsection{Galerie der Zusatzinhalte}
-Der Anforderung nach einer Übersicht über annotierte Zusatzinhalte wird mittels einer Galerie begegnet, welche in dieser Iteration umgesetzt wird. Hierfür wird der Code aus Auflistung \ref{lst:it9:renderer} in der \textbf{renderer.php} ergänzt.
+Der Anforderung nach einer Übersicht über annotierte Zusatzinhalte wird mittels einer Galerie begegnet, welche in dieser Iteration umgesetzt wird. Hierfür werden in der \textbf{renderer.php} zunächst die Metainformationen zu allen Zusatzinhalten des Hyperaudio-Dokuments geladen, um mit diesen im nächsten Schritt URLs zu den Dateien zu generieren. Diese URLs und die restlichen Metainformationen werden dann zur Darstellung für die Galerie verwendet (vgl. Auflistung \ref{lst:it8:renderer}).
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{renderer.php} in der 9. Iteration},
-             label={lst:it9:renderer}]
-$output .= '</div>';
+             caption={Ausschnitt der \textbf{renderer.php} in der 8. Iteration},
+             label={lst:it8:renderer}]
+$output .= '<div id="gallery_container">';
 $output .= '<div id="gallery">';
-foreach ($files as $file) {
-	$additional_content = $DB->get_record('additional_content', array('hyperaudio_id' => $hyperaudio->id, 'file' => $file->get_filename()), '*', IGNORE_MISSING);
-                    
-		if ($additional_content == false){
-                        continue;
-		}
-                    
-		$additional_content_fileinfo = array(
-			'component' => 'mod_hyperaudio',
-			'filearea' => 'additional_content',
-			'itemid' => $hyperaudio->id,
-			'contextid' => $context->id,
-			'filepath' => '/',
-			'filename' => $additional_content->file
-		);
-                    
-	$additional_content_fileurl = moodle_url::make_pluginfile_url($additional_content_fileinfo['contextid'], $additional_content_fileinfo['component'], $additional_content_fileinfo['filearea'],
-	$additional_content_fileinfo['itemid'], $additional_content_fileinfo['filepath'], $additional_content_fileinfo['filename']);
-	$additional_content_url = $additional_content_fileurl->get_scheme() . '://' . $additional_content_fileurl->get_host() . $additional_content_fileurl->get_path();
-	if ($additional_content_fileurl->get_port()){
-		$additional_content_url .= ':' . $additional_content_fileurl->get_port();
-	}
-                    
-	$output .= '<div id="gallery_additional_content">';
-	$output .= '<div id="gallery_additional_content_image"><img src="'.$additional_content_url.'" border="5"></div>' ;
-	$output .= '<div id="gallery_additional_content_meta">';
-	$output .= '<span class="additional_content_name">'.get_string('additional_content_course_name', 'hyperaudio').': '.$additional_content->name.'</span>';
-	$output .= '<span class="additional_content_description">'.get_string('additional_content_description', 'hyperaudio').': '.$additional_content->description.'</span>';
-	$output .= '<span class="additional_content_course_unit">'.get_string('additional_content_course_unit', 'hyperaudio').': '.$additional_content->course_unit.'</span>';
-	$output .= '<span class="additional_content_page>"'.get_string('additional_content_pages', 'hyperaudio').': '.$additional_content->page.'</span>';
-	$output .= '<a href="javascript:void(0);" class="additional_content_begin" onclick="jump_to_time(this)" data-annotated_time="'.$additional_content->begin.'">'.get_string('additional_content_begin', 'hyperaudio').': '.$additional_content->begin.'</a>';
-	$output .= '<a href="javascript:void(0);" class="additional_content_end" onclick="jump_to_time(this)" data-annotated_time="'.$additional_content->end.'">'.get_string('additional_content_end', 'hyperaudio').': '.$additional_content->end.'</a>';
-	$output .= '</div>';
-	$output .= '</div>';
+foreach ($files as $additional_content) {
+    $additional_content_fileinfo = array(
+        'component' => 'mod_hyperaudio',
+        'filearea' => 'additional_content',
+        'itemid' => $hyperaudio->id,
+        'contextid' => $context->id,
+        'filepath' => '/',
+        'filename' => $additional_content->file
+    );
+            
+    $additional_content_fileurl = moodle_url::make_pluginfile_url(
+        $additional_content_fileinfo['contextid'],
+        $additional_content_fileinfo['component'],
+        $additional_content_fileinfo['filearea'],
+        $additional_content_fileinfo['itemid'],
+        $additional_content_fileinfo['filepath'],
+        $additional_content_fileinfo['filename']);
+    $additional_content_url =
+        $additional_content_fileurl->get_scheme() . '://' . 
+        $additional_content_fileurl->get_host() . 
+        $additional_content_fileurl->get_path();
+    if ($additional_content_fileurl->get_port()){
+        $additional_content_url .= ':' . $additional_content_fileurl->get_port();
+    }
+    $output .= '<div class="gallery_additional_content">';
+    $output .= '<div class="gallery_additional_content_image">
+        <img class="gallery_image" src="'.$additional_content_url.'" border="5">
+        </div>' ;
+    $output .= '<div class="gallery_additional_content_meta">';
+    $output .= '<div class="additional_content_name">
+        '.$additional_content->name.'</div>';
+    $output .= '<div class="additional_content_description">
+        '.$additional_content->description.'</div>';
+    $output .= '<div class="additional_content_course_info">';
+    $output .= '<span class="additional_content_course_unit">
+        '.get_string('additional_content_course_unit', 'hyperaudio').': 
+        '.$additional_content->course_unit.'</span>';
+    $output .= '<span class="additional_content_page">
+        '.get_string('additional_content_pages', 'hyperaudio').': 
+        '.$additional_content->page.'</span>';
+    $output .= '</div>';
+    $output .= '<div class="additional_content_time_info">';
+    $output .= '<a href="javascript:void(0);" 
+        class="additional_content_begin"
+        onclick="jump_to_time(this)"
+        data-annotated_time="'.$additional_content->begin.'">
+        <i class="fa fa-play-circle"></i>
+        '.get_string('additional_content_begin', 'hyperaudio').':
+        '.format_time_annotated($additional_content->begin).'</a>';
+    $output .= '<a href="javascript:void(0);" 
+        class="additional_content_end"
+        onclick="jump_to_time(this)"
+        data-annotated_time="
+        '.$additional_content->end.'">
+        <i class="fa fa-play-circle"></i>
+        '.get_string('additional_content_end', 'hyperaudio').':
+        '.format_time_annotated($additional_content->end).'</a>';
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '</div>';
 }
 $output .= '</div>';
+$output .= '</div>';
+\end{lstlisting}
+
+Durch diese Implementierung wird die Darstellung der Galerie erreicht, durch Verwendung der JavaScript-Funktion \texttt{jump\underline{{ }}to\underline{{ }}time} wird zusätzlich noch die Rückkopplung an die Mediensteuerung geboten.
+
+\subsection{Zeitabhängige Visualisierung der Kommentare und Notizen}
+In dieser Iteration soll sich nun der zeitabhängigen Visualisierung der Kommentare und Notizen zugewendet werden. An dieser Stelle muss festgehalten werden, dass dies beim Einsatz des Standard HTML-5 Audioplayers schwer umsetzbar ist, aus diesem Grund wird auf die Erkenntnisse bezüglich des \textit{VideoJS Players} aus Abschnitt \ref{sub:TechnologienMoodle} zurückgegriffen. Hier wurde bereits festgestellt, dass dieser Player von Natur aus Anpassungsmöglichkeiten bietet. Dies soll sich nun in dieser Iteration zu Nutze gemacht werden.
+
+Im ersten Schritt werden zunächst die Benötigten Informationen für die Darstellung der in Abbildung \ref{fig:MockupMediensteuerungV3} beschriebenen Blöcke aus der Datenbank abgerufen. Hierfür wird eine neuer Webservice eingerührt und unter anderem  die \textbf{external.php} erweitert (vgl. Auflistung \ref{lst:it9:external}).
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{external.php} in der 9. Iteration},
+             label={lst:it9:external}]
+public static function load_timeline_comments($hyperaudio_id, $duration, $number_of_slots) {
+
+//...
+
+    $slots = $DB->get_records_sql($sql, $conditions);
+        
+        $result_slots = array();
+        $id = 0;
+        foreach ($slots as $slot) {
+            $id++;
+            $slot = array(
+                'id' => $id,
+                'comments' => $slot->comments,
+                'notes' => $slot->notes,
+                'title_comment_id' => $slot->title_comment_id,
+                'title_comment_text' => $slot->title_comment_text,
+                'title_comment_username' => $slot->title_comment_username,
+                'title_note_id' => $slot->title_note_id,
+                'title_note_text' => $slot->title_note_text
+            );
+            $result_slots[] = $slot;
+        }
+        
+    $max_comments = max(array_column($result_slots, 'comments'));
+    $max_notes = max(array_column($result_slots, 'notes'));
+        
+    return array('max_count' => max($max_comments, $max_notes), 'blocks' => $result_slots);
 }
 \end{lstlisting}
 
-\subsection{Zeitabhängige Visualisierung der Kommentare}
-\dots
+Um die Ermittelten Informationen auch darzustellen wird, wie in Auflistung \ref{lst:it9:hyperaudio} der Webservice von der Funktion \texttt{show\underline{{ }}timeline} der \textbf{hyperaudio.js} aufgerufen und darauf zur Darstellung verarbeitet. Dabei wird auf vorhandene HTML Elemente des \textit{VideoJS Players} zurückgegriffen, um die Gewünschte Darstellung der Blöcke ober- und unterhalb der Timeline zu erreichen.
+\todo[inline]{Umfang der hyperaudio.js}
 
-\subsection{Markierungen}
-Mit der Möglichkeiten der Visualisierung der Kommentare aus der vorherigen Iteration, könnten nun auch Markierungen mithilfe dieser Funktion visualisiert werden. Dementsprechend wird in dieser Iteration das Erstellen und Visualisieren von Markierungen behandelt.
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{hyperaudio.js} in der 9. Iteration},
+             label={lst:it9:hyperaudio}]
+var promises = ajax.call([{
+    methodname: 'mod_hyperaudio_load_timeline_comments',
+    args:{
+        'hyperaudio_id': hyperaudio_id,
+        'duration': duration,
+        'number_of_slots': number_of_slots
+        }
+    }]);
+promises[0].done(function(data) {
+    var container_height =
+        $(".hyperaudio_timeline_blocks_container.comment_blocks_container").
+            height();
+		    	
+    var pixel_width = 
+        ((container_width - (number_of_slots-1)*2*2) / number_of_slots);
+    var width = (pixel_width / (container_width + 20)) * 100;
+    var height_1_comment = ((container_height - 5) / data.max_count);
+		    	
+    var output_comments = '';
+    var output_notes = '';
+    var height;
+    var class_zero;
+		    	
+    function set_height_and_class(annotations){
+        height = annotations * height_1_comment;
+        if (height == 0){
+            class_zero = 'block_zero';
+        }
+        else {
+            class_zero = '';
+        }
+        if (height < 5){
+            height = 5;
+        }
+    }
+		    	
+    function get_title(title, username){
+        var result_title = '';
+		    		
+        if (username){
+            result_title = username + ':\n';
+        }
+		    		
+        if (title){
+            if (title.length > 100){
+                result_title = result_title + title.substr(0, 100) + " ...";
+            }
+            else {
+                result_title = result_title + title;
+            }
+        }
+		    		
+        return result_title;
+    }
+		    	
+    $(data.blocks).each(function(){
+        set_height_and_class(this.comments);
+        output_comments = output_comments + 
+            '<div title="' + 
+            get_title(this.title_comment_text, this.title_comment_username) +
+            '" class="timeline_block comment_block ' + 
+            class_zero + '" data-comment-id="' + 
+            this.title_comment_id + 
+            '" style="width: '+width+'%; height: ' + height + 'px;"
+            onclick="jump_to_comment(this)"></div>';
+                
+        set_height_and_class(this.notes);
+        output_notes = output_notes +
+            '<div title="' +
+            get_title(this.title_note_text) + 
+            '" class="timeline_block note_block ' +
+            class_zero + '" data-comment-id="' +
+            this.title_note_id + 
+            '" style="width: '+width+'%; height: ' +	height + 'px;"
+            onclick="jump_to_comment(this)"></div>';
+    });
+    $(".hyperaudio_timeline_blocks.comment_blocks").html(output_comments);
+    $(".hyperaudio_timeline_blocks.note_blocks").html(output_notes);
+});
+\end{lstlisting}
 
-%\subsection{Suche, Filter und Sortierung bei Kommentaren}
-%\dots
-%
+Um auch das Springen zu den in den Tooltips dargestellten Kommentaren und Notizen zu ermöglichen, wird die auf die Funktion  \texttt{jump\underline{{ }}to\underline{{ }}comment} aus der \textbf{locallib.js} zurückgegriffen. Hierbei müssen wie in Auflistung \ref{lst:it9:locallib.js} zu sehen bereits vorhandene Moodle Elemente (\texttt{fixed-top.navba}) berücksichtigt werden, um an die korrekte Stelle zu springen.
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{locallib.js} in der 9. Iteration},
+             label={lst:it9:locallib.js}]
+function jump_to_comment(element){
+    var comment_id = $(element).attr("data-comment-id");
+	
+    if (comment_id != "null"){
+        $("#hyperaudio_comments").on("show_comments_finished", function(){
+            $('html, body').animate({
+                scrollTop:
+                    $('.comment[data-comment_id="' + comment_id + '"]').offset().top
+                    - $(".fixed-top.navbar").outerHeight()
+            },'slow');
+            $("#hyperaudio_comments").off("show_comments_finished");
+        });
+    }
+}
+\end{lstlisting}
+
+\todo[inline]{Sortierung an allen Stellen entfernt?}
+
+Mit dieser Iteration wurde die Visualisierung der Kommentare und Notizen und damit verbundenen Interaktionsmöglichkeiten umgesetzt.
+
+\subsection{Lesezeichen}
+Mit der Möglichkeiten der Visualisierung der Kommentare aus der vorherigen Iteration, könnten nun auch Lesezeichen mithilfe dieser Funktion visualisiert werden. Dementsprechend wird in dieser Iteration das Erstellen und Visualisieren von Lesezeichen behandelt.
+
+Im ersten Schritt wird der Button zum Erstellen der Lesezeichen in der \textbf{hyperaudio.js} ergänzt und neben die bereits vorhandenen Bedienelemente des \textit{VideoJS Players} platziert (vgl. Auflistung \ref{lst:it10:hyperaudio.js}).
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{hyperaudio.js} in der 10. Iteration},
+             label={lst:it10:hyperaudio.js}]
+$(".vjs-volume-panel").after(
+    '<button class="vjs-bookmark-control vjs-control vjs-button"
+    type="button" title="' + string_bookmark + '"
+    aria-disabled="false">' +
+    '<span aria-hidden="true" class="far fa-bookmark vjs-icon-placeholder"></span>
+    <span class="vjs-control-text" aria-live="polite">' + string_bookmark + '</span>
+    </button>'
+);
+\end{lstlisting}
+
+Das Speichern der Lesezeichen erfolgt nach Betätigung des Buttons analog zum Speichern der Kommentare (vlg. Abschnitt \ref{sub:SpeichernKommentare}). Zur Darstellung der Lesezeichen wird die Funktion \texttt{show\underline{{ }}timeline} aus der \textbf{hyperaudio.js} erweitert, als auch ein neuer Webservice für das Laden von Lesezeichen eingeführt. Der Webservice liefert der \texttt{show\underline{{ }}timeline} die Lesezeichen des aktuellen Benutzers. Diese werden dann durch die \texttt{show\underline{{ }}timeline} entsprechend der Auflistung \ref{} innerhalb der Timeline dargestellt.
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{hyperaudio.js} in der 10. Iteration},
+             label={lst:it10:hyperaudio.js}]
+promises[1].done(function(data) {
+    var output = '';
+    $(data).each(function(){
+    var left = (this.timeannotated / parseFloat(duration)) * 100;
+    output = output + '<div title="' + string_delete_bookmark + '" 
+        class="bookmark" style="left: ' + left + '%;" 
+        data-comment_id="' + this.id +'">
+        <i class="far fa-bookmark"/></div>';
+    });
+    $(".hyperaudio_timeline_bookmarks_container").html(output);
+});
+\end{lstlisting}
+
+Mit einem Rechtsklick auf ein Lesezeichen wird dessen Löschung vorgenommen, diese wird mit der gleichen Prozedur wie bei den Notizen abgearbeitet (vlg. Abschnitt \ref{sub:notizen}. Somit ist mit dieser Iteration das Erstellen, Anzeigen und Löschen von Lesezeichen möglich.
+
+\subsection{Suche, Filter und Sortierung bei Kommentaren}
+Die elfte und letzte Iteration beschäftigt sich mit den gewünschten Such, Filter- und Sortierungsmöglichkeiten innerhalb der Kommentare und Notizen.
+
+Zu Beginn werden die dafür ein Eingabefeld, zwei Checkboxen und ein Dropdown-Menü in der \textbf{renderer.php} ergänzt. Die Implementierung dieser drei Wünsche ist so umgesetzt, dass jeweils nur das SQL-Statement innerhalb der Funktion \texttt{load\underline{{ }}comments} der \textbf{external.php} angepasst wird. Die Umsetzung ist Auflistung \ref{lst:it11:external} zu entnehmen.
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{external.php} in der 11. Iteration},
+             label={lst:it11:external}]
+$sql='SELECT comments.id, comments.comment_type, comments.commenttext,'.
+    ' comments.timeannotated, comments.timecreated,'.
+    ' user.username, comments.comment_id'.
+    ' FROM mdl_hyperaudio_comments comments'.
+    ' INNER JOIN mdl_user user ON comments.userid = user.id'.
+    ' LEFT JOIN mdl_hyperaudio_comments original_comment'.
+    ' ON original_comment.id = comments.comment_id'.
+    ' WHERE comments.hyperaudio_id = :p_hyperaudio_id'.
+    ' AND (comments.comment_type = :p_comment_type_c'.
+    ' OR (comments.comment_type = :p_comment_type_note'.
+    ' AND comments.userid = :p_userid))'.
+    ' AND comments.comment_type'.
+    ' IN (:p_filter_comment, :p_filter_note)'.
+    ' AND ' . $DB->sql_like('comments.commenttext', ':p_search_string');
+
+switch ($order){
+    case timecreated_asc:
+        $sql.= 
+            'ORDER BY
+            IFNULL(original_comment.timecreated, comments.timecreated) asc,
+            comments.timecreated asc';
+        break;
+    case timecreated_desc:
+        $sql.= 
+            'ORDER BY
+            IFNULL(original_comment.timecreated, comments.timecreated) desc,
+            comments.timecreated asc';
+        break;
+    case timeannotated:
+        $sql.=
+            'ORDER BY comments.timeannotated asc,
+            IFNULL(original_comment.timecreated, comments.timecreated) asc,
+            comments.timecreated asc';
+        break;
+}
+        
+$comments = $DB->get_records_sql($sql, array('p_hyperaudio_id' => $hyperaudio_id,
+    'p_comment_type_c' => CommentType::Comment,
+    'p_comment_type_note' => CommentType::Note,
+    'p_userid' => $USER->id,
+    'p_filter_comment' => $filter_comments ? CommentType::Comment : null,
+    'p_filter_note' => $filter_notes ? CommentType::Note : null,
+    'p_search_string' => '%' . $DB->sql_like_escape($search_string) . '%'));
+\end{lstlisting}
+
+
+
 %\subsection{Export-/Import-Funktion}
 %\dots
 

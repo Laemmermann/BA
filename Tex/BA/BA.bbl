@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{53}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -124,6 +124,12 @@ Hilko Donker und Norbert Blenn.
 \newblock {wavesurfer.js}.
 \newblock \url{https://wavesurfer-js.org/}, o.D.
 \newblock abgerufen am 15.08.2018.
+
+\bibitem[{helllicht medien GmbH}(o.D.)]{hellichtresponsive}
+{helllicht medien GmbH}.
+\newblock {Code - Responsive Webdesign}.
+\newblock \url{http://be-responsive.de/code/}, o.D.
+\newblock abgerufen am 27.08.2018.
 
 \bibitem[Kerres und Jechle(2002)]{kerres2002didaktische}
 Michael Kerres und Thomas Jechle.
