@@ -71,14 +71,14 @@ Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann ansc
       "course_unit": "1",
       "page": "32",
       "description": "Verschiedene Komponenten des Papierprototyps.",
-      "begin": "15",
-      "end": "25"}
-    ]
+      "begin": "62",
+      "end": "220"}
+    ],
+    "author": "Dr. Niels Seidel"
   }
 }
 \end{lstlisting}
-\todo[inline]{JSON Beispieldaten Zeitpunkte korrigieren}
-\todo[inline]{JSON-Datei um Autor ergänzen}
+\todo[inline]{JSON Beispieldaten evtl erweitern}
 
 %%%%%%%%%%
 \section{Datenbankentwurf}
@@ -118,7 +118,7 @@ Damit den Lehrenden und Studierenden die im vorherigen Kapitel beschriebenen Nut
 
 \begin{figure}[h!]
 \includegraphics[width=0.8\textwidth,center]{MockupBereiche.pdf}
-\caption{\label{fig:MockupBereiche} Bereiche des Kursabschnittes einer Hyperaduio-Aktivität}
+\caption{\label{fig:MockupBereiche} Bereiche des Kursabschnittes einer Hyperaudio-Aktivität}
 \end{figure}
 
 Die Hyperaudio-Kursabschnitte lassen sich grob in die Bereiche Zusatzinhalte, Mediensteuerung inklusive Visualisierungen der Annotationen, Kommentare und Notizen und Galerie aufteilen. Zunächst werden nun für jeden dieser Bereiche verschiedene Designs erarbeitet und dann eines für die Verwendung im Hyperaudio-Plugin festgelegt.
@@ -146,6 +146,7 @@ Neben der Nutzung der Fläche während keine Zusatzinhalte dargestellt werden, m
 
 %%%%%%%%%%
 \subsection{Mediensteuerung inklusive Visualisierungen der Annotationen}
+\label{sub:Mediensteuerung}
 Bei der Mediensteuerung für Hyperaudio-Dokumente müssen neben den üblichen Mediensteuerungselementen zusätzliche Elemente visualisiert werden. So sollen auch die annotierten öffentlichen Kommentare, persönlichen Notizen und Lesezeichen dargestellt werden.
 
 Der erste Entwurf der Mediensteuerung ist in Abbildung \ref{fig:MockupMediensteuerungV1} dargestellt. Es ist zu erkennen, dass neben den üblichen Steuerungselementen die Visualisierung der Annotationen in der Timeline erfolgt. Hierzu wird für die drei verschiedenen Kommentar-Arten jeweils ein andersfarbiger Punkt (Kommentar: blau, Notiz: orange und Lesezeichen: grün) innerhalb der Timeline des Players dargestellt. Durch einen Klick auf einen Punkt, welcher einen Kommentar oder eine Notiz repräsentiert, soll dann zu der dazugehörigen Stelle innerhalb des Bereichs für Kommentare und Notizen gesprungen werden. Das Löschen und Anlegen von Lesezeichen soll durch eine Betätigung des Rechtsklicks auf den Punkt bzw. die Timeline möglich sein. Es wird ersichtlich, dass diese Variante den Nachteil hat, dass bei einer hohen Anzahl an Kommentaren und Notizen die Timeline unübersichtlich und schwer bedienbar wird.
@@ -227,7 +228,7 @@ Letztlich stellt sich die optimierte Variante der Kachel-Darstellung in Abbildun
 \subsection{Kommentare und Notizen}
 Dieser Bereich ist für das Erstellen und Anzeigen der öffentlichen Kommentare sowie der persönlichen Notizen zuständig. Zusätzlich müssen eine Suche, Filter- und Sortiermöglichkeiten auf Basis der Anforderungen aus Abschnitt \ref{sub:AnforderungenDerNutzenden} in die Oberfläche integriert werden.
 
-Abbildung \ref{fig:MockupKommentarsektionVersion1} zeigt eine erste Version des Kommentarbereichs. An oberste Stelle befinden sich eine Eingabemaske für Kommentare mit zwei Buttons, um den Inhalt der Eingabemaske als Kommentar oder als Notiz abzuspeichern. Neben der Suchmaske befinden sich zwei Checkboxen unterhalb der Eingabemaske und den Buttons. Diese ermöglichen es dem Betrachter nach öffentlichen Kommentaren und persönlichen Notizen zu filtern. Im benachbarten Dropdown-Menü kann die Grundlage der Sortierung bestimmt werden. Die Sortierung kann nach Erstellungsdatum beziehungsweise nach Zeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments erfolgen. Unterhalb dieser Funktionen befindet sich die Anzeige der Kommentare und Notizen. Sowohl bei Kommentaren als auch bei Notizen wird neben dem Erstellungsdatum auch der Annotationszeitpunkt festgehalten. Dieser wird als Link umgesetzt, sodass bei einem Klick die Rückkopplung an die Mediensteuerung erfolgen kann. Bei Kommentaren gibt es nach Betätigung der \textit{Antworten}-Schaltfläche noch eine zusätzliche Eingabemaske zum Verfassen von Antworten. Persönliche Notizen werden durch ein Schloss-Symbol hinter dem Erstellungsdatum visualisiert. Zusätzlich befinden sich noch jeweils zwei Buttons zum Bearbeiten und Löschen auf der rechten Seite einer Notiz.
+Abbildung \ref{fig:MockupKommentarsektionVersion1} zeigt eine erste Version des Kommentarbereichs. An oberste Stelle befinden sich eine Eingabemaske für Kommentare mit zwei Buttons, um den Inhalt der Eingabemaske als Kommentar oder als Notiz abzuspeichern. Neben der Suchmaske befinden sich zwei Checkboxen unterhalb der Eingabemaske und den Buttons. Diese ermöglichen es dem Betrachter nach öffentlichen Kommentaren und persönlichen Notizen zu filtern. Im benachbarten Dropdown-Menü kann die Grundlage der Sortierung bestimmt werden. Die Sortierung kann nach Erstellungsdatum beziehungsweise nach Zeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments erfolgen. Unterhalb dieser Funktionen befindet sich die Anzeige der Kommentare und Notizen. Sowohl bei Kommentaren als auch bei Notizen wird neben dem Erstellungsdatum auch der Annotationszeitpunkt festgehalten. Dieser wird als Link umgesetzt, sodass bei einem Klick die Rückkopplung an die Mediensteuerung erfolgen kann. Bei Kommentaren gibt es nach Betätigung der \textit{Antworten}-Schaltfläche noch eine zusätzliche Eingabemaske zum Verfassen von Antworten. \textbf{Um den Austausch der Studierenden und Lehrenden korrekt stets korrekt und sinnhaft wiedergeben zu könne, wird auf eine Bearbeitungs- und Löschfunktion bei Kommentaren und Antworten verzichtet. }Persönliche Notizen werden durch ein Schloss-Symbol hinter dem Erstellungsdatum visualisiert. Zusätzlich befinden sich noch jeweils zwei Buttons zum Bearbeiten und Löschen auf der rechten Seite einer Notiz. 
 
 Im nochmals verbesserten Design, welches in Abbildung \ref{fig:MockupKommentarsektionFinal} abgebildet ist, werden die Antworten auf Kommentare eingerückt dargestellt. Diese Darstellung führt zu einer besseren Übersichtlichkeit und ist auch aus anderen modernen Anwendungen bekannt.
 
