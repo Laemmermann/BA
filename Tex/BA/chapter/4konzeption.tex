@@ -52,7 +52,7 @@ Mittels der JSON-Datei sollen folgende Informationen der Zusatzinhalte übertrag
 
 \todo[inline]{autor}
 
-Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann anschließend die Zuordnung der weiteren Informationen zu der entsprechenden Audio-Datei in der Datenbank vorgenommen werden. Eine beispielhaft befüllte Konfigurationsdatei ist in Auflistung \ref{lst:JSON} dargestellt.
+Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann anschließend die Zuordnung der weiteren Informationen zu der entsprechenden Audio-Datei in der Datenbank vorgenommen werden. Eine beispielhaft befüllte Konfigurationsdatei ist in Auflistung \ref{lst:JSON} dargestellt. \textbf{Bei der Betrachtung der Konfigurationsdatei ist zu erkennen, dass neben den Metadaten für die Zusatzinhalte auch der Autor des Hyperaudio-Dokuments mithilfe der Konfigurationsdatei übertragen wird.}
 
 \begin{lstlisting}[language=json,
              linewidth=\textwidth,
@@ -139,6 +139,23 @@ Im Bereich der Zusatzinhalte beschränkt sich die Diskussion auf die Darstellung
 
 Die erste Variante ist unpraktisch, da dies bei Inhalten, welche größer sind als der Bereich, dazu führt, dass nur ein Ausschnitt des Inhaltes dargestellt wird. Bei Inhalten, welche kleiner sind als der Bereich, wird hingegen nicht der volle Platz ausgenutzt und der Inhalt wird unnötig klein dargestellt. Bei der Variante 2 wird zwar stets der gesamte Bereich ausgenutzt und der Zusatzinhalt wird vollständig dargestellt, doch kann dies dazu zu unschönen Verzerrungen des dargestellten Inhaltes führen. Im Vergleich dazu bietet die dritte Variante den Vorteil, dass diese den Bereich möglichst gut ausnutzt ohne unschöne Verzerrungen zu verursachen.
 \todo[inline]{Mockup ergänzen}
+
+\begin{figure}[h!]
+\begin{subfigure}[c]{0.32\textwidth}
+\includegraphics[width=\textwidth,center]{Zusatzinhalt1.pdf}
+\label{fig:Zusatzinhalt1}
+\end{subfigure}
+\begin{subfigure}[c]{0.32\textwidth}
+\includegraphics[width=\textwidth,center]{Zusatzinhalt2.pdf}
+\label{fig:Zusatzinhalt2}
+\end{subfigure}
+\begin{subfigure}[c]{0.32\textwidth}
+\includegraphics[width=\textwidth,center]{Zusatzinhalt3.pdf}
+\label{fig:Zusatzinhalt3}
+\end{subfigure}
+\caption{Verschiedene Möglichkeiten zur Darstellung von Zusatzinhalten}
+\label{fig:Zusatzinhalt}
+\end{figure}
 
 Neben der Entscheidung für Variante 3 muss auch die Entscheidung getroffen werden, wie sich der Bereich verhält, wenn gerade keine Zusatzinhalte dargestellt werden müssen. In diesem Fall sind verschiedenen Szenarien denkbar. Zum einen wäre denkbar, dass der Bereich minimiert wird, sobald keine Zusatzinhalt dargestellt wird. Dies hätte aber den Nachteil, dass sich die Position der Kommentare mehrmals ändert und somit das Lesen erschwert wird. Zum anderen wäre auch die Darstellung eines Standardbildes oder einer einfarbigen Fläche vorstellbar. Es wäre aber auch möglich, innerhalb der Fläche die Metadaten des Hyperaudio-Dokuments darzustellen, sprich Titel, Autor und Beschreibung. Die letzte Variante stellt einen guten Kompromiss dar, da somit auch keine weitere Fläche für die Darstellung dieser Informationen benötigt wird.
 
@@ -287,6 +304,6 @@ So wird beispielsweise die Galerie auf kleinen Displays unterhalb des Bereichs f
 
 %%%%%%%%%%
 \section{Zusammenfassung}
-\dots
+\textbf{In diesem Kapitel wurden die grundlegenden konzeptuellen Entscheidungen getroffen. So wurden zum Anfang des Kapitels die Komponenten des Hyperaudio-Dokuments und deren Zusammenhänge bestimmt. Mit diesen Zusammenhängen konnte eine bei der Definition des Schnittstellenformats das Format und der Aufbau einer Konfigurationsdatei erarbeitet werden. Ebenfalls auf den Zusammenhängen der Komponenten des Hyperaudio-Dokuments basierend wurde die Datenbank entworfen. Nachdem diese technischen Grundlagen entschiedenen wurden, wurde das Design des Plugins erarbeitet und die nötigen Anpassungen für mobile Endgeräte definiert.}
 
 \todo[inline]{Zusammenfassung}

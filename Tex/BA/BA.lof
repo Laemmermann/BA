@@ -4,36 +4,37 @@
 \contentsline {figure}{\numberline {}{\ignorespaces Schematischer Aufbau einer Moodle Seite\relax }}{14}{figure.caption.20}
 \contentsline {figure}{\numberline {}{\ignorespaces Kursseite des Kurses \glqq Einf\IeC {\"u}hrung in Mensch-Computer-Interaktion\grqq {} \citep {fernuniversitaet2018mensch}\relax }}{15}{figure.caption.21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {}{\ignorespaces Benutzerrollen\relax }}{21}{figure.caption.35}
-\contentsline {figure}{\numberline {}{\ignorespaces Player der Musik- und Audio-Plattform \textit {SoundCloud} \citep {SoundCloud2015Panic}\relax }}{27}{figure.caption.79}
-\contentsline {figure}{\numberline {}{\ignorespaces Player der Video-Plattform \textit {Youtube} \citep {Youtube2015Panic}\relax }}{27}{figure.caption.82}
-\contentsline {figure}{\numberline {}{\ignorespaces Anzeige der Infokarte \citep {Youtube2015Panic}\relax }}{28}{figure.caption.84}
-\contentsline {figure}{\numberline {}{\ignorespaces Auszug aus einem \textit {Interactive Video} \citep {h5p2013video}\relax }}{29}{figure.caption.91}
-\contentsline {figure}{\numberline {}{\ignorespaces Der Audio-Player auf der \textit {wavesurfer.js}-Webseite\citep {wavesurfer}\relax }}{30}{figure.caption.96}
+\contentsline {figure}{\numberline {}{\ignorespaces Benutzerrollen\relax }}{22}{figure.caption.34}
+\contentsline {figure}{\numberline {}{\ignorespaces Player der Musik- und Audio-Plattform \textit {SoundCloud} \citep {SoundCloud2015Panic}\relax }}{28}{figure.caption.78}
+\contentsline {figure}{\numberline {}{\ignorespaces Player der Video-Plattform \textit {Youtube} \citep {Youtube2015Panic}\relax }}{28}{figure.caption.81}
+\contentsline {figure}{\numberline {}{\ignorespaces Anzeige der Infokarte \citep {Youtube2015Panic}\relax }}{29}{figure.caption.83}
+\contentsline {figure}{\numberline {}{\ignorespaces Auszug aus einem \textit {Interactive Video} \citep {h5p2013video}\relax }}{30}{figure.caption.90}
+\contentsline {figure}{\numberline {}{\ignorespaces Der Audio-Player auf der \textit {wavesurfer.js}-Webseite\citep {wavesurfer}\relax }}{31}{figure.caption.95}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {}{\ignorespaces Zusammenh\IeC {\"a}nge der Komponenten\relax }}{33}{figure.caption.106}
-\contentsline {figure}{\numberline {}{\ignorespaces ER-Diagramm der Datenbank des Moodle-Plugins\relax }}{35}{figure.caption.133}
-\contentsline {figure}{\numberline {}{\ignorespaces Bereiche des Kursabschnittes einer Hyperaudio-Aktivit\IeC {\"a}t\relax }}{36}{figure.caption.135}
-\contentsline {figure}{\numberline {}{\ignorespaces Benutzeroberfl\IeC {\"a}che - MockupMediensteuerung\relax }}{38}{figure.caption.143}
-\contentsline {figure}{\numberline {}{\ignorespaces Benutzeroberfl\IeC {\"a}che - Galerie\relax }}{40}{figure.caption.145}
-\contentsline {figure}{\numberline {}{\ignorespaces Benutzeroberfl\IeC {\"a}che - Kommentarsektion\relax }}{42}{figure.caption.147}
-\contentsline {figure}{\numberline {}{\ignorespaces Benutzeroberfl\IeC {\"a}che - Layout der Seite f\IeC {\"u}r Hyperaudio-Dokumente\relax }}{43}{figure.caption.149}
-\contentsline {figure}{\numberline {}{\ignorespaces Mobile Darstellung der Benutzeroberfl\IeC {\"a}che\relax }}{44}{figure.caption.151}
+\contentsline {figure}{\numberline {}{\ignorespaces Zusammenh\IeC {\"a}nge der Komponenten\relax }}{34}{figure.caption.105}
+\contentsline {figure}{\numberline {}{\ignorespaces ER-Diagramm der Datenbank des Moodle-Plugins\relax }}{37}{figure.caption.132}
+\contentsline {figure}{\numberline {}{\ignorespaces Bereiche des Kursabschnittes einer Hyperaudio-Aktivit\IeC {\"a}t\relax }}{37}{figure.caption.134}
+\contentsline {figure}{\numberline {}{\ignorespaces Verschiedene M\IeC {\"o}glichkeiten zur Darstellung von Zusatzinhalten\relax }}{38}{figure.caption.141}
+\contentsline {figure}{\numberline {}{\ignorespaces Benutzeroberfl\IeC {\"a}che - MockupMediensteuerung\relax }}{39}{figure.caption.143}
+\contentsline {figure}{\numberline {}{\ignorespaces Benutzeroberfl\IeC {\"a}che - Galerie\relax }}{41}{figure.caption.145}
+\contentsline {figure}{\numberline {}{\ignorespaces Benutzeroberfl\IeC {\"a}che - Kommentarsektion\relax }}{44}{figure.caption.147}
+\contentsline {figure}{\numberline {}{\ignorespaces Benutzeroberfl\IeC {\"a}che - Layout der Seite f\IeC {\"u}r Hyperaudio-Dokumente\relax }}{45}{figure.caption.149}
+\contentsline {figure}{\numberline {}{\ignorespaces Mobile Darstellung der Benutzeroberfl\IeC {\"a}che\relax }}{46}{figure.caption.151}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {}{\ignorespaces Ordnerstruktur des Hyperaudio-Plugins\relax }}{45}{figure.caption.156}
-\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Antworten-Funktion\relax }}{56}{figure.caption.534}
-\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Notiz-Funktion\relax }}{57}{figure.caption.557}
-\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Galerie\relax }}{59}{figure.caption.608}
-\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Mediensteuerung\relax }}{62}{figure.caption.726}
-\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Bereiche f\IeC {\"u}r Desktop und mobile Endger\IeC {\"a}te\relax }}{64}{figure.caption.773}
-\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Such-, Filter- und Sortierfunktion f\IeC {\"u}r Desktop und mobile Endger\IeC {\"a}te\relax }}{64}{figure.caption.774}
-\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Galerie f\IeC {\"u}r Desktop und mobile Endger\IeC {\"a}te\relax }}{64}{figure.caption.775}
-\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der finalen Desktop-Version\relax }}{66}{figure.caption.837}
+\contentsline {figure}{\numberline {}{\ignorespaces Ordnerstruktur des Hyperaudio-Plugins\relax }}{47}{figure.caption.156}
+\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Antworten-Funktion\relax }}{58}{figure.caption.534}
+\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Notiz-Funktion\relax }}{59}{figure.caption.557}
+\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Galerie\relax }}{61}{figure.caption.608}
+\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Mediensteuerung\relax }}{64}{figure.caption.726}
+\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Bereiche f\IeC {\"u}r Desktop und mobile Endger\IeC {\"a}te\relax }}{66}{figure.caption.773}
+\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Such-, Filter- und Sortierfunktion f\IeC {\"u}r Desktop und mobile Endger\IeC {\"a}te\relax }}{66}{figure.caption.774}
+\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der Galerie f\IeC {\"u}r Desktop und mobile Endger\IeC {\"a}te\relax }}{66}{figure.caption.775}
+\contentsline {figure}{\numberline {}{\ignorespaces Darstellung der finalen Desktop-Version\relax }}{68}{figure.caption.837}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {}{\ignorespaces Analyse der Kurseinheiten\relax }}{74}{figure.caption.854}
-\contentsline {figure}{\numberline {}{\ignorespaces Verwendung von Moodle in den Pflichtmodulen des Bachelorstudiengangs Wirtschaftsinformatik (Sommersemester 2018)\relax }}{75}{figure.caption.857}
+\contentsline {figure}{\numberline {}{\ignorespaces Analyse der Kurseinheiten\relax }}{76}{figure.caption.849}
+\contentsline {figure}{\numberline {}{\ignorespaces Verwendung von Moodle in den Pflichtmodulen des Bachelorstudiengangs Wirtschaftsinformatik (Sommersemester 2018)\relax }}{77}{figure.caption.852}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
