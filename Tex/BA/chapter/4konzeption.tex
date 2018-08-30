@@ -50,6 +50,8 @@ Mittels der JSON-Datei sollen folgende Informationen der Zusatzinhalte übertrag
 \item Endzeitpunkt der Annotation
 \end{itemize}
 
+\todo[inline]{autor}
+
 Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann anschließend die Zuordnung der weiteren Informationen zu der entsprechenden Audio-Datei in der Datenbank vorgenommen werden. Eine beispielhaft befüllte Konfigurationsdatei ist in Auflistung \ref{lst:JSON} dargestellt.
 
 \begin{lstlisting}[language=json,
@@ -57,6 +59,7 @@ Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann ansc
              caption={Beispielhafte Konfigurationsdatei},
              label={lst:JSON}]             
 {
+  "author": "Dr. Niels Seidel",
   "additional_contents": {
     "additional_content": [
       {"filename": "Abbildung_1_4.png",
@@ -73,12 +76,10 @@ Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann ansc
       "description": "Verschiedene Komponenten des Papierprototyps.",
       "begin": "62",
       "end": "220"}
-    ],
-    "author": "Dr. Niels Seidel"
+    ]
   }
 }
 \end{lstlisting}
-\todo[inline]{JSON Beispieldaten evtl erweitern}
 
 %%%%%%%%%%
 \section{Datenbankentwurf}
@@ -139,7 +140,7 @@ Im Bereich der Zusatzinhalte beschränkt sich die Diskussion auf die Darstellung
 Die erste Variante ist unpraktisch, da dies bei Inhalten, welche größer sind als der Bereich, dazu führt, dass nur ein Ausschnitt des Inhaltes dargestellt wird. Bei Inhalten, welche kleiner sind als der Bereich, wird hingegen nicht der volle Platz ausgenutzt und der Inhalt wird unnötig klein dargestellt. Bei der Variante 2 wird zwar stets der gesamte Bereich ausgenutzt und der Zusatzinhalt wird vollständig dargestellt, doch kann dies dazu zu unschönen Verzerrungen des dargestellten Inhaltes führen. Im Vergleich dazu bietet die dritte Variante den Vorteil, dass diese den Bereich möglichst gut ausnutzt ohne unschöne Verzerrungen zu verursachen.
 \todo[inline]{Mockup ergänzen}
 
-\textbf{Neben der Entscheidung für Variante 3 muss auch die Entscheidung getroffen werden, wie sich der Bereich verhält, wenn gerade keine Zusatzinhalte dargestellt werden müssen. In diesem Fall sind verschiedenen Szenarien denkbar. Zum einen wäre denkbar, dass der Bereich minimiert wird, sobald keine Zusatzinhalt dargestellt wird. Dies hätte aber den Nachteil, dass sich die Position der Kommentare mehrmals ändert und somit das Lesen erschwert wird. Zum anderen wäre auch die Darstellung eines Standardbildes oder einer einfarbigen Fläche vorstellbar. Es wäre aber auch möglich, innerhalb der Fläche die Metadaten des Hyperaudio-Dokuments darzustellen, sprich Titel, Autor und Beschreibung. Die letzte Variante stellt einen guten Kompromiss dar, da somit auch keine weitere Fläche für die Darstellung dieser Informationen benötigt wird.}
+Neben der Entscheidung für Variante 3 muss auch die Entscheidung getroffen werden, wie sich der Bereich verhält, wenn gerade keine Zusatzinhalte dargestellt werden müssen. In diesem Fall sind verschiedenen Szenarien denkbar. Zum einen wäre denkbar, dass der Bereich minimiert wird, sobald keine Zusatzinhalt dargestellt wird. Dies hätte aber den Nachteil, dass sich die Position der Kommentare mehrmals ändert und somit das Lesen erschwert wird. Zum anderen wäre auch die Darstellung eines Standardbildes oder einer einfarbigen Fläche vorstellbar. Es wäre aber auch möglich, innerhalb der Fläche die Metadaten des Hyperaudio-Dokuments darzustellen, sprich Titel, Autor und Beschreibung. Die letzte Variante stellt einen guten Kompromiss dar, da somit auch keine weitere Fläche für die Darstellung dieser Informationen benötigt wird.
 
 Neben der Nutzung der Fläche während keine Zusatzinhalte dargestellt werden, muss auch über das Format für die Darstellung entschieden werden. Hierbei bieten sich dir Formate 16:9 und 4:3 für die Darstellung an. Nachdem vornehmlich vorhandene Abbildungen, Formeln und Bilder aus bestehenden Kurseinheiten dargestellt werden sollen, fällt die Wahl auf das 4:3 Format. Dies bietet sich an, da das 4:3 Format mehr Ähnlichkeiten mit dem DIN A4 Format von Kurseinheiten hat, als das 16:9 Format. Dieses würde sich vor allem bei der Darstellung von Videos anbieten.
 
@@ -175,7 +176,7 @@ In einem zweiten Entwurf der Mediensteuerung in Abbildung \ref{fig:MockupMediens
 \label{fig:MockupMediensteuerung}
 \end{figure}
 
-In der dritten und finalen Variante wird die Waveform an die Timeline gedockt und in zwei Teile aufgeteilt (siehe Abbildung \ref{fig:MockupMediensteuerungV3}). Der obere Teil repräsentiert die Kommentare, während der untere Teil die Notizen wiederspiegelt. Des Weiteren wurde ein Button zum Erstellen der Lesezeichen in der Mediensteuerung ergänzt. Somit ist nur noch zum Löschen der Lesezeichen die Verwendung des Rechtsklicks notwendig. Darüber hinaus wurde der Punkt für Lesezeichen durch das entsprechende Symbol ersetzt. Diese Version bietet den Vorteil, dass die Interaktion, welche in der vorherigen Version ausschließlich für Kommentaren vorbehalten wurde, ebenfalls für Notizen eingebettet werden kann. Somit ist es auch möglich, in der Mediensteuerung mittels Mouse over eine Vorschau einer Notiz anzeigen zu lassen und mit Klick zu dieser zu springen. \textbf{Aufgrund der neuen Anordnung der Visualisierung von Kommentaren, Notizen und Lesezeichen wird die Barrierefreiheit der Anwendung verbessert, da die Kommentar-Arten nicht nur anhand der Farbe zu unterscheiden sind.}
+In der dritten und finalen Variante wird die Waveform an die Timeline gedockt und in zwei Teile aufgeteilt (siehe Abbildung \ref{fig:MockupMediensteuerungV3}). Der obere Teil repräsentiert die Kommentare, während der untere Teil die Notizen wiederspiegelt. Des Weiteren wurde ein Button zum Erstellen der Lesezeichen in der Mediensteuerung ergänzt. Somit ist nur noch zum Löschen der Lesezeichen die Verwendung des Rechtsklicks notwendig. Darüber hinaus wurde der Punkt für Lesezeichen durch das entsprechende Symbol ersetzt. Diese Version bietet den Vorteil, dass die Interaktion, welche in der vorherigen Version ausschließlich für Kommentaren vorbehalten wurde, ebenfalls für Notizen eingebettet werden kann. Somit ist es auch möglich, in der Mediensteuerung mittels Mouse over eine Vorschau einer Notiz anzeigen zu lassen und mit Klick zu dieser zu springen. Durch die neue Art der Visualisierung von Kommentaren, Notizen und Lesezeichen wird zudem die Barrierefreiheit der Anwendung verbessert, da die Kommentar-Arten nicht nur anhand der Farbe zu unterscheiden sind, sondern auch anhand der Positionierung.
 
 %%%%%%%%%%
 \subsection{Galerie}
@@ -228,9 +229,12 @@ Letztlich stellt sich die optimierte Variante der Kachel-Darstellung in Abbildun
 \subsection{Kommentare und Notizen}
 Dieser Bereich ist für das Erstellen und Anzeigen der öffentlichen Kommentare sowie der persönlichen Notizen zuständig. Zusätzlich müssen eine Suche, Filter- und Sortiermöglichkeiten auf Basis der Anforderungen aus Abschnitt \ref{sub:AnforderungenDerNutzenden} in die Oberfläche integriert werden.
 
-Abbildung \ref{fig:MockupKommentarsektionVersion1} zeigt eine erste Version des Kommentarbereichs. An oberste Stelle befinden sich eine Eingabemaske für Kommentare mit zwei Buttons, um den Inhalt der Eingabemaske als Kommentar oder als Notiz abzuspeichern. Neben der Suchmaske befinden sich zwei Checkboxen unterhalb der Eingabemaske und den Buttons. Diese ermöglichen es dem Betrachter nach öffentlichen Kommentaren und persönlichen Notizen zu filtern. Im benachbarten Dropdown-Menü kann die Grundlage der Sortierung bestimmt werden. Die Sortierung kann nach Erstellungsdatum beziehungsweise nach Zeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments erfolgen. Unterhalb dieser Funktionen befindet sich die Anzeige der Kommentare und Notizen. Sowohl bei Kommentaren als auch bei Notizen wird neben dem Erstellungsdatum auch der Annotationszeitpunkt festgehalten. Dieser wird als Link umgesetzt, sodass bei einem Klick die Rückkopplung an die Mediensteuerung erfolgen kann. Bei Kommentaren gibt es nach Betätigung der \textit{Antworten}-Schaltfläche noch eine zusätzliche Eingabemaske zum Verfassen von Antworten. \textbf{Um den Austausch der Studierenden und Lehrenden korrekt stets korrekt und sinnhaft wiedergeben zu könne, wird auf eine Bearbeitungs- und Löschfunktion bei Kommentaren und Antworten verzichtet. }Persönliche Notizen werden durch ein Schloss-Symbol hinter dem Erstellungsdatum visualisiert. Zusätzlich befinden sich noch jeweils zwei Buttons zum Bearbeiten und Löschen auf der rechten Seite einer Notiz. 
+Abbildung \ref{fig:MockupKommentarsektionVersion1} zeigt eine erste Version des Kommentarbereichs. An oberste Stelle befinden sich eine Eingabemaske für Kommentare mit zwei Buttons, um den Inhalt der Eingabemaske als Kommentar oder als Notiz abzuspeichern. Neben der Suchmaske befinden sich zwei Checkboxen unterhalb der Eingabemaske und den Buttons. Diese ermöglichen es dem Betrachter nach öffentlichen Kommentaren und persönlichen Notizen zu filtern. Im benachbarten Dropdown-Menü kann die Grundlage der Sortierung bestimmt werden. Die Sortierung kann nach Erstellungsdatum beziehungsweise nach Zeitpunkt der Annotation innerhalb des Hyperaudio-Dokuments erfolgen.\\
+Unterhalb dieser Funktionen befindet sich die Anzeige der Kommentare und Notizen. Sowohl bei Kommentaren als auch bei Notizen wird neben dem Erstellungsdatum auch der Annotationszeitpunkt festgehalten. Dieser wird als Link umgesetzt, sodass bei einem Klick die Rückkopplung an die Mediensteuerung erfolgen kann.\\
+Bei Kommentaren gibt es nach Betätigung der \textit{Antworten}-Schaltfläche noch eine zusätzliche Eingabemaske zum Verfassen von Antworten. Damit die Kommunikation zwischen Studierenden und Lehrenden stets nachvollziehbar bleibt, werden weder eine Bearbeitungs- noch eine Löschfunktion für Kommentare und Antworten zur Verfügung gestellt.\\
+Bei persönlichen Notizen hingegen ist wird das Bearbeiten und Löschen durch zwei zusätzliche Buttons ermöglicht. Persönliche Notizen werden durch ein Schloss-Symbol hinter dem Erstellungsdatum gekennzeichnet.
 
-Im nochmals verbesserten Design, welches in Abbildung \ref{fig:MockupKommentarsektionFinal} abgebildet ist, werden die Antworten auf Kommentare eingerückt dargestellt. Diese Darstellung führt zu einer besseren Übersichtlichkeit und ist auch aus anderen modernen Anwendungen bekannt.
+Im nochmals verbesserten Design, welches in Abbildung \ref{fig:MockupKommentarsektionFinal} abgebildet ist, werden die Antworten auf Kommentare eingerückt dargestellt. Diese Darstellung führt zu einer verbesserten Übersicht und ist auch aus anderen modernen Anwendungen bekannt.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{\textwidth}
@@ -271,6 +275,7 @@ Im ersten Schritt werden die jeweils favorisierten Elemente in ein Layout zusamm
 
 %%%%%%%%%%
 \subsection{Mobile Version}
+\label{sub:mobile}
 Für mobile Endgeräte wird keine neue Benutzeroberfläche entworfen. Stattdessen wird die vorhandene Oberfläche so angepasst (siehe Abbildung \ref{fig:MockupMobile}), dass diese für die Darstellung auf mobilen Geräten geeignet ist. Dazu wird die Strategie eines responsiven Grid-Layouts angewandt, das dafür sorgt, dass Inhalte bei kleineren Bildschirmgrößen anhand definierter Breakpoints umgebrochen werden \citep{hellichtresponsive}.
 
 So wird beispielsweise die Galerie auf kleinen Displays unterhalb des Bereichs für Kommentare und Notizen platziert. Dasselbe Vorgehen erstreckt sich auf weitere Bedienelemente, wie zum Beispiel die Filtermöglichkeiten. Zudem wird die Anzahl der Balken zur Visualisierung von Annotationen im Bereich der Mediensteuerung abhängig von der zur Verfügung stehenden Bildschirmgröße gewählt, sodass diese jeweils gut erkennbar bleiben und dabei möglichst viel Information liefern. Die Mediensteuerung selbst sowie die Anzeige der Zusatzinhalte skaliert mit der Bildschirmbreite, jedoch nur bis zu einer definierten Maximalbreite.
@@ -283,3 +288,5 @@ So wird beispielsweise die Galerie auf kleinen Displays unterhalb des Bereichs f
 %%%%%%%%%%
 \section{Zusammenfassung}
 \dots
+
+\todo[inline]{Zusammenfassung}

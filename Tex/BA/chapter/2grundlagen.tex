@@ -51,7 +51,7 @@ Bei \textit{Kollaboration} wird die Problemlösung hingegen durch gemeinsames En
 Als Beispiel kann eine Gruppenarbeit mit der Aufgabe, mehrere Textabschnitte zusammenzufassen, betrachtet werden.
 Bei einem kooperativen Vorgehen wäre zunächst jeweils ein Gruppenmitglied für die Zusammenfassung genau eines Textabschnittes verantwortlich. In einem zweiten Schritt würden dann die einzelnen Teilergebnisse zu einem Ergebnis zusammengefasst. Bei einem kollaborativen Vorgehen wiederum würden alle Gruppenmitglieder die einzelnen Textabschnitte gemeinsam zusammenfassen.
 
-Dem kooperativen Lernen werden positive Effekt zugesprochen, unter anderem bezüglich der Lernmotivation \citep{reinmann1995kooperation,dillenbourg1999collaborative}. So wird beispielsweise beim Lernen durch Lehren, einer speziellen Form des kooperativen Lernens, die Motivation der Beteiligten erhöht. Gleichzeitig werden sowohl beim Lehrenden als auch beim Lernenden effektive Lernprozesse in Gang gesetzt \citep{reinmann1995kooperation}.
+Dem kooperativen Lernen werden positive Effekte zugesprochen, unter anderem bezüglich der Lernmotivation \citep{reinmann1995kooperation,dillenbourg1999collaborative}. So wird beispielsweise beim Lernen durch Lehren, einer speziellen Form des kooperativen Lernens, die Motivation der Beteiligten erhöht. Gleichzeitig werden sowohl beim Lehrenden als auch beim Lernenden effektive Lernprozesse in Gang gesetzt \citep{reinmann1995kooperation}.
 
 \cite{reinmann2002analyse} beschreiben auch, welche Probleme bei netzbasierten Umgebungen entstehen können. So können neben technischen Problemen auch Widerstände seitens der Nutzer vorliegen. Oftmals ist es schwer, die Gruppenmitglieder dazu zu bringen, aktiv an den netzbasierten Szenarien teilzunehmen. Auch besteht das Problem, dass in netzbasierten Umgebungen weniger individuelles als kollektives Wissen geteilt wird als in Face-to-Face-Situationen. Aufgrund der fehlenden sozialen Hinweisreize und der Anonymität kann \glqq es leicht zu unkontrollierter Kommunikation und heftigen Gefühlsausbrüchen, dem sog. Flaming, kommen\grqq{} \citep{reinmann2002analyse}.
 
@@ -65,33 +65,12 @@ Bevor mit der genauen Konzeption und Implementation des Hyperaudio-Plugins begon
 \subsection{Grundbegriffe}
 Zu Beginn wird zunächst der Begriff \textit{Multimedia} betrachtet. Unter \textit{Multimedia} wird die Bereitstellung von Informationen mittels verschiedener Formate, beispielsweise Text, Audio, Bilder oder Video, bezeichnet \citep{mayer2009multimedia,moos2010multimedia}.
 
-Der Begriff \textit{Hypermedia} wurde das erste Mal von Ted Nelson 1965 verwendet \citep{nelson1965complex}. In seinem Paper beschreibt er detailliert, was er sich unter einem \textit{Hypertext} vorstellt. Hierunter versteht er ein Dokument bestehend aus geschriebenen oder bildhaften Inhalten, welche in solch einer komplexen Art und Weise miteinander verbunden sind, dass sie nicht mehr auf Papier dargestellt werden können. Es kann Zusammenfassungen, Karten über die Inhalte und deren Zusammenhänge, Annotationen, Ergänzungen oder Anmerkungen von Wissenschaftlern, die das Dokument begutachtet haben, enthalten. Nelson beschreibt das Kriterium für den Präfix \textit{hyper} damit, dass diese Objekte nicht durch eine Konvertierung in ein einfaches lineares Medium, wie beispielsweise einen String umgewandelt werden können. Der wesentliche Punkt ist also, dass es sich beim Arbeiten mit \textit{Hypermedia} um ein nicht-lineares Vorgehen handelt.
+Der Begriff \textit{Hypermedia} wurde das erste Mal von Ted Nelson 1965 verwendet \citep{nelson1965complex}. In seinem Paper beschreibt er detailliert, was er sich unter einem \textit{Hypertext} vorstellt. Hierunter versteht er ein Dokument bestehend aus geschriebenen oder bildhaften Inhalten, welche in solch einer komplexen Art und Weise miteinander verbunden sind, dass sie nicht mehr auf Papier dargestellt werden können. Es kann Zusammenfassungen, Karten über die Inhalte und deren Zusammenhänge, Annotationen, Ergänzungen oder Anmerkungen von Wissenschaftlern, die das Dokument begutachtet haben, enthalten. Nelson beschreibt das Kriterium für den Präfix \textit{hyper} damit, dass diese Objekte nicht durch eine Konvertierung in ein einfaches lineares Medium, wie beispielsweise eine Zeichenkette umgewandelt werden können. Der wesentliche Punkt ist also, dass es sich beim Arbeiten mit \textit{Hypermedia} um ein nicht-lineares Vorgehen handelt.
 
-Genauer betrachtet stellt das, was \cite{nelson1965complex} sich als \textit{Hypertext} vorgestellt hatte, nach \cite{nielsen2013multimedia} bereits eine Form von \textit{Hypermedia} dar. Auch wenn die beiden Begriffe \textit{Hypertext} und \textit{Hypermedia} synonym verwendet werden können, werden bei strikter Betrachtung bei \textit{Hypertext} ausschließlich Texte miteinander verbunden, während bei \textit{Hypermedia} auch andere Medien eingebunden werden können. Gemeinsam haben beide Arten jedoch, dass der Betrachter keinen linearen Weg vorgegeben hat, sondern von einem Knoten (Node) zum anderen springen kann und sich somit seinen Weg selbst aussucht. Demnach stellt \textit{Hypermedia} eine nicht-lineare Variante von \textit{Multimedia} dar.
+Genauer betrachtet stellt das, was \cite{nelson1965complex} sich als \textit{Hypertext} vorgestellt hatte, nach \cite{nielsen2013multimedia} bereits eine Form von \textit{Hypermedia} dar. Auch wenn die beiden Begriffe \textit{Hypertext} und \textit{Hypermedia} synonym verwendet werden können, werden bei strikter Betrachtung bei \textit{Hypertext} ausschließlich Texte miteinander verbunden, während bei \textit{Hypermedia} auch andere Medien eingebunden werden können. Gemeinsam haben beide Arten jedoch, dass der Betrachter keinen linearen Weg vorgegeben hat, sondern von einem Knoten zum anderen springen kann und sich somit seinen Weg selbst aussucht. Demnach stellt \textit{Hypermedia} eine nicht-lineare Variante von \textit{Multimedia} dar.
 
 Nach dieser Logik handelt es sich bei \textit{Hyperaudio} in seiner klassischen Form eigentlich um reine Audiosequenzen, die miteinander verknüpft sind, wobei der Zuhörer selbst entschieden kann, in welcher Reihenfolge er diese abspielt \citep{zumbach2006learning}.
 
-\subsection{Hyperaudio}
-\label{sec:audiocues}
-\textit{Hyperaudio} als Sonderform von \textit{Hypermedia} bringt spezielle Probleme mit sich. So weisen \cite{donker2007gestaltung} auf die Herausforderungen bei der Gestlatung von \textit{Hyperaudio}-Anwendungen hin, welche darin bestehen dem Hörer die Hyperlinks innerhalb einer \textit{Hyperaudio}-Anwendung sinnvoll darzustellen. Bei ihrer Untersuchung kamen \cite{donker2007gestaltung} zu dem Ergebnis, \glqq dass sowohl eine Verdeutlichung von Links durch das Voranstellen eines Tons als auch die Variante durch das
-Ändern des Alters des Sprechers zu guten Ergebnissen hinsichtlich des Erkennens des Links
-führen.\grqq{} Die genannten vorangestellten Töne werden auch als \textit{Audio Cues} bezeichnet.
-
-Diese Erkenntnisse könnten darüber hinaus auch bei der Vertonung von Kurseinheiten nützlich sein. Denn hierbei stellen sich auch mehrere Herausforderungen, einige davon werden hier kurz aufgelistet:
-
-\begin{itemize}
-\item Wie können dem Hörer Auflistungen erkenntlich und nachvollziehbar wiedergegeben werden
-\item Wie können dem Hörer spezielle Textpassagen (Beispiele, Aufgaben, Definitionen, Algorithmen etc.) kenntlich gemacht werden
-\item Wie können dem Hörer Zitate kenntlich gemacht werden
-Wie kann man längere Zitate kennzeichnen, die teilweise auch noch in einer anderen Sprache verfasst sind (deutsch/englisch)
-\item Wie soll mit Ausdrücken in Klammern umgegangen werden
-\item Wie soll mit Marginalien
-\item Wie soll mit Querverweisen umgegangen werden
-\end{itemize} 
-
-So könnten diesen Herausforderungen mit Anlehnung an \cite{donker2007gestaltung} mit dem Einsatz von verschiedenen Audio Cues und Sprechern begegnet werden. Auch wäre der Einsatz von \textit{Resonance Audio}\footnote{https://developers.google.com/resonance-audio/} von Google denkbar. Damit wäre es möglich durch unterschiedliche Positionierung im Raum oder durch Verwendung verschiedener Audio-Kanäle den gerade gesprochenen Inhalt zu kategorisieren. 
-\todo[inline]{Was hat das mit Lernen zu tun?}
-\todo[inline]{ML: Herausforderungen bei der Vertonung}
 
 %%%%%%%%%%
 \subsection{Lernen mit Hypermedia}
@@ -99,7 +78,7 @@ Wissenschaftler beschäftigen sich schon seit vielen Jahren damit, festzustellen
 
 %In der Arbeit von \cite{moos2010multimedia} wird eine Analyse von etlichen Arbeiten zu diesem Thema durchgeführt. \cite{moos2010multimedia} konzentrieren sich hierbei vor allem auf den Einfluss auf die Motivation der Lernenden. Dennoch wird auch auf andere Aspekte der drei verschiedenen E-Learning Methoden \textit{Multimedia}, \textit{Hypertext} und  \textit{Hypermedia} im Vergleich zu klassischen Lehrmethoden eingegangen.
 
-\cite{mayer2009multimedia} \textbf{konnte im Laufe seiner Untersuchungen }positive Effekte beim Einsatz von \textit{Multimedia} nachweisen. So schnitten Studenten bei einem Transfertest besser ab, wenn sie mit Text und Bildern lernten, als wenn sie ausschließlich mit Text lernten. \cite{mayer2009multimedia} knüpft dieses Ergebnis aber an folgende Prinzipien, welche beim Einsatz von \textit{Multimedia} befolgt werden müssen:
+\cite{mayer2009multimedia} konnte im Laufe seiner Untersuchungen positive Effekte beim Einsatz von \textit{Multimedia} nachweisen. So schnitten Studenten bei einem Transfertest besser ab, wenn sie mit Text und Bildern lernten, als wenn sie ausschließlich mit Text lernten. \cite{mayer2009multimedia} knüpft dieses Ergebnis aber an folgende Prinzipien, welche beim Einsatz von \textit{Multimedia} befolgt werden müssen:
 
 \begin{itemize}
  \item  Kohärenz: irrelevante Wörter, Töne und Bilder sollten vermieden werden
@@ -114,34 +93,41 @@ Wissenschaftler beschäftigen sich schon seit vielen Jahren damit, festzustellen
  \item	Stimme: Text sollte von einer freundlichen menschlichen Stimme statt einer Computerstimme wiedergegeben werden
 \end{itemize}
 
+Im Gegenzug verweisen \cite{moos2010multimedia} auf Arbeiten, nach denen eine Herausforderung bei \textit{Multimedia} und somit auch bei \textit{Hypermedia} darin besteht, dass die kognitive Aufnahmekapazität der Studierenden überschritten werden kann, wenn Informationen sowohl aus einem Text als auch aus einem Diagramm entnommen werden sollen (Mayer und Moreno; van Merrienboer und Ayres, nach \cite{moos2010multimedia}). Dies beruht auf der Annahme der Cognitive Load Theory, welche dem Arbeitsgedächtnis nur eine begrenzte Kapazität zuspricht (Sweller; van Merrienboer und Sweller, nach \cite{moos2010multimedia}). Diesem Problem ist laut \cite{mayer2009multimedia} mit den oben genannten Prinzipien zu entgegenzukommen, da diese darauf abzielen, die begrenzte Kapazität besser zu nutzen.
+
+Ebenso wie \textit{Multimedia} bietet \textit{Hypertext} den Vorteil, dass der Studierende den Lernweg bestimmen kann, der am besten auf seine Bedürfnisse angepasst ist. Auf der anderen Seite ist hierzu aber eine ausreichende Vorkenntnis im entsprechenden Lernbereich notwendig, um die Entscheidung treffen zu können, wie dieser Weg aussehen soll. Des Weiteren wirkt sich auch ein fehlendes Interesse des Studierenden negativ auf die Effektivität der \textit{Hypertext}-Lernumgebung aus (Lawless und Kulikowich, nach \cite{moos2010multimedia}).
+
+Es ist nun also nicht verwunderlich, dass \textit{Hypermedia} als Verschmelzung von \textit{Multimedia} und \textit{Hypertext} ebenfalls einige Herausforderungen mit sich bringt \citep{moos2010multimedia}. Scott und Schwartz (nach \cite{moos2010multimedia}) fordern für das Lernen mit \textit{Hypermedia} eine Balance zwischen effektiver Navigation und Inhaltsverständnis. Dies soll durch Prozesse zur Überwachung des eigenen Lernfortschritts erreicht werden, wohingegen Untersuchungen ergeben haben, dass viele Studierende Schwierigkeiten dabei haben, diese Prozesse korrekt anzuwenden \citep{moos2010multimedia}.
+
+
+\subsection{Hyperaudio-Repräsentation von Kurseinheiten}
+\label{sec:hyperaudio}
+\label{sec:audiocues}
+\textit{Hyperaudio} als Sonderform von \textit{Hypermedia} bringt spezielle Probleme mit sich. So weisen \cite{donker2007gestaltung} auf die Herausforderungen bei der Gestlatung von \textit{Hyperaudio}-Anwendungen hin, welche unter anderem darin bestehen, dem Hörer die Hyperlinks innerhalb einer \textit{Hyperaudio}-Anwendung sinnvoll darzustellen. Bei ihrer Untersuchung kamen \cite{donker2007gestaltung} zu dem Ergebnis, \glqq dass sowohl eine Verdeutlichung von Links durch das Voranstellen eines Tons als auch die Variante durch das
+Ändern des Alters des Sprechers zu guten Ergebnissen hinsichtlich des Erkennens des Links
+führen.\grqq{} Die genannten vorangestellten Töne werden auch als \textit{Audio Cues} bezeichnet.
+
+Bei einer auditiven Repräsentation von Kurseinheiten stellen sich einige Herausforderungen, denen ebenfalls mit den Erkenntnissen von \cite{donker2007gestaltung} begegnet werden kann:
+
+\begin{itemize}
+\item Wie können spezielle Textpassagen (Auflistungen, Beispiele, Aufgaben, Definitionen, Algorithmen etc.) nachvollziehbar wiedergegeben werden?
+\item Wie können Zitate kenntlich gemacht werden?
+\item Wie soll mit Ausdrücken in Klammern umgegangen werden?
+\item Wie soll der Hörer auf Fußnoten hingewiesen werden?
+\item Wie sollen Marginalien bei der Vertonung berücksichtigt werden?
+\item Wie kann der Hörer auf Querverweise informiert werden?
+\end{itemize} 
+
+In Anlehnung an \cite{donker2007gestaltung} könnte mit dem Einsatz verschiedener Audio Cues und Sprecher gearbeitet werden. Auch wäre ein Einsatz von \textit{Resonance Audio}\footnote{https://developers.google.com/resonance-audio/} von Google denkbar. Damit wäre es möglich, durch unterschiedliche Positionierung im Raum oder durch Verwendung verschiedener Audio-Kanäle den gerade gesprochenen Inhalt zu kategorisieren. 
+
 \todo[inline]{Welche Erkenntniss kann aus diesen Prinzipien für Hyperaudio bzw. die Vertonung von Studienbriefen ableiten?}
 
-Im Gegenzug verweisen \cite{moos2010multimedia} auf Arbeiten, nach denen eine Herausforderung bei \textit{Multimedia} und somit auch bei \textit{Hypermedia} darin besteht, dass die kognitive Aufnahmekapazität der Studierenden überschritten werden kann, wenn Informationen sowohl aus einem Text als auch aus einem Diagramm entnommen werden sollen (Mayer und Moreno; van Merrienboer und Ayres, nach \cite{moos2010multimedia}). Dies beruht auf der Annahme der Cognitive Load Theory, welche dem Arbeitsgedächtnis nur eine begrenzte Kapazität zuspricht (Sweller; van Merrienboer und Sweller, nach \cite{moos2010multimedia}). \textbf{Diesem Problem ist laut \cite{mayer2009multimedia} mit den oben genannten Prinzipien zu entgegen zu kommen, da diese darauf abzielen die begrenzte Kapazität besser zu nutzen.}
+Unter Berücksichtigung der soeben genannten Herausforderungen und Lösungsideen müssen für eine auditive Repräsentation der Kurseinheiten deren Inhalte entsprechend aufbereitet werden. Inhalte, die nicht auditiv umgesetzt werden können, können in visueller Darstellung zum passenden Zeitpunkt an die auditiven Inhalte annotiert werden.
 
-\todo[inline]{Und, was soll man dann tun? Gibt es Gestaltungsempfehlungen um solche Probleme zu vermeiden?}
-\todo[inline]{Ich verstehe den Zusammenhang zwischen den vorher besprochenen Multimediaprinzipien und Hypertext nicht. => Überleitung}
+In Ergänzung zu \cite{zumbach2006learning} wird in dieser Arbeit unter \textit{Hyperaudio} ein Audioinhalt verstanden, der mittels der Erweiterung durch Kommunikations- und Interaktionsmöglichkeiten (vgl. Abschnitt \ref{sec:zielsetzung}) sowie visuelle Inhalte um Multimedia- und Hypermedia-Elemente ergänzt wird. Die Kommunikationsmöglichkeiten sollen die Lehrenden und Studierenden in die Lage versetzen effektiv miteinander zu kommunizieren, um die Vorzüge des kooperativen Lernens (vgl. Abschnitt \ref{sec:kooperativeslernen}) genießen zu können. Die Interaktionsmöglichkeiten sollen wiederum dafür sorgen, dass die Möglichkeiten, die eine textuelle Darstellung der Lerninhalte bietet, wie beispielsweise das Markieren von Inhalten mit Pagemarkern, erhalten bleiben.\\
+Ein Hyperaudio-Dokument im Sinne dieser Arbeit besteht aus auditiven Inhalten und annotierten visuellen Inhalten. Bei den Hyperaudio-Dokumenten handelt es sich somit eigentlich um Multimedia-Dokumente. Erst die Kommunikations- und Interaktionsmöglichkeiten führen dazu, dass der \textit{Hypermedia}-Aspekt erfüllt wird.
 
-\textbf{Ebenso wie \textit{Multimedia} bietet \textit{Hypertext} bietet Vorteile, da der Studierende den Lernweg bestimmen kann, der am besten auf seine Bedürfnisse angepasst ist.} Auf der anderen Seite ist hierzu aber eine ausreichende Vorkenntnis in dem entsprechenden Lernbereich notwendig, um die Entscheidung treffen zu können, wie dieser Weg aussehen soll. Des Weiteren wirkt sich auch ein fehlendes Interesse des Studierenden negativ auf die Effektivität der \textit{Hypertext}-Lernumgebung aus (Lawless und Kulikowich, nach \cite{moos2010multimedia}).
-
-Es ist nun also nicht verwunderlich, dass \textit{Hypermedia} als Verschmelzung von \textit{Multimedia} und \textit{Hypertext} ebenfalls einige Herausforderungen mit sich bringt \citep{moos2010multimedia}. Scott und Schwartz (nach \cite{moos2010multimedia}) fordern für das Lernen mit \textit{Hypermedia} eine Balance zwischen effektiver Navigation und Inhaltsverständnis. Dies soll durch Prozesse zur Überwachung des eigenen Lernfortschritts erreicht werden, doch Untersuchungen haben ergeben, dass viele Studierende Schwierigkeiten dabei haben, diese Prozesse korrekt anzuwenden \citep{moos2010multimedia}.
-
-
-
-\subsection{Repräsentation von Kurseinheiten im Hyperaudio-Format}
-\label{sec:hyperaudio}
-
-Nachdem nun die Begrifflichkeiten um \textit{Hypermedia}, sowie den Begriff \textit{Hyperaudio} im eigentlichen Sinne beleuchtet und entsprechende Studien betrachtet wurden, wird nun darauf eingegangen, welche Rückschlüsse daraus für diese Arbeit gezogen werden können.
-
-Um eine auditive Repräsentation der Kurseinheiten umsetzen zu können, müssen deren Inhalte entsprechend auditiv aufbereitet werden. Inhalte, die nicht auditiv umgesetzt werden können, können in visueller Darstellung zum entsprechenden Zeitpunkt an den Audioinhalt annotiert werden.
-
-In Ergänzung zu \cite{zumbach2006learning} wird in dieser Arbeit unter \textit{Hyperaudio} ein Audioinhalt verstanden, der mittels der Erweiterung durch Kommunikations- und Interaktionsmöglichkeiten (vgl. Abschnitt \ref{sec:zielsetzung}) sowie visuelle Inhalte um Multimedia- und Hypermedia-Elemente ergänzt wird. \textbf{Die Kommunikationsmöglichkeiten sollen die Lehrenden und Studierenden in die Lage versetzen untereinander zu kommunizieren, um die Vorzüge des kooperativen Lernens (vlg. Abschnitt \ref{sec:kooperativeslernen} ausnutzen zu können. Die Interaktionsmöglichkeiten sollen auf der anderen Seite dafür sorgen, dass die Möglichkeiten die eine textuelle Darstellung der Lerninhalte bietet, wie beispielsweise das Markieren von Inhalten mit einem Marker, beibehalten bleiben.} Ein Hyperaudio-Dokument im Sinne dieser Arbeit besteht aus auditiven Inhalten und annotierten visuellen Inhalten. Bei den Hyperaudio-Dokumenten handelt es sich somit eigentlich um Multimedia-Dokumente. Erst die Kommunikations- und Interaktionsmöglichkeiten führen dazu, dass der \textit{Hypermedia}-Aspekt erfüllt wird.
-\todo[inline]{Sind Sie daruaf bereits eingegangen? Was meinen Sie mit Kommunikation? Werden nur Lerninhalte an die Lernenden kommuniziert oder kommunizieren alle beteiligten miteinander, wenn ja wie? Gibt es in der Literatur dazu Vorarbeiten?}
-
-\textbf{Der Vorteil dieser Betrachtungsweise von \textit{Hyperaudio} liegt darin, dass die Herausforderungen der Navigation durch den Nutzer, die in Verbindung mit \textit{Hypermedia} bzw. \textit{Hypertext} normalerweise auftreten, nicht besonders prägnant sind, da es sich in erster Linie um ein lineares Audio-Dokument handelt.} Im zu entwickelnden Moodle-Plugin wird dem Studierenden in erster Linie ein linearer Audioinhalt vorgespielt, der um Multimedia-Elemente ergänzt wird. Erst durch den Einsatz der Kommunikations- und Interaktionsmöglichkeiten kommen die herausfordernden Elemente von \textit{Hypermedia} ins Spiel. Dementsprechend stellt das Hyperaudio-Plugin einen guten Kompromiss zwischen den verschiedenen Lehrmethoden dar.
-\todo[inline]{Welche Herausforderungen meinen Sie hier?}
-\todo[inline]{Was heißt "nicht besonders prägnant"? Warum ist das so?}
-\todo[inline]{ML: Probleme der Vertonung aus Arbeit ausschließen?}
-
+Der Vorteil dieser Betrachtungsweise von \textit{Hyperaudio} liegt darin, dass die Herausforderungen der Navigation durch den Nutzer, die in Verbindung mit \textit{Hypermedia} bzw. \textit{Hypertext} normalerweise auftreten, nicht besonders prägnant sind, da es sich vorrangig um ein lineares Audio-Dokument handelt. Im zu entwickelnden Moodle-Plugin wird dem Studierenden in erster Linie ein linearer Audioinhalt vorgespielt, der um Multimedia-Elemente ergänzt wird. Die herausfordernden Elemente von \textit{Hypermedia} kommen jedoch erst durch die Einbindung der Kommunikations- und Interaktionsmöglichkeiten ins Spiel. Dementsprechend stellt das Hyperaudio-Plugin einen guten Kompromiss zwischen den verschiedenen Lehrmethoden dar.
 
 %%%%%%%%%%
 \section{Zusammenfassung}

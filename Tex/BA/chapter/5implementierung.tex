@@ -303,8 +303,6 @@ Damit die Beispieldaten durch tatsächliche Metadateninformationen ausgetauscht 
 
 Die Speicherung verläuft analog zur Speicherung der Zusatzinhalte. In diesem Zuge wird also erneut die \textbf{lib.php} und \textbf{locallib.php} entsprechend erweitert. Neben den Funktionen \texttt{hyperaudio\underline{{ }}update\underline{{ }}hyperaudio\underline{{ }}config} und \texttt{hyperaudio\underline{{ }}delete\underline{{ }}hyperaudio\underline{{ }}config} wird, wie in Auflistung \ref{lst:it3:locallib} zu erkennen, die Funktion \texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content} erweitert. Es ist zu entnehmen, dass zunächst die Inhalte der Konfigurationsdatei mithilfe der Funktion \texttt{parse\underline{{ }}hyperaudio\underline{{ }}config} ausgelesen werden, um diese Metadaten dann beim Abspeichern der Zusatzinhalte zu verwenden.
 
-\todo[inline]{parse\underline{{ }}hyperaudio\underline{{ }}config}
-
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{locallib.php} in der 3. Iteration},
@@ -643,9 +641,14 @@ Entsprechend der Webservices werden innerhalb der \textbf{external.php} Funktion
 \subsection{Audio Cues}
 Das Abspielen der Audio Cues im Moment der Darstellung eines Zusatzinhaltes wird durch eine Erweiterung des verwendeten \textit{Popcorn.js}-Plugin \textit{Images} erreicht. In diesem Zug wird das \textit{Popcorn.js}-Plugin \textit{Hyperaudio} basierend auf dem \textit{Images}-Plugin entwickelt.
 
-Hierfür wird in den Optionen ein zusätzlicher Parameter \texttt{cue} eingeführt (vgl. Auflistung \ref{lst:it7:popcorn.hyperaudio}). Mit diesem Parameter kann die abzuspielende Audio-Datei an \textit{Popcorn.js} übermittelt werden. Diese Anpassung wird innerhalb der Funktion \texttt{start} vorgenommen, also in der Funktion, die ausgeführt wird, wenn die Darstellung des Zusatzinhalts beginnen soll. Durch Ergänzung der Zeilen 25 bis 28 wird die Audio-Datei abgespielt, sofern der Ton mittels der Mediensteuerung nicht auf stumm geschaltet wurde oder die Wiedergabe pausiert wurde. 
+Hierfür wird in den Optionen ein zusätzlicher Parameter \texttt{cue} eingeführt. Dieser nimmt die ID eines \texttt{<audio>}-Elements entgegen, welches den abzuspielenden Audio Cue wiedergeben kann (vgl. Auflistung \ref{lst:it7:renderer}). Um den Ton zeitgleich mit der Anzeige des Zusatzinhaltes abzuspielen, wird eine Anpassung in der Funktion \texttt{start} vorgenommen. Sofern keine Stummschaltung oder Pausierung des Hyperaudio-Dokuments vorliegt, wird die Wiedergabe des Audio Cues durch den Aufruf der \texttt{play}-Funktion des HTML5-Audioplayers angestoßen. Auflistung \ref{lst:it7:popcorn.hyperaudio} zeigt die Erweiterungen des \textit{Popcorn.js}-Plugins \textit{Hyperaudio}.
 
-\todo[inline]{Überarbeiten (siehe Zettel)}
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{renderer.php} in der 7. Iteration},
+             label={lst:it7:renderer}]
+$output .= '<audio id="hyperaudio_audio_cue" src="../hyperaudio/ding.mp3"></audio>';
+\end{lstlisting}
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -687,7 +690,7 @@ Der Anforderung nach einer Übersicht über annotierte Zusatzinhalte wird mittel
 
 Durch diese Implementierung wird die Darstellung der Galerie erreicht, durch Verwendung der JavaScript-Funktion \texttt{jump\underline{{ }}to\underline{{ }}time} wird zusätzlich noch die Rückkopplung an die Mediensteuerung geboten.
 
-
+\todo[inline]{Vorschaubilder}
 
 \subsection{Zeitabhängige Visualisierung der Kommentare und Notizen}
 In dieser Iteration soll sich nun der zeitabhängigen Visualisierung der Kommentare und Notizen zugewendet werden. An dieser Stelle muss festgehalten werden, dass dies beim Einsatz des Standard HTML5-Audioplayers schwer umsetzbar ist, weshalb auf die Erkenntnisse bezüglich des \textit{VideoJS Players} aus Abschnitt \ref{sub:TechnologienMoodle} zurückgegriffen wird. Die umfassenden Anpassungsmöglichkeiten sollen sich nun in dieser Iteration zu Nutze gemacht werden.
@@ -799,6 +802,8 @@ function jump_to_comment(element){
 }
 \end{lstlisting}
 Als Ergebnis dieser Iteration ergibt sich eine in die Mediensteuerung integrierte Visualisierung der Kommentare und Notizen, welche nicht nur der Übersicht sondern auch der Navigation dient.
+
+\todo[inline]{SQL?}
 
 \subsection{Lesezeichen}
 Um die Vorstellung aus Abschnitt \ref{sub:Mediensteuerung} zu vervollständigen müssen nun noch die Lesezeichen in die Mediensteuerung integriert werden. Dementsprechend wird in dieser Iteration das Erstellen und Visualisieren von Lesezeichen behandelt.
@@ -924,10 +929,125 @@ Die Umsetzung der Such-, Filter- und Sortierfunktion runden die Implementierung 
 
 %%%%%%%%%%
 \subsection{Unterstützung mobiler Endgeräte}
-\todo[inline]{Ergänzen}
+In der letzten Iteration werden Anpassungen vorgenommen, um die Nutzung des Hyperaudio-Plugins auch auf mobilen Endgeräte zu ermöglichen. Dafür werden wie bereits in Abschnitt \ref{sub:mobile} beschrieben Breakpoints eingeführt um die Anordnung der Elemente für mobile Endgeräte zu optimieren.
 
-%TODO: Wiedergabe von Videos
+Durch den ersten Breakpoint weren die Bereiche, wie in Abbildung \ref{fig:BereicheDesktopMobile} sichtbar, neu angeordnet, so dass die Galerie sich nun unterhalb der Kommentare und Notizen befindet. Hierdurch wird der geringeren Bildschirmgröße der mobilen Endgeräte Sorge getragen.
+
+\begin{figure}[h!]
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.95\textwidth,center]{BereicheDesktop.pdf}
+\label{fig:BereicheDesktop}
+\end{subfigure}%
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.6\textwidth,center]{BereicheMobile.pdf}
+\label{fig:BereicheMobile}
+\end{subfigure}
+\caption{Darstellung der Bereiche für Desktop und mobile Endgeräte}
+\label{fig:BereicheDesktopMobile}
+\end{figure}
+
+Ein weiterer Breakpoint wird bei der Such-, Filter- und Sortierfunktion angewandt, diese werden für mobile Endgeräte untereinander, statt nebeneinander angeordnet (siehe Abbildung \ref{fig:FilterDesktopMobile}).
+
+\begin{figure}[h!]
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.95\textwidth,center]{FilterDesktop.pdf}
+\label{fig:FilterDesktop}
+\end{subfigure}%
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.6\textwidth,center]{FilterMobile.pdf}
+\label{fig:FilterMobile}
+\end{subfigure}
+\caption{Darstellung der Such-, Filter- und Sortierfunktion für Desktop und mobile Endgeräte}
+\label{fig:FilterDesktopMobile}
+\end{figure}
+
+Um auch innerhalb der Galerie auf die Gegebenheiten von mobilen Endgeräten Rücksicht zu nehmen, wird ein weiterer Breakpoint eingeführt. Dieser sorgt dafür, dass die Metainformationen der Zusatzinhalt unterhalb statt neben des Thumbnail dargestellt werden. Hieraus resultiert die in Abbildung \ref{fig:GalerieDesktopMobile} dargestellte Aufteilung.
+
+\begin{figure}[h!]
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.95\textwidth,center]{GalerieDesktop.pdf}
+\label{fig:GalerieDesktop}
+\end{subfigure}%
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.6\textwidth,center]{GalerieMobile.pdf}
+\label{fig:GalerieMobile}
+\end{subfigure}
+\caption{Darstellung der Galerie für Desktop und mobile Endgeräte}
+\label{fig:GalerieDesktopMobile}
+\end{figure}
+
+Umgesetzt werden diese Breakpoints innerhalb der \textbf{styles.css}. Das Vorgehen ist in Auflistung \ref{lst:it12:styles} dargestellt. Es ist zu erkennen, dass die Darstellung der Desktop-Version mittels einer \texttt{@media} Abfrage unter der Angabe einer Mindestbreite vorgenommen wird. Sofern diese Bedingung nicht erfüllt wird, wird die Darstellung für die mobilen Endgeräte durchgeführt.
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{styles.css} in der 12. Iteration},
+             label={lst:it12:styles}]
+@media (min-width: 100em) {
+  div#hyperaudio {
+    display: grid;
+    grid-template-columns: 70em 1fr;
+  }
+  div#gallery_container {
+    margin-left: 2em;
+  }
+}
+
+@media (min-width: 40em) {
+  div.gallery_additional_content {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
+@media (min-width: 50em) {
+  div#comment_tools_container {
+    display: grid;
+    grid-template-columns: 4fr 2fr 3fr;
+  }
+  input#hyperaudio_search {
+  	max-width: 35em;
+  	margin-top: 0em;
+  }
+  div#comment_tools_filter,
+  div#comment_tools_order {
+  	display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+  }
+}
+
+div.gallery_additional_content {
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+div#comment_tools_container {
+	align-items: baseline;
+    margin-top: 1rem;
+    max-width: 70em;
+}
+
+input#hyperaudio_search {
+    font-family: Arial, FontAwesome;
+    font-weight: normal;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 0.3em;
+}
+
+div#comment_tools_order {
+    align-items: baseline;
+}
+\end{lstlisting}
+
 
 %%%%%%%%%%
 \section{Zusammenfassung}
-\dots
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth,center]{Desktop.png}
+\caption{\label{fig:DesktopFinal}Darstellung der finalen Desktop-Version}
+\end{figure}
