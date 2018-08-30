@@ -69,16 +69,16 @@
 \contentsline {chapter}{\numberline {6}Evaluation}{67}{chapter.838}
 \contentsline {section}{\numberline {6.1}Administration}{67}{section.839}
 \contentsline {section}{\numberline {6.2}Nutzung}{68}{section.840}
-\contentsline {section}{\numberline {6.3}Zusammenfassung}{69}{section.845}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{70}{chapter.851}
-\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{72}{appendix.855}
-\contentsline {section}{\numberline {A.1}Auswertung des Textanteils der Kurseinheiten}{72}{section.856}
-\contentsline {section}{\numberline {A.2}Auswertung Moodle-Beteiligung}{72}{section.860}
-\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{75}{appendix.862}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{77}{chapter*.863}
-\contentsline {chapter}{Abbildungsverzeichnis}{81}{section*.864}
-\contentsline {chapter}{Tabellenverzeichnis}{83}{section*.865}
-\contentsline {chapter}{Auflistungsverzeichnis}{85}{section*.866}
-\contentsline {chapter}{Verzeichnis der Algorithmen}{87}{section*.868}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{89}{section*.870}
+\contentsline {section}{\numberline {6.3}Zusammenfassung}{69}{section.841}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{71}{chapter.847}
+\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{73}{appendix.851}
+\contentsline {section}{\numberline {A.1}Auswertung des Textanteils der Kurseinheiten}{73}{section.852}
+\contentsline {section}{\numberline {A.2}Auswertung Moodle-Beteiligung}{73}{section.856}
+\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{76}{appendix.858}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{78}{chapter*.859}
+\contentsline {chapter}{Abbildungsverzeichnis}{81}{section*.860}
+\contentsline {chapter}{Tabellenverzeichnis}{83}{section*.861}
+\contentsline {chapter}{Auflistungsverzeichnis}{85}{section*.862}
+\contentsline {chapter}{Verzeichnis der Algorithmen}{87}{section*.864}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{89}{section*.866}
 \contentsfinish 

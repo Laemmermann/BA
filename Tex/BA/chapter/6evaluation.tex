@@ -5,43 +5,100 @@ Nachdem die Implementierung des Hyperaudio-Plugins abgeschlossen ist, kann nun d
 \label{sec:eval_administration}
 Die Anforderungen der Administrierenden wurden in Tabelle \ref{tab:AnforderungenAdministrierenden} festgehalten.
 
-Die erste Anforderung besteht darin Hyperaudio-Dokumente erstellen zu können. Die Erstellung von Hyperaudio-Dokumenten, wie es auch in \ref{US-Admin-Erstellen} gefordert wurde, ist durch das Hochladen einer Audio-Datei, der Zusatzinhalte sowie einer Konfigurationsdatei möglich. Somit kann diese Anforderung als erfolgreich implementiert betrachtet werden. Jedoch zeigt diese Implementierung einige Schwächen auf. So fehlt eine Validierung der Konfigurationsdatei. Dies kann zum einen damit resultieren, dass das Speichern des Hyperaudio-Dokuments fehlschlägt, wenn beispielsweise der Dateiname eines Zusatzinhaltes innerhalb der JSON-Datei falsch geschrieben wurde. Auch wird nicht sichergestellt, dass sich die Zeiträume der Zusatzinhalte nicht überschreiten. In diesem Fall werden beide Inhalte während der Überschneidung dargestellt und zerstören dabei den Aufbau der Seite. Generell wäre es wünschenswert, wenn die Erstellung von Hyperaudio-Dokumenten komplett innerhalb von Moodle über eine Art Wizzard erfolgen würde. Weitere Einschränkungen bestehen darin, dass nur eine Audio-Datei als Grundlage dienen kann und nur Bilddateien als Zusatzinhalt nutzbar sind.
 
-Die nächste Anforderung stellt die Möglichkeit zum Bearbeiten von Hyperaudio-Dokumenten dar. Diese Anforderung wurde insofern umgesetzt, als dass es möglich ist im Nachhinein die Audio-Datei, Zusatzinhalte oder Konfigurationsdatei auszutauschen und hierüber Änderungen am Hyperaudio-Dokument vorzunehmen. Ein direkte Bearbeitung des Hyperaudio-Dokuments innerhalb von Moodle kann beim Namen und der Beschreibung erfolgen. Insofern ist eine Bearbeitung von Hyperaudio-Dokumenten möglich, diese beschränkt sich aber darauf, dass die dazugehörigen Dateien ausgetauscht werden können. Dementsprechend ist die Anforderung aus \ref{US-Admin-Bearbeiten} erfüllt, aber es treten die gleichen Nachteile wie bereits beim Erstellen auf.
+\textbf{Erstellen eines Hyperaudio-Dokuments}\\
+\ref{US-Admin-Erstellen} - erfüllt\\
+Die Erstellung von Hyperaudio-Dokumenten, wie es auch in \ref{US-Admin-Erstellen} gefordert wurde, ist durch das Hochladen einer Audio-Datei, der Zusatzinhalte sowie einer Konfigurationsdatei möglich. Jedoch zeigt diese Implementierung einige Schwächen auf. So fehlt eine Validierung der Konfigurationsdatei. Dies kann zum einen damit resultieren, dass das Speichern des Hyperaudio-Dokuments fehlschlägt, wenn beispielsweise der Dateiname eines Zusatzinhaltes innerhalb der JSON-Datei falsch geschrieben wurde. Auch wird nicht sichergestellt, dass sich die Zeiträume der Zusatzinhalte nicht überschreiten. In diesem Fall werden beide Inhalte während der Überschneidung dargestellt und zerstören dabei den Aufbau der Seite. Generell wäre es wünschenswert, wenn die Erstellung von Hyperaudio-Dokumenten komplett innerhalb von Moodle über eine Art Wizzard erfolgen würde. Weitere Einschränkungen bestehen darin, dass nur eine Audio-Datei als Grundlage dienen kann und nur Bilddateien als Zusatzinhalt nutzbar sind.
 
-Das Löschen von Hyperaudio-Dokumenten wurde vollständig implementiert, somit kann die dazugehörige Anforderung und \ref{US-Admin-Loeschen} als erfolgreich Umgesetzt betrachtet werden.
+\textbf{Bearbeiten eines Hyperaudio-Dokuments}\\
+\ref{US-Admin-Bearbeiten} - erfüllt\\
+Diese Anforderung wurde insofern umgesetzt, als dass es möglich ist im Nachhinein die Audio-Datei, Zusatzinhalte oder Konfigurationsdatei auszutauschen und hierüber Änderungen am Hyperaudio-Dokument vorzunehmen. Ein direkte Bearbeitung des Hyperaudio-Dokuments innerhalb von Moodle kann beim Namen und der Beschreibung erfolgen. Insofern ist eine Bearbeitung von Hyperaudio-Dokumenten möglich, diese beschränkt sich aber darauf, dass die dazugehörigen Dateien ausgetauscht werden können. Dementsprechend ist die Anforderung aus \ref{US-Admin-Bearbeiten} erfüllt, aber es treten die gleichen Nachteile wie bereits beim Erstellen auf.
 
+\textbf{Löschen eines Hyperaudio-Dokuments}\\
+\ref{US-Admin-Loeschen} - erfüllt\\
+Das Löschen von Hyperaudio-Dokumenten wurde vollständig implementiert
+
+\textbf{Übernahme eines Hyperaudio-Dokuments in einen anderen Kurs}\\
+\ref{US-Admin-Kurs} - teilweise erfüllt\\
+\ref{US-Admin-Semester} - teilweise erfüllt\\
 Die Export- und Import-Funktion ist nur mit den Moodle Boardmitteln umgesetzt. Es ist somit nur möglich Audio-Datei, Zusatzinhalte und Konfigurationsdatei über die Bearbeitungsmaske herunterzuladen und dann bei der Anlage eines neuen Hyperaudio-Dokuments wieder hochzuladen. Titel und Beschreibung des Hyperaudio-Dokuments müssen händisch nachgetragen werden. Hier wäre es möglich für die Zukunft eine richtige Export- und Importfunktion zu implementieren, bei welcher alle Dateien in ein Archiv gepackt werden und um eine weitere Datei für Titel und Beschreibung ergänzt werden. Dieses Archiv müsste sich dann wiederum importieren lassen können, wodurch das ganze Hyperaudio-Dokument angelegt ist.
 
+\textbf{Statistische Auswertungen über die Nutzung der Hyperaudio-Dokumente}\\
+\ref{US-Admin-Statistik} - teilweise erfüllt\\
 Die gewünschten Statistiken wurden in kleinen Umfang über die \textbf{index.php} bereitgestellt. Dadurch ist es Lehrenden möglich zu sehen, wie viele Kommentare/Antworten, Notizen und Lesezeichen durch wie viele verschiedene Nutzer erstellt wurden. Es ist aber durchaus vorstellbar, dass diese Statistiken noch erweitert werden sollen. So wäre es denkbar, dass man visualisiert bekommt, welche Bereiche des Hyperaudio-Dokuments am häufigsten abgespielt wurden.
 
  
 \section{Nutzung}
 In Tabelle \ref{tab:AnforderungenNutzenden} sind die Anforderungen der Nutzenden definiert.
 
-Als erste Anforderung wird die zum Abspielen von Hyperaudio-Dokumenten betrachtet. Durch die Implementierung wurde dieses Ziel erreicht. Es kann eine Audio-Datei abgespielt werden und zu den festgelegten Zeitpunkten wird der annotierte Zusatzinhalt dargestellt. Gleichzeitig mit der Darstellung wird auch eine Audio Cue abgespielt. Demzufolge kann neben der Anforderung an das Abspielen auch die Anforderung an die Hinweise auf Zusatzinhalte als erfüllt betrachtet werden. Hierbei trifft die bereits in Abschnitt \ref{sec:eval_administration} erwähnte Einschränkung bezüglich der Formate der Zusatzinhalte zu. Zusätzlich gibt es keine Möglichkeit die Hyperaudio-Dokumente in einen Vollbildmodus abzuspielen.
+\textbf{Wiedergabe von Hyperaudio-Dokumenten}\\
+\ref{US-Wiedergabe} - erfüllt\\
+\ref{US-Zeit}\\
+\ref{US-Mobil}\\
+\ref{US-Zeit-Mobil}\\
+Durch die Implementierung wurde dieses Ziel erreicht. Es kann eine Audio-Datei abgespielt werden und zu den festgelegten Zeitpunkten wird der annotierte Zusatzinhalt dargestellt. Hierbei trifft die bereits in Abschnitt \ref{sec:eval_administration} erwähnte Einschränkung bezüglich der Formate der Zusatzinhalte zu. Zusätzlich gibt es keine Möglichkeit die Hyperaudio-Dokumente in einen Vollbildmodus abzuspielen.
 
+\textbf{Hinweise auf die Darstellung von annotierten Zusatzinhalten}\\
+\ref{US-Zeit} - erfüllt\\
+\ref{US-Mobil}\\
+\ref{US-Zeit-Mobil}\\
+Gleichzeitig mit der Darstellung von Zusatzinhalten wird eine Audio Cue abgespielt.
 
-Neben dem Abspielen wurden auch den Anforderungen zum Erstellen, Anzeigen und Beantworten von Kommentaren eine hohe Priorität zugewiesen. Diesen Anforderungen wurde genüge getan, insofern alle drei Funktionalitäten gegeben sind. Dies ist ebenfalls der Fall für die Anforderung zum Erstellen, Anzeigen, Bearbeiten und Löschen persönlicher Notizen. Die Funktionalitäten wurden um eine Möglichkeit zu Rückkopplung an den Player erweitert, um den Nutzen der Funktion weiter zu erhöhen. 
-\todo[inline]{wo wird gesagt, dass Löschen/Bearbeiten von Kommentaren nicht gewünscht ist}
-
+\textbf{Übersicht über annotierte Zusatzinhalte}\\
+\ref{US-Galerie} - erfüllt\\
 Der Übersicht über annotierte Zusatzinhalte wurde durch die Implementierung einer Galerie für Zusatzinhalte Sorge getragen. Durch die Erweiterung der Galerie um zusätzliche Metadaten und einer Rückkopplung an den Player wurde die Funktionalität der Galerie zusätzlich über die eigentliche Anforderung hinaus erweitert.
 
-Die Suchfunktion wurde für Kommentare als auch Notzien implementiert und findet die Kommentare und Notizen die den Suchbegriff enthalten. Somit ist die Anforderung zwar erfüllt, aber ein verbesserter Suchalgorithmus, welcher Schreibfehler verzeiht und ähnliche Wörter berücksichtigt, würde die Suche noch aufwerten.
 
-Die Anforderung Lesezeichen setzen zu können wurde umgesetzt. Nutzende sind in der Lage Lesezeichen zu erstellen und zu löschen. 
+\textbf{Kommentarfunktion bei Hyperaudio-Dokumenten}\\
+\ref{US-Kommentar-L} - erfüllt\\
+\ref{US-Antwort-L} - erfüllt\\
+\ref{US-Kommentar-S} - erfüllt\\
+\ref{US-Antwort-S} - erfüllt\\
+\ref{US-Sortierung-Zeitpunkt}
+\ref{US-Suche} - erfüllt\\
+Den Anforderungen an eine Kommentarfunktion wurde genüge getan, da alle drei Funktionalitäten gegeben sind. Die Suchfunktion wurde für Kommentare als auch Notizen implementiert und findet die Kommentare und Notizen die den Suchbegriff enthalten. Somit ist die Anforderung zwar erfüllt, aber ein verbesserter Suchalgorithmus, welcher Schreibfehler verzeiht und ähnliche Wörter berücksichtigt, würde die Suche noch aufwerten.
 
-Die gewünschte Filter- und Sortierfunktion wurde ebenso implementiert. Durch die Implementierung ist es möglich zu filtern, ob Kommentare, Notizen oder beides dargestellt werden sollen. Auch eine Sortierung nach Erstelldatum (auf- und absteigend) sowie nach Annotationszeitpunkt ist umgesetzt worden.
 
+\textbf{Notizfunktion bei Hyperaudio-Dokumenten}\\
+\ref{US-Notiz-L} - erfüllt\\
+\ref{US-Notiz-S} - erfüllt\\
+\ref{US-Notiz-Bearbeiten} - erfüllt\\
+\ref{US-Notiz-Loeschen} - erfüllt\\
+\ref{US-Sortierung-Zeitpunkt}\\
+
+\textbf{Lesezeichenfunktion bei Hyperaudio-Dokumenten}\\
+\ref{US-Lesezeichen} - erfüllt\\
+\ref{US-Lesezeichen-Loeschen} - erfüllt\\
+Nutzende sind in der Lage Lesezeichen zu erstellen und zu löschen. 
+
+\textbf{Filter- und Sortiermöglichkeiten}\\
+\ref{US-Filter} - erfüllt\\
+\ref{US-Sortierung-Erstellungsdatum} - erfüllt\\
+\ref{US-Sortierung-Zeitpunkt}\\
+Durch die Implementierung ist es möglich zu filtern, ob Kommentare, Notizen oder beides dargestellt werden sollen. Auch eine Sortierung nach Erstelldatum (auf- und absteigend) sowie nach Annotationszeitpunkt ist umgesetzt worden.
+
+\textbf{Favoritenfunktion für Hyperaudio-Dokumente}\\
+\ref{US-Favoriten} - nicht erfüllt\\
+\ref{US-Favoriten-Loeschen} - nicht erfüllt\\
+
+\textbf{Übersicht über alle Hyperaudio-Dokumente der belegten Kurse}\\
+\ref{US-Uebersicht-Kurse} - teilweise erfüllt\\
+Nutzende können sich nur innerhalb eines Kurses einen Überblick über alle darin enthaltenen Hyperaudio-Dokumente verschaffen.
+
+
+\textbf{Übersicht über die zuletzt abgespielten Hyperaudio-Dokumente}\\
+\ref{US-Uebersicht-Letzte} - nicht erfüllt\\
+
+
+\textbf{Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle}\\
+\ref{US-Fortsetzen} - nicht erfüllt\\
+
+
+\textbf{Unterstützung von mobilen Endgeräten}\\
+\ref{US-Mobil} - teilweise erfüllt\\
+\ref{US-Zeit-Mobil}  - teilweise erfüllt\\
 Es wurde eine angepasste Darstellung auf mobilen Geräten implementiert. Diese gibt dem Nutzer die Möglichkeit auch auf mobilen Endgeräten Hyperaudio-Dokumente abzuspielen, die dazugehörigen Kommentare, Notizen und Lesezeichen als auch die Galerie zu betrachten. Hierbei handelt es sich aber nur um eine angepasste Darstellung der Desktopversion. Um die Nutzung auf mobilen Geräten komfortabel zu gestalten, wäre eine komplett angepasste Darstellung der Hyperaudio-Dokumente notwendig.
 
-Was die Anforderung in Bezug auf Favoriten und Übersicht über alle Hyperaudio-Dokumente der belegten Kurse und der zuletzt abgespielten Hyperaudio-Dokumente belangt, wurden diese bei der Implementierung nicht berücksichtigt. Nutzende können sich nur innerhalb eines Kurses einen Überblick über alle darin enthaltenen Hyperaudio-Dokumente verschaffen.
-
-\todo[inline]{Fortsetzen}
-\todo[inline]{Leere Kommentare/Notizen/Antworten}
-
-
-\todo[inline]{User Stories und Anforderungen verknüpfen?}
 
 \section{Zusammenfassung}
 
