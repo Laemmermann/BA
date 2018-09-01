@@ -34,11 +34,11 @@ Zwischen Kommentaren und Zusatzinhalten gibt es jedoch keinen direkten Zusammenh
 %%%%%%%%%%
 \section{Definition des Schnittstellenformats für Hyperaudio-Dokumente}
 \label{sec:konfigurationsdatei}
-Um ein Hyperaudio-Dokument zu erstellen, können mehrere Dateien hochgeladen werden. Verpflichtend ist das Bereitstellen einer Audio-Datei. Sollen Zusatzinhalte angezeigt werden, muss neben den Zusatzinhalten selbst auch eine Konfigurationsdatei hochgeladen werden. Darin wird festgehalten, zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll. Darüber hinaus ist es mittels der Konfigurationsdatei möglich Metadaten (Name und Beschreibung des Zusatzinhalts sowie die betroffene Kurseinheit und die zugehörigen Seiten) für die einzelnen Zusatzinhalte anzufügen.
+Um ein Hyperaudio-Dokument zu erstellen, können mehrere Dateien hochgeladen werden. Verpflichtend ist das Bereitstellen einer Audio-Datei sowie einer Konfigurationsdatei. Darin wird festgehalten, zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll. Darüber hinaus ist es mittels der Konfigurationsdatei möglich Metadaten (Name und Beschreibung des Zusatzinhalts sowie die betroffene Kurseinheit und die zugehörigen Seiten) für die einzelnen Zusatzinhalte und das Hyperaudio-Dokument selbst anzufügen.
 %Wie in der Einleitung dieses Kapitels beschrieben, kann die Konfiguration zu welchem Zeitpunkt welcher Zusatzinhalt annotiert werden soll mittels einer Konfigurationsdatei durchgeführt werden. Diese Vorgehensweise wird nun umgesetzt und die Konfigurationsdatei ist entsprechend zu definieren.
 Aufgrund des Einsatzes von PHP und JavaScript innerhalb der Moodle Plugin-Entwicklung bietet sich der Einsatz von JSON (JavaScript Object Notation) an. JSON wird direkt durch JavaScript unterstützt und bietet im Vergleich zu XML (Extensible Markup Language) erhebliche Geschwindigkeitsvorteile \citep{nurseitov2009comparison}.
 %JSON is directly supported inside JavaScript [7] and is best suited for JavaScript applications; thus providing significant performance gains over XML, 
-Mittels der JSON-Datei sollen folgende Informationen der Zusatzinhalte übertragen werden:
+Mittels der JSON-Datei sollen die Informationen zum Autor des Hyperaudio-Dokuments sowie folgende Informationen der Zusatzinhalte übertragen werden:
 
 \begin{itemize}
 \item Dateiname
@@ -50,9 +50,7 @@ Mittels der JSON-Datei sollen folgende Informationen der Zusatzinhalte übertrag
 \item Endzeitpunkt der Annotation
 \end{itemize}
 
-\todo[inline]{autor}
-
-Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann anschließend die Zuordnung der weiteren Informationen zu der entsprechenden Audio-Datei in der Datenbank vorgenommen werden. Eine beispielhaft befüllte Konfigurationsdatei ist in Auflistung \ref{lst:JSON} dargestellt. \textbf{Bei der Betrachtung der Konfigurationsdatei ist zu erkennen, dass neben den Metadaten für die Zusatzinhalte auch der Autor des Hyperaudio-Dokuments mithilfe der Konfigurationsdatei übertragen wird.}
+Entscheidend ist dabei vor allem der Dateiname. Anhand des Dateinamens kann anschließend die Zuordnung der weiteren Informationen zu der entsprechenden Audio-Datei in der Datenbank vorgenommen werden. Eine beispielhaft befüllte Konfigurationsdatei ist in Auflistung \ref{lst:JSON} dargestellt. 
 
 \begin{lstlisting}[language=json,
              linewidth=\textwidth,
@@ -138,7 +136,6 @@ Im Bereich der Zusatzinhalte beschränkt sich die Diskussion auf die Darstellung
 \end{enumerate}
 
 Die erste Variante ist unpraktisch, da dies bei Inhalten, welche größer sind als der Bereich, dazu führt, dass nur ein Ausschnitt des Inhaltes dargestellt wird. Bei Inhalten, welche kleiner sind als der Bereich, wird hingegen nicht der volle Platz ausgenutzt und der Inhalt wird unnötig klein dargestellt. Bei der Variante 2 wird zwar stets der gesamte Bereich ausgenutzt und der Zusatzinhalt wird vollständig dargestellt, doch kann dies dazu zu unschönen Verzerrungen des dargestellten Inhaltes führen. Im Vergleich dazu bietet die dritte Variante den Vorteil, dass diese den Bereich möglichst gut ausnutzt ohne unschöne Verzerrungen zu verursachen.
-\todo[inline]{Mockup ergänzen}
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{0.32\textwidth}
@@ -157,15 +154,15 @@ Die erste Variante ist unpraktisch, da dies bei Inhalten, welche größer sind a
 \label{fig:Zusatzinhalt}
 \end{figure}
 
-Neben der Entscheidung für Variante 3 muss auch die Entscheidung getroffen werden, wie sich der Bereich verhält, wenn gerade keine Zusatzinhalte dargestellt werden müssen. In diesem Fall sind verschiedenen Szenarien denkbar. Zum einen wäre denkbar, dass der Bereich minimiert wird, sobald keine Zusatzinhalt dargestellt wird. Dies hätte aber den Nachteil, dass sich die Position der Kommentare mehrmals ändert und somit das Lesen erschwert wird. Zum anderen wäre auch die Darstellung eines Standardbildes oder einer einfarbigen Fläche vorstellbar. Es wäre aber auch möglich, innerhalb der Fläche die Metadaten des Hyperaudio-Dokuments darzustellen, sprich Titel, Autor und Beschreibung. Die letzte Variante stellt einen guten Kompromiss dar, da somit auch keine weitere Fläche für die Darstellung dieser Informationen benötigt wird.
+Neben der Entscheidung für Variante 3 muss auch die Entscheidung getroffen werden, wie sich der Bereich verhält, wenn gerade keine Zusatzinhalte dargestellt werden müssen. In diesem Fall sind verschiedene Szenarien denkbar. Zum einen wäre denkbar, dass der Bereich minimiert wird, sobald kein Zusatzinhalt dargestellt wird. Dies hätte aber den Nachteil, dass sich die Position der Kommentare mehrmals ändert und somit das Lesen erschwert wird. Zum anderen wäre auch die Darstellung eines Standardbildes oder einer einfarbigen Fläche vorstellbar. Es wäre aber auch möglich, innerhalb der Fläche die Metadaten des Hyperaudio-Dokuments darzustellen, sprich Titel, Autor und Beschreibung. Die letzte Variante stellt einen guten Kompromiss dar, da somit auch keine weitere Fläche für die Darstellung dieser Informationen benötigt wird.
 
-Neben der Nutzung der Fläche während keine Zusatzinhalte dargestellt werden, muss auch über das Format für die Darstellung entschieden werden. Hierbei bieten sich dir Formate 16:9 und 4:3 für die Darstellung an. Nachdem vornehmlich vorhandene Abbildungen, Formeln und Bilder aus bestehenden Kurseinheiten dargestellt werden sollen, fällt die Wahl auf das 4:3 Format. Dies bietet sich an, da das 4:3 Format mehr Ähnlichkeiten mit dem DIN A4 Format von Kurseinheiten hat, als das 16:9 Format. Dieses würde sich vor allem bei der Darstellung von Videos anbieten.
+Darüber hinaus muss auch über das Darstellungsformat der Zusatzinhalte entschieden werden. Hierbei bieten sich die Formate 16:9 und 4:3 für die Darstellung an. Nachdem vornehmlich vorhandene Abbildungen, Formeln und Bilder aus bestehenden Kurseinheiten dargestellt werden sollen, fällt die Wahl auf das 4:3-Format, welches mehr Ähnlichkeiten mit dem DIN A4-Format von Kurseinheiten aufweist als das 16:9-Format. Letzteres würde sich eher für die Darstellung von Videos eignen.
 
 
 %%%%%%%%%%
 \subsection{Mediensteuerung inklusive Visualisierungen der Annotationen}
 \label{sub:Mediensteuerung}
-Bei der Mediensteuerung für Hyperaudio-Dokumente müssen neben den üblichen Mediensteuerungselementen zusätzliche Elemente visualisiert werden. So sollen auch die annotierten öffentlichen Kommentare, persönlichen Notizen und Lesezeichen dargestellt werden.
+Bei der Mediensteuerung für Hyperaudio-Dokumente sollen neben den üblichen Mediensteuerungselementen zusätzliche Informationen visualisiert werden. So sollen ähnlich wie bei \textit{SoundCloud} auch die annotierten öffentlichen Kommentare, persönlichen Notizen und Lesezeichen dargestellt werden. Die Möglichkeit zum Erstellen von Lesezeichen soll ebenfalls in die Mediensteuerung integriert werden. Anhand dieser erweiterten Mediensteuerung kann sich der Nutzende schnell einen Überblick über die Annotationen verschaffen.
 
 Der erste Entwurf der Mediensteuerung ist in Abbildung \ref{fig:MockupMediensteuerungV1} dargestellt. Es ist zu erkennen, dass neben den üblichen Steuerungselementen die Visualisierung der Annotationen in der Timeline erfolgt. Hierzu wird für die drei verschiedenen Kommentar-Arten jeweils ein andersfarbiger Punkt (Kommentar: blau, Notiz: orange und Lesezeichen: grün) innerhalb der Timeline des Players dargestellt. Durch einen Klick auf einen Punkt, welcher einen Kommentar oder eine Notiz repräsentiert, soll dann zu der dazugehörigen Stelle innerhalb des Bereichs für Kommentare und Notizen gesprungen werden. Das Löschen und Anlegen von Lesezeichen soll durch eine Betätigung des Rechtsklicks auf den Punkt bzw. die Timeline möglich sein. Es wird ersichtlich, dass diese Variante den Nachteil hat, dass bei einer hohen Anzahl an Kommentaren und Notizen die Timeline unübersichtlich und schwer bedienbar wird.
 
@@ -272,17 +269,17 @@ Im nochmals verbesserten Design, welches in Abbildung \ref{fig:MockupKommentarse
 
 %%%%%%%%%%
 \subsection{Zusammenführen der Elemente}
-Im ersten Schritt werden die jeweils favorisierten Elemente in ein Layout zusammengeführt. Dabei  wird sich zunächst an der groben Skizze aus Abbildung \ref{fig:MockupBereiche} orientiert. Wie nun in Abbildung \ref{fig:MockupSeiteLayoutVersion1} zu erkennen ist, ist der Bereich der Kommentare und Notizen so in die Breite gezogen, dass das Lesen der Inhalte unangenehm werden kann. Aus diesem Grund wird in der finalen Version (siehe Abbildung \ref{fig:MockupSeiteLayoutFinal}) die Breite dieses Bereichs auf die Breite der Zusatzinhalte und Mediensteuerung beschränkt. Dies hat zeitgleich zur Folge, dass der nun vorhandene freie Platz für die Galerie verwendet werden kann. Spätestens hiermit wird der Nachteil der gewählten Darstellungsweise der Galerie egalisiert, da nun ausreichend viele Zusatzinhalte ohne die Verwendung des Scrollbalkens eingesehen werden können.
+Im ersten Schritt werden die jeweils favorisierten Elemente in ein Layout zusammengeführt. Dabei  wird sich zunächst an der groben Skizze aus Abbildung \ref{fig:MockupBereiche} orientiert. Wie nun in Abbildung \ref{fig:MockupSeiteLayoutVersion1} zu erkennen ist, wird der Anzeige der Zusatzinhalte und der Mediensteuerung eine große Fläche der Seite zugesprochen. Somit soll zugesichert werden, dass die Zusatzinhalte lesbar dargestellt werden. In dieser ersten Version ist der Bereich der Kommentare und Notizen so in die Breite gezogen, dass das Lesen der Inhalte unangenehm werden kann. Aus diesem Grund wird in der finalen Version (siehe Abbildung \ref{fig:MockupSeiteLayoutFinal}) die Breite dieses Bereichs auf die Breite der Zusatzinhalte und Mediensteuerung beschränkt. Dies hat zeitgleich zur Folge, dass der nun vorhandene freie Platz für die Galerie verwendet werden kann. Spätestens hiermit wird der Nachteil der gewählten Darstellungsweise der Galerie egalisiert, da nun ausreichend viele Zusatzinhalte ohne die Verwendung des Scrollbalkens eingesehen werden können.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{\textwidth}
-\includegraphics[width=0.9\textwidth,center]{MockupSeiteLayoutVersion1.pdf}
+\includegraphics[width=0.67\textwidth,center]{MockupSeiteLayoutVersion1.pdf}
 \subcaption{Erste Version}
 \label{fig:MockupSeiteLayoutVersion1}
 \end{subfigure}
 \par\bigskip
 \begin{subfigure}[c]{\textwidth}
-\includegraphics[width=0.9\textwidth,center]{MockupSeiteLayoutFinal.pdf}
+\includegraphics[width=0.67\textwidth,center]{MockupSeiteLayoutFinal.pdf}
 \subcaption{Finale Version}
 \label{fig:MockupSeiteLayoutFinal}
 \end{subfigure}
@@ -304,6 +301,4 @@ So wird beispielsweise die Galerie auf kleinen Displays unterhalb des Bereichs f
 
 %%%%%%%%%%
 \section{Zusammenfassung}
-\textbf{In diesem Kapitel wurden die grundlegenden konzeptuellen Entscheidungen getroffen. So wurden zum Anfang des Kapitels die Komponenten des Hyperaudio-Dokuments und deren Zusammenhänge bestimmt. Mit diesen Zusammenhängen konnte eine bei der Definition des Schnittstellenformats das Format und der Aufbau einer Konfigurationsdatei erarbeitet werden. Ebenfalls auf den Zusammenhängen der Komponenten des Hyperaudio-Dokuments basierend wurde die Datenbank entworfen. Nachdem diese technischen Grundlagen entschiedenen wurden, wurde das Design des Plugins erarbeitet und die nötigen Anpassungen für mobile Endgeräte definiert.}
-
-\todo[inline]{Zusammenfassung}
+In diesem Kapitel wurden die grundlegenden konzeptuellen Entscheidungen getroffen. So wurden zu Beginn die Komponenten von Hyperaudio-Dokumenten im Sinne dieser Arbeit sowie deren Zusammenhänge bestimmt. Daraufhin wurde der Aufbau einer Konfigurationsdatei erarbeitet, welche diese Zusammenhänge abbilden kann. Auch der Datenbankentwurf wurde basierend auf diesen Ergebnissen vorgenommen. Nach dem Abschluss der technischen Konzeption wurde das Design des Plugins entworfen. Anhand verschiedener Mockups wurden Alternativen verglichen und ein Designkonzept beschlossen, das sowohl die Darstellung in Desktop-Umgebungen als auch auf mobilen Endgeräten umfasst.

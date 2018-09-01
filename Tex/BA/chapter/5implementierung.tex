@@ -1,4 +1,4 @@
-\textbf{Nachdem nun die konzeptionellen Vorarbeiten geleistet sind, wird in diesem Kapitel die Implementierung des Hyperaudio-Plugins erläutert. Zu Beginn wird die grundlegende Architektur des Moodle-Plugins festgehalten, darauf hin werden die Iterationen die bei der Implementierung angewandt wurden beschrieben.}
+Nachdem nun die konzeptionellen Vorarbeiten geleistet sind, wird in diesem Kapitel die Implementierung des Hyperaudio-Plugins erläutert. Zu Beginn wird zunächst die grundlegende Architektur des Moodle-Plugins festgehalten. Daraufhin werden das Vorgehen und die Ergebnisse der Implementierung beleuchtet.
 
 %%%%%%%%%%
 \section{Architektur des Moodle-Plugins}
@@ -31,7 +31,7 @@ Neben diesen vorgegebenen Dateien kommen üblicherweise noch weitere Dateien bei
 
 %%%%%%%%%%
 \section{Iterative Entwicklung}
-Die Entwicklung des Plugins wird in iterativer Form durchgeführt. In jeder Iteration soll das Plugin nur um einige wenige Funktionalitäten erweitert werden. Jede Iteration soll mit einem lauffähigen Plugin abgeschlossen werden. So kann direkt das Ergebnis betrachtet werden und gegebenenfalls in der nächsten Iteration nochmals angepasst werden \citep{augsten2018iterativ}. Die Reihenfolge, in welcher die Funktionalitäten umgesetzt werden, leitet sich aus der Priorisierung der Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} ab.
+Die Entwicklung des Plugins wird in iterativer Form durchgeführt. In jeder Iteration soll das Plugin nur um einige wenige Funktionalitäten erweitert werden. Jede Iteration soll mit einem lauffähigen Plugin abgeschlossen werden. So kann direkt das Ergebnis betrachtet werden und gegebenenfalls in der nächsten Iteration nochmals angepasst werden \citep{augsten2018iterativ}. Die Reihenfolge, in welcher die Funktionalitäten umgesetzt werden, leitet sich aus der Priorisierung der Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} ab. In den folgenden Abschnitten werden nun die verschiedenen Iterationsschritte vorgestellt. Dabei werden die Kernkonzepte mithilfe von Codeauszügen erläutert. 
 
 \subsection{Speichern und Abspielen einer Audio-Datei}
 \label{sec:it1}
@@ -129,7 +129,7 @@ echo $output->display($hyperaudio, $context);
 echo $output->footer();
 \end{lstlisting}
 
-In der Funktion \texttt{display} der Klasse \mbox{\texttt{mod\underline{{ }}hyperaudio\underline{{ }}renderer}}, die von der Klasse \mbox{\texttt{plugin\underline{{ }}renderer\underline{{ }}base}} erbt, werden die HTML-Inhalte erzeugt. Dabei handelt es sich in der 1. Iteration um einen Container, der ein \texttt{<audio>}-Element beinhaltet. Als Quelle wird im \texttt{<source>}-Element eine URL (Uniform Resource Locator) angegeben, die zuvor mit Moodle-Standardmitteln erzeugt wurde und auf die in der Datenbank abgelegte Audio-Datei verweist.
+In der Funktion \texttt{display} der Klasse \mbox{\texttt{mod\underline{{ }}hyperaudio\underline{{ }}renderer}}, die von der Klasse \mbox{\texttt{plugin\underline{{ }}renderer\underline{{ }}base}} erbt, werden die HTML-Inhalte erzeugt. Dabei handelt es sich in der ersten Iteration um einen Container, der ein \texttt{<audio>}-Element beinhaltet. Als Quelle wird im \texttt{<source>}-Element eine URL (Uniform Resource Locator) angegeben, die zuvor mit Moodle-Standardmitteln erzeugt wurde und auf die in der Datenbank abgelegte Audio-Datei verweist.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -307,12 +307,13 @@ Die Speicherung verläuft analog zur Speicherung der Zusatzinhalte. In diesem Zu
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{locallib.php} in der 3. Iteration},
              label={lst:it3:locallib}]
-update_additional_content{
+hyperaudio_update_additional_content($hyperaudio_id, $context,
+    $draftitemid, $configfile){
 	
-	//...
+    //...
 	
     $additional_contents_data = 
-        parse_hyperaudio_config($hyperaudioid, $context, $configfile)
+        hyperaudio_parse_hyperaudio_config($hyperaudioid, $context, $configfile)
                 ["additional_contents_by_filename"];;
     
     //...
@@ -336,7 +337,7 @@ update_additional_content{
 
 //...
 
-function parse_hyperaudio_config($hyperaudio_id, $context, $configfile) {
+function hyperaudio_parse_hyperaudio_config($hyperaudio_id, $context, $configfile) {
     
     $fs = get_file_storage();
     $file = $fs->get_file(
@@ -386,6 +387,7 @@ $output .= '<div id="hyperaudio_comments"></div>';
 \end{lstlisting}
 
 Das Speichern sowie das Anzeigen der Kommentare wird unter Einsatz von Webservices, welche durch ein JavaScript-Modul (\textbf{/hyperaudio/AMD/src/hyperaudio.js}) angesprochen werden, realisiert. Hierfür werden zusätzlich die Dateien \textbf{services.php} (\textbf{/hyperaudio/db}) und \textbf{external.php} (\textbf{/hyperaudio/classes}) für die Bereitstellung der Webservices benötigt.
+\todo[inline]{Wie ist Annotationszeitpunkt definiert?}
 
 In der \textbf{services.php} werden zunächst die nötigen Webservices deklariert (siehe Auflistung \ref{lst:it4:services}). Hier wird lediglich auf die \textbf{external.php} verwiesen, die den eigentlichen Code der Webservices beinhalten.
 
@@ -555,7 +557,6 @@ Im nächsten Schritt soll nun eine Antwortmöglichkeit auf Kommentare geschaffen
 \caption{Darstellung der Antworten-Funktion}
 \label{fig:Antworten}
 \end{figure}
-\todo[inline]{Bilder überarbeiten}
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -605,9 +606,6 @@ Da Notizen im Gegensatz zu Kommentaren geändert und gelöscht werden können so
 \label{fig:Notiz}
 \end{figure}
 
-\todo[inline]{Bilder überarbeiten}
-
- 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{hyperaudio.js} in der 6. Iteration},
@@ -688,9 +686,21 @@ Der Anforderung nach einer Übersicht über annotierte Zusatzinhalte wird mittel
 \caption{\label{fig:Galerie}Darstellung der Galerie}
 \end{figure}
 
-Durch diese Implementierung wird die Darstellung der Galerie erreicht, durch Verwendung der JavaScript-Funktion \texttt{jump\underline{{ }}to\underline{{ }}time} wird zusätzlich noch die Rückkopplung an die Mediensteuerung geboten.
 
-\todo[inline]{Vorschaubilder}
+Um eine vergrößerte Darstellung der Zusatzinhalte zu realisieren, wird ein versteckter Bereich angelegt. Beim Klick auf ein Vorschaubild wird mithilfe der Funktion \texttt{show\underline{{ }}modal} der entsprechende Zusatzinhalt in diesen Bereich geladen und dargestellt (vgl. Auflistung \ref{lst:it8:hyperaudio}). 
+
+\begin{lstlisting}[language=php,
+             linewidth=\textwidth,
+             caption={Ausschnitt der \textbf{hyperaudio.js} in der 8. Iteration},
+             label={lst:it8:hyperaudio}]
+function show_modal(source, caption){
+    $("#hyperaudio_modal_image").attr("src", source);
+    $("#hyperaudio_modal_caption").html(caption);
+    $("#hyperaudio_modal").css("display", "block");
+}
+\end{lstlisting}
+
+Durch diese Implementierung wird die Darstellung der Galerie erreicht, durch Verwendung der JavaScript-Funktion \texttt{jump\underline{{ }}to\underline{{ }}time} wird zusätzlich noch die Rückkopplung an die Mediensteuerung geboten. 
 
 \subsection{Zeitabhängige Visualisierung der Kommentare und Notizen}
 In dieser Iteration soll sich nun der zeitabhängigen Visualisierung der Kommentare und Notizen zugewendet werden. An dieser Stelle muss festgehalten werden, dass dies beim Einsatz des Standard HTML5-Audioplayers schwer umsetzbar ist, weshalb auf die Erkenntnisse bezüglich des \textit{VideoJS Players} aus Abschnitt \ref{sub:TechnologienMoodle} zurückgegriffen wird. Die umfassenden Anpassungsmöglichkeiten sollen sich nun in dieser Iteration zu Nutze gemacht werden.
@@ -1042,7 +1052,7 @@ div#comment_tools_order {
     align-items: baseline;
 }
 \end{lstlisting}
-
+\todo[inline]{Styling anpassen und Code auf Aktualität prüfen}
 
 %%%%%%%%%%
 \section{Zusammenfassung}
