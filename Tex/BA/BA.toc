@@ -67,18 +67,19 @@
 \contentsline {subsection}{\numberline {5.2.12}Unterst\IeC {\"u}tzung mobiler Endger\IeC {\"a}te}{64}{subsection.771}
 \contentsline {section}{\numberline {5.3}Zusammenfassung}{67}{section.836}
 \contentsline {chapter}{\numberline {6}Evaluation}{69}{chapter.838}
-\contentsline {section}{\numberline {6.1}User Stories}{69}{section.839}
-\contentsline {section}{\numberline {6.2}Anforderungen}{72}{section.871}
-\contentsline {section}{\numberline {6.3}Verbesserungsvorschl\IeC {\"a}ge}{73}{section.874}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{74}{chapter.875}
-\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{76}{appendix.879}
-\contentsline {section}{\numberline {A.1}Auswertung des Textanteils der Kurseinheiten}{76}{section.880}
-\contentsline {section}{\numberline {A.2}Auswertung Moodle-Beteiligung}{76}{section.884}
-\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{79}{appendix.886}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{81}{chapter*.887}
-\contentsline {chapter}{Abbildungsverzeichnis}{85}{section*.888}
-\contentsline {chapter}{Tabellenverzeichnis}{87}{section*.889}
-\contentsline {chapter}{Auflistungsverzeichnis}{89}{section*.890}
-\contentsline {chapter}{Verzeichnis der Algorithmen}{91}{section*.892}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{93}{section*.894}
+\contentsline {section}{\numberline {6.1}User Stories}{69}{section.840}
+\contentsline {section}{\numberline {6.2}Anforderungen}{72}{section.872}
+\contentsline {section}{\numberline {6.3}Verbesserungsvorschl\IeC {\"a}ge}{75}{section.875}
+\contentsline {section}{\numberline {6.4}Zusammenfassung}{75}{section.887}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{76}{chapter.888}
+\contentsline {chapter}{\numberline {A}Erster Teil des Anhangs}{78}{appendix.892}
+\contentsline {section}{\numberline {A.1}Auswertung des Textanteils der Kurseinheiten}{78}{section.893}
+\contentsline {section}{\numberline {A.2}Auswertung Moodle-Beteiligung}{78}{section.897}
+\contentsline {chapter}{\numberline {B}Zweiter Teil des Anhangs}{81}{appendix.899}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{83}{chapter*.900}
+\contentsline {chapter}{Abbildungsverzeichnis}{87}{section*.901}
+\contentsline {chapter}{Tabellenverzeichnis}{89}{section*.902}
+\contentsline {chapter}{Auflistungsverzeichnis}{91}{section*.903}
+\contentsline {chapter}{Verzeichnis der Algorithmen}{93}{section*.905}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{95}{section*.907}
 \contentsfinish 

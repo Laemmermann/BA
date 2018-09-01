@@ -1,7 +1,10 @@
 \label{cap:evaluation}
-Nachdem nun die Implementierung des Hyperaudio-Plugins abgeschlossen ist, kann nun die Evaluation anhand der definierten Anforderungen und der dazugehörigen User Stories erfolgen. Dabei wird analog zur Anforderungsdefinition eine Aufteilung anhand der beiden Rollen Administrierende und Nutzende vorgenommen. Innerhalb dieser beiden Bereiche wird dann analysiert, in welchem Umfang die Anforderungen durch die Implementierung erfüllt wurden. Die Reihenfolge der Analyse erfolgt unter Zuhilfenahme der festgelegten Prioritäten.
+Nachdem nun die Implementierung des Hyperaudio-Plugins abgeschlossen ist, kann die Evaluation anhand der im Abschnitt \ref{sec:UserStories} formulierten User Stories und den daraus abgeleiteten Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} erfolgen. Daraufhin werden mögliche Verbesserungen auf Basis von neuen User Stories formuliert.
+\todo[inline]{überarbeiten}
 
 \section{User Stories}
+Nachfolgend wird untersucht, ob die User Stories mit der vorhandenen Implementierung umgesetzt werden können.
+
 \begin{enumerate}[label=US-\arabic*:,ref=US-\arabic*]
 
 \item \label{US-Admin-Erstellen-Eval} \textit{Als Administrierende möchte Prof. Dr. Karolin Schröder ein neues Hyperaudio-Dokument in ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} zur Verfügung stellen, um den Studierenden neue Lerninhalte bereitzustellen.}\\
@@ -33,77 +36,76 @@ Nach dem Öffnen einer \textit{Hyperaudio}-Aktivität sind alle an das Hyperaudi
 \item \label{US-Notiz-L-Eval} \textit{Als Nutzende möchte Prof. Dr. Karolin Schröder eine Notiz zu einem Hyperaudio-Dokument machen, um ihren Gedanken festzuhalten und später darauf zurückgreifen zu können.}\\
 Das Erstellen einer Notiz wird durch das Befüllen des entsprechenden Textfeldes und der Betätigung des \glqq Als Notiz speichern\grqq{}-Buttons erreicht. Die Notiz wird zum aktuellen Zeitpunkt der Wiedergabe annotiert.
 
-
 \item \label{US-Kommentar-L-Eval} \textit{Als Nutzender möchte Dr. Julian Schmidt eine gefundene Erklärungslücke in einem Hyperaudio-Dokument durch einen Kommentar zum entsprechenden Zeitpunkt schließen, um eventuellen Fragen der Studierenden zuvorzukommen.}\\
 Dr. Julian Schmidt kann durch Befüllen des entsprechenden Textfeldes und der Betätigung des \glqq Als Kommentar speichern\grqq{}-Buttons einen Kommentar hinterlegen. Der Kommentar wird zum aktuellen Zeitpunkt der Wiedergabe annotiert.
 
 \item \label{US-Zeit-Eval} \textit{Als Nutzende möchte Laura Ebert mittels Hyperaudio-Dokument lernen, um die Zeit während Haushaltsarbeiten, wie dem Bügeln, Kochen oder Putzen, und dem Pendeln sinnvoller zu nutzen.}\\
-Durch die auditive Wiedergabeform der Hyperaudio-Dokumente ist Laura Eber in der Lage in den gewünschten Situationen mit Hyperaudio-Dokumenten zu lernen. Falls ein visueller Zusatzinhalt dargestellt wird, so wird sie durch die Wiedergabe einer Audio Cue auf diesen hingewiesen.
+Durch die auditive Wiedergabeform der Hyperaudio-Dokumente ist Laura Ebert in der Lage in den gewünschten Situationen mit Hyperaudio-Dokumenten zu lernen. Falls ein visueller Zusatzinhalt dargestellt wird, so wird sie durch die Wiedergabe einer Audio Cue auf diesen hingewiesen.
 
-\item \label{US-Uebersicht-Kurse} \textit{Als Nutzende möchte Laura Ebert erfahren, welche Hyperaudio-Dokumente in den von ihr belegten Kursen angeboten werden, um herauszufinden, mit welchen Mitteln sie sich auf die anstehenden Prüfungen vorbereiten kann.}\\
-Laura Ebert kann sich ausschließlich einen Überblick über alle Hyperaudio-Dokumente eines jeweiligen Kurses verschaffen. Eine kursübergreifende Übersicht ist nicht vorhanden.
+\item \label{US-Uebersicht-Kurse-Eval} \textit{Als Nutzende möchte Laura Ebert erfahren, welche Hyperaudio-Dokumente in den von ihr belegten Kursen angeboten werden, um herauszufinden, mit welchen Mitteln sie sich auf die anstehenden Prüfungen vorbereiten kann.}\\
+Laura Ebert kann sich mithilfe des Blocks \textit{Aktivitäten} ausschließlich einen Überblick über alle Hyperaudio-Dokumente eines jeweiligen Kurses verschaffen. Eine kursübergreifende Übersicht ist nicht vorhanden.
 
-\item \label{US-Kommentar-S} \textit{Als Nutzende möchte Laura Ebert einen Kommentar verfassen, um dem Kursbetreuer und den anderen Studierenden eine Frage zu stellen.}\\
-Indem Sie ihre Frage in das entsprechende Textfeld schreibt und dann mittels des entsprechenden Buttons speichert, kann Laura Ebert eine Frage an den Kursbetreuer und andere Studierende stellen.
+\item \label{US-Kommentar-S-Eval} \textit{Als Nutzende möchte Laura Ebert einen Kommentar verfassen, um dem Kursbetreuer und den anderen Studierenden eine Frage zu stellen.}\\
+Indem sie ihre Frage in das Kommentarfeld schreibt und dann mittels des entsprechenden Buttons speichert, kann Laura Ebert eine Frage an den Kursbetreuer und andere Studierende stellen.
 
-\item \label{US-Lesezeichen} \textit{Als Nutzende möchte Laura Ebert ein Lesezeichen setzen, wenn eine klausurrelevante Thematik erklärt wird. Bei der Prüfungsvorbereitung möchte sie anhand dieser Lesezeichen diejenigen Themen erkennen, mit welchen sie sich besonders intensiv beschäftigen möchte.}\\
-Das hinterlegen von Lesezeichen ist durch die Betätigung des Lesezeichen-Buttons links neben der Timeline möglich. Das Lesezeichen wird zum Wiedergabezeitpunkt erstellt und in Form eines Lesezeichen-Symbols in der Timeline dargestellt.
+\item \label{US-Lesezeichen-Eval} \textit{Als Nutzende möchte Laura Ebert ein Lesezeichen setzen, wenn eine klausurrelevante Thematik erklärt wird. Bei der Prüfungsvorbereitung möchte sie anhand dieser Lesezeichen diejenigen Themen erkennen, mit welchen sie sich besonders intensiv beschäftigen möchte.}\\
+Das Hinterlegen von Lesezeichen ist durch die Betätigung des Lesezeichen-Buttons links neben der Timeline möglich. Das Lesezeichen wird zum Wiedergabezeitpunkt erstellt und in Form eines Lesezeichen-Symbols in der Timeline dargestellt.
 
-\item \label{US-Lesezeichen-Loeschen} \textit{Als Nutzende möchte Laura Ebert ein Lesezeichen löschen, da sie den markierten Lerninhalt inzwischen beherrscht. Anhand der übrigen Lesezeichen möchte sie schnell erkennen, wo für sie noch Lernbedarf besteht.}\\
+\item \label{US-Lesezeichen-Loeschen-Eval} \textit{Als Nutzende möchte Laura Ebert ein Lesezeichen löschen, da sie den markierten Lerninhalt inzwischen beherrscht. Anhand der übrigen Lesezeichen möchte sie schnell erkennen, wo für sie noch Lernbedarf besteht.}\\
 Lesezeichen können durch Rechtsklick auf das entsprechende Lesezeichen-Symbol in der Timeline gelöscht werden.
 
-\item \label{US-Notiz-S} \textit{Als Nutzende möchte Laura Ebert eine Notiz erstellen, um ein Beispiel zu dem genannten Sachverhalt festzuhalten, sodass sie die Thematik beim nächsten Mal einfacher nachvollziehen kann.}\\
+\item \label{US-Notiz-S-Eval} \textit{Als Nutzende möchte Laura Ebert eine Notiz erstellen, um ein Beispiel zu dem genannten Sachverhalt festzuhalten, sodass sie die Thematik beim nächsten Mal einfacher nachvollziehen kann.}\\
 Das Erstellen einer Notiz wird durch das Befüllen des entsprechenden Textfeldes und der Betätigung des \glqq Als Notiz speichern\grqq{}-Buttons erreicht. Die Notiz wird zum aktuellen Zeitpunkt der Wiedergabe annotiert.
 
-\item \label{US-Fortsetzen} \textit{Als Nutzende möchte Laura Ebert die Wiedergabe eines Hyperaudio-Dokuments beenden und am nächsten Tag automatisch an derselben Stelle fortsetzen können, um das Lernen schnell wiederaufnehmen zu können.}\\
-Eine automatische Wiedergabe des Hyperaudio-Dokuments an der Stelle an der es beendet wurde ist nicht möglich.
+\item \label{US-Fortsetzen-Eval} \textit{Als Nutzende möchte Laura Ebert die Wiedergabe eines Hyperaudio-Dokuments beenden und am nächsten Tag automatisch an derselben Stelle fortsetzen können, um das Lernen schnell wiederaufnehmen zu können.}\\
+Eine automatische Wiedergabe des Hyperaudio-Dokuments an der Stelle, an der es beendet wurde, ist nicht möglich.
 
-\item \label{US-Mobil} \textit{Als Nutzende möchte Laura Ebert die Hyperaudio-Angebote mit ihrem Smartphone in Anspruch nehmen, um auch die Zeit während des Pendelns zum Lernen nutzen zu können.}\\
-Durch die angepasste Darstellung auf mobilen Endgeräten kann Laura Ebert auch mit ihrem Smartphone das Hyperaudio-Angebot wahrnehmen. Dabei hat sie allerdings die Einschränkung, dass sie vorhandene Lesezeichen nicht löschen kann.
+\item \label{US-Mobil-Eval} \textit{Als Nutzende möchte Laura Ebert die Hyperaudio-Angebote mit ihrem Smartphone in Anspruch nehmen, um auch die Zeit während des Pendelns zum Lernen nutzen zu können.}\\
+Durch die angepasste Darstellung auf mobilen Endgeräten kann Laura Ebert auch mit ihrem Smartphone das Hyperaudio-Angebot wahrnehmen. Dabei ergibt sich allerdings die Einschränkung, dass sie vorhandene Lesezeichen nicht löschen kann.
 
-\item \label{US-Notiz-Bearbeiten} \textit{Als Nutzender möchte Max Lustig eine alte Notiz bearbeiten, um einen Schreibfehler zu korrigieren.}\\
-Durch betätigen von \glqq Bearbeiten\grqq{} ist Max Lustig in der Lage seine Notiz zu bearbeiten und die Änderung zu speichern.
+\item \label{US-Notiz-Bearbeiten-Eval} \textit{Als Nutzender möchte Max Lustig eine alte Notiz bearbeiten, um einen Schreibfehler zu korrigieren.}\\
+Durch Betätigen von \glqq Bearbeiten\grqq{}-Schaltfläche ist Max Lustig in der Lage seine Notiz zu bearbeiten und die Änderung zu speichern.
 
-\item \label{US-Notiz-Loeschen} \textit{Als Nutzender möchte Max Lustig eine alte Notiz löschen, da er inzwischen Lernfortschritte gemacht hat und auf diese Notiz verzichten kann.}\\
-Durch betätigen von \glqq Löschen\grqq{} kann die Notiz durch Max Lustig gelöscht werden.
+\item \label{US-Notiz-Loeschen-Eval} \textit{Als Nutzender möchte Max Lustig eine alte Notiz löschen, da er inzwischen Lernfortschritte gemacht hat und auf diese Notiz verzichten kann.}\\
+Durch Betätigen von \glqq Löschen\grqq{}-Schaltfläche kann die Notiz durch Max Lustig gelöscht werden.
 
 
-\item \label{US-Galerie} \textit{Als Nutzender möchte Max Lustig möchte schnell erkennen welche Inhalte im Hyperaudio-Dokument behandelt werden, um eine Erklärung eines bestimmten Themas zu finden.}\\
+\item \label{US-Galerie-Eval} \textit{Als Nutzender möchte Max Lustig schnell erkennen welche Inhalte im Hyperaudio-Dokument behandelt werden, um eine Erklärung eines bestimmten Themas zu finden.}\\
 Durch Betrachtung der annotierten Zusatzinhalte, welche gesammelt in der Galerie dargestellt werden, kann sich Max Lustig schnell einen groben Überblick über das Hyperaudio-Dokument verschaffen.
 
-\item \label{US-Suche} \textit{Als Nutzender möchte Max Lustig nach Textinhalten in Kommentaren suchen können, um schnell Erklärungen zu finden.}\\
+\item \label{US-Suche-Eval} \textit{Als Nutzender möchte Max Lustig nach Textinhalten in Kommentaren suchen können, um schnell Erklärungen zu finden.}\\
 Durch Nutzung des Suchfeldes können sowohl Kommentare als auch Notizen durchsucht werden.
 
-\item \label{US-Sortierung-Erstellungsdatum} \textit{Als Nutzender möchte Max Lustig die Kommentare nach Erstellungsdatum sortieren können, um sich einen Überblick über die neuesten Aktionen zu verschaffen.}\\
-Wenn Max Lustig im Dropdown Menü für die Sortierung \glqq Erstelldatum absteigend\grqq{} auswählt, kann er sich einen Überblick über die neuesten Aktionen verschaffen.
+\item \label{US-Sortierung-Erstellungsdatum-Eval} \textit{Als Nutzender möchte Max Lustig die Kommentare nach Erstellungsdatum sortieren können, um sich einen Überblick über die neuesten Aktionen zu verschaffen.}\\
+Wenn Max Lustig im Dropdown-Menü für die Sortierung \glqq Erstelldatum absteigend\grqq{} auswählt, kann er sich einen Überblick über die neuesten Aktionen verschaffen.
 
-\item \label{US-Sortierung-Zeitpunkt} \textit{Als Nutzender möchte Max Lustig die Kommentare und persönlichen Notizen zu den Annotationszeitpunkten zuordnen können, um diese bei der Wiedergabe verfolgen zu können.}\\
-Wenn Max Lustig im Dropdown Menü für die Sortierung \glqq Annotationszeitpunkt\grqq{} auswählt, werden die Kommentare und Notizen entsprechend sortiert. Zusätzlich werden die Kommentare und Notizen in der Timeline visualisiert.
+\item \label{US-Sortierung-Zeitpunkt-Eval} \textit{Als Nutzender möchte Max Lustig die Kommentare und persönlichen Notizen zu den Annotationszeitpunkten zuordnen können, um diese bei der Wiedergabe verfolgen zu können.}\\
+Wenn Max Lustig im Dropdown-Menü für die Sortierung \glqq Annotationszeitpunkt\grqq{} auswählt, werden die Kommentare und Notizen entsprechend sortiert. Zusätzlich werden die Kommentare und Notizen in der Timeline visualisiert.
 
-\item \label{US-Filter} \textit{Als Nutzender möchte Max Lustig öffentliche Kommentare und persönliche Notizen getrennt betrachten können, um die öffentliche Diskussion verfolgen beziehungsweise die eigenen Anmerkungen isoliert betrachten zu können.}\\
-Mittels zweier Checkboxen kann festgelegt werden, ob die Kommentare beziehungsweise die Notizen dargestellt werden sollen.
+\item \label{US-Filter-Eval} \textit{Als Nutzender möchte Max Lustig öffentliche Kommentare und persönliche Notizen getrennt betrachten können, um die öffentliche Diskussion verfolgen beziehungsweise die eigenen Anmerkungen isoliert betrachten zu können.}\\
+Mittels zweier Checkboxen kann festgelegt werden, ob Kommentare und/oder Notizen dargestellt werden sollen.
 
-\item \label{US-Antwort-S} \textit{Als Nutzender möchte Max Lustig auf Kommentare antworten können, um sich mit den Studierenden und Lehrenden auszutauschen.}\\
+\item \label{US-Antwort-S-Eval} \textit{Als Nutzender möchte Max Lustig auf Kommentare antworten können, um sich mit den Studierenden und Lehrenden auszutauschen.}\\
 Nach dem Öffnen einer \textit{Hyperaudio}-Aktivität sind alle an das Hyperaudio-Dokument annotierten Kommentare sichtbar. Diese können nach einem Klick auf \glqq Antworten\grqq{} beantwortet werden.
 
-\item \label{US-Uebersicht-Letzte} \textit{Als Nutzender möchte Max Lustig erkennen, welche Hyperaudio-Dokumente er zuletzt abgespielt hat, um seinen Lernfortschritt im Auge zu behalten.}\\
+\item \label{US-Uebersicht-Letzte-Eval} \textit{Als Nutzender möchte Max Lustig erkennen, welche Hyperaudio-Dokumente er zuletzt abgespielt hat, um seinen Lernfortschritt im Auge zu behalten.}\\
 Eine Übersicht über die zuletzt abgespielten Hyperaudio-Dokumente ist nicht vorhanden.
 
-\item \label{US-Favoriten} \textit{Als Nutzender möchte Max Lustig besonders hilfreiche Hyperaudio-Dokumente als Favoriten speichern, um diese schnell als solche identifizieren zu können.}\\
+\item \label{US-Favoriten-Eval} \textit{Als Nutzender möchte Max Lustig besonders hilfreiche Hyperaudio-Dokumente als Favoriten speichern, um diese schnell als solche identifizieren zu können.}\\
 Das Erstellen von Favoriten ist nicht möglich.
 
-\item \label{US-Favoriten-Loeschen} \textit{Als Nutzender möchte Max Lustig die Markierung als Favorit entfernen können, wenn der Inhalt für ihn nicht mehr von Interesse ist.}\\
+\item \label{US-Favoriten-Loeschen-Eval} \textit{Als Nutzender möchte Max Lustig die Markierung als Favorit entfernen können, wenn der Inhalt für ihn nicht mehr von Interesse ist.}\\
 Das Löschen von Favoriten ist nicht möglich.
 
-\item \label{US-Zeit-Mobil} \textit{Als Nutzender möchte Max Lustig auf seinem Tablet Zugang zu Hyperaudio-Dokumenten haben, um die Zeit auf dem Laufband gleichzeitig zum Lernen nutzen zu können.}\\
+\item \label{US-Zeit-Mobil-Eval} \textit{Als Nutzender möchte Max Lustig auf seinem Tablet Zugang zu Hyperaudio-Dokumenten haben, um die Zeit auf dem Laufband gleichzeitig zum Lernen nutzen zu können.}\\
 Durch die angepasste Darstellung auf mobilen Endgeräten kann Max Lustig auch mit seinem Tablet das Hyperaudio-Angebot wahrnehmen. Dabei hat er allerdings die Einschränkung, dass er vorhandene Lesezeichen nicht löschen kann.
 \end{enumerate}
 
-Wie zu erkennen ist wurde ein Großteil der User Stories umgesetzt. Manche User Stories wurden nur teilweise, einige wenige gar nicht bei der Implementierung berücksichtigt.
+Wie zu erkennen ist, wurde mit 22 User Stories ein Großteil der User Stories umgesetzt. Jeweils vier User Stories wurden nur teilweise oder gar nicht bei der Implementierung berücksichtigt.
 
 
 \section{Anforderungen}
-Nachdem im vorherigen Abschnitt das Hyperaudio-Plugin auf Basis der User Stories bewertet wurde, wird es nun anhand dessen die aus den User Stories abgeleiteten Anforderungen evaluiert. Die Ergebnisse dessen sind in Tabelle \ref{tab:EvalAnforderungenAdministrierenden} und \ref{tab:EvalAnforderungenNutzenden} aufgeführt.
+Nachdem im vorherigen Abschnitt das Hyperaudio-Plugin auf Basis der User Stories bewertet wurde, werden die Ergebnisse nun auf die Anforderungen aus Kapitel \ref{sec:anforderungsdefinition} übertragen. Die Resultate sind in Tabelle \ref{tab:EvalAnforderungenAdministrierenden} und \ref{tab:EvalAnforderungenNutzenden} aufgeführt.
 
 
 \begin{table}[!ht]
@@ -118,7 +120,7 @@ Nachdem im vorherigen Abschnitt das Hyperaudio-Plugin auf Basis der User Stories
     2 & Bearbeiten eines Hyperaudio-Dokuments & hoch & erfüllt\\
     3 & Löschen eines Hyperaudio-Dokuments & hoch & erfüllt\\
     4 & Übernahme eines Hyperaudio-Dokuments in einen anderen Kurs & mittel & teilweise erfüllt\\
-    5 & Statistische Auswertungen über die Nutzung der Hyperaudio-Dokumente & niedrig & teilweise erfüllt\\
+    5 & Statistische Auswertungen über die Nutzung der Hyperaudio-Dokumente & niedrig & erfüllt\\
     \hline
     \end{tabularx}
 \end{table}
@@ -160,111 +162,26 @@ Nachdem im vorherigen Abschnitt das Hyperaudio-Plugin auf Basis der User Stories
     \hline
 \end{tabularx}
 \end{table}
-
+\FloatBarrier
 \section{Verbesserungsvorschläge}
-Dies Verbesserungsvorschläge für das Hyperaudio-Plugin, die bei der Implementierung und Evaluation entstanden sind,  sollen in Form von neuen User Stories festgehalten werden.
+Dies Verbesserungsvorschläge für das Hyperaudio-Plugin, die bei der Implementierung und Evaluation entstanden sind,  sollen in Form von neuen User Stories festgehalten werden. Für diese User Stories werden die gleichen Personas aus Abschnitt \ref{sec:personas} verwendet wie bereits bei den User Stories aus Abschnitt \ref{sec:UserStories}.
 
+\begin{enumerate}[label=US-\arabic*:,ref=US-\arabic*]
+\setcounter{enumi}{30}
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder möchte detailliert auf Fehler in der Konfigurationsdatei hingewiesen werden, um Fehler in der Konfigurationsdatei schneller zu finden, wie beispielsweise Zeitüberschneidungen bei annotierten Zusatzinhalten.
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio-Dokumente komplett innerhalb der Moodle-Umgebung erzeugen können, um nicht mühsam eine Konfigurationsdatei erstellen zu müssen.
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder mehrere Audio-Dateien für Hyperaudio-Dokumente verwenden können, um die Vertonung von Kurseinheiten in mehreren Abschnitten durchführen zu können.
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder auch andere Dateiformate als Bilddateien als Zusatzinhalt annotieren können, um auch PDF-Dokumente oder Videos annotieren zu können.
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder noch detaillierte Auswertungen über das Nutzungsverhalten von Hyperaudio-Dokumenten erhalten, um noch genauere Rückschlüsse über die Stärken und Schwächen des Hyperaudio-Dokuments zu ermitteln. 
+\item Als Administrierende möchte Prof. Dr. Karolin Schröder verschiedene Audio Cues verwenden können, um die Studierende auf die verschiedenen Arten von Zusatzinhalten hinzuweisen.
+\item Als Nutzende möchte Laura Ebert zunächst nur noch die wichtigsten Antworten auf Kommentare angezeigt bekommen, um eine bessere Übersicht bei viel diskutierten Hyperaudio-Dokumenten zu erhalten.
+\item Also Nutzender möchte Laura Ebert ihrer Notiz eine Datei hinzufügen, um ihre selbst angefertigte Zeichnung zu hinterlegen.
+\item Als Nutzender möchte Max Lustig eine bessere Suchfunktion, um auch Ergebnisse trotz Schreibfehler oder mit ähnlichen Wörtern zu finden.
+\item Als Nutzender möchte Max Lustig nicht nur Zeitpunkte sondern auch Zeitfenster hervorheben, um genau zu wissen welches Zeitfenster wichtige Inhalte enthält.
+\item Als Nutzender möchte Max Lustig alles Funktionalitäten der Desktop-Version auf seine Smartphone nutzen können, um unabhängiger von seinem Desktop-Rechner zu werden.
+\end{enumerate}
 
+Diese neu formulierten User Stories stellen erneut nur einen Teil der möglichen User Stories dar und können für die Optimierung des Hyperaudio-Plugins dienen.
 
-%\label{sec:eval_administration}
-%Die Anforderungen der Administrierenden wurden in Tabelle \ref{tab:AnforderungenAdministrierenden} festgehalten.
-
-
-%\textbf{1 - Erstellen eines Hyperaudio-Dokuments}\\
-%\ref{US-Admin-Erstellen} - erfüllt\\
-%Die Erstellung von Hyperaudio-Dokumenten, wie es in \ref{US-Admin-Erstellen} gefordert wurde, ist durch das Hochladen einer Audio-Datei, der Zusatzinhalte sowie einer Konfigurationsdatei möglich. Jedoch zeigt diese Implementierung einige Schwächen auf. So fehlt eine Validierung der Konfigurationsdatei. Dies kann zum einen dazu führen, dass das Speichern des Hyperaudio-Dokuments fehlschlägt, wenn beispielsweise der Dateiname eines Zusatzinhaltes innerhalb der JSON-Datei falsch geschrieben wurde. Auch wird nicht sichergestellt, dass sich die Zeiträume der Zusatzinhalte nicht überschneiden. In diesem Fall werden beide Inhalte während der Überschneidung dargestellt und zerstören dabei den Aufbau der Seite. Generell wäre es wünschenswert, wenn die Erstellung von Hyperaudio-Dokumenten komplett innerhalb von Moodle über einen Wizard erfolgen würde. Weitere Einschränkungen bestehen darin, dass nur eine Audio-Datei als Grundlage für das Hyperaudio-Dokument dienen kann und nur Bilddateien als Zusatzinhalt nutzbar sind.
-%
-%\textbf{2 - Bearbeiten eines Hyperaudio-Dokuments}\\
-%\ref{US-Admin-Bearbeiten} - erfüllt\\
-%Diese Anforderung, welche sich aus \ref{US-Admin-Bearbeiten} ergab, wurde insofern umgesetzt, als dass es möglich ist im Nachhinein die Audio-Datei, Zusatzinhalte oder Konfigurationsdatei auszutauschen und hierüber Änderungen am Hyperaudio-Dokument vorzunehmen. Eine direkte Bearbeitung  des Hyperaudio-Dokuments innerhalb von Moodle kann beim Namen und der Beschreibung erfolgen. Insofern ist eine Bearbeitung von Hyperaudio-Dokumenten möglich, diese beschränkt sich aber darauf, dass die dazugehörigen Dateien ausgetauscht werden können. Dementsprechend ist die Anforderung aus \ref{US-Admin-Bearbeiten} erfüllt, aber es treten die gleichen Nachteile wie bereits beim Erstellen auf.
-%
-%\textbf{3 - Löschen eines Hyperaudio-Dokuments}\\
-%\ref{US-Admin-Loeschen} - erfüllt\\
-%Das Löschen von Hyperaudio-Dokumenten, wie in \ref{US-Admin-Loeschen} gefordert, wurde vollständig implementiert.
-%
-%\textbf{4 - Übernahme eines Hyperaudio-Dokuments in einen anderen Kurs}\\
-%\ref{US-Admin-Kurs} - teilweise erfüllt\\
-%\ref{US-Admin-Semester} - teilweise erfüllt\\
-%Die Export- und Import-Funktion, welche sich auch den User Stories \ref{US-Admin-Kurs} und \ref{US-Admin-Semester} ableiten lies, ist nur in eingeschränkter Form mit den Moodle Bordmitteln möglich. Es ist nur möglich Audio-Datei, Zusatzinhalte und Konfigurationsdatei über die Bearbeitungsmaske herunterzuladen und dann bei der Anlage eines neuen Hyperaudio-Dokuments wiederzuverwenden. Titel und Beschreibung des Hyperaudio-Dokuments müssen händisch nachgetragen werden. Es wäre denkbar für die Zukunft eine richtige Export- und Importfunktion zu implementieren, bei welcher alle Dateien in ein Archiv gepackt werden und um eine weitere Datei für Titel und Beschreibung ergänzt werden. Dieses Archiv müsste sich dann wiederum importieren lassen können, wodurch das ganze Hyperaudio-Dokument angelegt ist.
-%
-%\textbf{5 - Statistische Auswertungen über die Nutzung der Hyperaudio-Dokumente}\\
-%\ref{US-Admin-Statistik} - teilweise erfüllt\\
-%Die aus \ref{US-Admin-Statistik} abgeleiteten statischen Auswertungen wurden in kleinem Umfang über die \textbf{index.php} bereitgestellt. Mit deren Hilfe ist es Lehrenden möglich zu sehen wie viele Kommentare/Antworten, Notizen und Lesezeichen durch wie viele verschiedene Nutzer erstellt wurden. Es ist aber durchaus vorstellbar, dass diese Statistiken noch erweitert werden. Eine Überlegung wäre, dass visualisiert wird, welche Bereiche des Hyperaudio-Dokuments am häufigsten abgespielt wurden.
-%
-% 
-%\section{Nutzung}
-%In Tabelle \ref{tab:AnforderungenNutzenden} sind die Anforderungen der Nutzenden definiert.
-%
-%\textbf{1 - Wiedergabe von Hyperaudio-Dokumenten}\\
-%\ref{US-Wiedergabe} - erfüllt\\
-%\ref{US-Zeit} - erfüllt (im Bezug auf das alleinige Abspielen)\\
-%\ref{US-Mobil} - erfüllt (im Bezug auf das alleinige Abspielen)\\
-%\ref{US-Zeit-Mobil} - erfüllt (im Bezug auf das alleinige Abspielen)\\
-%Die User Stories \ref{US-Wiedergabe}, \ref{US-Zeit}, \ref{US-Mobil} und \ref{US-Zeit-Mobil} hatten gemein, dass sie eine Wiedergabemöglichkeit für Hyperaudio-Dokumente eingefordert hatten. Dem wurde Genüge getan, als dass eine Audio-Datei abgespielt werden kann und gleichzeitig werden zu den festgelegten Zeitpunkten die annotierten Zusatzinhalte dargestellt werden können. Darüber hinaus wurde auch eine Visualisierung der annotierten Kommentare, Notizen und Lesezeichen in die Mediensteuerung integriert, bei dieser ergibt sich die Beeinträchtigung, dass bei der Auswahl eines Blockes zu dessen Kommentar oder Notiz gesprungen werden soll auch die Wiedergabe der Audio-Datei zu diesem Zeitpunkt spring. Hierbei liegt die bereits in Abschnitt \ref{sec:eval_administration} erwähnte Einschränkung bezüglich der Formate der Zusatzinhalte vor. Zusätzlich gibt es keine Möglichkeit die Hyperaudio-Dokumente in einen Vollbildmodus abzuspielen.
-%
-%\textbf{2 - Hinweise auf die Darstellung von annotierten Zusatzinhalten}\\
-%\ref{US-Zeit} - erfüllt(im Bezug auf das Abspielen der Audio Cues)\\
-%\ref{US-Mobil} - erfüllt(im Bezug auf das Abspielen der Audio Cues)\\
-%\ref{US-Zeit-Mobil} - erfüllt(im Bezug auf das Abspielen der Audio Cues)\\
-%Gleichzeitig mit der Darstellung von Zusatzinhalten wird eine Audio Cue abgespielt. Diese dient der Erfüllung der User Stories \ref{US-Zeit}, \ref{US-Mobil} und \ref{US-Zeit-Mobil}. Wie bereits in Abschnitt \ref{sec:audiocues} erwähnt, wäre es möglich diese Funktion noch um weitere Töne zu erweitern, um auf verschiedene Arten von Zusatzinhalten hinzuweisen.
-%
-%\textbf{3 - Übersicht über annotierte Zusatzinhalte}\\
-%\ref{US-Galerie} - erfüllt\\
-%Eine Übersicht über annotierte Zusatzinhalte wurde in \ref{US-Galerie} gefordert und durch die Implementierung einer Galerie für Zusatzinhalte umgesetzt. Durch die Erweiterung der Galerie um zusätzliche Metadaten und einer Rückkopplung an den Player wurde die Funktionalität der Galerie zusätzlich über die eigentliche Anforderung hinaus erweitert.
-%
-%
-%\textbf{4 - Kommentarfunktion bei Hyperaudio-Dokumenten}\\
-%\ref{US-Kommentar-L} - erfüllt\\
-%\ref{US-Antwort-L} - erfüllt\\
-%\ref{US-Kommentar-S} - erfüllt\\
-%\ref{US-Antwort-S} - erfüllt\\
-%\ref{US-Sortierung-Zeitpunkt} - erfüllt (im Bezug auf das alleinige Darstellen von Kommentaren)\\
-%\ref{US-Suche} - erfüllt\\
-%Den Anforderungen an eine Kommentarfunktion wurde Genüge getan, da das Erstellen, Anzeigen und Beantworten von Kommentaren möglich ist (vgl. \ref{US-Kommentar-L}, {US-Antwort-L}, \ref{US-Kommentar-S}, {US-Antwort-S} und \ref{US-Sortierung-Zeitpunkt}). Die Suchfunktion aus \ref{US-Suche} wurde für Kommentare als auch Notizen implementiert. Somit sind die Anforderungen an die Kommentarfunktion zwar erfüllt, aber ein verbesserter Suchalgorithmus, welcher Schreibfehler verzeiht und ähnliche Wörter berücksichtigt, würde die Suche noch aufwerten. Ebenfalls wäre es bei Kommentaren und deren Antworten noch möglich, dass ab einer gewissen Anzahl an Antworten nicht mehr alle dargestellt werden. Auch ein Bewertungssystem für Kommentare und Antworten, wie es zum Beispiel bei \textit{Stack Overflow} umgesetzt ist wäre sicherlich eine sinnvolle Erweiterung. 
-%
-%
-%\textbf{5 - Notizfunktion bei Hyperaudio-Dokumenten}\\
-%\ref{US-Notiz-L} - erfüllt\\
-%\ref{US-Notiz-S} - erfüllt\\
-%\ref{US-Notiz-Bearbeiten} - erfüllt\\
-%\ref{US-Notiz-Loeschen} - erfüllt\\
-%\ref{US-Sortierung-Zeitpunkt} - erfüllt (im Bezug auf das alleinige Darstellen von Notizen)\\
-%Die gewünschten Möglichkeiten zum Erstellen, Anzeigen, Bearbeiten und Löschen von Notizen wurden umgesetzt. Wie bereits bei der Kommentarfunktion erwähnt, wurde innerhalb der Notizen eine Suche ermöglicht. Es wäre aber vorstellbar, dass Notizen zukünftig auch um eigene Dateien ergänzt werden können, um beispielsweise selbst angefertigte Zeichnungen bei Notizen zu hinterlegen. 
-%
-%\textbf{6 - Lesezeichenfunktion bei Hyperaudio-Dokumenten}\\
-%\ref{US-Lesezeichen} - erfüllt\\
-%\ref{US-Lesezeichen-Loeschen} - erfüllt\\
-%Es ist, wie in \ref{US-Lesezeichen} formuliert, möglich Lesezeichen zu erstellen und gemäß \ref{US-Lesezeichen-Loeschen} ist das Löschen jener ebenfalls umgesetzt. Eine Weiterentwicklungsmöglichkeit wäre, dass Markierungen nicht nur punktuell, sondern für bestimmte Zeiträume, definiert werden können.
-%
-%\textbf{7 - Filter- und Sortiermöglichkeiten}\\
-%\ref{US-Filter} - erfüllt\\
-%\ref{US-Sortierung-Erstellungsdatum} - erfüllt\\
-%\ref{US-Sortierung-Zeitpunkt} - erfüllt ( in Bezug auf die Sortierfunktion)\\
-%Dem Wunsch nach einer Filterfunktion aus \ref{US-Filter} und einer Sortierfunktion aus \ref{US-Sortierung-Erstellungsdatum} und \ref{US-Sortierung-Zeitpunkt} wurde Sorge getragen. Durch die Implementierung ist es möglich zu filtern, ob Kommentare, Notizen oder beides dargestellt werden sollen. Auch eine Sortierung nach Erstelldatum (auf- und absteigend) sowie nach Annotationszeitpunkt ist umgesetzt worden.
-%
-%\textbf{8 - Favoritenfunktion für Hyperaudio-Dokumente}\\
-%\ref{US-Favoriten} - nicht erfüllt\\
-%\ref{US-Favoriten-Loeschen} - nicht erfüllt\\
-%
-%\textbf{9 - Übersicht über alle Hyperaudio-Dokumente der belegten Kurse}\\
-%\ref{US-Uebersicht-Kurse} - teilweise erfüllt\\
-%Nutzende können sich nur innerhalb eines Kurses einen Überblick über alle darin enthaltenen Hyperaudio-Dokumente verschaffen. Dies entspricht nicht komplett der \ref{US-Uebersicht-Kurse}, welche eine Übersicht über die Hyperaudio-Dokumente aller belegten Kurse forderte.
-%
-%
-%\textbf{10 - Übersicht über die zuletzt abgespielten Hyperaudio-Dokumente}\\
-%\ref{US-Uebersicht-Letzte} - nicht erfüllt\\
-%
-%
-%\textbf{11 - Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle}\\
-%\ref{US-Fortsetzen} - nicht erfüllt\\
-%
-%
-%\textbf{12 - Unterstützung von mobilen Endgeräten}\\
-%\ref{US-Mobil} - teilweise erfüllt\\
-%\ref{US-Zeit-Mobil}  - teilweise erfüllt\\
-%Es wurde gemäß den User Stories \ref{US-Mobil}  und \ref{US-Zeit-Mobil} eine für mobile Endgeräte angepasst Darstellung implementiert. Diese gibt dem Nutzer die Möglichkeit auch auf mobilen Endgeräten Hyperaudio-Dokumente abzuspielen, die dazugehörigen Kommentare, Notizen und Lesezeichen als auch die Galerie zu betrachten. Hierbei handelt es sich aber nur um eine angepasste Darstellung der Desktopversion. Die Funktion zum Löschen von Markierungen ist allerdings auf mobilen Endgeräten mit Touchscreen nicht nutzbar. Um die Nutzung auf mobilen Geräten komfortabler zu gestalten und alle Funktionen anbieten zu können, wäre eine komplett angepasste Darstellung der Hyperaudio-Dokumente notwendig.
-%
-%
-%\section{Zusammenfassung}
-%
-%Durch die vorliegende Implementierung des Hyperaudio-Plugins wurden bereits viele der definierten Anforderungen erfüllt, dennoch gibt es sowohl im Bereich der Administration als auch im Bereich der Nutzung noch Verbesserungspotenzial.
+\section{Zusammenfassung}
+Bei der Evaluation wurde die vorliegende Implementierung des Hyperaudio-Plugins analysiert. Die Ergebnisse zeigen auf, dass bereits viele der formulierten User Stories ermöglicht und dementsprechend viele Anforderungen erfüllt wurden. Dennoch gibt es sowohl im Bereich der Administration als auch im Bereich der Nutzung noch Verbesserungspotenzial, diese wurden in Form von neuen User Stories formuliert.
