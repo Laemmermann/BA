@@ -1,27 +1,25 @@
-Nachdem nun die konzeptionellen Vorarbeiten geleistet sind, wird in diesem Kapitel die Implementierung des Hyperaudio-Plugins erläutert. Zu Beginn wird zunächst die grundlegende Architektur des Moodle-Plugins festgehalten. Daraufhin werden das Vorgehen und die Ergebnisse der Implementierung beleuchtet.
+Nachdem nun die konzeptionellen Vorarbeiten geleistet sind, wird in diesem Kapitel die Implementierung des Hyperaudio"=Plugins erläutert. Zu Beginn wird zunächst die grundlegende Architektur des Moodle-Plugins festgehalten. Daraufhin werden das Vorgehen und die Ergebnisse der Implementierung beleuchtet.
 
 %%%%%%%%%%
 \section{Architektur des Moodle-Plugins}
 \label{sec:architektur}
-Bei der Implementierung des Hyperaudio-Plugins ist die durch Moodle vorgegebene Architektur von Plugins zu beachten \citep{moodle2016activity}. Diese besteht stets aus vorgegebenen Dateien und Ordnen, wobei die jeweilige Anzahl von der Art des zu entwickelnden Plugins abhängig ist. Darüber hinaus bestimmt die Art des Plugins auch den zu wählenden Speicherort.
+Bei der Implementierung des Hyperaudio"=Plugins ist die durch Moodle vorgegebene Architektur von Plugins zu beachten \citep{moodle2016activity}. Diese besteht stets aus vorgegebenen Dateien und Ordnen, wobei die jeweilige Anzahl von der Art des zu entwickelnden Plugins abhängig ist. Darüber hinaus bestimmt die Art des Plugins auch den zu wählenden Speicherort.
 
-Bei Activity Plugins, wie dem Plugin für Hyperaudio-Dokumente, ist als Speicherort der Ordner \textbf{/mod} vorgeben. In diesem Ordner muss ein Unterordner mit dem Namen des Plugins angelegt werden, in diesem Fall \textbf{hyperaudio}, in welchem alle Plugin-Dateien abgelegt werden. Eine Übersicht über die Ordnerstruktur des Hyperaudio-Plugins findet sich in Abbildung \ref{fig:Ordnerstruktur}.
+Bei Activity Plugins, wie dem Plugin für Hyperaudio-Dokumente, ist als Speicherort der Ordner \textbf{/mod} vorgeben. In diesem Ordner muss ein Unterordner mit dem Namen des Plugins angelegt werden, in diesem Fall \textbf{hyperaudio}, in welchem alle Plugin-Dateien abgelegt werden. Eine Übersicht über die Ordnerstruktur des Hyperaudio"=Plugins findet sich in Abbildung \ref{fig:Ordnerstruktur}.
 
 \begin{figure}[h!]
-\includegraphics[width=0.3\textwidth,center]{Ordnerstruktur.PNG}
-\caption{\label{fig:Ordnerstruktur}Ordnerstruktur des Hyperaudio-Plugins}
+\includegraphics[width=0.33\textwidth,center]{Ordnerstruktur.PNG}
+\caption{\label{fig:Ordnerstruktur}Ordnerstruktur des Hyperaudio"=Plugins}
 \end{figure}
-
-\todo[inline]{Ordnerstruktur aktualisieren}
 
 Der Ordner \textbf{/hyperaudio/db} beherbergt die Dateien \textbf{access.php}, \textbf{install.xml} und \textbf{upgrade.php}. Die Datei \textbf{access.php} dient zur Steuerung der Berechtigungen innerhalb des Moodle-Plugins, wobei den verschiedenen Moodle-Rollen verschiedene Rechte für die einzelnen Funktionen zugewiesen werden können. Bei der Installation des Plugins wird die \textbf{install.xml} zur Erstellung der Datenbanktabellen für das Plugin verwendet. Es ist mindestens eine Tabelle mit dem Namen des Plugins anzulegen. Sollten die Datenbanktabellen nach Veröffentlichung des Plugins um Spalten erweitert werden, so kommt die Datei \textbf{upgrade.php} zum Einsatz. Hierin werden die notwendigen Schritte für einen Versionsabgleich definiert.
 
 Im Ordner \textbf{/hyperaudio/lang} wird die Sprachlokalisierung vorgenommen. Für jede Sprache wird innerhalb des \textbf{lang}-Ordners ein eigener Unterordner angelegt. Darin befindet sich jeweils eine PHP-Datei, in welcher die Übersetzungen definiert werden. Der Name dieser Datei entspricht wiederum dem Namen des Plugins.
 
-Das Icon, welches für das Plugin  verwendet werden soll, muss im Ordner \textbf{/hyperaudio/pix} mit dem Dateinamen \textbf{icon.gif} abgelegt werden und sollte eine Auflösung von 16x16 Pixel besitzen.
+Das Icon, welches für das Plugin  verwendet werden soll, muss im Ordner \textbf{/hyperaudio/pix} mit dem Dateinamen \textbf{icon.png} abgelegt werden und sollte eine Auflösung von 16x16 Pixel besitzen.
 
 Im Ordner \textbf{/hyperaudio} liegen darüber hinaus die Dateien \textbf{lib.php}, \textbf{mod\underline{{ }}form.php}, \textbf{index.php}, \textbf{view.php} und \textbf{version.php}.\\
-Die \textbf{lib.php} dient dazu, Standardfunktionen von Moodle zu überschreiben, wobei \texttt{<pluginname>\underline{{ }}add\underline{{ }}instance}, \texttt{<pluginname>\underline{{ }}update\underline{{ }}instance} und \texttt{<pluginname>\underline{{ }}delete\underline{{ }}instance} als essenzielle Funktionen zu nennen sind. Mit diesen Funktionen wird das Anlegen, Aktualisieren und Löschen von Instanzen des Plugins ermöglicht.\\
+Die \textbf{lib.php} dient dazu, Standardfunktionen von Moodle zu überschreiben, wobei \mbox{\texttt{<pluginname>\underline{{ }}add\underline{{ }}instance}}, \texttt{<pluginname>\underline{{ }}update\underline{{ }}instance} und \texttt{<pluginname>\underline{{ }}delete\underline{{ }}instance} als essenzielle Funktionen zu nennen sind. Mit diesen Funktionen wird das Anlegen, Aktualisieren und Löschen von Instanzen des Plugins ermöglicht.\\
 Zum Anlegen und Aktualisieren wird in der \textbf{mod\underline{{ }}form.php} die dazugehörige Maske festgelegt.\\
 Die \textbf{\textit{index.php}} dient der Auflistung aller Instanzen eines Plugins innerhalb eines Kurses, worüber sich somit eine statistische Ansicht für den jeweiligen Kurs definieren lässt. Je nach Umsetzung kann der Inhalt dieser Auflistung unterschiedlich viele Informationen zu den Instanzen bereitstellen. Auch ist es beispielsweise anhand der Berechtigungen aus der \textbf{access.php} möglich, gewisse Inforationen nur bestimmten Benutzern anzuzeigen.\\
 Die erste Datei, die beim Öffnen der Aktivität geladen wird, ist die \textbf{view.php}, welche dementsprechend vornehmlich der Anzeige der Inhalte dient.\\
@@ -37,7 +35,7 @@ Die Entwicklung des Plugins wird in iterativer Form durchgeführt. In jeder Iter
 \label{sec:it1}
 In der ersten Iteration wird zunächst die grundlegende Struktur des Plugins erstellt (vgl. Abschnitt \ref{sec:architektur}). Ziel der ersten Iteration soll es sein, eine Audio-Datei speichern und wiedergeben zu können.
 
-Dazu wird in der Maske zum Anlegen und Aktualisieren von Instanzen des Hyperaudio-Plugins (\textbf{mod\underline{{ }}form.php}) neben dem obligatorischen Namens-Feld noch ein Element zum Hinzufügen einer Audio-Datei angelegt. Auflistung \ref{lst:it1:modform} zeigt einen Ausschnitt des Codes, der in der Funktion \texttt{definition} der Klasse \texttt{mod\underline{{ }}hyperaudio\underline{{ }}mod\underline{{ }}form}, die von der Klasse \texttt{moodleform\underline{{ }}mod} erbt, ergänzt werden muss. 
+Dazu wird in der Maske zum Anlegen und Aktualisieren von Instanzen des Hyperaudio"=Plugins (\textbf{mod\underline{{ }}form.php}) neben dem obligatorischen Namens-Feld noch ein Element zum Hinzufügen einer Audio-Datei angelegt. Auflistung \ref{lst:it1:modform} zeigt einen Ausschnitt des Codes, der in der Funktion \texttt{definition} der Klasse \texttt{mod\underline{{ }}hyperaudio\underline{{ }}mod\underline{{ }}form}, die von der Klasse \texttt{moodleform\underline{{ }}mod} erbt, ergänzt werden muss. 
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -387,13 +385,12 @@ $output .= '<div id="hyperaudio_comments"></div>';
 \end{lstlisting}
 
 Das Speichern sowie das Anzeigen der Kommentare wird unter Einsatz von Webservices, welche durch ein JavaScript-Modul (\textbf{/hyperaudio/AMD/src/hyperaudio.js}) angesprochen werden, realisiert. Hierfür werden zusätzlich die Dateien \textbf{services.php} (\textbf{/hyperaudio/db}) und \textbf{external.php} (\textbf{/hyperaudio/classes}) für die Bereitstellung der Webservices benötigt.
-\todo[inline]{Wie ist Annotationszeitpunkt definiert?}
 
 In der \textbf{services.php} werden zunächst die nötigen Webservices deklariert (siehe Auflistung \ref{lst:it4:services}). Hier wird lediglich auf die \textbf{external.php} verwiesen, die den eigentlichen Code der Webservices beinhalten.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
-             caption={\textbf{services.php} in der 4. Iteration},
+             caption={Ausschnitt der \textbf{services.php} in der 4. Iteration},
              label={lst:it4:services}]
 $functions = array(
     'mod_hyperaudio_save_comment' => array(
@@ -591,7 +588,9 @@ Nachdem durch die vorangegangenen Iterationen nun die Funktionen für die Kommun
 
 Zum Speichern der Notizen können dieselben Webservices und Funktionen, wie zum Speichern der Kommentare verwendet werden. Dies rührt daher, dass Notizen eine bestimmte Art von Kommentaren darstellen (vgl. Abschnitt \ref{sec:komponenten_zusammenhaenge}). 
 
-Da Notizen im Gegensatz zu Kommentaren geändert und gelöscht werden können sollen, müssen hierfür entsprechende Webservices bereitgestellt werden. Gleichzeitig müssen analog zum Antworten auf Kommentare ein Button zum Löschen sowie Button und Textfeld für die Bearbeitung der Notiz ergänzt werden.
+Da Notizen im Gegensatz zu Kommentaren geändert und gelöscht werden können sollen, müssen hierfür entsprechende Webservices bereitgestellt werden. Gleichzeitig müssen analog zum Antworten auf Kommentare ein Button zum Löschen sowie Button und Textfeld für die Bearbeitung der Notiz ergänzt werden. 
+
+Die Darstellung des Schloss-Symbols als Symbol für Notizen wird mithilfe der schriftbasierten Icon-Sammlung \textit{Font Awesome}\footnote{https://fontawesome.com/} realisiert.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{0.5\textwidth}
@@ -811,50 +810,45 @@ function jump_to_comment(element){
     }
 }
 \end{lstlisting}
-Als Ergebnis dieser Iteration ergibt sich eine in die Mediensteuerung integrierte Visualisierung der Kommentare und Notizen, welche nicht nur der Übersicht sondern auch der Navigation dient.
+Als Ergebnis dieser Iteration ergibt sich eine in die Mediensteuerung integrierte Visualisierung der Kommentare und Notizen, welche nicht nur der Übersicht sondern auch der Navigation dient. Um die Kommentare und Antworten anderer Nutzer einsehen zu können ohne das Hyperaudio-Dokument erneut öffnen zu müssen, wurde eine Echtzeitabfrage implementiert, die sich sowohl auf die Anzeige in der Mediensteuerung als auch auf den Kommentarbereich erstreckt.
 
-\todo[inline]{SQL?}
 
 \subsection{Lesezeichen}
 Um die Vorstellung aus Abschnitt \ref{sub:Mediensteuerung} zu vervollständigen müssen nun noch die Lesezeichen in die Mediensteuerung integriert werden. Dementsprechend wird in dieser Iteration das Erstellen und Visualisieren von Lesezeichen behandelt.
 
-In die vorhandenen Bedienelemente des \textit{VideoJS Players} wird eine weitere Schaltfläche zum Erstellen von Lesezeichen integriert (vgl. Auflistung \ref{lst:it10:hyperaudio.js}).
+In die vorhandenen Bedienelemente des \textit{VideoJS Players} wird eine weitere Schaltfläche zum Erstellen von Lesezeichen integriert (vgl. Auflistung \ref{lst:it10:hyperaudio.js} Zeilen 1-8).
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{hyperaudio.js} in der 10. Iteration},
              label={lst:it10:hyperaudio.js}]
 $(".vjs-volume-panel").after(
-    '<button class="vjs-bookmark-control vjs-control vjs-button"
-    type="button" title="' + string_bookmark + '"
-    aria-disabled="false">' +
-    '<span aria-hidden="true" class="far fa-bookmark vjs-icon-placeholder"></span>
-    <span class="vjs-control-text" aria-live="polite">' + string_bookmark + '</span>
-    </button>'
+    '<button class="vjs-bookmark-control vjs-control vjs-button" ' +
+    'type="button" title="' + string_bookmark + '" ' +
+    'aria-disabled="false">' +
+    '<span aria-hidden="true" class="far fa-bookmark vjs-icon-placeholder"></span>' + 
+    '<span class="vjs-control-text" aria-live="polite">' + string_bookmark + '</span>' +
+    '</button>'
 );
-\end{lstlisting}
 
-Das Speichern der Lesezeichen erfolgt nach Betätigung der Schaltfläche analog zum Speichern der Kommentare (vgl. Abschnitt \ref{sub:SpeichernKommentare}). Zur Darstellung der Lesezeichen wird die Funktion \texttt{show\underline{{ }}timeline} aus der \textbf{hyperaudio.js} erweitert sowie ein neuer Webservice für das Laden von Lesezeichen eingeführt. Der Webservice liefert der \texttt{show\underline{{ }}timeline}-Funktion die Lesezeichen des aktuellen Benutzers. Ihre Position innerhalb der Timeline ist durch einen prozentualen Abstand von links festgelegt, wobei sich der Prozentsatz gemäß Auflistung \ref{lst:it10:hyperaudio.js} durch das Verhältnis des Annotationszeitpunktes zur Abspieldauer ergibt. 
+//...
 
-\begin{lstlisting}[language=php,
-             linewidth=\textwidth,
-             caption={Ausschnitt der \textbf{hyperaudio.js} in der 10. Iteration},
-             label={lst:it10:hyperaudio.js}]
 promises[1].done(function(data) {
     var output = '';
     $(data).each(function(){
-    var left = (this.timeannotated / parseFloat(duration)) * 100;
-    output = output + '<div title="' + string_delete_bookmark + '" 
-        class="bookmark" style="left: ' + left + '%;" 
-        data-comment_id="' + this.id +'">
-        <i class="far fa-bookmark"/></div>';
+        var left = (this.timeannotated / parseFloat(duration)) * 100;
+        output = output + '<div title="' + string_delete_bookmark + '" 
+            class="bookmark" style="left: ' + left + '%;" 
+            data-comment_id="' + this.id +'">' +
+            '<i class="far fa-bookmark"/></div>';
     });
     $(".hyperaudio_timeline_bookmarks_container").html(output);
 });
 \end{lstlisting}
 
-Mit einem Rechtsklick auf ein Lesezeichen wird die Löschung mit derselben Prozedur wie bei den Notizen abgearbeitet (vgl. Abschnitt \ref{sub:notizen}). Somit ist mit dieser Iteration auch das Erstellen, Anzeigen und Löschen von Lesezeichen möglich und die Implementierung der Mediensteuerung abgeschlossen. Die visuelle Umsetzung ist Abbildung \ref{fig:Mediensteuerung} zu entnehmen.
+Das Speichern der Lesezeichen erfolgt nach Betätigung der Schaltfläche analog zum Speichern der Kommentare (vgl. Abschnitt \ref{sub:SpeichernKommentare}). Zur Darstellung der Lesezeichen wird die Funktion \texttt{show\underline{{ }}timeline} aus der \textbf{hyperaudio.js} erweitert sowie ein neuer Webservice für das Laden von Lesezeichen eingeführt. Der Webservice liefert der \texttt{show\underline{{ }}timeline}-Funktion die Lesezeichen des aktuellen Benutzers. Ihre Position innerhalb der Timeline ist durch einen prozentualen Abstand von links festgelegt, wobei sich der Prozentsatz durch das Verhältnis des Annotationszeitpunktes zur Abspieldauer ergibt (vgl. Auflistung \ref{lst:it10:hyperaudio.js} Zeilen 12-22).
 
+Mit einem Rechtsklick auf ein Lesezeichen wird die Löschung mit derselben Prozedur wie bei den Notizen abgearbeitet (vgl. Abschnitt \ref{sub:notizen}). Somit ist mit dieser Iteration auch das Erstellen, Anzeigen und Löschen von Lesezeichen möglich und die Implementierung der Mediensteuerung abgeschlossen. Die visuelle Umsetzung ist Abbildung \ref{fig:Mediensteuerung} zu entnehmen.
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth,center]{Mediensteuerung.png}
@@ -939,106 +933,109 @@ Die Umsetzung der Such-, Filter- und Sortierfunktion runden die Implementierung 
 
 %%%%%%%%%%
 \subsection{Unterstützung mobiler Endgeräte}
-In der letzten Iteration werden Anpassungen vorgenommen, um die Nutzung des Hyperaudio-Plugins auch auf mobilen Endgeräte zu ermöglichen. Dafür werden wie bereits in Abschnitt \ref{sub:mobile} beschrieben Breakpoints eingeführt um die Anordnung der Elemente für mobile Endgeräte zu optimieren.
+In der letzten Iteration werden Anpassungen vorgenommen, um die Nutzung des Hyperaudio"=Plugins auch auf mobilen Endgeräte zu ermöglichen. Dafür werden wie bereits in Abschnitt \ref{sub:mobile} beschrieben Breakpoints eingeführt, um die Anordnung der Elemente für mobile Endgeräte zu optimieren.
 
-Durch den ersten Breakpoint weren die Bereiche, wie in Abbildung \ref{fig:BereicheDesktopMobile} sichtbar, neu angeordnet, so dass die Galerie sich nun unterhalb der Kommentare und Notizen befindet. Hierdurch wird der geringeren Bildschirmgröße der mobilen Endgeräte Sorge getragen.
+Bei geringer Bildschirmbreite werden durch den ersten Breakpoint die Bereiche wie in Abbildung \ref{fig:BereicheDesktopMobile} sichtbar neu angeordnet, sodass statt einem zweispaltigen ein einspaltiges Layout verwendet wird. Das hat zur Folge, dass die Galerie nun unterhalb der Kommentare und Notizen angezeigt wird.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.95\textwidth,center]{BereicheDesktop.pdf}
 \label{fig:BereicheDesktop}
+\subcaption{Desktop}
 \end{subfigure}%
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.6\textwidth,center]{BereicheMobile.pdf}
 \label{fig:BereicheMobile}
+\subcaption{mobile Endgeräte}
 \end{subfigure}
-\caption{Darstellung der Bereiche für Desktop und mobile Endgeräte}
+\caption{Darstellung der Bereiche}
 \label{fig:BereicheDesktopMobile}
 \end{figure}
 
-Ein weiterer Breakpoint wird bei der Such-, Filter- und Sortierfunktion angewandt, diese werden für mobile Endgeräte untereinander, statt nebeneinander angeordnet (siehe Abbildung \ref{fig:FilterDesktopMobile}).
+Ein weiterer Breakpoint wird bei der Such-, Filter- und Sortierfunktion angewandt. Für mobile Endgeräte werden diese Funktionen untereinander statt nebeneinander angeordnet (siehe Abbildung \ref{fig:FilterDesktopMobile}).
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.95\textwidth,center]{FilterDesktop.pdf}
 \label{fig:FilterDesktop}
+\subcaption{Desktop}
 \end{subfigure}%
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.6\textwidth,center]{FilterMobile.pdf}
 \label{fig:FilterMobile}
+\subcaption{mobile Endgeräte}
 \end{subfigure}
-\caption{Darstellung der Such-, Filter- und Sortierfunktion für Desktop und mobile Endgeräte}
+\caption{Darstellung der Such-, Filter- und Sortierfunktion}
 \label{fig:FilterDesktopMobile}
 \end{figure}
 
-Um auch innerhalb der Galerie auf die Gegebenheiten von mobilen Endgeräten Rücksicht zu nehmen, wird ein weiterer Breakpoint eingeführt. Dieser sorgt dafür, dass die Metainformationen der Zusatzinhalt unterhalb statt neben des Thumbnail dargestellt werden. Hieraus resultiert die in Abbildung \ref{fig:GalerieDesktopMobile} dargestellte Aufteilung.
+Um auch innerhalb der Galerie auf die Gegebenheiten von Endgeräten mit geringer Bildschirmbreite Rücksicht zu nehmen, wird ein weiterer Breakpoint eingeführt. Dieser sorgt dafür, dass die Metainformationen der Zusatzinhalte unterhalb statt neben des Thumbnails dargestellt werden. Hieraus resultiert die in Abbildung \ref{fig:GalerieDesktopMobile} dargestellte Ansicht.
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.95\textwidth,center]{GalerieDesktop.pdf}
 \label{fig:GalerieDesktop}
+\subcaption{Desktop}
 \end{subfigure}%
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.6\textwidth,center]{GalerieMobile.pdf}
 \label{fig:GalerieMobile}
+\subcaption{mobile Endgeräte}
 \end{subfigure}
-\caption{Darstellung der Galerie für Desktop und mobile Endgeräte}
+\caption{Darstellung der Galerie}
 \label{fig:GalerieDesktopMobile}
 \end{figure}
 
-Umgesetzt werden diese Breakpoints innerhalb der \textbf{styles.css}. Das Vorgehen ist in Auflistung \ref{lst:it12:styles} dargestellt. Es ist zu erkennen, dass die Darstellung der Desktop-Version mittels einer \texttt{@media} Abfrage unter der Angabe einer Mindestbreite vorgenommen wird. Sofern diese Bedingung nicht erfüllt wird, wird die Darstellung für die mobilen Endgeräte durchgeführt.
+\FloatBarrier
 
-\begin{lstlisting}[language=php,
+Umgesetzt werden diese Breakpoints anhand von CSS-Regeln innerhalb der \textbf{styles.css} (siehe Auflistung \ref{lst:it12:styles}). Die verschiedenen Darstellungen werden mittels Medienabfragen gesteuert. Dabei wird die Breite des Anzeigebereichs abgefragt und falls die angegebene Grenze überschritten wird, werden die innerhalb des \texttt{@media}-Blocks definierten Regeln angewandt. Diese  erzeugen mittels Grid Layout die Desktop-Darstellungsvariante. Andernfalls gelten die \glqq normalen\grqq{} CSS-Regeln, welche die Darstellung auf mobilen Endgeräten definieren.
+
+\begin{lstlisting}[language=css,
              linewidth=\textwidth,
              caption={Ausschnitt der \textbf{styles.css} in der 12. Iteration},
              label={lst:it12:styles}]
 @media (min-width: 100em) {
-  div#hyperaudio {
+  div#hyperaudio div#hyperaudio {
     display: grid;
     grid-template-columns: 70em 1fr;
   }
-  div#gallery_container {
+  div#hyperaudio div#gallery_container {
     margin-left: 2em;
   }
 }
-
 @media (min-width: 40em) {
-  div.gallery_additional_content {
+  div#hyperaudio div.gallery_additional_content {
     display: grid;
     grid-template-columns: 1fr 5fr;
   }
 }
-
 @media (min-width: 50em) {
-  div#comment_tools_container {
+  div#hyperaudio div#comment_tools_container {
     display: grid;
     grid-template-columns: 4fr 2fr 3fr;
   }
-  input#hyperaudio_search {
+  div#hyperaudio input#hyperaudio_search {
   	max-width: 35em;
   	margin-top: 0em;
   }
-  div#comment_tools_filter,
-  div#comment_tools_order {
+  div#hyperaudio div#comment_tools_filter,
+  div#hyperaudio div#comment_tools_order {
   	display: flex;
     justify-content: flex-end;
     margin-left: 20px;
   }
 }
-
-div.gallery_additional_content {
+div#hyperaudio div.gallery_additional_content {
     margin-bottom: 15px;
     padding: 5px 10px;
     border-radius: 10px;
 }
-
-div#comment_tools_container {
-	align-items: baseline;
+div#hyperaudio div#comment_tools_container {
+    align-items: baseline;
     margin-top: 1rem;
     max-width: 70em;
 }
-
-input#hyperaudio_search {
+div#hyperaudio input#hyperaudio_search {
     font-family: Arial, FontAwesome;
     font-weight: normal;
     padding: 5px 10px;
@@ -1047,17 +1044,19 @@ input#hyperaudio_search {
     width: 100%;
     margin-top: 0.3em;
 }
-
-div#comment_tools_order {
+div#hyperaudio div#comment_tools_order {
     align-items: baseline;
 }
 \end{lstlisting}
-\todo[inline]{Styling anpassen und Code auf Aktualität prüfen}
+%\todo[inline]{Styling anpassen}
+
+\begin{figure}[h!]
+\includegraphics[width=0.85\textwidth,center]{Desktop.png}
+\caption{\label{fig:DesktopFinal}Darstellung der finalen Desktop-Version}
+\end{figure}
+
+\FloatBarrier
 
 %%%%%%%%%%
 \section{Zusammenfassung}
-Nachdem zu Beginn der Implementierung die grundlegende Moodle-Struktur erarbeitet wurde, wurden in den darauffolgenden Iterationen das Hyperaudio-Plugin Schritt für Schritt um die einzelnen Anforderungen erweitert. Somit ist am Ende die in Abbildung \ref{fig:DesktopFinal} sichtbar finale Repräsentation von Kurseinheiten als Hyperaudio-Dokumente innerhalb eines Moodle-Plugins entstanden. In der letzten Iteration wurde dann noch die Darstellung auf mobilen Endgeräten implementiert.
-\begin{figure}[h!]
-\includegraphics[width=\textwidth,center]{Desktop.png}
-\caption{\label{fig:DesktopFinal}Darstellung der finalen Desktop-Version}
-\end{figure}
+Nachdem zu Beginn der Implementierung die grundlegende Moodle-Struktur erarbeitet wurde, wurden in den darauffolgenden Iterationen das Hyperaudio"=Plugin Schritt für Schritt um die einzelnen Anforderungen erweitert. Somit ist am Ende die in Abbildung \ref{fig:DesktopFinal} sichtbar finale Repräsentation von Kurseinheiten als Hyperaudio"=Dokumente innerhalb eines Moodle-Plugins entstanden. In der letzten Iteration wurde dann noch die Darstellung auf mobilen Endgeräten implementiert.

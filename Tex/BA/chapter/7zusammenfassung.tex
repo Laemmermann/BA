@@ -1,32 +1,55 @@
-Zusammenfassend wurden in dieser Arbeit, basierend auf einer mittels Personas und User Stories entwickelten Zielgruppe, Anforderungen an ein Plugin gestellt, welches eine auditive Repräsentation der bisherigen Kurseinheiten an der FernUniversität in Hagen darstellen soll. Aufbauend auf diesen Anforderungen wurde der aktuelle Stand der Technik betrachtet, um sowohl Ideen zu sammeln als auch eine technische Grundlage für die Umsetzung des Hyperaudio-Plugins zu finden. Im nächsten Schritt wurde die Konzeption des Plugins vorgenommen, dies bestand unter anderem daraus die verschiedenen Komponenten und deren Zusammenhänge zu definieren. Zusätzlich wurde eine Konfigurationsdatei für das Schnittstellenformat definiert als auch der Datenbankentwurf vorgenommen. Am Ende der Konzeption wurde das Design der Benutzeroberfläche erarbeitet. Basierend auf diesen konzeptionellen Entscheidungen wurde anschließend die Implementierung durchgeführt. Zum Zwecke der anschließenden Evaluierung wurden erneut die User Stories und die daraus entstanden Anforderungen in Verbindung mit der durchgeführten Implementierung betrachtet. In diesem Zuge wurden einige Schwächen, wie beispielsweise die fehlende Validierung der Konfiguration, aber auch potentielle Weiterentwicklungsmöglichkeiten aufgezeigt. 
-\todo[inline]{Wurden Forschungsfragen beantwortet?}
+Zum Abschluss dieser Arbeit sollen die Ergebnisse nochmals zusammengefasst und der Bezug zu den anfangs gestellten Forschungsfragen hergestellt werden. Abschließend soll ein Ausblick für die Weiterentwicklung des Hyperaudio"=Plugins gegeben werden.
 
-Nachdem nun die Evaluierung erfolgt ist, kann ein Ausblick für mögliche Weiterentwicklungen gegeben werden. An dieser Stelle wären als erstes die nicht umgesetzten Anforderungen zu nennen. Um den Studierenden beim Anhören der Audio Cues zu unterstützen könnten auch die Audio Cues und die Art des Vorlesens erweitert werden. So könnte man beispielsweise für verschiedene Arten von Zusatzinhalten unterschiedliche Audio Cues abspielen, oder verschiedene Sprecher oder Audiokanäle verwenden um den Studierenden beispielsweise dabei zu unterstützen Aufzählungen besser nachvollziehen zu können. Mit solchen Ideen haben sich bereits \cite{donker2007gestaltung} auseinander gesetzt. Ein Ansatz hierfür könnte \textit{Resonance Audio}\footnote{https://developers.google.com/resonance-audio/} von Google sein.
-Eine weitere Überlegung wäre es das Hyperaudio-Plugin so zu erweitern, dass es auch das Streaming auf Fernsehgeräte ermöglicht, zum Beispiel durch die Unterstützung von Google ChromeCast oder Apple TV. Hierdurch würde man die Nutzung einer großen Bildschirmfläche abseits von Laptops und Desktops ermöglichen.
-Aber auch im Bereich der kleinen Displays, also der mobilen Endgeräte, besteht noch Potential zur Weiterentwicklung. Die aktuelle Implementierung beschränkt sich aktuell nur darauf, dass die Inhalte auf mobilen Endgeräte korrekt dargestellt werden. Wie bereits in der Evaluierung erwähnt, würde es sich anbieten ein speziell an die mobilen Anforderungen ausgerichtetes Design zu entwickeln. Es wäre eine App vorstellbar, welche neben einem besseren Design auch offline Funktionalitäten bietet. Damit würden die Freiheiten des Studierenden nochmals erhöht, da er nicht mehr abhängig von einer Internetverbindung ist.
-Neben diesen Punkten die sich vor allem auf die Rolle der Nutzenden bezieht, wären auch einige Weiterentwicklungen für die Administrierenden denkbar. Neben der bereits in der Evaluation besprochenen Möglichkeit Hyperaudio-Dokumente komplett in Moodle erstellen zu können und somit auf die Konfigurationsdatei verzichten zu können, wäre eine Möglichkeit zur automatischen Konvertierung der klassischen Kurseinheiten in Hyperaudio-Dokumente reizvoll. Dies würde die Hürde zur Einführung von Hyperaudio-Dokumenten durch die Lehrenden enorm senken, da dies mit einem wesentlich geringeren Aufwand verbunden wäre.
+\section{Zusammenfassung}
+Beginnend mit der Formulierung der Grundgedanken für die Repräsentation der Kurseinheiten im Hyperaudio-Format, wurde das Hyperaduio-Plugin nach einer Analyse der Anforderungen und des aktuellen Stands der Technik konzeptioniert und implementiert. Dabei stand die Beantwortung der Forschungsfragen und das Erreichen der daraus abgeleiteten Ziele im Mittelpunkt.
 
-\todo[inline]{Lehrend möchten außerdem den Inhalt ihrer bestehenden Kurse vollständig als Audio/Hyperaudio abbilden können. Formeln, Tabellen, Bilder,...Sie möchten bei der Konvertierung/Produktion wenig Arbeit haben. Sie möchten Inhalte nachträglich editieren (auch Audio?!).}
+\begin{itemize}
+\item Wie kann den Studierenden mithilfe einer Hyperaudio-Lernumgebung ermöglicht werden mehr Zeit zum Lernen nutzen zu können?
+\end{itemize}
 
-Ausblick:\\
-Anforderungen die nicht umgesetzt wurden\\
+Es wurde eine zusätzliche Lernumgebung für Studierende geschaffen. Durch die Umsetzung als Moodle-Plugin ist diese nahtlos in die bestehende Infrastruktur der FernUniversität in Hagen integrierbar. Da diese Hyperaudio-Lernumgebung primär auditive Inhalte vermittelt, ist das Lernen in vielen Alltagssituationen möglich. Im Vergleich zur textuellen Repräsentation von Kurseinheiten ist nur selten die visuelle Aufmerksamkeit der Studierenden gefordert. Auf diese Notwendigkeit wird mithilfe akustischer Signale hingewiesen.
 
+\begin{itemize}
+\item Wie lassen sich auditive Inhalte verständlich gestalten?
+\end{itemize}
 
-nachträgliche Änderungen\\
-Versionierung\\
-\textbf{Bewertungssystem für Kommentare und Antworten, wie es zum Beispiel bei \textit{Stack Overflow}\\
-Dateien bei Notizen mitspeichern}
+In den Grundlagen wurden Wege aufgezeigt, wie die Vertonung von Kurseinheiten durchgeführt werden kann, sodass der Studierende den Lerninhalten erfolgreich folgen kann. Dies kann unter anderem durch den Einsatz der Prinzipien für Multimedia von \cite{mayer2009multimedia} oder unter Berücksichtigung der Erkenntnisse von \cite{donker2007gestaltung} erfolgen.
 
-Löschen von Kommentaren durch Administratoren\\
-Videos als Zusatzinhalt
-Echtzeitaustausch
-Unterschiedliche Anzeige Lehrende Studierende
-ScrollToTop (evtl. wenn AudioCue kommt)
-Validierung (was passiert wenn Student austritt, falsches JSON File)
-Export mit Kommentaren
+\begin{itemize}
+\item Wie lassen sich Inhalte in der Hyperaudio-Lernumgebung darstellen, die nicht in auditiver Form abgebildet werden können?
+\end{itemize}
 
-Unterstützung für ChromeCast/Apple TV\\
-https://developers.google.com/resonance-audio/\\
-verschiedene Audio-Cues, über Config-JSON konfigurierbar YAY\\
-mobile Endgeräte\\
-Konvertierung von Kurseinheit zu Hyperaudio\\
+Nicht auditiv repräsentierte Inhalte der Kurseinheiten, wie beispielsweise Tabellen oder Grafiken, können in Form von Bildern in die Hyperaudio-Repräsentation eingebunden werden.
+
+\begin{itemize}
+\item Wie können nicht-auditive Inhalte mit den auditiven Inhalten verknüpft werden?
+\end{itemize}
+
+Das Hyperaudio"=Plugin bietet die Möglichkeit, Bilder zu definierten Zeitpunkten darzustellen. Die Zuordnung von Bildern zu Zeitpunkten erfolgt anhand einer Konfigurationsdatei im JSON-Format. Auf die eingebundenen Zusatzinhalte wird nach dem Vorschlag von \cite{donker2007gestaltung} durch Audio Cues hingewiesen.
+
+\begin{itemize}
+\item Wie lassen sich alle Interaktionen, die eine textuelle Darstellung der Lerninhalte bietet, in der Hyperaudio-Lernumgebung umsetzen?
+\end{itemize}
+
+In der Hyperaudio-Lernumgebung wurden Möglichkeiten geschaffen, um Interaktionen mit textuellen Kursrepräsentationen digital nachzubilden. So kann das klassische Lesezeichen in der Kurseinheit durch ein Lesezeichen in der Timeline des Hyperaudio-Dokuments ersetzt werden. Soll zudem noch eine Anmerkung notiert werden, kann statt eines Lesezeichens eine persönliche Notiz angefertigt werden. Die Galerie des Hyperaudio-Dokuments repräsentiert gleichermaßen das Inhaltsverzeichnis einer Kurseinheit sowie die Möglichkeit, durch die Seiten zu blättern.
+
+\begin{itemize}
+\item Wie kann der Austausch zwischen Studierenden und Lehrenden umgesetzt werden?
+\end{itemize}
+Die im Hyperaudio"=Plugin umgesetzte Kommentarfunktion ermöglicht den Austausch zwischen Studierenden und Lehrenden. Jeder Teilnehmer kann Kommentare zu bestimmten Zeitpunkten eines Hyperaudio-Dokuments verfassen oder auf bestehende Kommentare antworten.
+
+Mit dem Moodle-Hyperaudio"=Plugin wurde allen Forschungsfragen begegnet. Dennoch ist die Entwicklung einer Hyperaudio-Lernumgebung noch nicht abgeschlossen.
+
+\section{Ausblick}
+
+Im Folgenden soll nun ein Ausblick für mögliche Weiterentwicklungen der Hyperaudio-Lernumgebung gegeben werden.
+
+In der Evaluation wurde festgestellt, dass noch nicht alle Anforderungen zu voller Zufriedenheit umgesetzt wurden. Zu diesen Themen (Favoritenfunktion, Übersichten, Unterstützung mobiler Endgeräte, Fortsetzen Unterbrochener Wiedergaben und Import- und Export-Funktion) sind Nachbesserungen erforderlich. Darüber hinaus wurden bereits in Abschnitt \ref{sec:Verbesserungsvorschlaege} Verbesserungsvorschläge in Form von User Stories festgehalten.\\
+Im Bezug auf \ref{US-Kommentar-Bewertung} wäre die Entwicklung einer Bewertungsfunktion für Kommentare und Antworten denkbar, wie sie beispielsweise auf der Plattform \textit{Stack Exchange}\footnote{https://stackexchange.com} zum Einsatz kommt.\\
+Eine weitere Überlegung wäre es das Hyperaudio"=Plugin so zu erweitern, dass auch das Streaming auf Fernsehgeräte, zum Beispiel durch \textit{Google ChromeCast} oder \textit{Apple TV}, unterstützt wird. Hierdurch würde die Nutzung einer großen Bildschirmfläche abseits von Laptops und Desktops ermöglicht.\\
+Aber auch im Bereich der kleinen Displays, also der mobilen Endgeräte, besteht noch Potenzial zur Weiterentwicklung. Es wäre eine App vorstellbar, welche neben einem speziell für mobile Geräte ausgelegten Design auch über eine Offline-Funktionalität verfügt. Damit würden die Freiheiten des Studierenden nochmals erhöht, da er beim Lernen nicht mehr abhängig von einer Internetverbindung ist.\\
+Neben diesen Punkten, die sich vor allem auf die Rolle der Nutzenden beziehen, wären auch einige Weiterentwicklungen für die Administrierenden denkbar. So wäre auf lange Sicht eine Funktion von Nöten, um unerwünschte Nutzerkommentare (vgl. \cite{reinmann2002analyse}) zu löschen.\\
+Für Administrierende wäre ebenfalls eine Möglichkeit zur (halb-)automatischen Konvertierung der klassischen Kurseinheiten in Hyperaudio"=Dokumente reizvoll, zum Beispiel durch den Einsatz von ScreenReadern (vgl. \cite{donker2007gestaltung}). Dies würde die Hürde zur Einführung von Hyperaudio"=Dokumenten durch die Lehrenden enorm senken, da dies mit einem wesentlich geringeren Aufwand verbunden wäre.\\
+Eine weitere Fragestellung, die sich im Rahmen dieser Arbeit eröffnet hat, ist der Umgang mit Änderungen am Hyperaudio"=Dokument. Besonders eine Änderung der zugrundeliegenden Audio-Datei zieht weitreichende Folgen nach sich. So müssen nicht nur Zusatzinhalte und deren Annotationszeitpunkte angepasst, sondern auch bestehende Kommentare, Notizen und Lesezeichen berücksichtigt werden. In diesem Rahmen ist über eine Versionierung beziehungsweise verschiedene Optionen zum Entfernen oder Migrieren der annotierten Inhalte nachzudenken.
+
+Diese Arbeit hat gezeigt, wie eine Hyperaudio-Lernumgebung in Moodle gestaltet werden kann. Das ausbaufähige Hyperaudio"=Plugin bietet Raum für zusätzliche Optimierungen für Nutzende als auch Administrierende.

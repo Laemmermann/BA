@@ -7,7 +7,7 @@
 \newcommand{\thesismatrikelnummer}{9611711}
 
 % Tell LaTeX about how to wrap words using the correct german hyphenation rules.
-\hyphenation{Lern-arrange-ments Lern-arrange-ment Lern-aktivität Lern-aktivitäten doku-mentiert Hash-funk-tion Hash-funk-tionen Video-frames Video-frame Link-ak-ti-vier-ung Co-decs Link-ob-jekt-es  Hyper-video-Autoren-um-geb-ung-en  App-li-kat-ion-en  Kon-tain-er-for-mat Bild da-tei-en  Co-decs Brow-ser   Au-to-ren-um-ge-bun-gen Aus-zeich-nungs-spra-che spe-zi-fische Vi-deo-lern-um-ge-bung-en Vi-deo-lern-um-ge-bung Lern-um-ge-bung Lern-um-ge-bung-en Hy-per-au-dio-Do-ku-ment Hy-per-au-dio-Do-ku-men-te Hy-per-au-dio Do-ku-ment Do-ku-men-te wave-sur-fer}
+\hyphenation{Lern-arrange-ments Lern-arrange-ment Lern-aktivität Lern-aktivitäten doku-mentiert Hash-funk-tion Hash-funk-tionen Video-frames Video-frame Link-ak-ti-vier-ung Co-decs Link-ob-jekt-es  Hyper-video-Autoren-um-geb-ung-en  App-li-kat-ion-en  Kon-tain-er-for-mat Bild da-tei-en  Co-decs Brow-ser   Au-to-ren-um-ge-bun-gen Aus-zeich-nungs-spra-che spe-zi-fische Vi-deo-lern-um-ge-bung-en Vi-deo-lern-um-ge-bung Lern-um-ge-bung Lern-um-ge-bung-en Hy-per-au-dio-Do-ku-ment Hy-per-au-dio-Do-ku-men-te Hy-per-au-dio Do-ku-ment Do-ku-men-te wave-sur-fer Fern-Uni-ver-si-tät Auf-lis-tung Tab-let}
 
 \title{\thesistitle}
 \author{\thesisauthor}
@@ -27,6 +27,8 @@
 \usepackage{textcomp}
 \colorlet{punct}{red!60!black}
 \definecolor{delim}{RGB}{20,105,176}
+\definecolor{commentgreen}{RGB}{2,112,10}
+\definecolor{eminence}{RGB}{108,48,130}
 \lstdefinelanguage{json}{
     literate=
      *{:}{{{\color{punct}{:}}}}{1}
@@ -36,10 +38,10 @@
       {[}{{{\color{delim}{[}}}}{1}
       {]}{{{\color{delim}{]}}}}{1},
 }
-\definecolor{commentgreen}{RGB}{2,112,10}
-\definecolor{eminence}{RGB}{108,48,130}
-\definecolor{weborange}{RGB}{255,165,0}
-\definecolor{frenchplum}{RGB}{129,20,83}
+\lstdefinelanguage{css}{
+    keywordstyle=\color{eminence}, % 
+    morekeywords={@media, div, input}
+}
 \lstset {
     language=php,
     aboveskip=15pt,
@@ -124,9 +126,10 @@ Dr. Niels Seidel
 
 %% Seite mit Zusammenfassung und englishsprachigen Summary
 \section*{Zusammenfassung}
-\dots\vfill
+Aktuell werden Lerninhalte an der FernUniversität in Hagen hauptsächlich in Form von textlastigen Kurseinheiten vermittelt. Diese schränken die Studierenden, bezogen auf die Tätigkeiten, welche beim Lernen durchgeführt werden können, ein. Aus diesem Grund lässt sich das Lernen aktuell schwer in Alltagstätigkeiten integrieren. Ziel dieser Arbeit soll es sein, eine auditive Lernumgebung zu schaffen, welche alle Inhalte der bestehende Kurseinheiten vermitteln kann. Die auditive Lernumgebung soll es den Studierenden ermöglichen, zukünftig mehr Zeit zum Lernen wahrzunehmen. Um dieses Ziel zu erreichen, wird ein Moodle-Plugin entwickelt, welches eine alternative Repräsentation der Kurseinheiten bietet und zudem Kommunikationsmöglichkeiten für Studierende und Lehrende schafft.\vfill
 \section*{Summary}
-\dots\vfill\newpage
+Currently, learning content is primarily provided in the form of text-heavy course units at the FernUniversität in Hagen. Those restrict the students in terms of activities which can be executed during studying. For that reason learning is currently difficult to integrate in everyday activities. The goal of this work is to create an auditory learning environment imparting all the content of the existing course units. The auditory learning environment should enable students to use more time for studying. In order to reach this goal, a Moodle plugin is developed, offering an alternative representation for course units while also creating the means for communication between students and teachers.
+\vfill\newpage
 
 %% Seite mit bibliografischen Angaben
 {\small
@@ -156,8 +159,12 @@ Datum: \today\\
 \pagestyle{headings}
 \tableofcontents
 
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty=10000
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{sloppypar}
 \chapter{Einführung}
 %% lade Kapitel aus Datei
 \input{chapter/1einfuehrung}
@@ -195,7 +202,7 @@ Datum: \today\\
 
 
 %%%%%%%%%%%%%%%%
-\chapter{Zusammenfassung und Ausblick}
+\chapter{Fazit}
 %% lade Kapitel aus Datei
 \input{chapter/7zusammenfassung}
 
@@ -204,13 +211,13 @@ Datum: \today\\
 \appendix
 
 %%
-\chapter{Erster Teil des Anhangs}
+\chapter{Auswertungen}
 \input{chapter/8anhang}
-
+\end{sloppypar}
 
 %%
-\chapter{Zweiter Teil des Anhangs}
-\dots
+%\chapter{Zweiter Teil des Anhangs}
+%\dots
 
 
 
@@ -249,10 +256,10 @@ Datum: \today\\
 
 
 %% Verzeichnis von Algorithmen
-\phantomsection\addcontentsline{toc}{chapter}{Verzeichnis der Algorithmen}
-\renewcommand*\listalgorithmcfname{Verzeichnis der Algorithmen}
-\listofalgorithms
-\cleardoublepage
+%\phantomsection\addcontentsline{toc}{chapter}{Verzeichnis der Algorithmen}
+%\renewcommand*\listalgorithmcfname{Verzeichnis der Algorithmen}
+%\listofalgorithms
+%\cleardoublepage
 
 
 %% Abkürzungsverzeichnis
@@ -282,6 +289,7 @@ Datum: \today\\
 \textbf{LMS} & Learningmanagementsystem \\
 \textbf{LVU} & Lernraum Virtuelle Universität \\
 \textbf{Moodle} & Modular Object-Oriented Dynamic Learning Environment \\
+\textbf{PDF} & Portable Document Format \\
 \textbf{PHP} & PHP: Hypertext Preprocessor \\
 \textbf{SQL} & Structured Query Language \\
 \textbf{URL} & Uniform Resource Locator \\
@@ -296,9 +304,9 @@ Datum: \today\\
 Name: \thesisauthor \hfill Matrikelnummer: \thesismatrikelnummer \vspace{2cm}
 \subsection*{Eidesstattliche Erklärung}
 Ich erkläre hiermit, dass ich diese \thesistype~selbständig verfasst, noch nicht anderweitig für Prüfungszwecke vorgelegt, keine anderen als die angegebenen Quellen und Hilfsmittel benutzt sowie wörtliche und sinngemäße Zitate als solche gekennzeichnet habe.\\[1cm]
-Hagen, den \dotfill
+Oberasbach, den \dotfill
 
-\hspace{2cm}{\footnotesize Datum}\hspace{5cm} {\footnotesize \thesisauthor}
+\hspace{3,5cm}{\footnotesize Datum}\hspace{5cm} {\footnotesize \thesisauthor}
 
 
 
