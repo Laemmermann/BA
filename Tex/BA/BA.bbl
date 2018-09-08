@@ -1,4 +1,4 @@
-\begin{thebibliography}{53}
+\begin{thebibliography}{54}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -208,17 +208,23 @@ Marshall McLuhan.
 \newblock \url{https://docs.moodle.org/dev/File_API}, 2018{\natexlab{c}}.
 \newblock abgerufen am 15.08.2018.
 
-\bibitem[{Moodle}(2018{\natexlab{d}})]{moodle2018install}
+\bibitem[{Moodle}(2018{\natexlab{d}})]{moodle2018grunt}
+{Moodle}.
+\newblock {Grunt - MoodleDocs}.
+\newblock \url{https://docs.moodle.org/dev/Grunt}, 2018{\natexlab{d}}.
+\newblock abgerufen am 08.09.2018.
+
+\bibitem[{Moodle}(2018{\natexlab{e}})]{moodle2018install}
 {Moodle}.
 \newblock {Installing Moodle - MoodleDocs}.
 \newblock \url{https://docs.moodle.org/35/en/Installing_Moodle},
-  2018{\natexlab{d}}.
+  2018{\natexlab{e}}.
 \newblock abgerufen am 18.08.2018.
 
-\bibitem[{Moodle}(2018{\natexlab{e}})]{moodle2018stats}
+\bibitem[{Moodle}(2018{\natexlab{f}})]{moodle2018stats}
 {Moodle}.
 \newblock {Moodle.org: Moodle Statistics}.
-\newblock \url{https://moodle.net/stats/}, 2018{\natexlab{e}}.
+\newblock \url{https://moodle.net/stats/}, 2018{\natexlab{f}}.
 \newblock abgerufen am 28.07.2018.
 
 \bibitem[Moos und Marroquin(2010)]{moos2010multimedia}

@@ -1,6 +1,13 @@
 \label{cap:evaluation}
 Nachdem nun die Implementierung des Hyperaudio"=Plugins abgeschlossen ist, kann die Evaluation anhand der im Abschnitt \ref{sec:UserStories} formulierten User Stories und den daraus abgeleiteten Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} erfolgen. Daraufhin werden mögliche Verbesserungen anhand von weiteren User Stories formuliert.
 
+\todo[inline]{Die Frage nach der Umsetzbarkeit ist keine wissenschaftliche Frage, da es hierbei (trotz aller Mühen und fleißigen Programmierarbeit) da hier aus technischer Sicht keine herausragenden Problemstellungen bearbeitet wurden. 
+
+Es mag dennoch wichtig und richtigt sein, hier eine Bilanz zu ziehen, welche User Stories bzw. Anforderungen in Ihrem Prototyp realisiert wurden. Eine solche Bilanz stellt jedoch nur eine Validierung dar. Eine Evaluation geht einen Schritt weiter. }
+
+\todo[inline]{Stellen Sie das doch als eine checkbox in einer Liste dar. Das "umgesetzt" erscheint so losgelöst. Zudem suouggeriert der Abstand nicht die Zugehörigkeit.  }
+
+
 \section{Umsetzbarkeit der User Stories}
 Nachfolgend wird untersucht, ob die User Stories mit der vorhandenen Implementierung umgesetzt werden können.
 
@@ -10,6 +17,7 @@ Nachfolgend wird untersucht, ob die User Stories mit der vorhandenen Implementie
 \vspace{-0.25cm}
 \textbf{umgesetzt}\\
 Prof. Dr. Karolin Schröder ist in der Lage ein neues Hyperaudio"=Dokument zu erstellen, indem sie Ihrem Kurs eine neue Aktivität \textit{Hyperaudio} hinzufügt. Hierbei muss sie eine Audio-Datei, die gewünschten Zusatzinhalte und eine Konfigurationsdatei bereitstellen.
+\todo[inline]{Sie fassen hier noch einmal das umgesetzte zusammen. Eine Evaluation würde eine kritische Analyse beinhalten. Idealer Weise würde Ihnen ein Experte oder eine Gruppe von potentiellen Anwendern Feedback zur Umsetzung der User Story geben. Fest steht, dass es keine eine richtige Lösung gibt, sondern viele alternative Lösungsmöglichkeiten. Warum ist Ihre Lösung eine gute Lösung?}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Admin-Loeschen-Eval} Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio"=Dokumente aus ihrem Kurs \glqq Einführun in die Wirtschaftsinformatik\grqq{} löschen können, um veraltete Informationen zu entfernen.
@@ -220,6 +228,7 @@ Wie zu erkennen ist, wurde mit 21 User Stories ein Großteil der User Stories um
 
 \section{Erfüllungsgrad der Anforderungen}
 Nachdem im vorherigen Abschnitt das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden die Ergebnisse nun auf die Anforderungen aus Kapitel \ref{sec:anforderungsdefinition} übertragen. Die Resultate sind in Tabelle \ref{tab:EvalAnforderungenAdministrierenden} und \ref{tab:EvalAnforderungenNutzenden} aufgeführt.
+\todo[inline]{Ich weiss nicht, warum Sie dies in einem gesonderten Teilabschnitt behandeln. Für mich wäre dies lediglich die Zusammenfassung von 6.1.}
 
 
 \begin{table}[!ht]
@@ -280,6 +289,7 @@ Nachdem im vorherigen Abschnitt das Hyperaudio"=Plugin auf Basis der User Storie
 \section{Verbesserungsvorschläge}
 \label{sec:Verbesserungsvorschlaege}
 Die Verbesserungsvorschläge für das Hyperaudio"=Plugin, die bei der Implementierung und Evaluation entstanden sind,  sollen in Form von neuen User Stories festgehalten werden. Für diese User Stories werden die gleichen Personas aus Abschnitt \ref{sec:personas} verwendet wie bereits bei den User Stories aus Abschnitt \ref{sec:UserStories}.
+\todo[inline]{Ich finde es gut, dass Sie Vorschläge zur Verbesserung erbringen. Es ist jedoch unklar, warum Sie erst jetzt auf diese User Stories kommen und diese nicht schon vorher formuliert haben. Die Systematik, mit der Sie diese User Stories ermittelt haben, ist außerdem unklar. Hätten Sie eine Art von Evaluation mit potentiellen Nutzern durchgeführt, wäre Ableitungen dieser Art aus den Evaluationsergebnissen nachvollziehbar,}
 
 \begin{enumerate}[leftmargin=1.3cm,label=US-\arabic*:,ref=US-\arabic*]
 \setcounter{enumi}{30}
@@ -300,3 +310,20 @@ Diese elf neu formulierten User Stories stellen weiterhin nur einen Teil der mö
 
 \section{Zusammenfassung}
 Bei der Evaluation wurde die vorliegende Implementierung des Hyperaudio"=Plugins analysiert. Die Ergebnisse zeigen auf, dass bereits viele der formulierten User Stories ermöglicht und entsprechend viele Anforderungen erfüllt wurden. Dennoch gibt es sowohl im Bereich der Administration als auch im Bereich der Nutzung noch Verbesserungspotenzial, welches in Form von neuen User Stories formuliert wurde.
+
+\todo[inline]{{Was Sie beispielsweise nicht evaluiert haben:
+
+nicht-funktionale Anforderungen wie Performanz, Lauffähigkeit auf unterschiedlichen Systemen/Browsern, Usability, User Experience
+
+Können Sie sich drei Leute aus Ihrem persönlichem Umfeld suchen, die einen SUS oder UE Test absolvieren?
+
+UE ist einfach: Rauschenberger, M., Cota, M. P.,  Thomaschewski, J. (2013). Efficient Measurement of the User Experience of Interactive Products. International Journal of Artificial Intelligence and Interactive Multimedia, 2(1), 39–45. http://doi.org/10.9781/ijimai.2013.215
+Es gibt den Fragebogen auf der Webseite und die Werkzeuge zur Auswertung ebenso. 
+
+Außerdem könnten Sie die Technologie Akzeptanz evaluieren: UTAUT, TAM2, TAM ... das sind standardisierte Fragebögen.
+
+Zudem können Sie die Umsetzung der Audio Cues evaluieren und Nutzer schlicht fragen, ob der Ton lauf genug, zur rechten Zeit und eindeutig unterscheidbar erscheint.
+
+Hier sind viele Fragen offen, die in einer wissenschaftlichen Arbeit beantwortet werden sollten. In einer Bachelorarbeit geht es nicht nur darum eine Software zu bauen, sondern auch darum die Anwendung von systematischen Untersuchungsmethoden einzuüben, welche die Nutzbarkeit, Akzeptanz und Zufriedheit der Zielgruppe (zumindest) nahelegt. 
+
+Sie werden natürlich keine hochgradig signifikate Tests durchführen können, dennoch sollte der Wille zur Qualitätssicherung und Verbesserung im wissenschaftlichen Sinne erkenntbar sein.}}
