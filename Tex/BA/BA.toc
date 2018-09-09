@@ -69,19 +69,21 @@
 \contentsline {subsection}{\numberline {5.2.12}Unterst\IeC {\"u}tzung mobiler Endger\IeC {\"a}te}{66}{subsection.793}
 \contentsline {section}{\numberline {5.3}Zusammenfassung}{71}{section.853}
 \contentsline {chapter}{\numberline {6}Evaluation}{72}{chapter.854}
-\contentsline {section}{\numberline {6.1}Umsetzbarkeit der User Stories}{72}{section.857}
-\contentsline {section}{\numberline {6.2}Erf\IeC {\"u}llungsgrad der Anforderungen}{76}{section.889}
-\contentsline {section}{\numberline {6.3}Verbesserungsvorschl\IeC {\"a}ge}{79}{section.893}
-\contentsline {section}{\numberline {6.4}Zusammenfassung}{80}{section.906}
-\contentsline {chapter}{\numberline {7}Fazit}{81}{chapter.908}
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{81}{section.909}
-\contentsline {section}{\numberline {7.2}Ausblick}{82}{section.914}
-\contentsline {chapter}{\numberline {A}Auswertungen}{84}{appendix.917}
-\contentsline {section}{\numberline {A.1}Textanteil der Kurseinheiten}{84}{section.918}
-\contentsline {section}{\numberline {A.2}Einsatz von Moodle}{87}{section.924}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{90}{chapter*.926}
-\contentsline {chapter}{Abbildungsverzeichnis}{93}{section*.927}
-\contentsline {chapter}{Tabellenverzeichnis}{95}{section*.928}
-\contentsline {chapter}{Auflistungsverzeichnis}{97}{section*.929}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{99}{section*.931}
+\contentsline {section}{\numberline {6.1}Validierung der User Stories und Anforderungen}{72}{section.857}
+\contentsline {section}{\numberline {6.2}Evaluation des Hyperaudio-Plugins}{79}{section.891}
+\contentsline {subsection}{\numberline {6.2.1}Rolle der Nutzenden}{79}{subsection.892}
+\contentsline {subsection}{\numberline {6.2.2}Rolle der Lehrenden}{79}{subsection.893}
+\contentsline {section}{\numberline {6.3}Verbesserungsvorschl\IeC {\"a}ge}{80}{section.895}
+\contentsline {section}{\numberline {6.4}Zusammenfassung}{81}{section.908}
+\contentsline {chapter}{\numberline {7}Fazit}{82}{chapter.910}
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{82}{section.911}
+\contentsline {section}{\numberline {7.2}Ausblick}{83}{section.916}
+\contentsline {chapter}{\numberline {A}Auswertungen}{85}{appendix.919}
+\contentsline {section}{\numberline {A.1}Textanteil der Kurseinheiten}{85}{section.920}
+\contentsline {section}{\numberline {A.2}Einsatz von Moodle}{88}{section.926}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{91}{chapter*.928}
+\contentsline {chapter}{Abbildungsverzeichnis}{95}{section*.929}
+\contentsline {chapter}{Tabellenverzeichnis}{97}{section*.930}
+\contentsline {chapter}{Auflistungsverzeichnis}{99}{section*.931}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{101}{section*.933}
 \contentsfinish 

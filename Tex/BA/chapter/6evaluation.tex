@@ -1,5 +1,5 @@
 \label{cap:evaluation}
-Nachdem nun die Implementierung des Hyperaudio"=Plugins abgeschlossen ist, kann die Evaluation anhand der im Abschnitt \ref{sec:UserStories} formulierten User Stories und den daraus abgeleiteten Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} erfolgen. Daraufhin werden mögliche Verbesserungen anhand von weiteren User Stories formuliert.
+Nachdem nun die Implementierung des Hyperaudio"=Plugins abgeschlossen ist, kann zunächst eine Validierung anhand der im Abschnitt \ref{sec:UserStories} formulierten User Stories und den daraus abgeleiteten Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} erfolgen. Im nächsten Schritt erfolgt die Evaluation für die Rolle der Nutzenden anhand des User Experience Questionnaire (UEQ). Nachfolgend wird noch eine Möglichkeit zur Evaluation für die Rolle der Lehrenden beschrieben. Daraufhin werden mögliche Verbesserungen anhand von weiteren User Stories formuliert.
 
 \todo[inline]{Die Frage nach der Umsetzbarkeit ist keine wissenschaftliche Frage, da es hierbei (trotz aller Mühen und fleißigen Programmierarbeit) da hier aus technischer Sicht keine herausragenden Problemstellungen bearbeitet wurden. 
 
@@ -8,7 +8,7 @@ Es mag dennoch wichtig und richtigt sein, hier eine Bilanz zu ziehen, welche Use
 \todo[inline]{Stellen Sie das doch als eine checkbox in einer Liste dar. Das "umgesetzt" erscheint so losgelöst. Zudem suouggeriert der Abstand nicht die Zugehörigkeit.  }
 
 
-\section{Umsetzbarkeit der User Stories}
+\section{Validierung der User Stories und Anforderungen}
 Nachfolgend wird untersucht, ob die User Stories mit der vorhandenen Implementierung umgesetzt werden können.
 
 \begin{enumerate}[leftmargin=1.11cm,label=US-\arabic*:,ref=US-\arabic*]
@@ -225,11 +225,7 @@ Durch die angepasste Darstellung auf mobilen Endgeräten kann Max Lustig auch mi
 
 Wie zu erkennen ist, wurde mit 21 User Stories ein Großteil der User Stories umgesetzt. Vier User Stories wurden nicht und fünf nur teilweise bei der Implementierung berücksichtigt.
 
-
-\section{Erfüllungsgrad der Anforderungen}
-Nachdem im vorherigen Abschnitt das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden die Ergebnisse nun auf die Anforderungen aus Kapitel \ref{sec:anforderungsdefinition} übertragen. Die Resultate sind in Tabelle \ref{tab:EvalAnforderungenAdministrierenden} und \ref{tab:EvalAnforderungenNutzenden} aufgeführt.
-\todo[inline]{Ich weiss nicht, warum Sie dies in einem gesonderten Teilabschnitt behandeln. Für mich wäre dies lediglich die Zusammenfassung von 6.1.}
-
+Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden die Ergebnisse nun auf die Anforderungen aus Kapitel \ref{sec:anforderungsdefinition} übertragen und zusammengefasst. Die Resultate sind in Tabelle \ref{tab:EvalAnforderungenAdministrierenden} und \ref{tab:EvalAnforderungenNutzenden} aufgeführt.
 
 \begin{table}[!ht]
 \def\arraystretch{1.4}
@@ -286,6 +282,37 @@ Nachdem im vorherigen Abschnitt das Hyperaudio"=Plugin auf Basis der User Storie
 \end{tabularx}
 \end{table}
 \FloatBarrier
+
+\section{Evaluation des Hyperaudio-Plugins}
+Nachdem im vorherigen Abschnitt ermittelt wurde welche Anforderungen erfüllt wurden, wird nun die Evaluation vorgenommen. Für die Rolle der Nutzenden werden UEQ und TAM bei der Evaluation eingesetzt. Anschließen wird ein Ausblick für die Möglichkeiten bei der Evaluation der Rolle der Lehrenden gegeben.
+
+\subsection{Rolle der Nutzenden}
+Für die Rolle der Nutzenden soll im Folgenden die User Experience (UX) anhand von des User Experience Questionnaire durchgeführt werden.\\
+Die Verwendung von UEQ ermöglicht eine schnelle Evaluation der User Experience interaktiver Produkte und misst dabei nicht nur Aspekte der Usability, wie Effizienz, Verständlichkeit und Steuerbarkeit, sondern auch User Experience Aspekte, wie Stimulation und Originalität \citep{rauschenberger2013efficient}. Neben der Möglichkeit zum Vergleich zweier Produkte, kann UEQ auch eingesetzt werden, um zu testen, ob ein Produkt eine ausreichende User Experience bietet \citep{schrepp2018user}. Bei UEQ wird jeweils ein Fragebogen von Testkandidaten ausgefüllt. \glqq Der UEQ besteht . . . aus 26 bipolaren Items, die sich auf sechs Dimensionen verteilen. Die Items sind als siebenstufige Lickert-Skalen realisiert\grqq{} \citep{rauschenberger2013user}. Im Folgenden sind die sechs Dimensionen aufgelistet:
+
+\begin{itemize}
+\item Attraktivität
+\item Durchschaubarkeit
+\item Effizienz
+\item Steuerbarkeit
+\item Stimulation
+\item Originalität
+\end{itemize}
+
+Die Fragebögen sollten durch den Testkandidaten möglichst direkt nach der Nutzung des Produktes ausgefüllt werden, damit die Testkandidaten nicht durch eine mögliche Diskussion beeinflusst werden \citep{schrepp2018user}. Nachdem die Fragebögen durch die Testkandidaten ausgefüllt wurden, werden diese ausgewertet. Hierbei wird für jede Dimension ein Wert zwischen -3 und 3 ermittelt. Standardmäßig werden Werte zwischen -0,8 und 0,8 als neutrale, Werte > 0,8 als positive und Werte < -0,8 als negative Evaluation gewertet \citep{schrepp2018user}. Mit dem UEQ können zwar nicht direkt Punkte abgeleitet werden, welche eine Steigerung der User Experience mit sich bringen, dennoch hilft UEQ dabei eine auf Sachkenntnis gestützte Vermutung über die Bereiche, welche den größten Einfluss haben, zu äußern  \citep{schrepp2018user}.
+
+Nachdem die Grundlage des UEQ erläutert wurden, sollen nun die Ergebnisse des UEQ zum Hyperaudio"=Plugin betrachtet und interpretiert werden.
+
+
+
+\subsection{Rolle der Lehrenden}
+Auf die Evaluation für die Rolle der Nutzenden sollte nun auch eine Evaluation für die Rolle der Lehrenden durchgeführt werden. An dieser Stelle soll nun, aber nur eine mögliche Art der Evaluation beschrieben werden. Natürlich könnten hierfür ebenfalls die im vorherigen Abschnitt beschrieben Methode des UEQ durchgeführt werden, es soll nun aber eine weitere Art der Evaluation beschrieben werden. Bei dieser alternativen Methode handelt es sich um das sogenannte Think-Aloud-Protokoll beziehungsweise Think-Aloud-Test. Bei einem Think-Aloud-Test werden die Testkandidaten darum gebeten, das Produkt zu verwenden und währenddessen ihre Gedanken, die bei der Verwendung des Produktes auftreten, laut auszusprechen \citep{nielsen2012thinking}.
+
+%Definition: In a thinking aloud test, you ask test participants to use the system while continuously thinking out loud — that is, simply verbalizing their thoughts as they move through the user interface.
+%https://www.nngroup.com/articles/thinking-aloud-the-1-usability-tool/
+\todo[inline]{Sie sollten dann aber darlegen, wie eine Evaluation mit den Lehrenden aussehen sollte (Ablauf, Fragen, Testinstrumente, Vorgehensweise). Viele Studierende wenden in diesem Kontext das Think aloud protocol an.}
+
+
 \section{Verbesserungsvorschläge}
 \label{sec:Verbesserungsvorschlaege}
 Die Verbesserungsvorschläge für das Hyperaudio"=Plugin, die bei der Implementierung und Evaluation entstanden sind,  sollen in Form von neuen User Stories festgehalten werden. Für diese User Stories werden die gleichen Personas aus Abschnitt \ref{sec:personas} verwendet wie bereits bei den User Stories aus Abschnitt \ref{sec:UserStories}.

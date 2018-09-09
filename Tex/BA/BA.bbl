@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{58}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -241,6 +241,11 @@ Theodor~H Nelson.
 \newblock In \emph{Proceedings of the 1965 20th national conference}, pages
   84--100. ACM, 1965.
 
+\bibitem[Nielsen(2012)]{nielsen2012thinking}
+Jakob Nielsen.
+\newblock {Thinking aloud: The\# 1 usability tool}.
+\newblock \emph{Nielsen Norman Group [online]. January}, 16, 2012.
+
 \bibitem[Nielsen(2013)]{nielsen2013multimedia}
 Jakob Nielsen.
 \newblock \emph{{Multimedia, Hypertext und Internet: Grundlagen und Praxis des
@@ -273,6 +278,23 @@ Reinhard Oppermann.
   2007.
 \newblock abgerufen am 30.07.2018.
 
+\bibitem[Rauschenberger et~al.(2013{\natexlab{a}})Rauschenberger, Schrepp,
+  Cota, Olschner, und Thomaschewski]{rauschenberger2013efficient}
+Maria Rauschenberger, Martin Schrepp, Manuel~P{\'e}rez Cota, Siegfried
+  Olschner, und J{\"o}rg Thomaschewski.
+\newblock Efficient measurement of the user experience of interactive products.
+  how to use the user experience questionnaire (ueq). example: spanish language
+  version.
+\newblock \emph{International Journal of Artificial Intelligence and
+  Interactive Multimedia. 2013; 2 (1): 39-45}, 2013{\natexlab{a}}.
+
+\bibitem[Rauschenberger et~al.(2013{\natexlab{b}})Rauschenberger, Schrepp, und
+  Thomaschewski]{rauschenberger2013user}
+Maria Rauschenberger, Martin Schrepp, und J{\"o}rg Thomaschewski.
+\newblock User experience mit frageb{\"o}gen messen--durchf{\"u}hrung und
+  auswertung am beispiel des ueq.
+\newblock \emph{Tagungsband UP13}, 2013{\natexlab{b}}.
+
 \bibitem[Reinmann-Rothmeier und Mandl(1995)]{reinmann1995kooperation}
 Gabi Reinmann-Rothmeier und Heinz Mandl.
 \newblock Kooperation. lernen im team.
@@ -293,6 +315,10 @@ Maren Schmidt-Kassow, Marie Deusser, Christian Thiel, Sascha Otterbein,
 \newblock {Physical exercise during encoding improves vocabulary learning in
   young female adults: a neuroendocrinological study}.
 \newblock \emph{PloS one}, 8\penalty0 (5):\penalty0 e64172, 2013.
+
+\bibitem[Schrepp(2018)]{schrepp2018user}
+Martin Schrepp.
+\newblock \emph{User Experience Questionnaire Handbook}, 2018.
 
 \bibitem[Scutter et~al.(2010)Scutter, Stupans, Sawyer, und
   King]{scutter2010students}
