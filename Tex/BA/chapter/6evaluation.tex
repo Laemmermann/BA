@@ -1,9 +1,9 @@
 \label{cap:evaluation}
-Nachdem nun die Implementierung des Hyperaudio"=Plugins abgeschlossen ist, kann zunächst eine Validierung anhand der im Abschnitt \ref{sec:UserStories} formulierten User Stories und den daraus abgeleiteten Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} erfolgen. Im nächsten Schritt erfolgt die Evaluation für die Rolle der Nutzenden anhand des User Experience Questionnaire (UEQ). Nachfolgend wird noch eine Möglichkeit zur Evaluation für die Rolle der Lehrenden beschrieben. Daraufhin werden mögliche Verbesserungen anhand von weiteren User Stories formuliert.
+Nachdem nun die Implementierung des Hyperaudio"=Plugins abgeschlossen ist, kann zunächst eine Validierung anhand der im Abschnitt \ref{sec:UserStories} formulierten User Stories und der daraus abgeleiteten Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} erfolgen. Im nächsten Schritt erfolgt die Evaluation für die Rolle der Nutzenden mithilfe des User Experience Questionnaire (UEQ). Nachfolgend wird noch eine alternative Möglichkeit zur Evaluation für die Rolle der Administrierenden beschrieben. Daraufhin werden mögliche Verbesserungen anhand von weiteren User Stories formuliert.
 
-\todo[inline]{Die Frage nach der Umsetzbarkeit ist keine wissenschaftliche Frage, da es hierbei (trotz aller Mühen und fleißigen Programmierarbeit) da hier aus technischer Sicht keine herausragenden Problemstellungen bearbeitet wurden. 
+%\todo[inline]{Die Frage nach der Umsetzbarkeit ist keine wissenschaftliche Frage, da es hierbei (trotz aller Mühen und fleißigen Programmierarbeit) da hier aus technischer Sicht keine herausragenden Problemstellungen bearbeitet wurden. 
 
-Es mag dennoch wichtig und richtigt sein, hier eine Bilanz zu ziehen, welche User Stories bzw. Anforderungen in Ihrem Prototyp realisiert wurden. Eine solche Bilanz stellt jedoch nur eine Validierung dar. Eine Evaluation geht einen Schritt weiter. }
+%Es mag dennoch wichtig und richtigt sein, hier eine Bilanz zu ziehen, welche User Stories bzw. Anforderungen in Ihrem Prototyp realisiert wurden. Eine solche Bilanz stellt jedoch nur eine Validierung dar. Eine Evaluation geht einen Schritt weiter. }
 
 \todo[inline]{Stellen Sie das doch als eine checkbox in einer Liste dar. Das "umgesetzt" erscheint so losgelöst. Zudem suouggeriert der Abstand nicht die Zugehörigkeit.  }
 
@@ -17,7 +17,7 @@ Nachfolgend wird untersucht, ob die User Stories mit der vorhandenen Implementie
 \vspace{-0.25cm}
 \textbf{umgesetzt}\\
 Prof. Dr. Karolin Schröder ist in der Lage ein neues Hyperaudio"=Dokument zu erstellen, indem sie Ihrem Kurs eine neue Aktivität \textit{Hyperaudio} hinzufügt. Hierbei muss sie eine Audio-Datei, die gewünschten Zusatzinhalte und eine Konfigurationsdatei bereitstellen.
-\todo[inline]{Sie fassen hier noch einmal das umgesetzte zusammen. Eine Evaluation würde eine kritische Analyse beinhalten. Idealer Weise würde Ihnen ein Experte oder eine Gruppe von potentiellen Anwendern Feedback zur Umsetzung der User Story geben. Fest steht, dass es keine eine richtige Lösung gibt, sondern viele alternative Lösungsmöglichkeiten. Warum ist Ihre Lösung eine gute Lösung?}
+%\todo[inline]{Sie fassen hier noch einmal das umgesetzte zusammen. Eine Evaluation würde eine kritische Analyse beinhalten. Idealer Weise würde Ihnen ein Experte oder eine Gruppe von potentiellen Anwendern Feedback zur Umsetzung der User Story geben. Fest steht, dass es keine eine richtige Lösung gibt, sondern viele alternative Lösungsmöglichkeiten. Warum ist Ihre Lösung eine gute Lösung?}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Admin-Loeschen-Eval} Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio"=Dokumente aus ihrem Kurs \glqq Einführun in die Wirtschaftsinformatik\grqq{} löschen können, um veraltete Informationen zu entfernen.
@@ -284,73 +284,123 @@ Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden
 \FloatBarrier
 
 \section{Evaluation des Hyperaudio-Plugins}
-Nachdem im vorherigen Abschnitt ermittelt wurde welche Anforderungen erfüllt wurden, wird nun die Evaluation vorgenommen. Für die Rolle der Nutzenden werden UEQ und TAM bei der Evaluation eingesetzt. Anschließen wird ein Ausblick für die Möglichkeiten bei der Evaluation der Rolle der Lehrenden gegeben.
+Nachdem im vorherigen Abschnitt ermittelt wurde welche Anforderungen erfüllt wurden, wird nun die Evaluation vorgenommen. Für die Rolle der Nutzenden wird ein UEQ bei der Evaluation eingesetzt. Anschließend wird ein Ausblick für die Möglichkeiten bei der Evaluation des Plugins aus Sicht der Administrierenden gegeben.
 
 \subsection{Rolle der Nutzenden}
-Für die Rolle der Nutzenden soll im Folgenden die User Experience (UX) anhand von des User Experience Questionnaire durchgeführt werden.\\
-Die Verwendung von UEQ ermöglicht eine schnelle Evaluation der User Experience interaktiver Produkte und misst dabei nicht nur Aspekte der Usability, wie Effizienz, Verständlichkeit und Steuerbarkeit, sondern auch User Experience Aspekte, wie Stimulation und Originalität \citep{rauschenberger2013efficient}. Neben der Möglichkeit zum Vergleich zweier Produkte, kann UEQ auch eingesetzt werden, um zu testen, ob ein Produkt eine ausreichende User Experience bietet \citep{schrepp2018user}. Bei UEQ wird jeweils ein Fragebogen von Testkandidaten ausgefüllt. \glqq Der UEQ besteht . . . aus 26 bipolaren Items, die sich auf sechs Dimensionen verteilen. Die Items sind als siebenstufige Lickert-Skalen realisiert\grqq{} \citep{rauschenberger2013user}. Im Folgenden sind die sechs Dimensionen aufgelistet:
+Für die Rolle der Nutzenden soll im Folgenden die User Experience (UX) anhand des User Experience Questionnaires untersucht werden.\\
+Die Verwendung des UEQ ermöglicht eine schnelle Evaluation der User Experience interaktiver Produkte und misst dabei nicht nur Aspekte der Usability, wie Effizienz, Verständlichkeit und Steuerbarkeit, sondern auch Aspekte der User Experience, wie Stimulation und Originalität \citep{rauschenberger2013efficient}. Neben der Möglichkeit zum Vergleich zweier Produkte kann ein UEQ auch eingesetzt werden, um zu testen, ob ein Produkt eine ausreichende User Experience bietet \citep{schrepp2018user}. Dabei wird jeweils ein Fragebogen von Testkandidaten ausgefüllt. \glqq Der UEQ besteht . . . aus 26 bipolaren Items, die sich auf sechs Dimensionen verteilen. Die Items sind als siebenstufige Lickert-Skalen realisiert\grqq{} \citep{rauschenberger2013user}. Bei diesen sechs Dimensionen handelt es sich um
 
 \begin{itemize}
-\item Attraktivität
-\item Durchschaubarkeit
-\item Effizienz
-\item Steuerbarkeit
-\item Stimulation
-\item Originalität
+\item Attraktivität,
+\item Durchschaubarkeit,
+\item Effizienz,
+\item Steuerbarkeit,
+\item Stimulation und
+\item Originalität.
 \end{itemize}
 
-Die Fragebögen sollten durch den Testkandidaten möglichst direkt nach der Nutzung des Produktes ausgefüllt werden, damit die Testkandidaten nicht durch eine mögliche Diskussion beeinflusst werden \citep{schrepp2018user}. Nachdem die Fragebögen durch die Testkandidaten ausgefüllt wurden, werden diese ausgewertet. Hierbei wird für jede Dimension ein Wert zwischen -3 und 3 ermittelt. Standardmäßig werden Werte zwischen -0,8 und 0,8 als neutrale, Werte > 0,8 als positive und Werte < -0,8 als negative Evaluation gewertet \citep{schrepp2018user}. Mit dem UEQ können zwar nicht direkt Punkte abgeleitet werden, welche eine Steigerung der User Experience mit sich bringen, dennoch hilft UEQ dabei eine auf Sachkenntnis gestützte Vermutung über die Bereiche, welche den größten Einfluss haben, zu äußern  \citep{schrepp2018user}.
+Die Fragebögen sollten durch die Testkandidaten möglichst direkt nach der Nutzung des Produktes ausgefüllt werden, damit die Testkandidaten nicht durch eine mögliche Diskussion beeinflusst werden \citep{schrepp2018user}. Bei der Auswertung der Fragebögen wird für jede Dimension ein Wert zwischen -3 und 3 ermittelt. Standardmäßig werden Werte zwischen -0,8 und 0,8 als neutrale, Werte größer 0,8 als positive und Werte kleiner -0,8 als negative Evaluation gewertet \citep{schrepp2018user}. Mit dem UEQ können zwar nicht direkt Punkte abgeleitet werden, welche eine Steigerung der User Experience mit sich bringen, dennoch hilft UEQ dabei, eine auf Sachkenntnis gestützte Vermutung über die Bereiche, welche den größten Einfluss auf die User Experience haben, zu äußern \citep{schrepp2018user}.
 
-Nachdem die Grundlage des UEQ erläutert wurden, sollen nun die Ergebnisse des UEQ zum Hyperaudio"=Plugin betrachtet und interpretiert werden.
+Es soll nun eine Evaluation anhand eines UEQ für das Hyperaudio"=Plugin durchgeführt werden. Zu diesem Zweck wurde das Hyperaudio"=Plugin von fünf Testkandidaten nach kurzer Erläuterung des Grundgedankens des Hyperaudio"=Plugins unter die Lupe genommen. Direkt im Anschluss wurden die Testkandidaten gebeten, einen Standard-UEQ-Fragebogen auszufüllen. Bei der Auswertung der Fragebögen (siehe Anhang \ref{sec:ueqs}) wurden für die sechs Dimensionen die in Tabelle \ref{tab:EvalUEQ} aufgeführten Ergebnisse erzielt. In Abbildung \ref{fig:UEQ} sind diese grafisch aufbereitet. Für jede der Dimensionen wurden der Durchschnittswert sowie die Varianz ermittelt.
+
+\begin{table}[!ht]
+\def\arraystretch{1.4}
+\caption{Ergebnisse des UEQs}
+\label{tab:EvalUEQ}
+ \begin{tabularx}{\textwidth}{lcc}      
+    \hline
+    Dimension & Mittelwert & Varianz
+    \\\hline
+	Attraktivität & 1,167 & 0,24\\
+	Durchschaubarkeit & 1,250 & 0,31\\
+	Effizienz & 0,700 & 0,83\\
+	Steuerbarkeit & 1,350 & 0,74\\
+	Stimulation & 0,700 & 0,08\\
+	Originalität & 1,000 & 0,34\\
+    \hline
+    \end{tabularx}
+\end{table}
+
+\begin{figure}[h!]
+\includegraphics[width=0.55\textwidth,center]{UEQ.png}
+\caption{\label{fig:UEQ}Grafische Darstellung der Ergebnisse des UEQs}
+\end{figure}
+
+Die Ergebnisse zeigen auf, dass das Hyperaudio"=Plugin in vier Dimensionen knapp ein positives und in zwei Dimensionen ein neutrales Evaluationsergebnis erzielt. Hinsichtlich dieser beiden Dimensionen (Effizienz und Stimulation) sollte das Plugin somit nochmals optimiert werden. Bei Betrachtung der einzelnen Fragebögen scheint Verbesserungspotential bei der Übersichtlichkeit des Plugins zu herrschen, was sich sowohl auf die Effizienz als auch die Durchschaubarkeit negativ auswirkt.
+%Außerdem ist erkennbar, dass sich in den Dimensionen Steuerbarkeit und Effizienz eine hohe Varianz ergibt. Dies lässt darauf schließen, dass diese Dimensionen je nach Testkandidat sehr unterschiedlich wahrgenommen werden.
+
+\todo[inline]{Auswertung der Fragen ergänzen}
+
+\subsection{Rolle der Administrierenden}
+Auf die Evaluation für die Rolle der Nutzenden sollte nun auch eine Evaluation für die Rolle der Administrierenden folgen. Natürlich könnten hierfür ebenfalls die im vorherigen Abschnitt beschriebene Methode des UEQ durchgeführt werden, es soll nun aber eine weitere Art der Evaluation aufgezeigt werden. Eine alternative Methode stellt das sogenannte Think"=Aloud"=Protokoll beziehungsweise der Think"=Aloud"=Test dar. Bei einem Think"=Aloud"=Test werden die Testkandidaten darum gebeten, das Produkt zu verwenden und währenddessen ihre Gedanken laut auszusprechen \citep{nielsen2012thinking}. \cite{nielsen2012thinking} beschreibt das Vorgehen bei einem Think"=Aloud"=Tests mit den folgenden drei Schritten:
+
+\begin{enumerate}
+\item Recruit representative users.
+\item Give them representative tasks to perform.
+\item Shut up and let the users do the talking.
+\end{enumerate}
+
+\todo[inline]{Zitierweise Aufzählung}
+
+Think-Aloud-Tests sind dementsprechend einfach und kostengünstig umsetzbar. Zudem sind sie robust, flexibel, überzeugend und einfach zu erlernen \citep{nielsen2012thinking}. Somit stellt ein Think"=Aloud"=Test eine geeignete Evaluationsmethode für die Rolle der Administrierenden dar.\\
+Für die Durchführung eines Think"=Aloud"=Tests für das Hyperaudio"=Plugin müssten zunächst einige Lehrende ausgewählt werden. Diese müssten daraufhin ausgewählte Aufgaben innerhalb des administrativen Bereichs des Hyperaudio"=Plugins erledigen. Hier wäre beispielsweise das Erstellen einer Hyperaudio"=Aktivität in ihrem Kurs denkbar oder auch das Austauschen eines Zusatzinhaltes innerhalb einer Hyperaudio"=Aktivität. Die während des Think"=Aloud"=Tests geäußerten Gedanken der Lehrenden werden festgehalten, um daraus Rückschlüsse bezüglich der Funktionen und Bedienung des Hyperaudio"=Plugins ziehen zu können.
 
 
-
-\subsection{Rolle der Lehrenden}
-Auf die Evaluation für die Rolle der Nutzenden sollte nun auch eine Evaluation für die Rolle der Lehrenden durchgeführt werden. An dieser Stelle soll nun, aber nur eine mögliche Art der Evaluation beschrieben werden. Natürlich könnten hierfür ebenfalls die im vorherigen Abschnitt beschrieben Methode des UEQ durchgeführt werden, es soll nun aber eine weitere Art der Evaluation beschrieben werden. Bei dieser alternativen Methode handelt es sich um das sogenannte Think-Aloud-Protokoll beziehungsweise Think-Aloud-Test. Bei einem Think-Aloud-Test werden die Testkandidaten darum gebeten, das Produkt zu verwenden und währenddessen ihre Gedanken, die bei der Verwendung des Produktes auftreten, laut auszusprechen \citep{nielsen2012thinking}.
 
 %Definition: In a thinking aloud test, you ask test participants to use the system while continuously thinking out loud — that is, simply verbalizing their thoughts as they move through the user interface.
 %https://www.nngroup.com/articles/thinking-aloud-the-1-usability-tool/
-\todo[inline]{Sie sollten dann aber darlegen, wie eine Evaluation mit den Lehrenden aussehen sollte (Ablauf, Fragen, Testinstrumente, Vorgehensweise). Viele Studierende wenden in diesem Kontext das Think aloud protocol an.}
+%\todo[inline]{Sie sollten dann aber darlegen, wie eine Evaluation mit den Lehrenden aussehen sollte (Ablauf, Fragen, Testinstrumente, Vorgehensweise). Viele Studierende wenden in diesem Kontext das Think aloud protocol an.}
+
+\todo[inline]{Reihenfolge UEQ/Think-Aloud, Nutzende/Administrierende}
 
 
 \section{Verbesserungsvorschläge}
 \label{sec:Verbesserungsvorschlaege}
-Die Verbesserungsvorschläge für das Hyperaudio"=Plugin, die bei der Implementierung und Evaluation entstanden sind,  sollen in Form von neuen User Stories festgehalten werden. Für diese User Stories werden die gleichen Personas aus Abschnitt \ref{sec:personas} verwendet wie bereits bei den User Stories aus Abschnitt \ref{sec:UserStories}.
-\todo[inline]{Ich finde es gut, dass Sie Vorschläge zur Verbesserung erbringen. Es ist jedoch unklar, warum Sie erst jetzt auf diese User Stories kommen und diese nicht schon vorher formuliert haben. Die Systematik, mit der Sie diese User Stories ermittelt haben, ist außerdem unklar. Hätten Sie eine Art von Evaluation mit potentiellen Nutzern durchgeführt, wäre Ableitungen dieser Art aus den Evaluationsergebnissen nachvollziehbar,}
+Im Zuge der Evaluation der Rolle der Nutzenden wurden die Testkandidaten nach dem Ausfüllen des Fragebogens darum gebeten, Wünsche bezüglich funktionaler Erweiterungen des Plugins zu äußern. Die genannten Vorschläge werden im Folgenden in Form von neuen User Stories festgehalten. Für diese User Stories können dieselben Personas (siehe Abschnitt \ref{sec:personas}) verwendet werden wie bereits bei den User Stories aus Abschnitt \ref{sec:UserStories}.
+%\todo[inline]{Ich finde es gut, dass Sie Vorschläge zur Verbesserung erbringen. Es ist jedoch unklar, warum Sie erst jetzt auf diese User Stories kommen und diese nicht schon vorher formuliert haben. Die Systematik, mit der Sie diese User Stories ermittelt haben, ist außerdem unklar. Hätten Sie eine Art von Evaluation mit potentiellen Nutzern durchgeführt, wäre Ableitungen dieser Art aus den Evaluationsergebnissen nachvollziehbar,}
 
 \begin{enumerate}[leftmargin=1.3cm,label=US-\arabic*:,ref=US-\arabic*]
 \setcounter{enumi}{30}
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder detailliert auf Fehler in der Konfigurationsdatei hingewiesen werden, um solche schneller zu identifizieren, wie beispielsweise Zeitüberschneidungen bei annotierten Zusatzinhalten.
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio"=Dokumente ganzheitlich innerhalb der Moodle-Umgebung erzeugen können, um nicht mühsam eine Konfigurationsdatei erstellen zu müssen.
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder mehrere Audio-Dateien für Hyperaudio"=Dokumente verwenden können, um die Vertonung von Kurseinheiten in mehreren Abschnitten vornehmen zu können.
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder auch andere Dateiformate als Bilddateien als Zusatzinhalt annotieren, um auch PDF-Dokumente oder Videos einsetzen zu können.
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder noch detailliertere Auswertungen über das Nutzungsverhalten von Hyperaudio"=Dokumenten erhalten, um noch genauere Rückschlüsse über die Stärken und Schwächen des Hyperaudio"=Dokuments zu ermitteln. 
-\item Als Administrierende möchte Prof. Dr. Karolin Schröder verschiedene Audio Cues einsetzen können, um die Studierende auf die verschiedenen Arten von Zusatzinhalten hinzuweisen.
+%\item Als Administrierende möchte Prof. Dr. Karolin Schröder detailliert auf Fehler in der Konfigurationsdatei hingewiesen werden, um solche schneller zu identifizieren, wie beispielsweise Zeitüberschneidungen bei annotierten Zusatzinhalten.
+%\item Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio"=Dokumente ganzheitlich innerhalb der Moodle-Umgebung erzeugen können, um nicht mühsam eine Konfigurationsdatei erstellen zu müssen.
+%\item Als Administrierende möchte Prof. Dr. Karolin Schröder mehrere Audio-Dateien für Hyperaudio"=Dokumente verwenden können, um die Vertonung von Kurseinheiten in mehreren Abschnitten vornehmen zu können.
+%\item Als Administrierende möchte Prof. Dr. Karolin Schröder auch andere Dateiformate als Bilddateien als Zusatzinhalt annotieren, um auch PDF-Dokumente oder Videos einsetzen zu können.
+%\item Als Administrierende möchte Prof. Dr. Karolin Schröder noch detailliertere Auswertungen über das Nutzungsverhalten von Hyperaudio"=Dokumenten erhalten, um noch genauere Rückschlüsse über die Stärken und Schwächen des Hyperaudio"=Dokuments zu ermitteln. 
+%\item Als Administrierende möchte Prof. Dr. Karolin Schröder verschiedene Audio Cues einsetzen können, um die Studierende auf die verschiedenen Arten von Zusatzinhalten hinzuweisen.
 \item \label{US-Kommentar-Bewertung} Als Nutzende möchte Laura Ebert zunächst nur noch die wichtigsten Antworten auf Kommentare angezeigt bekommen, um eine bessere Übersicht bei viel diskutierten Hyperaudio"=Dokumenten zu erhalten.
+\item Als Nutzende möchte Laura Ebert nur den Anfang von langen Kommentaren und Notizen angezeigt bekommen, um eine bessere Übersicht im Kommentarbereich zu haben.
 \item Als Nutzende möchte Laura Ebert ihrer Notiz eine Datei anfügen, um ihre selbst angefertigte Zeichnung zu hinterlegen.
+\item Als Nutzende möchte Laura Ebert Hyperaudio"=Dokumente im Vollbildmodus abspielen können, um die annotierten Zusatzinhalte möglichst groß dargestellt zu bekommen.
+%\item Als Nutzende möchte Laura Ebert Kommentare und Antworten löschen und bearbeiten können, um falsche Aussagen entfernen beziehungsweise korrigieren zu können.
+\item Als Nutzender möchte Max Lustig, dass der eingegebene Suchbegriff in den gefilterten Kommentaren und Notizen hervorgehoben wird, um die Suchergebnisse schneller bewerten zu können.
 \item Als Nutzender wünscht sich Max Lustig eine intelligentere Suchfunktion, um Ergebnisse trotz Schreibfehler oder mit ähnlichen Wörtern zu finden.
 \item Als Nutzender möchte Max Lustig nicht nur Zeitpunkte sondern auch Zeitfenster markieren, um Beginn und Ende interessanter Passagen kenntlich zu machen.
 \item Als Nutzender möchte Max Lustig schnell vom Kommentarbereich zur Anzeige der Zusatzinhalte springen, sobald ein neuer Zusatzinhalt dargestellt wird, um diesen direkt ohne langes Scrollen einsehen zu können.
+\item Als Nutzender möchte Max Lustig über Antworten auf seine Kommentare informiert werden, um nicht proaktiv überprüfen zu müssen, ob jemand seine Fragen beantwortet hat.
+\item Als Nutzender möchte Max Lustig die Annotationszeiträume von Zusatzinhalten in der Timeline erkennen können, um einschätzen zu können, wann der nächste Zusatzinhalt dargestellt wird.
 \end{enumerate}
 
-Diese elf neu formulierten User Stories stellen weiterhin nur einen Teil der möglichen User Stories dar. Sie können dennoch als Basis für die Optimierung des Hyperaudio"=Plugins dienen.
+\todo[inline]{Notizen aus Gespräch mit Testkandidaten}
+
+Diese zehn neu formulierten User Stories stellen weiterhin nur einen Teil der möglichen User Stories dar. Sie können dennoch als Basis für die Weiterentwicklung des Hyperaudio"=Plugins dienen.
 
 \section{Zusammenfassung}
-Bei der Evaluation wurde die vorliegende Implementierung des Hyperaudio"=Plugins analysiert. Die Ergebnisse zeigen auf, dass bereits viele der formulierten User Stories ermöglicht und entsprechend viele Anforderungen erfüllt wurden. Dennoch gibt es sowohl im Bereich der Administration als auch im Bereich der Nutzung noch Verbesserungspotenzial, welches in Form von neuen User Stories formuliert wurde.
+Bei der Validierung und Evaluation wurde die vorliegende Implementierung des Hyperaudio"=Plugins analysiert. Die Ergebnisse der Validierung zeigen auf, dass bereits viele der formulierten User Stories ermöglicht und entsprechend viele Anforderungen erfüllt wurden. Die durchgeführte Evaluation stellt selbstverständlich keine vollwertige Evaluation des Hyperaudio"=Plugins dar, dennoch konnten bereits Erkenntnisse über die Qualität des Plugins in Bezug auf die User Experience gezogen und entsprechende Stellschrauben ausgemacht werden, die zu einer Verbesserung der UX beitragen können. Zusätzlich wurden Ideen der Testkandidaten zur Verbesserung des Plugins in Form von neuen User Stories festgehalten. Durch die Evaluation konnten diverse Aspekte aufgezeigt werden, welche bei der Weiterentwicklung des Hyperaudio"=Plugins bedacht werden sollten.
 
-\todo[inline]{{Was Sie beispielsweise nicht evaluiert haben:
 
-nicht-funktionale Anforderungen wie Performanz, Lauffähigkeit auf unterschiedlichen Systemen/Browsern, Usability, User Experience
-
-Können Sie sich drei Leute aus Ihrem persönlichem Umfeld suchen, die einen SUS oder UE Test absolvieren?
-
-UE ist einfach: Rauschenberger, M., Cota, M. P.,  Thomaschewski, J. (2013). Efficient Measurement of the User Experience of Interactive Products. International Journal of Artificial Intelligence and Interactive Multimedia, 2(1), 39–45. http://doi.org/10.9781/ijimai.2013.215
-Es gibt den Fragebogen auf der Webseite und die Werkzeuge zur Auswertung ebenso. 
-
-Außerdem könnten Sie die Technologie Akzeptanz evaluieren: UTAUT, TAM2, TAM ... das sind standardisierte Fragebögen.
-
-Zudem können Sie die Umsetzung der Audio Cues evaluieren und Nutzer schlicht fragen, ob der Ton lauf genug, zur rechten Zeit und eindeutig unterscheidbar erscheint.
-
-Hier sind viele Fragen offen, die in einer wissenschaftlichen Arbeit beantwortet werden sollten. In einer Bachelorarbeit geht es nicht nur darum eine Software zu bauen, sondern auch darum die Anwendung von systematischen Untersuchungsmethoden einzuüben, welche die Nutzbarkeit, Akzeptanz und Zufriedheit der Zielgruppe (zumindest) nahelegt. 
-
-Sie werden natürlich keine hochgradig signifikate Tests durchführen können, dennoch sollte der Wille zur Qualitätssicherung und Verbesserung im wissenschaftlichen Sinne erkenntbar sein.}}
+%\todo[inline]{{Was Sie beispielsweise nicht evaluiert haben:
+%
+%nicht-funktionale Anforderungen wie Performanz, Lauffähigkeit auf unterschiedlichen Systemen/Browsern, Usability, User Experience
+%
+%Können Sie sich drei Leute aus Ihrem persönlichem Umfeld suchen, die einen SUS oder UE Test absolvieren?
+%
+%UE ist einfach: Rauschenberger, M., Cota, M. P.,  Thomaschewski, J. (2013). Efficient Measurement of the User Experience of Interactive Products. International Journal of Artificial Intelligence and Interactive Multimedia, 2(1), 39–45. http://doi.org/10.9781/ijimai.2013.215
+%Es gibt den Fragebogen auf der Webseite und die Werkzeuge zur Auswertung ebenso. 
+%
+%Außerdem könnten Sie die Technologie Akzeptanz evaluieren: UTAUT, TAM2, TAM ... das sind standardisierte Fragebögen.
+%
+%Zudem können Sie die Umsetzung der Audio Cues evaluieren und Nutzer schlicht fragen, ob der Ton lauf genug, zur rechten Zeit und eindeutig unterscheidbar erscheint.
+%
+%Hier sind viele Fragen offen, die in einer wissenschaftlichen Arbeit beantwortet werden sollten. In einer Bachelorarbeit geht es nicht nur darum eine Software zu bauen, sondern auch darum die Anwendung von systematischen Untersuchungsmethoden einzuüben, welche die Nutzbarkeit, Akzeptanz und Zufriedheit der Zielgruppe (zumindest) nahelegt. 
+%
+%Sie werden natürlich keine hochgradig signifikate Tests durchführen können, dennoch sollte der Wille zur Qualitätssicherung und Verbesserung im wissenschaftlichen Sinne erkenntbar sein.}}

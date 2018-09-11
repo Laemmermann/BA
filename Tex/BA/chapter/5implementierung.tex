@@ -16,7 +16,8 @@ Bei Activity Plugins, wie dem Plugin für Hyperaudio-Dokumente, ist als Speicher
 \caption{\label{fig:Ordnerstruktur}Ordnerstruktur des Hyperaudio"=Plugins}
 \end{figure}
 
-\todo[inline]{Warum gibt es hier eine Datei ding.mp3?}
+\todo[inline]{Ordnerstruktur austauschen}
+%\todo[inline]{Warum gibt es hier eine Datei ding.mp3?}
 
 Der Ordner \textbf{/hyperaudio/db} beherbergt die Dateien \textbf{access.php}, \textbf{install.xml} und \textbf{upgrade.php}. Die Datei \textbf{access.php} dient zur Steuerung der Berechtigungen innerhalb des Moodle-Plugins, wobei den verschiedenen Moodle-Rollen verschiedene Rechte für die einzelnen Funktionen zugewiesen werden können. Bei der Installation des Plugins wird die \textbf{install.xml} zur Erstellung der Datenbanktabellen für das Plugin verwendet. Es ist mindestens eine Tabelle mit dem Namen des Plugins anzulegen. Sollten die Datenbanktabellen nach Veröffentlichung des Plugins um Spalten erweitert werden, so kommt die Datei \textbf{upgrade.php} zum Einsatz. Hierin werden die notwendigen Schritte für einen Versionsabgleich definiert.
 
@@ -36,7 +37,6 @@ Neben diesen vorgegebenen Dateien kommen üblicherweise noch weitere Dateien bei
 %%%%%%%%%%
 \subsubsection{Architektur des Hyperaudio-Plugins}
 Basierend auf dem im vorherigen Kapitel beschriebenen Aufbau eines Moodle-Plugins kann nun die Architektur des Hyperaudio"=Plugins dargelegt werden (siehe Abbildung \ref{fig:Architektur}). Das Plugin baut auf der um die für das Hyperaudio"=Plugin benötigten Tabellen erweiterte Datenbank von Moodle auf. Die Renderer (\textbf{view.php}, \textbf{renderer.php}, \textbf{mod\underline{{ }}form.php} und \textbf{index.php}) dienen der Darstellung des User Interfaces und greifen hierfür auf die entsprechenden Daten aus der Datenbank zurück. Während die Renderer die statischen Inhalte des User Interfaces bereitstellen, dient das JavaScript"=Modul (AMD) der Darstellung der dynamischen Inhalte. Hierfür bereitet das JavaScript"=Modul ebenfalls Daten aus der Datenbank auf. Der Zugriff auf die Datenbank erfolgt in diesem Fall aber mittels Webservices. Neben dem Renderer und dem JavaScript-Modul wird das User Interface auch mittels CSS und Thirdparty JavaScript-Frameworks (wie zum Beispiel \textit{Popcorn.js} und \textit{VideoJS}) geformt. Abseits der Darstellung des User Interfaces dienen die Renderer sowie das JavaScript-Modul auch der Verarbeitung von Eingaben im User Interface. Die Core APIs von Moodle unterstützen dabei das Zusammenwirken der verschiedenen Komponenten. Sie ermöglichen beispielsweise die Darstellung von Inhalten sowie direkte Zugriffe auf die Datenbank.
-\todo[inline]{lib aus Abbildung entfernen}
 
 \begin{figure}[h!]
 \includegraphics[width=0.70\textwidth,center]{Architektur.PDF}
@@ -46,7 +46,7 @@ Basierend auf dem im vorherigen Kapitel beschriebenen Aufbau eines Moodle-Plugin
 %%%%%%%%%%
 \section{Iterative Entwicklung}
 Die Entwicklung des Plugins wurde in iterativer Form durchgeführt. In jeder Iteration sollte das Plugin nur um einige wenige Funktionalitäten erweitert werden. Jede Iteration sollte mit einem lauffähigen Plugin abgeschlossen werden. So konnte direkt das Ergebnis betrachtet werden und gegebenenfalls in der nächsten Iteration nochmals angepasst werden \citep{augsten2018iterativ}. Die Reihenfolge, in welcher die Funktionalitäten umgesetzt werden, leitete sich aus der Priorisierung der Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} ab. In den folgenden Abschnitten werden nun die verschiedenen Iterationsschritte vorgestellt. Dabei werden die Kernkonzepte mithilfe von Codeauszügen erläutert.
-\todo[inline]{Ein Hinweis zum Stil: Da es sich bei dieser Textform nicht um ein Manual oder eine technische Dokumentation, sondern eher um einen Bericht der durchgeführten Arbeiten handelt, formuliert man den Text im Präteritum. Angesichts der Tatsache, dass die Iterationen bereits abgeschlossen sind und die Vorgehensweise (Issues, Iterationen, etc.) kaum auf andere Kontexte übertragbar und auch nicht wissenschaftlich relevant sind, muss der Text im Präteritum formuliert sein. }
+%\todo[inline]{Ein Hinweis zum Stil: Da es sich bei dieser Textform nicht um ein Manual oder eine technische Dokumentation, sondern eher um einen Bericht der durchgeführten Arbeiten handelt, formuliert man den Text im Präteritum. Angesichts der Tatsache, dass die Iterationen bereits abgeschlossen sind und die Vorgehensweise (Issues, Iterationen, etc.) kaum auf andere Kontexte übertragbar und auch nicht wissenschaftlich relevant sind, muss der Text im Präteritum formuliert sein. }
 
 \subsection{Speichern und Abspielen einer Audio-Datei}
 \label{sec:it1}
@@ -656,7 +656,7 @@ Entsprechend der Webservices wurden innerhalb der \textbf{external.php} Funktion
 Das Abspielen der Audio Cues im Moment der Darstellung eines Zusatzinhaltes wurde durch eine Erweiterung des verwendeten \textit{Popcorn.js}-Plugin \textit{Images} erreicht. In diesem Zug wurde das \textit{Popcorn.js}-Plugin \textit{Hyperaudio} basierend auf dem \textit{Images}-Plugin entwickelt.
 
 Hierfür wurde in den Optionen ein zusätzlicher Parameter \texttt{cue} eingeführt. Dieser nimmt die ID eines \texttt{<audio>}-Elements entgegen, welches den abzuspielenden Audio Cue wiedergeben kann (vgl. Auflistung \ref{lst:it7:renderer}). Um den Ton zeitgleich mit der Anzeige des Zusatzinhaltes abzuspielen, wurde eine Anpassung in der Funktion \texttt{start} vorgenommen. Sofern keine Stummschaltung oder Pausierung des Hyperaudio-Dokuments vorliegt, wird die Wiedergabe des Audio Cues durch den Aufruf der \texttt{play}-Funktion des HTML5-Audioplayers angestoßen. Auflistung \ref{lst:it7:popcorn.hyperaudio} zeigt die Erweiterungen des \textit{Popcorn.js}-Plugins \textit{Hyperaudio}.
-\todo[inline]{Wenn ich das richtig verstehe, gibt es ein einziges Tonsignal für alle Arten von Annotationen. Wie soll der Nutzer erkennen, ob an der gegenwärtigen Abspielposition ein Komentar, eine Notitz oder ein Medienelement hinterlegt ist?}
+%\todo[inline]{Wenn ich das richtig verstehe, gibt es ein einziges Tonsignal für alle Arten von Annotationen. Wie soll der Nutzer erkennen, ob an der gegenwärtigen Abspielposition ein Komentar, eine Notitz oder ein Medienelement hinterlegt ist?}
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -1080,7 +1080,6 @@ div#hyperaudio div#comment_tools_order {
     align-items: baseline;
 }
 \end{lstlisting}
-%\todo[inline]{Styling anpassen}
 
 \begin{figure}[h!]
 \includegraphics[width=0.85\textwidth,center]{Desktop.png}
