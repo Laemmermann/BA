@@ -53,28 +53,28 @@
 \contentsline {chapter}{\numberline {5}Implementierung}{46}{chapter.148}
 \contentsline {section}{\numberline {5.1}Struktur des Hyperaudio-Plugins}{46}{section.149}
 \contentsline {subsubsection}{\nonumberline Aufbau eines Moodle-Plugins}{46}{section*.150}
-\contentsline {subsubsection}{\nonumberline Architektur des Hyperaudio-Plugins}{48}{section*.154}
-\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{48}{section.156}
-\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{48}{subsection.157}
-\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{51}{subsection.249}
-\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{54}{subsection.356}
-\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{55}{subsection.407}
-\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{58}{subsection.535}
-\contentsline {subsection}{\numberline {5.2.6}Notizen}{59}{subsection.557}
-\contentsline {subsection}{\numberline {5.2.7}Audio Cues}{60}{subsection.583}
-\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{61}{subsection.620}
-\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare und Notizen}{61}{subsection.628}
-\contentsline {subsection}{\numberline {5.2.10}Lesezeichen}{64}{subsection.718}
-\contentsline {subsection}{\numberline {5.2.11}Suche, Filter und Sortierung bei Kommentaren}{65}{subsection.744}
-\contentsline {subsection}{\numberline {5.2.12}Unterst\IeC {\"u}tzung mobiler Endger\IeC {\"a}te}{66}{subsection.790}
-\contentsline {section}{\numberline {5.3}Zusammenfassung}{71}{section.850}
-\contentsline {chapter}{\numberline {6}Evaluation}{72}{chapter.851}
-\contentsline {section}{\numberline {6.1}Validierung der User Stories und Anforderungen}{72}{section.853}
-\contentsline {section}{\numberline {6.2}Evaluation des Hyperaudio-Plugins}{77}{section.886}
-\contentsline {subsection}{\numberline {6.2.1}Rolle der Nutzenden}{78}{subsection.887}
+\contentsline {subsubsection}{\nonumberline Architektur des Hyperaudio-Plugins}{48}{section*.153}
+\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{48}{section.155}
+\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{48}{subsection.156}
+\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{51}{subsection.248}
+\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{53}{subsection.355}
+\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{55}{subsection.406}
+\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{58}{subsection.534}
+\contentsline {subsection}{\numberline {5.2.6}Notizen}{59}{subsection.556}
+\contentsline {subsection}{\numberline {5.2.7}Audio Cues}{60}{subsection.582}
+\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{61}{subsection.619}
+\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare und Notizen}{61}{subsection.627}
+\contentsline {subsection}{\numberline {5.2.10}Lesezeichen}{63}{subsection.717}
+\contentsline {subsection}{\numberline {5.2.11}Suche, Filter und Sortierung bei Kommentaren}{64}{subsection.743}
+\contentsline {subsection}{\numberline {5.2.12}Unterst\IeC {\"u}tzung mobiler Endger\IeC {\"a}te}{66}{subsection.789}
+\contentsline {section}{\numberline {5.3}Zusammenfassung}{71}{section.849}
+\contentsline {chapter}{\numberline {6}Evaluation}{72}{chapter.850}
+\contentsline {section}{\numberline {6.1}Validierung der User Stories und Anforderungen}{72}{section.852}
+\contentsline {section}{\numberline {6.2}Evaluation des Hyperaudio-Plugins}{77}{section.885}
+\contentsline {subsection}{\numberline {6.2.1}Rolle der Nutzenden}{78}{subsection.886}
 \contentsline {subsection}{\numberline {6.2.2}Rolle der Administrierenden}{79}{subsection.891}
 \contentsline {section}{\numberline {6.3}Verbesserungsvorschl\IeC {\"a}ge}{80}{section.897}
-\contentsline {section}{\numberline {6.4}Zusammenfassung}{80}{section.909}
+\contentsline {section}{\numberline {6.4}Zusammenfassung}{81}{section.909}
 \contentsline {chapter}{\numberline {7}Fazit}{82}{chapter.910}
 \contentsline {section}{\numberline {7.1}Zusammenfassung}{82}{section.911}
 \contentsline {section}{\numberline {7.2}Ausblick}{83}{section.912}

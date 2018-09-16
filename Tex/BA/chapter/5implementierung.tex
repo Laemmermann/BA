@@ -12,11 +12,11 @@ Bei der Implementierung des Hyperaudio"=Plugins ist die durch Moodle vorgegebene
 Bei Activity Plugins, wie dem Plugin für Hyperaudio-Dokumente, ist als Speicherort der Ordner \textbf{/mod} vorgeben. In diesem Ordner muss ein Unterordner mit dem Namen des Plugins angelegt werden, in diesem Fall \textbf{hyperaudio}, in welchem alle Plugin-Dateien abgelegt werden. Eine Übersicht über die Ordnerstruktur des Hyperaudio"=Plugins findet sich in Abbildung \ref{fig:Ordnerstruktur}.
 
 \begin{figure}[h!]
-\includegraphics[width=0.33\textwidth,center]{Ordnerstruktur.PNG}
+\includegraphics[width=0.3\textwidth,center]{Ordnerstruktur.PNG}
 \caption{\label{fig:Ordnerstruktur}Ordnerstruktur des Hyperaudio"=Plugins}
 \end{figure}
 
-\todo[inline]{Ordnerstruktur austauschen}
+%\todo[inline]{Ordnerstruktur austauschen}
 %\todo[inline]{Warum gibt es hier eine Datei ding.mp3?}
 
 Der Ordner \textbf{/hyperaudio/db} beherbergt die Dateien \textbf{access.php}, \textbf{install.xml} und \textbf{upgrade.php}. Die Datei \textbf{access.php} dient zur Steuerung der Berechtigungen innerhalb des Moodle-Plugins, wobei den verschiedenen Moodle-Rollen verschiedene Rechte für die einzelnen Funktionen zugewiesen werden können. Bei der Installation des Plugins wird die \textbf{install.xml} zur Erstellung der Datenbanktabellen für das Plugin verwendet. Es ist mindestens eine Tabelle mit dem Namen des Plugins anzulegen. Sollten die Datenbanktabellen nach Veröffentlichung des Plugins um Spalten erweitert werden, so kommt die Datei \textbf{upgrade.php} zum Einsatz. Hierin werden die notwendigen Schritte für einen Versionsabgleich definiert.

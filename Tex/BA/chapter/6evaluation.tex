@@ -229,8 +229,6 @@ Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden
 
 \begin{table}[!ht]
 \def\arraystretch{1.4}
-\caption{Evaluierung der Anforderungen der Administrierenden}
-\label{tab:EvalAnforderungenAdministrierenden}
  \begin{tabularx}{\textwidth}{lXcc}      
     \hline
     Nr. & Anforderung & Priorität & Erfüllungsgrad
@@ -242,12 +240,13 @@ Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden
     5 & Statistische Auswertungen über die Nutzung der Hyperaudio"=Dokumente & niedrig & erfüllt\\
     \hline
     \end{tabularx}
+    \caption{Evaluierung der Anforderungen der Administrierenden}
+\label{tab:EvalAnforderungenAdministrierenden}
 \end{table}
 
 \begin{table}[!ht]
 \def\arraystretch{1.4}
-\caption{Evaluierung der Anforderungen der Nutzenden}
-\label{tab:EvalAnforderungenNutzenden}
+
 \begin{tabularx}{\textwidth}{lXcc}      
     \hline
     Nr. & Anforderung & Priorität & Erfüllungsgrad
@@ -280,6 +279,8 @@ Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden
     12 & Unterstützung von mobilen Endgeräten & mittel & teilweise erfüllt\\
     \hline
 \end{tabularx}
+\caption{Evaluierung der Anforderungen der Nutzenden}
+\label{tab:EvalAnforderungenNutzenden}
 \end{table}
 \FloatBarrier
 
@@ -305,9 +306,7 @@ Es soll nun eine Evaluation anhand eines UEQ für das Hyperaudio"=Plugin durchge
 
 \begin{table}[!ht]
 \def\arraystretch{1.4}
-\caption{Ergebnisse des UEQs}
-\label{tab:EvalUEQ}
- \begin{tabularx}{\textwidth}{lcc}      
+\begin{tabularx}{\textwidth}{lcc}      
     \hline
     Dimension & Mittelwert & Varianz
     \\\hline
@@ -319,6 +318,8 @@ Es soll nun eine Evaluation anhand eines UEQ für das Hyperaudio"=Plugin durchge
 	Originalität & 1,000 & 0,34\\
     \hline
     \end{tabularx}
+    \caption{Ergebnisse des UEQs}
+\label{tab:EvalUEQ}
 \end{table}
 
 \begin{figure}[h!]
@@ -326,8 +327,47 @@ Es soll nun eine Evaluation anhand eines UEQ für das Hyperaudio"=Plugin durchge
 \caption{\label{fig:UEQ}Grafische Darstellung der Ergebnisse des UEQs}
 \end{figure}
 
-Die Ergebnisse zeigen auf, dass das Hyperaudio"=Plugin in vier Dimensionen knapp ein positives und in zwei Dimensionen ein neutrales Evaluationsergebnis erzielt. Hinsichtlich dieser beiden Dimensionen (Effizienz und Stimulation) sollte das Plugin somit nochmals optimiert werden. Bei Betrachtung der einzelnen Fragebögen scheint Verbesserungspotential bei der Übersichtlichkeit des Plugins zu herrschen, was sich sowohl auf die Effizienz als auch die Durchschaubarkeit negativ auswirkt.
+Die Ergebnisse zeigen auf, dass das Hyperaudio"=Plugin in vier Dimensionen knapp ein positives und in zwei Dimensionen ein neutrales Evaluationsergebnis erzielt. Hinsichtlich dieser beiden Dimensionen (Effizienz und Stimulation) sollte das Plugin somit nochmals optimiert werden. Bei Betrachtung der einzelnen Items scheint Verbesserungspotential bei der Übersichtlichkeit des Plugins zu herrschen (vgl. Tabelle \ref{tab:EvalUEQFragen}), was sich sowohl auf die Effizienz als auch die Durchschaubarkeit negativ auswirkt.
 %Außerdem ist erkennbar, dass sich in den Dimensionen Steuerbarkeit und Effizienz eine hohe Varianz ergibt. Dies lässt darauf schließen, dass diese Dimensionen je nach Testkandidat sehr unterschiedlich wahrgenommen werden.
+
+\begin{table}[!ht]
+\def\arraystretch{1.4}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccclll}
+    \\\hline
+	Item & Durchschnitt & Varianz & Links & Rechts & Dimension
+    \\\hline
+	1 & 0,8 & 0,7 & unerfreulich & erfreulich & Attraktivität \\
+	2 & 1,4 & 0,3 & unverständlich & verständlich & Durchschaubarkeit \\
+	3 & 0,6 & 1,8 & kreativ & phantasielos & Originalität \\
+	4 & 1,8 & 0,7 & leicht zu lernen & schwer zu lernen & Durchschaubarkeit \\
+	5 & 0,6 & 0,3 & wertvoll & minderwertig & Stimulation \\
+	6 & 0,4 & 0,3 & langweilig & spannend & Stimulation \\
+	7 & 1,2 & 0,2 & uninteressant & interessant & Stimulation \\
+	8 & 1,2 & 1,7 & unberechenbar & voraussagbar & Steuerbarkeit \\
+	9 & 0,8 & 1,2 & schnell & langsam & Effizienz \\
+	10 & 0,8 & 0,2 & originell & konventionell & Originalität \\
+	11 & 1,8 & 0,2 & behindernd & unterstützend & Steuerbarkeit \\
+	12 & 1,6 & 0,3 & gut  & schlecht & Attraktivität \\
+	13 & 1,4 & 0,8 & kompliziert & einfach & Durchschaubarkeit \\
+	14 & 0,6 & 0,8 & abstoßend & anziehend & Attraktivität \\
+	15 & 1,8 & 1,2 & herkömmlich & neuartig & Originalität \\
+	16 & 1,8 & 0,2 & unangenehm & angenehm & Attraktivität \\
+	17 & 1 & 2 & sicher  & unsicher & Steuerbarkeit \\
+	18 & 0,6 & 0,8 & aktivierend & einschläfernd & Stimulation \\
+	19 & 1,4 & 0,3 & erwartungskonform & nicht erwartungskonform & Steuerbarkeit \\
+	20 & 1,2 & 0,7 & ineffizient & effizient & Effizienz \\
+	21 & 0,4 & 0,8 & übersichtlich & verwirrend & Durchschaubarkeit \\
+	22 & 0,8 & 0,2 & unpragmatisch & pragmatisch & Effizienz \\
+	23 & 0 & 3,5 & aufgeräumt & überladen & Effizienz \\
+	24 & 1 & 1 & attraktiv & unattraktiv & Attraktivität \\
+	25 & 1,2 & 0,7 & sympathisch & unsympathisch & Attraktivität \\
+	26 & 0,8 & 0,2 & konservativ & innovativ & Originalität \\
+    \hline
+\end{tabular}}
+\caption{Auswertung der einzelnen Fragen des UEQs}
+\label{tab:EvalUEQFragen}
+\end{table}
 
 \todo[inline]{Auswertung der Fragen ergänzen}
 
