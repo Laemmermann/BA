@@ -1,231 +1,295 @@
 \label{cap:evaluation}
-Nachdem nun die Implementierung des Hyperaudio"=Plugins abgeschlossen ist, kann zunächst eine Validierung anhand der im Abschnitt \ref{sec:UserStories} formulierten User Stories und der daraus abgeleiteten Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} erfolgen. Im nächsten Schritt erfolgt die Evaluation für die Rolle der Nutzenden mithilfe des User Experience Questionnaire (UEQ). Nachfolgend wird noch eine alternative Möglichkeit zur Evaluation für die Rolle der Administrierenden beschrieben. Daraufhin werden mögliche Verbesserungen anhand von weiteren User Stories formuliert.
+Nachdem nun die Implementierung des Hyperaudio"=Plugins abgeschlossen ist, kann zunächst eine Validierung anhand der im Abschnitt \ref{sec:UserStories} formulierten User Stories und der aus den User Stories abgeleiteten Anforderungen aus Abschnitt \ref{sec:anforderungsdefinition} durchgeführt werden. Im nächsten Schritt erfolgt die Evaluation für die Rolle der Nutzenden mithilfe des User Experience Questionnaire (UEQ). Nachfolgend wird noch eine alternative Möglichkeit zur Evaluation für die Rolle der Administrierenden beschrieben. Daraufhin werden mögliche Verbesserungen anhand von weiteren User Stories formuliert.
 
 %\todo[inline]{Die Frage nach der Umsetzbarkeit ist keine wissenschaftliche Frage, da es hierbei (trotz aller Mühen und fleißigen Programmierarbeit) da hier aus technischer Sicht keine herausragenden Problemstellungen bearbeitet wurden. 
 
 %Es mag dennoch wichtig und richtigt sein, hier eine Bilanz zu ziehen, welche User Stories bzw. Anforderungen in Ihrem Prototyp realisiert wurden. Eine solche Bilanz stellt jedoch nur eine Validierung dar. Eine Evaluation geht einen Schritt weiter. }
 
-\todo[inline]{Stellen Sie das doch als eine checkbox in einer Liste dar. Das "umgesetzt" erscheint so losgelöst. Zudem suouggeriert der Abstand nicht die Zugehörigkeit.  }
-
-
 \section{Validierung der User Stories und Anforderungen}
-Nachfolgend wird untersucht, ob die User Stories mit der vorhandenen Implementierung umgesetzt werden können.
+Nachfolgend wird untersucht, ob die User Stories mit der vorhandenen Implementierung umgesetzt werden können. Dabei werden folgende Symbole für die Darstellung des Umsetzungsgrades der User Stories eingesetzt:
+
+\begin{center}
+\Checkmark  \nobreakspace\nobreakspace umgesetzt \qquad \Asterisk \nobreakspace\nobreakspace teilweise umgesetzt \qquad \XSolidBrush \nobreakspace\nobreakspace nicht umgesetzt\\
+\end{center}
 
 \begin{enumerate}[leftmargin=1.11cm,label=US-\arabic*:,ref=US-\arabic*]
 \item \label{US-Admin-Erstellen-Eval} Als Administrierende möchte Prof. Dr. Karolin Schröder ein neues Hyperaudio"=Dokument in ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} zur Verfügung stellen, um den Studierenden neue Lerninhalte bereitzustellen.
 \end{enumerate}
 \vspace{-0.25cm}
-\textbf{umgesetzt}\\
-Prof. Dr. Karolin Schröder ist in der Lage ein neues Hyperaudio"=Dokument zu erstellen, indem sie Ihrem Kurs eine neue Aktivität \textit{Hyperaudio} hinzufügt. Hierbei muss sie eine Audio-Datei, die gewünschten Zusatzinhalte und eine Konfigurationsdatei bereitstellen.
+\begin{itemize}
+\item[\Checkmark] Prof. Dr. Karolin Schröder ist in der Lage ein neues Hyperaudio"=Dokument zu erstellen, indem sie ihrem Kurs eine neue Aktivität \textit{Hyperaudio} hinzufügt. Hierbei muss sie eine Audio-Datei, die gewünschten Zusatzinhalte und eine Konfigurationsdatei bereitstellen.
+\end{itemize}
 %\todo[inline]{Sie fassen hier noch einmal das umgesetzte zusammen. Eine Evaluation würde eine kritische Analyse beinhalten. Idealer Weise würde Ihnen ein Experte oder eine Gruppe von potentiellen Anwendern Feedback zur Umsetzung der User Story geben. Fest steht, dass es keine eine richtige Lösung gibt, sondern viele alternative Lösungsmöglichkeiten. Warum ist Ihre Lösung eine gute Lösung?}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Admin-Loeschen-Eval} Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio"=Dokumente aus ihrem Kurs \glqq Einführun in die Wirtschaftsinformatik\grqq{} löschen können, um veraltete Informationen zu entfernen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark] 
 Das Hyperaudio"=Dokument kann Prof. Dr. Karolin Schröder löschen, indem sie die dazugehörige Aktivität \textit{Hyperaudio} entfernt.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Admin-Semester-Eval} Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio"=Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} im Sommersemester in den darauffolgenden Kurs im Wintersemester übernehmen, um diese nicht erneut erstellen zu müssen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{teilweise umgesetzt}\\
-Die Übernahme von Hyperaudio"=Dokumenten in den darauffolgenden Kurs im Wintersemester ist Prof. Dr. Karolin Schröder nur über Umwege möglich. Hierzu müssen die einzelnen Dateien der Hyperaduio-Dokumente heruntergelanden werden und dann bei der Erstellung im neuen Kurs erneut hochgelanden werden. Der Titel und die Beschreibung des Hyperaudio"=Dokuments muss manuell übernommen werden.
+\begin{itemize}
+\item[\Asterisk]
+Die Übernahme von Hyperaudio"=Dokumenten in den darauffolgenden Kurs im Wintersemester ist Prof. Dr. Karolin Schröder nur über Umwege möglich. Hierzu müssen die einzelnen Dateien der Hyperaudio-Dokumente heruntergeladen werden und dann beim Erstellen des Hyperaudio"=Dokuments im neuen Kurs erneut hochgeladen werden. Der Titel und die Beschreibung des Hyperaudio"=Dokuments müssen manuell übernommen werden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Admin-Kurs-Eval} Als Administrierende möchte Prof. Dr. Karolin Schröder Hyperaudio"=Dokumente anderer Kurse in ihren Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} übernehmen, um auf die hervorragende Arbeit anderer Lehrender zurückgreifen zu können, da sich die Themen mit ihrem Kurs überschneiden.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{teilweise umgesetzt}\\
-Die Hyperaudio"=Dokumente anderer Kurse können Prof. Dr. Karolin Schröder analog zum Vorgehen bei \ref{US-Admin-Semester-Eval} nur anhand der einzelnen Dateien der Hyperaudio"=Dokumente bereitgestellt werden. Diese müssen dann beim Erstellen der Hyperaudio"=Dokumente verwendet werden.
+\begin{itemize}
+\item[\Asterisk]
+Die Hyperaudio"=Dokumente anderer Kurse können Prof. Dr. Karolin Schröder analog zum Vorgehen bei \ref{US-Admin-Semester-Eval} nur anhand der einzelnen Dateien der Hyperaudio"=Dokumente bereitgestellt werden. Diese können dann beim Erstellen der Hyperaudio"=Dokumente wiederverwendet werden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Admin-Statistik-Eval} Als Administrierende möchte Prof. Dr. Karolin Schröder Erkenntnisse daraus gewinnen, wie die Hyperaudio"=Dokumente des Kurses \glqq Einführung in die Wirtschaftsinformatik\grqq{} von Studierenden genutzt werden, um Verbesserungspotenzial auszumachen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}
-Prof. Dr. Karolin Schröder ist es möglich, über den Block \textit{Aktivitäten} zu der Auflistung aller Hyperaudio-Aktivitäten ihres Kurses zu gelangen. In dieser Auflistung kann sie sowohl die Anzahl der erstellten öffentlichen Kommentare, persönlichen Notizen und Lesezeichen aller Nutzer entnehmen, als auch die Anzahl der Nutzer, die diese geniert haben.
+\begin{itemize}
+\item[\Checkmark]
+Prof. Dr. Karolin Schröder ist es möglich, über den Block \textit{Aktivitäten} zur Auflistung aller Hyperaudio-Aktivitäten ihres Kurses zu gelangen. Dieser Auflistung kann sie sowohl die Anzahl der erstellten öffentlichen Kommentare, persönlichen Notizen und Lesezeichen aller Nutzer entnehmen, als auch die Anzahl der Nutzer, die diese geniert haben.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Admin-Bearbeiten-Eval} Als Administrierender möchte Dr. Julian Schmidt ein vorhandenes Hyperaudio"=Dokument in dem von ihm betreuten Kurs \glqq Marketing\grqq{} überarbeiten, um einen Fehler zu beseitigen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}
+\begin{itemize}
+\item[\Checkmark]
 Das Bearbeiten von Hyperaudio"=Dokumenten ist möglich. Es können Audio- und Konfigurationsdatei ausgetauscht werden. Auch Zusatzinhalte können getauscht, entfernt oder neue Zusatzinhalte hinzugefügt werden. Dabei ist zu beachten, dass einige dieser Änderungen auch die Anpassung der Konfigurationsdatei erfordern.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Wiedergabe-Eval} Als Nutzende möchte Prof. Dr. Karolin Schröder die bereits vorhandenen Hyperaudio"=Dokumente aus ihrem Kurs \glqq Einführung in die Wirtschaftsinformatik\grqq{} wiedergeben, um diese auf ihre Richtigkeit zu überprüfen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}
+\begin{itemize}
+\item[\Checkmark]
 Das Hyperaudio"=Dokument kann nach dem Öffnen der \textit{Hyperaudio}-Aktivität wiedergegeben werden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Antwort-L-Eval} Als Nutzende möchte Prof. Dr. Karolin Schröder die Kommentare zu einem Hyperaudio"=Dokument lesen und beantworten können, um auf Fragen von Studierenden einzugehen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}
+\begin{itemize}
+\item[\Checkmark]
 Nach dem Öffnen einer \textit{Hyperaudio}-Aktivität sind alle an das Hyperaudio"=Dokument annotierten Kommentare sichtbar. Diese können nach einem Klick auf \glqq Antworten\grqq{} beantwortet werden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Notiz-L-Eval} Als Nutzende möchte Prof. Dr. Karolin Schröder eine Notiz zu einem Hyperaudio"=Dokument machen, um ihren Gedanken festzuhalten und später darauf zurückgreifen zu können.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Das Erstellen einer Notiz wird durch das Befüllen des entsprechenden Textfeldes und der Betätigung des \glqq Als Notiz speichern\grqq{}-Buttons erreicht. Die Notiz wird zum aktuellen Zeitpunkt der Wiedergabe annotiert.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[leftmargin=1.3cm,label=US-\arabic*:,ref=US-\arabic*]
 \setcounter{enumi}{9}
 \item \label{US-Kommentar-L-Eval} Als Nutzender möchte Dr. Julian Schmidt eine gefundene Erklärungslücke in einem Hyperaudio"=Dokument durch einen Kommentar zum entsprechenden Zeitpunkt schließen, um eventuellen Fragen der Studierenden zuvorzukommen.
 \end{enumerate}
 \vspace{-0.25cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Dr. Julian Schmidt kann durch Befüllen des entsprechenden Textfeldes und der Betätigung des \glqq Als Kommentar speichern\grqq{}-Buttons einen Kommentar hinterlegen. Der Kommentar wird zum aktuellen Zeitpunkt der Wiedergabe annotiert.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Zeit-Eval} Als Nutzende möchte Laura Ebert mittels Hyperaudio"=Dokument lernen, um die Zeit während Haushaltsarbeiten, wie dem Bügeln, Kochen oder Putzen, und dem Pendeln sinnvoller zu nutzen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
-Durch die auditive Wiedergabeform der Hyperaudio"=Dokumente ist Laura Ebert in der Lage in den gewünschten Situationen mit Hyperaudio"=Dokumenten zu lernen. Falls ein visueller Zusatzinhalt dargestellt wird, so wird sie durch die Wiedergabe einer Audio Cue auf diesen hingewiesen.
+\begin{itemize}
+\item[\Checkmark]
+Durch die auditive Wiedergabeform der Hyperaudio"=Dokumente ist Laura Ebert in der Lage in den genannten Alltagssituationen mit Hyperaudio"=Dokumenten zu lernen. Falls ein visueller Zusatzinhalt dargestellt wird, so wird sie durch die Wiedergabe eines Audio Cue auf diesen hingewiesen.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Uebersicht-Kurse-Eval} Als Nutzende möchte Laura Ebert erfahren, welche Hyperaudio"=Dokumente in den von ihr belegten Kursen angeboten werden, um herauszufinden, mit welchen Mitteln sie sich auf die anstehenden Prüfungen vorbereiten kann.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{teilweise umgesetzt}\\
+\begin{itemize}
+\item[\Asterisk]
 Laura Ebert kann sich mithilfe des Blocks \textit{Aktivitäten} ausschließlich einen Überblick über alle Hyperaudio"=Dokumente eines jeweiligen Kurses verschaffen. Eine kursübergreifende Übersicht ist nicht vorhanden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Kommentar-S-Eval} Als Nutzende möchte Laura Ebert einen Kommentar verfassen, um dem Kursbetreuer und den anderen Studierenden eine Frage zu stellen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Indem sie ihre Frage in das Kommentarfeld schreibt und dann mittels des entsprechenden Buttons speichert, kann Laura Ebert eine Frage an den Kursbetreuer und andere Studierende stellen.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Lesezeichen-Eval} Als Nutzende möchte Laura Ebert ein Lesezeichen setzen, wenn eine klausurrelevante Thematik erklärt wird. Bei der Prüfungsvorbereitung möchte sie anhand dieser Lesezeichen diejenigen Themen erkennen, mit welchen sie sich besonders intensiv beschäftigen möchte.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Das Hinterlegen von Lesezeichen ist durch die Betätigung des Lesezeichen-Buttons links neben der Timeline möglich. Das Lesezeichen wird zum Wiedergabezeitpunkt erstellt und in Form eines Lesezeichen-Symbols in der Timeline dargestellt.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Lesezeichen-Loeschen-Eval} Als Nutzende möchte Laura Ebert ein Lesezeichen löschen, da sie den markierten Lerninhalt inzwischen beherrscht. Anhand der übrigen Lesezeichen möchte sie schnell erkennen, wo für sie noch Lernbedarf besteht.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Lesezeichen können durch Rechtsklick auf das entsprechende Lesezeichen-Symbol in der Timeline gelöscht werden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Notiz-S-Eval} Als Nutzende möchte Laura Ebert eine Notiz erstellen, um ein Beispiel zu dem genannten Sachverhalt festzuhalten, sodass sie die Thematik beim nächsten Mal einfacher nachvollziehen kann.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Das Erstellen einer Notiz wird durch das Befüllen des entsprechenden Textfeldes und der Betätigung des \glqq Als Notiz speichern\grqq{}-Buttons erreicht. Die Notiz wird zum aktuellen Zeitpunkt der Wiedergabe annotiert.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Fortsetzen-Eval} Als Nutzende möchte Laura Ebert die Wiedergabe eines Hyperaudio"=Dokuments beenden und am nächsten Tag automatisch an derselben Stelle fortsetzen können, um das Lernen schnell wiederaufnehmen zu können.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{nicht umgesetzt}\\
+\begin{itemize}
+\item[\XSolidBrush]
 Eine automatische Wiedergabe des Hyperaudio"=Dokuments an der Stelle, an der es beendet wurde, ist nicht möglich.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Mobil-Eval} Als Nutzende möchte Laura Ebert die Hyperaudio-Angebote mit ihrem Smartphone in Anspruch nehmen, um auch die Zeit während des Pendelns zum Lernen nutzen zu können.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{teilweise umgesetzt}\\
+\begin{itemize}
+\item[\Asterisk]
 Durch die angepasste Darstellung auf mobilen Endgeräten kann Laura Ebert auch mit ihrem Smartphone das Hyperaudio-Angebot wahrnehmen. Dabei ergibt sich allerdings die Einschränkung, dass sie vorhandene Lesezeichen nicht löschen kann.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Notiz-Bearbeiten-Eval} Als Nutzender möchte Max Lustig eine alte Notiz bearbeiten, um einen Schreibfehler zu korrigieren.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
-Durch Betätigen der \glqq Bearbeiten\grqq{}-Schaltfläche ist Max Lustig in der Lage seine Notiz zu bearbeiten und die Änderung zu speichern.
+\begin{itemize}
+\item[\Checkmark]
+Durch Betätigen der \glqq Bearbeiten\grqq{}-Schaltfläche ist Max Lustig in der Lage, seine Notiz zu bearbeiten und die Änderung zu speichern.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Notiz-Loeschen-Eval} Als Nutzender möchte Max Lustig eine alte Notiz löschen, da er inzwischen Lernfortschritte gemacht hat und auf diese Notiz verzichten kann.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Durch Betätigen der \glqq Löschen\grqq{}-Schaltfläche kann die Notiz durch Max Lustig gelöscht werden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Galerie-Eval} Als Nutzender möchte Max Lustig schnell erkennen welche Inhalte im Hyperaudio"=Dokument behandelt werden, um eine Erklärung eines bestimmten Themas zu finden.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Durch Betrachtung der annotierten Zusatzinhalte, welche gesammelt in der Galerie dargestellt werden, kann sich Max Lustig schnell einen groben Überblick über das Hyperaudio"=Dokument verschaffen.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Suche-Eval} Als Nutzender möchte Max Lustig nach Textinhalten in Kommentaren suchen können, um schnell Erklärungen zu finden.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Durch Nutzung des Suchfeldes können sowohl Kommentare als auch Notizen durchsucht werden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Sortierung-Erstellungsdatum-Eval} Als Nutzender möchte Max Lustig die Kommentare nach Erstellungsdatum sortieren können, um sich einen Überblick über die neuesten Aktionen zu verschaffen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Wenn Max Lustig im Dropdown-Menü für die Sortierung \glqq Erstelldatum absteigend\grqq{} auswählt, kann er sich einen Überblick über die neuesten Aktionen verschaffen.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Sortierung-Zeitpunkt-Eval} Als Nutzender möchte Max Lustig die Kommentare und persönlichen Notizen zu den Annotationszeitpunkten zuordnen können, um diese bei der Wiedergabe verfolgen zu können.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
-Die Kommentare und Notizen in der Timeline der Mediensteuerung visualisiert. Zusätzlich werden die Kommentare und Notizen im Kommentarbereich entsprechend sortiert, wenn Max Lustig im Dropdown-Menü für die Sortierung \glqq Annotationszeitpunkt\grqq{} auswählt.
+\begin{itemize}
+\item[\Checkmark]
+Die Kommentare und Notizen werden in der Timeline der Mediensteuerung visualisiert. Zusätzlich werden die Kommentare und Notizen im Kommentarbereich entsprechend sortiert, wenn Max Lustig im Dropdown-Menü für die Sortierung \glqq Annotationszeitpunkt\grqq{} auswählt.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Filter-Eval} Als Nutzender möchte Max Lustig öffentliche Kommentare und persönliche Notizen getrennt betrachten können, um die öffentliche Diskussion verfolgen beziehungsweise die eigenen Anmerkungen isoliert betrachten zu können.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Mittels zweier Checkboxen kann festgelegt werden, ob Kommentare und/oder Notizen dargestellt werden sollen.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Antwort-S-Eval} Als Nutzender möchte Max Lustig auf Kommentare antworten können, um sich mit den Studierenden und Lehrenden auszutauschen.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{umgesetzt}\\
+\begin{itemize}
+\item[\Checkmark]
 Nach dem Öffnen einer \textit{Hyperaudio}-Aktivität sind alle an das Hyperaudio"=Dokument annotierten Kommentare sichtbar. Diese können nach einem Klick auf \glqq Antworten\grqq{} beantwortet werden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Uebersicht-Letzte-Eval} Als Nutzender möchte Max Lustig erkennen, welche Hyperaudio"=Dokumente er zuletzt abgespielt hat, um seinen Lernfortschritt im Auge zu behalten.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{nicht umgesetzt}\\
+\begin{itemize}
+\item[\XSolidBrush]
 Eine Übersicht über die zuletzt abgespielten Hyperaudio"=Dokumente ist nicht vorhanden.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Favoriten-Eval} Als Nutzender möchte Max Lustig besonders hilfreiche Hyperaudio"=Dokumente als Favoriten speichern, um diese schnell als solche identifizieren zu können.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{nicht umgesetzt}\\
+\begin{itemize}
+\item[\XSolidBrush]
 Das Erstellen von Favoriten ist nicht möglich.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Favoriten-Loeschen-Eval} Als Nutzender möchte Max Lustig die Markierung als Favorit entfernen können, wenn der Inhalt für ihn nicht mehr von Interesse ist.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{nicht umgesetzt}\\
-Da bereits das Erstellen von Favoriten nicht umgesetzt wurde, ist auch das Löschen nicht möglich.
+\begin{itemize}
+\item[\XSolidBrush]
+Da bereits das Erstellen von Favoriten nicht umgesetzt wurde (siehe \ref{US-Favoriten-Eval}), ist auch das Löschen nicht möglich.
+\end{itemize}
 \vspace{0.25cm}
 \begin{enumerate}[resume*]
 \item \label{US-Zeit-Mobil-Eval} Als Nutzender möchte Max Lustig auf seinem Tablet Zugang zu Hyperaudio"=Dokumenten haben, um die Zeit auf dem Laufband gleichzeitig zum Lernen nutzen zu können.
 \end{enumerate}
 \vspace{-0.1cm}
-\textbf{teilweise umgesetzt}\\
-Durch die angepasste Darstellung auf mobilen Endgeräten kann Max Lustig auch mit seinem Tablet das Hyperaudio-Angebot wahrnehmen. Dabei ergibt sich allerdings die Einschränkung, dass er vorhandene Lesezeichen nicht löschen kann.
+\begin{itemize}
+\item[\Asterisk]
+Durch die angepasste Darstellung auf mobilen Endgeräten kann Max Lustig auch mit seinem Tablet das Hyperaudio-Angebot wahrnehmen. Dabei ergibt sich allerdings die Einschränkung, dass er vorhandene Lesezeichen nicht löschen kann, wenn sein Tablet keinen Rechtsklick unterstützt.
+\end{itemize}
 
-Wie zu erkennen ist, wurde mit 21 User Stories ein Großteil der User Stories umgesetzt. Vier User Stories wurden nicht und fünf nur teilweise bei der Implementierung berücksichtigt.
+Wie zu erkennen ist, wurden mit 21 User Stories ein Großteil der User Stories umgesetzt. Vier User Stories wurden nicht und fünf nur teilweise bei der Implementierung berücksichtigt.
 
-Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden die Ergebnisse nun auf die Anforderungen aus Kapitel \ref{sec:anforderungsdefinition} übertragen und zusammengefasst. Die Resultate sind in Tabelle \ref{tab:EvalAnforderungenAdministrierenden} und \ref{tab:EvalAnforderungenNutzenden} aufgeführt.
+Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden die Ergebnisse nun auf die Anforderungen aus Kapitel \ref{sec:anforderungsdefinition} übertragen und zusammengefasst. Die Resultate sind in Tabelle \ref{tab:EvalAnforderungenAdministrierenden} für die Rolle der Administrierenden und in Tabelle \ref{tab:EvalAnforderungenNutzenden} für die Rolle der Nutzenden aufgeführt. Der Erfüllungsgrad der Anforderungen wird wie folgt symbolisiert:
+
+\begin{center}
+\Checkmark  \nobreakspace\nobreakspace erfüllt \qquad \Asterisk \nobreakspace\nobreakspace teilweise erfüllt \qquad \XSolidBrush \nobreakspace\nobreakspace nicht erfüllt\\
+\end{center}
 
 \begin{table}[!ht]
 \def\arraystretch{1.4}
@@ -233,14 +297,14 @@ Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden
     \hline
     Nr. & Anforderung & Priorität & Erfüllungsgrad
     \\\hline
-    1 & Erstellen eines Hyperaudio"=Dokuments & hoch & erfüllt\\
-    2 & Bearbeiten eines Hyperaudio"=Dokuments & hoch & erfüllt\\
-    3 & Löschen eines Hyperaudio"=Dokuments & hoch & erfüllt\\
-    4 & Übernahme eines Hyperaudio"=Dokuments in einen anderen Kurs & mittel & teilweise erfüllt\\
-    5 & Statistische Auswertungen über die Nutzung der Hyperaudio"=Dokumente & niedrig & erfüllt\\
+    1 & Erstellen eines Hyperaudio"=Dokuments & hoch & \Checkmark\\
+    2 & Bearbeiten eines Hyperaudio"=Dokuments & hoch & \Checkmark\\
+    3 & Löschen eines Hyperaudio"=Dokuments & hoch & \Checkmark\\
+    4 & Übernahme eines Hyperaudio"=Dokuments in einen anderen Kurs & mittel & \Asterisk\\
+    5 & Statistische Auswertungen über die Nutzung der Hyperaudio"=Dokumente & niedrig & \Checkmark\\
     \hline
     \end{tabularx}
-    \caption{Evaluierung der Anforderungen der Administrierenden}
+    \caption{Evaluation der Anforderungen der Administrierenden}
 \label{tab:EvalAnforderungenAdministrierenden}
 \end{table}
 
@@ -251,45 +315,47 @@ Nachdem das Hyperaudio"=Plugin auf Basis der User Stories bewertet wurde, werden
     \hline
     Nr. & Anforderung & Priorität & Erfüllungsgrad
     \\\hline
-    1 & Wiedergabe von Hyperaudio"=Dokumenten & hoch & erfüllt\\
-    2 & Hinweise auf die Darstellung von annotierten Zusatzinhalten & hoch & erfüllt\\
-    3 & Übersicht über annotierte Zusatzinhalte & mittel & erfüllt\\
+    1 & Wiedergabe von Hyperaudio"=Dokumenten & hoch & \Checkmark\\
+    2 & Hinweise auf die Darstellung von annotierten Zusatzinhalten & hoch & \Checkmark\\
+    3 & Übersicht über annotierte Zusatzinhalte & mittel & \Checkmark\\
     4 & Kommentarfunktion bei Hyperaudio"=Dokumenten & & \\
-    4.1 & \hspace*{0.5cm} Erstellen von Kommentaren & hoch & erfüllt\\
-    4.2 & \hspace*{0.5cm} Anzeigen von Kommentaren & hoch & erfüllt\\
-    4.3 & \hspace*{0.5cm} Antworten auf Kommentare & hoch & erfüllt\\
-    4.4 & \hspace*{0.5cm} Suchfunktion innerhalb der Kommentare & mittel & erfüllt\\ 
+    4.1 & \hspace*{0.5cm} Erstellen von Kommentaren & hoch & \Checkmark\\
+    4.2 & \hspace*{0.5cm} Anzeigen von Kommentaren & hoch & \Checkmark\\
+    4.3 & \hspace*{0.5cm} Antworten auf Kommentare & hoch & \Checkmark\\
+    4.4 & \hspace*{0.5cm} Suchfunktion innerhalb der Kommentare & mittel & \Checkmark\\ 
     5 & Notizfunktion bei Hyperaudio"=Dokumenten & & \\
-    5.1 & \hspace*{0.5cm} Erstellen von Notizen & hoch & erfüllt\\
-    5.2 & \hspace*{0.5cm} Anzeigen von Notizen & hoch & erfüllt\\
-    5.3 & \hspace*{0.5cm} Bearbeiten von Notizen & hoch & erfüllt\\
-   	5.4 & \hspace*{0.5cm} Löschen von Notizen & hoch & erfüllt\\
+    5.1 & \hspace*{0.5cm} Erstellen von Notizen & hoch & \Checkmark\\
+    5.2 & \hspace*{0.5cm} Anzeigen von Notizen & hoch & \Checkmark\\
+    5.3 & \hspace*{0.5cm} Bearbeiten von Notizen & hoch & \Checkmark\\
+   	5.4 & \hspace*{0.5cm} Löschen von Notizen & hoch & \Checkmark\\
     6 & Lesezeichenfunktion bei Hyperaudio"=Dokumenten & & \\
-    6.1 & \hspace*{0.5cm} Erstellen von Lesezeichen & mittel & erfüllt\\
-    6.2 & \hspace*{0.5cm} Anzeigen von Lesezeichen & mittel & erfüllt\\
-   	6.3 & \hspace*{0.5cm} Löschen von Lesezeichen & mittel & erfüllt\\
-   	7 & Filter- und Sortiermöglichkeiten & mittel & erfüllt\\
+    6.1 & \hspace*{0.5cm} Erstellen von Lesezeichen & mittel & \Checkmark\\
+    6.2 & \hspace*{0.5cm} Anzeigen von Lesezeichen & mittel & \Checkmark\\
+   	6.3 & \hspace*{0.5cm} Löschen von Lesezeichen & mittel & \Checkmark\\
+   	7 & Filter- und Sortiermöglichkeiten & mittel & \Checkmark\\
     8 & Favoritenfunktion für Hyperaudio"=Dokumente & & \\
-    8.1 & \hspace*{0.5cm} Erstellen von Favoriten & niedrig & nicht erfüllt\\
-    8.2 & \hspace*{0.5cm} Anzeigen von Favoriten & niedrig & nicht erfüllt\\
-    8.3 & \hspace*{0.5cm} Löschen von Favoriten & niedrig & nicht erfüllt\\    
-    9 & Übersicht über alle Hyperaudio"=Dokumente der belegten Kurse & niedrig & teilweise erfüllt\\
-    10 & Übersicht über die zuletzt abgespielten Hyperaudio"=Dokumente & niedrig & nicht erfüllt\\
-    11 &  Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle & niedrig & nicht erfüllt\\
-    12 & Unterstützung von mobilen Endgeräten & mittel & teilweise erfüllt\\
+    8.1 & \hspace*{0.5cm} Erstellen von Favoriten & niedrig & \XSolidBrush\\
+    8.2 & \hspace*{0.5cm} Anzeigen von Favoriten & niedrig & \XSolidBrush\\
+    8.3 & \hspace*{0.5cm} Löschen von Favoriten & niedrig & \XSolidBrush\\    
+    9 & Übersicht über alle Hyperaudio"=Dokumente der belegten Kurse & niedrig & \Asterisk\\
+    10 & Übersicht über die zuletzt abgespielten Hyperaudio"=Dokumente & niedrig & \XSolidBrush\\
+    11 &  Funktion zum Fortsetzen unterbrochener Wiedergaben bei folgenden Aufrufen in Moodle & niedrig & \XSolidBrush\\
+    12 & Unterstützung von mobilen Endgeräten & mittel & \Asterisk\\
     \hline
 \end{tabularx}
-\caption{Evaluierung der Anforderungen der Nutzenden}
+\caption{Evaluation der Anforderungen der Nutzenden}
 \label{tab:EvalAnforderungenNutzenden}
 \end{table}
 \FloatBarrier
 
 \section{Evaluation des Hyperaudio-Plugins}
-Nachdem im vorherigen Abschnitt ermittelt wurde welche Anforderungen erfüllt wurden, wird nun die Evaluation vorgenommen. Für die Rolle der Nutzenden wird ein UEQ bei der Evaluation eingesetzt. Anschließend wird ein Ausblick für die Möglichkeiten bei der Evaluation des Plugins aus Sicht der Administrierenden gegeben.
+Nachdem im vorherigen Abschnitt ermittelt wurde, inwiefern die Anforderungen erfüllt wurden, wird nun die Evaluation des Hyperaudio"=Plugins vorgenommen. Zunächst werden Methoden zur Evaluation von Softwareprodukten vorgestellt. Im Anschluss wird für die Rolle der Nutzenden eine Evaluation anhand einer der beschriebenen Methoden durchgeführt. Da diese Zielgruppe zahlenmäßig größer ist und sich auch über einen längeren Zeitraum mit der Anwendung auseinandersetzen wird, wird dieser Rolle eine höhere Priorität bei der Evaluation zugewiesen. Dementsprechend wird  für die Rolle der Administrierenden nur der mögliche Ablauf einer Evaluation beschrieben.
 
-\subsection{Rolle der Nutzenden}
-Für die Rolle der Nutzenden soll im Folgenden die User Experience (UX) anhand des User Experience Questionnaires untersucht werden.\\
-Die Verwendung des UEQ ermöglicht eine schnelle Evaluation der User Experience interaktiver Produkte und misst dabei nicht nur Aspekte der Usability, wie Effizienz, Verständlichkeit und Steuerbarkeit, sondern auch Aspekte der User Experience, wie Stimulation und Originalität \citep{rauschenberger2013efficient}. Neben der Möglichkeit zum Vergleich zweier Produkte kann ein UEQ auch eingesetzt werden, um zu testen, ob ein Produkt eine ausreichende User Experience bietet \citep{schrepp2018user}. Dabei wird jeweils ein Fragebogen von Testkandidaten ausgefüllt. \glqq Der UEQ besteht . . . aus 26 bipolaren Items, die sich auf sechs Dimensionen verteilen. Die Items sind als siebenstufige Lickert-Skalen realisiert\grqq{} \citep{rauschenberger2013user}. Bei diesen sechs Dimensionen handelt es sich um
+\subsection{Methoden}
+Im Folgenden werden der User Experience Questionnaire und das Think-Aloud-Protokoll als Evaluationsmethoden vorgestellt. 
+
+\subsubsection{User Experience Questionnaire}
+Die Verwendung des User Experience Questionnaires ermöglicht eine schnelle Evaluation der User Experience (UX) interaktiver Produkte und misst dabei nicht nur Aspekte der Usability, wie Effizienz, Verständlichkeit und Steuerbarkeit, sondern auch Aspekte der User Experience, wie Stimulation und Originalität \citep{rauschenberger2013efficient}. Neben der Möglichkeit zum Vergleich zweier Produkte kann ein UEQ auch eingesetzt werden, um zu testen, ob ein Produkt eine ausreichende User Experience bietet \citep{schrepp2018user}. Dabei wird jeweils ein Fragebogen von Testkandidaten ausgefüllt. \glqq Der UEQ besteht . . . aus 26 bipolaren Items, die sich auf sechs Dimensionen verteilen. Die Items sind als siebenstufige Lickert-Skalen realisiert\grqq{} \citep{rauschenberger2013user}. Bei diesen sechs Dimensionen handelt es sich um
 
 \begin{itemize}
 \item Attraktivität,
@@ -302,11 +368,42 @@ Die Verwendung des UEQ ermöglicht eine schnelle Evaluation der User Experience 
 
 Die Fragebögen sollten durch die Testkandidaten möglichst direkt nach der Nutzung des Produktes ausgefüllt werden, damit die Testkandidaten nicht durch eine mögliche Diskussion beeinflusst werden \citep{schrepp2018user}. Bei der Auswertung der Fragebögen wird für jede Dimension ein Wert zwischen -3 und 3 ermittelt. Standardmäßig werden Werte zwischen -0,8 und 0,8 als neutrale, Werte größer 0,8 als positive und Werte kleiner -0,8 als negative Evaluation gewertet \citep{schrepp2018user}. Mit dem UEQ können zwar nicht direkt Punkte abgeleitet werden, welche eine Steigerung der User Experience mit sich bringen, dennoch hilft UEQ dabei, eine auf Sachkenntnis gestützte Vermutung über die Bereiche, welche den größten Einfluss auf die User Experience haben, zu äußern \citep{schrepp2018user}.
 
-Es soll nun eine Evaluation anhand eines UEQ für das Hyperaudio"=Plugin durchgeführt werden. Zu diesem Zweck wurde das Hyperaudio"=Plugin von fünf Testkandidaten nach kurzer Erläuterung des Grundgedankens des Hyperaudio"=Plugins unter die Lupe genommen. Direkt im Anschluss wurden die Testkandidaten gebeten, einen Standard-UEQ-Fragebogen auszufüllen. Bei der Auswertung der Fragebögen (siehe Anhang \ref{sec:ueqs}) wurden für die sechs Dimensionen die in Tabelle \ref{tab:EvalUEQ} aufgeführten Ergebnisse erzielt. In Abbildung \ref{fig:UEQ} sind diese grafisch aufbereitet. Für jede der Dimensionen wurden der Durchschnittswert sowie die Varianz ermittelt.
+\subsubsection{Think"=Aloud"=Protokoll}
+Eine alternative Methode stellt das sogenannte Think"=Aloud"=Protokoll beziehungsweise der Think"=Aloud"=Test dar. Bei einem Think"=Aloud"=Test werden die Testkandidaten darum gebeten, das Produkt zu verwenden und währenddessen ihre Gedanken laut auszusprechen \citep{nielsen2012thinking}. \cite{nielsen2012thinking} beschreibt das Vorgehen bei einem Think"=Aloud"=Tests mit den folgenden drei Schritten:
+
+\begin{enumerate}
+\item Recruit representative users.
+\item Give them representative tasks to perform.
+\item Shut up and let the users do the talking.
+\end{enumerate}
+
+Think-Aloud-Tests sind dementsprechend einfach und kostengünstig umsetzbar. Zudem sind sie robust, flexibel, überzeugend und einfach zu erlernen \citep{nielsen2012thinking}.
+
+\subsection{Anwendung der Methoden}
+Nachdem zwei mögliche Methoden für die Evaluation des Hyperaudio"=Plugins beschrieben wurden, soll nun eine Evaluation für die Rolle der Nutzenden anhand eines UEQ für das Hyperaudio"=Plugin durchgeführt werden. Zu diesem Zweck wurde das Hyperaudio"=Plugin von fünf Testkandidaten\footnote{Die Testkandidaten spiegeln in etwa den Altersschwerpunkt der Studierenden an der FernUniversität in Hagen wieder. Dieser liegt im Sommersemester 2018 bei 29 bis 35 Jahren \citep{fernuniversitaet2018stat}.} (vgl. Tabelle \ref{tab:EvalTestkandidaten}) nach kurzer Erläuterung des Grundgedankens des Hyperaudio"=Plugins unter die Lupe genommen. Direkt im Anschluss wurden die Testkandidaten gebeten, einen Standard-UEQ-Fragebogen auszufüllen. Bei der Auswertung der Fragebögen (siehe Anhang \ref{sec:ueqs}) wurden für die sechs Dimensionen die in Tabelle \ref{tab:EvalUEQ} aufgeführten Ergebnisse erzielt. In Abbildung \ref{fig:UEQ} sind diese grafisch aufbereitet. Für jede der Dimensionen wurden der Durchschnittswert sowie die Varianz ermittelt.
 
 \begin{table}[!ht]
 \def\arraystretch{1.4}
-\begin{tabularx}{\textwidth}{lcc}      
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lclll}      
+    \hline
+    Nr. & Geschlecht & Alter & höchster Schulabschluss & Beruf
+    \\\hline
+	1 & männlich & 32 & Matura & IT-Administrator\\
+	2 & weiblich & 31 & Allgemeine Hochschulreife & Industriekauffrau\\
+	3 & männlich & 32 & Mittlere Reife & Lagerist\\
+	4 & weiblich & 29 & Mittlere Reife & Bürokauffrau\\
+	5 & männlich & 27 & Fachgebundene Hochschulreife & Kaufmännischer Auszubildender\\
+    \hline
+    \end{tabular}}
+    \caption{Demografische Daten der Testkandidaten}
+\label{tab:EvalTestkandidaten}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\def\arraystretch{1.4}
+\begin{tabularx}{0.46\textwidth}{lcc}      
     \hline
     Dimension & Mittelwert & Varianz
     \\\hline
@@ -327,7 +424,7 @@ Es soll nun eine Evaluation anhand eines UEQ für das Hyperaudio"=Plugin durchge
 \caption{\label{fig:UEQ}Grafische Darstellung der Ergebnisse des UEQs}
 \end{figure}
 
-Die Ergebnisse zeigen auf, dass das Hyperaudio"=Plugin in vier Dimensionen knapp ein positives und in zwei Dimensionen ein neutrales Evaluationsergebnis erzielt. Hinsichtlich dieser beiden Dimensionen (Effizienz und Stimulation) sollte das Plugin somit nochmals optimiert werden. Bei Betrachtung der einzelnen Items scheint Verbesserungspotential bei der Übersichtlichkeit des Plugins zu herrschen (vgl. Tabelle \ref{tab:EvalUEQFragen}), was sich sowohl auf die Effizienz als auch die Durchschaubarkeit negativ auswirkt.
+Die Ergebnisse zeigen auf, dass das Hyperaudio"=Plugin in vier Dimensionen knapp ein positives und in zwei Dimensionen ein neutrales Evaluationsergebnis erzielt. Hinsichtlich dieser beiden Dimensionen (Effizienz und Stimulation) sollte das Plugin somit nochmals optimiert werden. Bei Betrachtung der einzelnen Items (vgl. Tabelle \ref{tab:EvalUEQFragen}) ist festzustellen, dass Verbesserungspotential bei der Gestaltung des Plugins zu herrschen scheint, was sich sowohl auf die Effizienz als auch die Durchschaubarkeit negativ auswirkt.
 %Außerdem ist erkennbar, dass sich in den Dimensionen Steuerbarkeit und Effizienz eine hohe Varianz ergibt. Dies lässt darauf schließen, dass diese Dimensionen je nach Testkandidat sehr unterschiedlich wahrgenommen werden.
 
 \begin{table}[!ht]
@@ -369,21 +466,8 @@ Die Ergebnisse zeigen auf, dass das Hyperaudio"=Plugin in vier Dimensionen knapp
 \label{tab:EvalUEQFragen}
 \end{table}
 
-\todo[inline]{Auswertung der Fragen ergänzen}
-
-\subsection{Rolle der Administrierenden}
-Auf die Evaluation für die Rolle der Nutzenden sollte nun auch eine Evaluation für die Rolle der Administrierenden folgen. Natürlich könnten hierfür ebenfalls die im vorherigen Abschnitt beschriebene Methode des UEQ durchgeführt werden, es soll nun aber eine weitere Art der Evaluation aufgezeigt werden. Eine alternative Methode stellt das sogenannte Think"=Aloud"=Protokoll beziehungsweise der Think"=Aloud"=Test dar. Bei einem Think"=Aloud"=Test werden die Testkandidaten darum gebeten, das Produkt zu verwenden und währenddessen ihre Gedanken laut auszusprechen \citep{nielsen2012thinking}. \cite{nielsen2012thinking} beschreibt das Vorgehen bei einem Think"=Aloud"=Tests mit den folgenden drei Schritten:
-
-\begin{enumerate}
-\item Recruit representative users.
-\item Give them representative tasks to perform.
-\item Shut up and let the users do the talking.
-\end{enumerate}
-
-\todo[inline]{Zitierweise Aufzählung}
-
-Think-Aloud-Tests sind dementsprechend einfach und kostengünstig umsetzbar. Zudem sind sie robust, flexibel, überzeugend und einfach zu erlernen \citep{nielsen2012thinking}. Somit stellt ein Think"=Aloud"=Test eine geeignete Evaluationsmethode für die Rolle der Administrierenden dar.\\
-Für die Durchführung eines Think"=Aloud"=Tests für das Hyperaudio"=Plugin müssten zunächst einige Lehrende ausgewählt werden. Diese müssten daraufhin ausgewählte Aufgaben innerhalb des administrativen Bereichs des Hyperaudio"=Plugins erledigen. Hier wäre beispielsweise das Erstellen einer Hyperaudio"=Aktivität in ihrem Kurs denkbar oder auch das Austauschen eines Zusatzinhaltes innerhalb einer Hyperaudio"=Aktivität. Die während des Think"=Aloud"=Tests geäußerten Gedanken der Lehrenden werden festgehalten, um daraus Rückschlüsse bezüglich der Funktionen und Bedienung des Hyperaudio"=Plugins ziehen zu können.
+Auf die Evaluation für die Rolle der Nutzenden sollte auch eine Evaluation für die Rolle der Administrierenden folgen. In diesem Fall soll nun beschrieben werden, wie das Vorgehen bei einem Think"=Aloud"=Test aussehen würde.\\
+Für die Durchführung eines Think"=Aloud"=Tests für das Hyperaudio"=Plugin müssten zunächst einige Lehrende ausgewählt werden. Diese müssten daraufhin ausgewählte Aufgaben innerhalb des administrativen Bereichs des Hyperaudio"=Plugins erledigen. Hier wäre beispielsweise das Erstellen einer Hyperaudio"=Aktivität in ihrem Kurs denkbar oder auch das Austauschen eines Zusatzinhaltes innerhalb einer Hyperaudio"=Aktivität. Die während des Think"=Aloud"=Tests geäußerten Gedanken der Lehrenden werden festgehalten, um daraus Rückschlüsse bezüglich der Funktionen und Bedienung des Hyperaudio"=Plugins ziehen zu können. Mit dieser Vorgehensweise könnte somit eine Evaluation für die Rolle der Administrierenden durchgeführt werden.
 
 
 
@@ -391,7 +475,6 @@ Für die Durchführung eines Think"=Aloud"=Tests für das Hyperaudio"=Plugin mü
 %https://www.nngroup.com/articles/thinking-aloud-the-1-usability-tool/
 %\todo[inline]{Sie sollten dann aber darlegen, wie eine Evaluation mit den Lehrenden aussehen sollte (Ablauf, Fragen, Testinstrumente, Vorgehensweise). Viele Studierende wenden in diesem Kontext das Think aloud protocol an.}
 
-\todo[inline]{Reihenfolge UEQ/Think-Aloud, Nutzende/Administrierende}
 
 
 \section{Verbesserungsvorschläge}

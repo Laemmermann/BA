@@ -15,13 +15,14 @@
 
 %%%%%%%%%%
 \captionsetup[figure]{justification=centering}
-%\captionsetup[table]{justification=left}
+\captionsetup[table]{justification=centering}
 \captionsetup[subfigure]{labelformat=brace}
 \newcommand\Subref[3][]{%
    \ref{#2}(\subref{#3}%
    \ifthenelse{\equal{#1}{}}{}{-\subref{#1}}%
    )}
 %%%%%%%%%%
+\usepackage{bbding}
 \usepackage{courier}
 \usepackage{xcolor}
 \usepackage{textcomp}
@@ -292,10 +293,12 @@ Datum: \today\\
 \textbf{PDF} & Portable Document Format \\
 \textbf{PHP} & PHP: Hypertext Preprocessor \\
 \textbf{SQL} & Structured Query Language \\
+\textbf{SS} & Sommersemester \\
 \textbf{UEQ} & User Experience Questionnaire \\
 \textbf{URL} & Uniform Resource Locator \\
 \textbf{UX} & User Experience \\
 \textbf{VU} & Virtuelle Universität \\
+\textbf{WS} & Wintersemester \\
 \textbf{XML} & Extensible Markup Language \\
 \end{longtable}
 \cleardoublepage
