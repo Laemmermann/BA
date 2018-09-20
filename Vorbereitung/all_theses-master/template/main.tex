@@ -250,21 +250,21 @@ Zur Verwaltung von Bibliografien verwenden wir \textit{Natbib}. Um damit ein Wer
 Als Zitierstil wird APA empfohlen, da im Text sowohl die Autoren, als auch das Erscheinungsjahr unmittelbar nachvollzogen werden kann. Genauere Informationen zur korrekten Zitierweise finden Sie unter \url{http://www.apastyle.org/} (abgerufen am 13.05.2018).
 
 Fußnoten dienen nicht zur Angabe von Zitationen. Sie können jedoch genutzt werden, um dem Leser zusätzliche Informationen zu vermitteln, die ansonsten den Lesefluss des Haupttextes stören würden (z.B. URLs\footnote{Siehe \url{https:\\example.com/} (abgerufen am 13.05.2018).}).
-
-\begin{table}\footnotesize
-\caption{\label{zitiercmd}Zitation von Literatur}
-\begin{tabularx}{\textwidth}{lXX}
-\hline
-Befehl & Beispiel & Beschreibung\\\hline
-\verb|\citet{}| & \citet{Guerra-Hollstein2017} & Aktive Zitierweise\\
-\verb|\citep{}| & \citep{Guerra-Hollstein2017} & Passive Zitierweise\\
-\verb|\citet*{}| & \citet*{Guerra-Hollstein2017} & Wie \verb|\citet|, wobei all Autoren genannt werden\\
-%\citep*{Guerra-Hollstein2017} & Wie \verb|\citep|, wobei all Autoren genannt werden\\ 
-\verb|\citeauthor{}| & \citeauthor{Guerra-Hollstein2017} & Gibt nur die Namen der Autoren aus\\
-\verb|\citeyear| & \citeyear{Guerra-Hollstein2017} & Gibt nur das Erscheinungsjahr aus\\
-\hline
-\end{tabularx}
-\end{table}
+%
+%\begin{table}\footnotesize
+%\caption{\label{zitiercmd}Zitation von Literatur}
+%\begin{tabularx}{\textwidth}{lXX}
+%\hline
+%Befehl & Beispiel & Beschreibung\\\hline
+%\verb|\citet{}| &  & Aktive Zitierweise\\
+%\verb|\citep{}| &  Passive Zitierweise\\
+%\verb|\citet*{}| & \citet*{Guerra-Hollstein2017} & Wie \verb|\citet|, wobei all Autoren genannt werden\\
+%%\citep*{Guerra-Hollstein2017} & Wie \verb|\citep|, wobei all Autoren genannt werden\\ 
+%\verb|\citeauthor{}| & \citeauthor{Guerra-Hollstein2017} & Gibt nur die Namen der Autoren aus\\
+%\verb|\citeyear| & \citeyear{Guerra-Hollstein2017} & Gibt nur das Erscheinungsjahr aus\\
+%\hline
+%\end{tabularx}
+%\end{table}
 
 %%%%%%%%
 \section{Sonstiges}
@@ -295,8 +295,8 @@ Kommentare im Quelltext werden im PDF nicht angezeigt:\\ Definitionen: \verb|\be
 \dots
 
 %%
-\chapter{Zweiter Teil des Anhangs}
-\dots
+%\chapter{Zweiter Teil des Anhangs}
+%\dots
 
 
 
@@ -345,13 +345,7 @@ Kommentare im Quelltext werden im PDF nicht angezeigt:\\ Definitionen: \verb|\be
 \phantomsection\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
 \chapter*{Abkürzungsverzeichnis}
 
-\begin{description}
-\item[AICC] Aviation Industry Computer-Based Training Committee
-\item[AJAX] Asynchronous JavaScript and XML
-\item[API] Application Programing Interface
-\item[BMBF] Bundesministerium für Bildung und Forschung
-\end{description}
-\cleardoublepage
+
 
 
 %% Erklärung ...

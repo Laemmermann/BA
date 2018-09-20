@@ -49,44 +49,46 @@
 \contentsline {subsection}{\numberline {4.4.4}Kommentare und Notizen}{39}{subsection.141}
 \contentsline {subsection}{\numberline {4.4.5}Zusammenf\IeC {\"u}hren der Elemente}{42}{subsection.143}
 \contentsline {subsection}{\numberline {4.4.6}Mobile Version}{42}{subsection.145}
-\contentsline {section}{\numberline {4.5}Zusammenfassung}{45}{section.147}
-\contentsline {chapter}{\numberline {5}Implementierung}{46}{chapter.148}
-\contentsline {section}{\numberline {5.1}Struktur des Hyperaudio-Plugins}{46}{section.149}
-\contentsline {subsubsection}{\nonumberline Aufbau eines Moodle-Plugins}{46}{section*.150}
-\contentsline {subsubsection}{\nonumberline Architektur des Hyperaudio-Plugins}{48}{section*.153}
-\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{48}{section.155}
-\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{48}{subsection.156}
-\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{51}{subsection.248}
-\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{53}{subsection.355}
-\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{55}{subsection.406}
-\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{58}{subsection.534}
-\contentsline {subsection}{\numberline {5.2.6}Notizen}{59}{subsection.556}
-\contentsline {subsection}{\numberline {5.2.7}Audio Cues}{60}{subsection.582}
-\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{61}{subsection.619}
-\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare und Notizen}{61}{subsection.627}
-\contentsline {subsection}{\numberline {5.2.10}Lesezeichen}{63}{subsection.717}
-\contentsline {subsection}{\numberline {5.2.11}Suche, Filter und Sortierung bei Kommentaren}{64}{subsection.743}
-\contentsline {subsection}{\numberline {5.2.12}Unterst\IeC {\"u}tzung mobiler Endger\IeC {\"a}te}{66}{subsection.789}
-\contentsline {section}{\numberline {5.3}Zusammenfassung}{71}{section.849}
-\contentsline {chapter}{\numberline {6}Evaluation}{72}{chapter.850}
-\contentsline {section}{\numberline {6.1}Validierung der User Stories und Anforderungen}{72}{section.851}
-\contentsline {section}{\numberline {6.2}Evaluation des Hyperaudio-Plugins}{77}{section.884}
-\contentsline {subsection}{\numberline {6.2.1}Methoden}{78}{subsection.885}
-\contentsline {subsubsection}{\nonumberline User Experience Questionnaire}{78}{section*.886}
-\contentsline {subsubsection}{\nonumberline Think"=Aloud"=Protokoll}{78}{section*.887}
-\contentsline {subsection}{\numberline {6.2.2}Anwendung der Methoden}{79}{subsection.891}
-\contentsline {section}{\numberline {6.3}Verbesserungsvorschl\IeC {\"a}ge}{81}{section.897}
-\contentsline {section}{\numberline {6.4}Zusammenfassung}{82}{section.909}
-\contentsline {chapter}{\numberline {7}Fazit}{83}{chapter.910}
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{83}{section.911}
-\contentsline {section}{\numberline {7.2}Ausblick}{84}{section.912}
-\contentsline {chapter}{\numberline {A}Auswertungen}{86}{appendix.914}
-\contentsline {section}{\numberline {A.1}Textanteil der Kurseinheiten}{86}{section.915}
-\contentsline {section}{\numberline {A.2}Einsatz von Moodle}{89}{section.921}
-\contentsline {section}{\numberline {A.3}UEQ}{89}{section.923}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{97}{chapter*.929}
-\contentsline {chapter}{Abbildungsverzeichnis}{101}{section*.930}
-\contentsline {chapter}{Tabellenverzeichnis}{103}{section*.931}
-\contentsline {chapter}{Auflistungsverzeichnis}{105}{section*.932}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{107}{section*.934}
+\contentsline {section}{\numberline {4.5}Zusammenfassung}{44}{section.147}
+\contentsline {chapter}{\numberline {5}Implementierung}{45}{chapter.148}
+\contentsline {section}{\numberline {5.1}Struktur des Hyperaudio-Plugins}{45}{section.149}
+\contentsline {subsubsection}{\nonumberline Aufbau eines Moodle-Plugins}{45}{section*.150}
+\contentsline {subsubsection}{\nonumberline Architektur des Hyperaudio-Plugins}{47}{section*.153}
+\contentsline {section}{\numberline {5.2}Iterative Entwicklung}{47}{section.155}
+\contentsline {subsection}{\numberline {5.2.1}Speichern und Abspielen einer Audio-Datei}{47}{subsection.156}
+\contentsline {subsection}{\numberline {5.2.2}Speichern und Anzeige von Zusatzinhalten}{50}{subsection.248}
+\contentsline {subsection}{\numberline {5.2.3}Einbindung der Konfigurationsdatei}{52}{subsection.355}
+\contentsline {subsection}{\numberline {5.2.4}Speichern und Anzeige von Kommentaren}{54}{subsection.406}
+\contentsline {subsection}{\numberline {5.2.5}Antworten auf Kommentare}{57}{subsection.534}
+\contentsline {subsection}{\numberline {5.2.6}Notizen}{58}{subsection.556}
+\contentsline {subsection}{\numberline {5.2.7}Audio Cues}{59}{subsection.582}
+\contentsline {subsection}{\numberline {5.2.8}Galerie der Zusatzinhalte}{60}{subsection.619}
+\contentsline {subsection}{\numberline {5.2.9}Zeitabh\IeC {\"a}ngige Visualisierung der Kommentare und Notizen}{60}{subsection.627}
+\contentsline {subsection}{\numberline {5.2.10}Lesezeichen}{62}{subsection.717}
+\contentsline {subsection}{\numberline {5.2.11}Suche, Filter und Sortierung bei Kommentaren}{63}{subsection.743}
+\contentsline {subsection}{\numberline {5.2.12}Unterst\IeC {\"u}tzung mobiler Endger\IeC {\"a}te}{65}{subsection.789}
+\contentsline {section}{\numberline {5.3}Zusammenfassung}{67}{section.849}
+\contentsline {chapter}{\numberline {6}Evaluation}{70}{chapter.850}
+\contentsline {section}{\numberline {6.1}Validierung der User Stories und Anforderungen}{70}{section.851}
+\contentsline {section}{\numberline {6.2}Evaluation des Hyperaudio-Plugins}{75}{section.884}
+\contentsline {subsection}{\numberline {6.2.1}Methoden}{76}{subsection.885}
+\contentsline {subsubsection}{\nonumberline User Experience Questionnaire}{76}{section*.886}
+\contentsline {subsubsection}{\nonumberline Think"=Aloud"=Protokoll}{76}{section*.887}
+\contentsline {subsection}{\numberline {6.2.2}Anwendung der Methoden}{77}{subsection.891}
+\contentsline {section}{\numberline {6.3}Verbesserungsvorschl\IeC {\"a}ge}{79}{section.897}
+\contentsline {section}{\numberline {6.4}Zusammenfassung}{79}{section.908}
+\contentsline {chapter}{\numberline {7}Fazit}{81}{chapter.909}
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{81}{section.910}
+\contentsline {section}{\numberline {7.2}Ausblick}{82}{section.911}
+\contentsline {chapter}{\numberline {A}Auswertungen}{84}{appendix.913}
+\contentsline {section}{\numberline {A.1}Textanteil der Kurseinheiten}{84}{section.914}
+\contentsline {section}{\numberline {A.2}Einsatz von Moodle}{87}{section.920}
+\contentsline {chapter}{\numberline {B}Evaluationsergebnisse}{89}{appendix.922}
+\contentsline {section}{\numberline {B.1}UEQ}{89}{section.923}
+\contentsline {section}{\numberline {B.2}Gespr\IeC {\"a}chsnotizen}{94}{section.929}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{97}{chapter*.935}
+\contentsline {chapter}{Abbildungsverzeichnis}{101}{section*.936}
+\contentsline {chapter}{Tabellenverzeichnis}{103}{section*.937}
+\contentsline {chapter}{Auflistungsverzeichnis}{105}{section*.938}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{107}{section*.940}
 \contentsfinish 

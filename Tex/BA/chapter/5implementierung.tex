@@ -28,7 +28,7 @@ Das Icon, welches für das Plugin  verwendet werden soll, muss im Ordner \textbf
 Im Ordner \textbf{/hyperaudio} liegen darüber hinaus die Dateien \textbf{lib.php}, \textbf{mod\underline{{ }}form.php}, \textbf{index.php}, \textbf{view.php} und \textbf{version.php}.\\
 Die \textbf{lib.php} dient dazu, Standardfunktionen von Moodle zu überschreiben, wobei \mbox{\texttt{<pluginname>\underline{{ }}add\underline{{ }}instance}}, \texttt{<pluginname>\underline{{ }}update\underline{{ }}instance} und \texttt{<pluginname>\underline{{ }}delete\underline{{ }}instance} als essenzielle Funktionen zu nennen sind. Mit diesen Funktionen wird das Anlegen, Aktualisieren und Löschen von Instanzen des Plugins ermöglicht.\\
 Zum Anlegen und Aktualisieren wird in der \textbf{mod\underline{{ }}form.php} die dazugehörige Maske festgelegt.\\
-Die \textbf{\textit{index.php}} dient der Auflistung aller Instanzen eines Plugins innerhalb eines Kurses, worüber sich somit eine statistische Ansicht für den jeweiligen Kurs definieren lässt. Je nach Umsetzung kann der Inhalt dieser Auflistung unterschiedlich viele Informationen zu den Instanzen bereitstellen. Auch ist es beispielsweise anhand der Berechtigungen aus der \textbf{access.php} möglich, gewisse Inforationen nur bestimmten Benutzern anzuzeigen.\\
+Die \textbf{\textit{index.php}} dient der Auflistung aller Instanzen eines Plugins innerhalb eines Kurses, worüber sich somit eine statistische Ansicht für den jeweiligen Kurs definieren lässt. Je nach Umsetzung kann der Inhalt dieser Auflistung unterschiedlich viele Informationen zu den Instanzen bereitstellen. Auch ist es beispielsweise anhand der Berechtigungen aus der \textbf{access.php} möglich, gewisse Informationen nur bestimmten Benutzern anzuzeigen.\\
 Die erste Datei, die beim Öffnen der Aktivität geladen wird, ist die \textbf{view.php}, welche dementsprechend vornehmlich der Anzeige der Inhalte dient.\\
 In der \textbf{version.php} wird die Version des Plugins gepflegt. Erhöht sich die Versionsnummer in der \textbf{version.php}, wird der automatische Upgradeprozess von Moodle für das Plugin ausgelöst.
 
@@ -315,7 +315,7 @@ echo $output;
 Mit diesen Erweiterungen wurde das Ziel der zweiten Iteration erreicht. Es war nun möglich, Zusatzinhalte abzuspeichern und diese unter Verwendung von \textit{Popcorn.js} zeitabhängig zur Audio-Datei darstellen zu lassen.
 
 \subsection{Einbindung der Konfigurationsdatei}
-Damit die Beispieldaten durch tatsächliche Metadateninformationen ausgetauscht werden konnte, war in der dritten Iteration die Einbindung der Konfigurationsdatei notwendig. Zu Beginn dieser Iteration stand erneut die Erweiterung der \textbf{mod\underline{{ }}form.php} um einen weiteren \textit{filemanager}, der maximal eine Konfigurationsdatei im JSON-Format entgegennimmt. Die Speicherung verläuft analog zur Speicherung der Zusatzinhalte. In diesem Zuge wurden also erneut die \textbf{lib.php} und \textbf{locallib.php} entsprechend erweitert. Neben den Funktionen \texttt{hyperaudio\underline{{ }}update\underline{{ }}hyperaudio\underline{{ }}config} und \texttt{hyperaudio\underline{{ }}delete\underline{{ }}hyperaudio\underline{{ }}config} wurde, wie in Auflistung \ref{lst:it3:locallib} zu erkennen, die Funktion \texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content} erweitert. Es ist zu entnehmen, dass zunächst die Inhalte der Konfigurationsdatei mithilfe der Funktion \texttt{hyperaudio\underline{{ }}parse\underline{{ }}hyperaudio\underline{{ }}config} ausgelesen werden, um diese Metadaten dann beim Abspeichern der Zusatzinhalte zu verwenden.
+Damit die Beispieldaten durch tatsächliche Metadateninformationen ausgetauscht werden konnten, war in der dritten Iteration die Einbindung der Konfigurationsdatei notwendig. Zu Beginn dieser Iteration stand erneut die Erweiterung der \textbf{mod\underline{{ }}form.php} um einen weiteren \textit{filemanager}, der maximal eine Konfigurationsdatei im JSON-Format entgegennimmt. Die Speicherung verläuft analog zur Speicherung der Zusatzinhalte. In diesem Zuge wurden also erneut die \textbf{lib.php} und \textbf{locallib.php} entsprechend erweitert. Neben den Funktionen \texttt{hyperaudio\underline{{ }}update\underline{{ }}hyperaudio\underline{{ }}config} und \texttt{hyperaudio\underline{{ }}delete\underline{{ }}hyperaudio\underline{{ }}config} wurde, wie in Auflistung \ref{lst:it3:locallib} zu erkennen, die Funktion \texttt{hyperaudio\underline{{ }}update\underline{{ }}additional\underline{{ }}content} erweitert. Es ist zu entnehmen, dass zunächst die Inhalte der Konfigurationsdatei mithilfe der Funktion \texttt{hyperaudio\underline{{ }}parse\underline{{ }}hyperaudio\underline{{ }}config} ausgelesen werden, um diese Metadaten dann beim Abspeichern der Zusatzinhalte zu verwenden.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -402,7 +402,7 @@ $output .= '<div id="hyperaudio_comments"></div>';
 
 Das Speichern sowie das Anzeigen der Kommentare wurde unter Einsatz von Webservices, welche durch ein JavaScript-Modul (\textbf{/hyperaudio/AMD/src/hyperaudio.js}) angesprochen werden, realisiert. Hierfür wurden zusätzlich die Dateien \textbf{services.php} (\textbf{/hyperaudio/db}) und \textbf{external.php} (\textbf{/hyperaudio/classes}) für die Bereitstellung der Webservices benötigt.
 
-In der \textbf{services.php} wurden zunächst die nötigen Webservices deklariert (siehe Auflistung \ref{lst:it4:services}). Hier wird lediglich auf die \textbf{external.php} verwiesen, die den eigentlichen Code der Webservices beinhalten.
+In der \textbf{services.php} wurden zunächst die nötigen Webservices deklariert (siehe Auflistung \ref{lst:it4:services}). Hier wird lediglich auf die \textbf{external.php} verwiesen, die den eigentlichen Code der Webservices beinhaltet.
 
 \begin{lstlisting}[language=php,
              linewidth=\textwidth,
@@ -507,7 +507,7 @@ class mod_hyperaudio_external extends external_api {
 \end{lstlisting}
 
 Für den Zugriff auf die Webservices wurde das JavaScript-Modul \textbf{hyperaudio.js}, welches sich im Ordner \textbf{/hyperaudio/AMD} befindet, eingeführt. Das Modul dient dazu die im Renderer definierten Elemente zu befüllen beziehungsweise auszulesen.
-Die Funktion zum Speichern eines Kommentars ist exemplarisch in Auflistung \ref{lst:it4:hyperaudio} dargestellt. Zunächst werden die im Renderer erstellten Elemente zum Erstellen eines Kommentars ausgelesen. Um Funktionen die mehrfach benötigt werden, wie die Funktion \texttt{get\underline{{ }}hyperaudio\underline{{ }}id},  auszugliedern, wurde die Datei \textbf{locallib.js} im Ordner \textbf{/hyperaudio/thirdparty} implementiert. Nachdem die Elemente ausgelesen wurden, wird mittels eines AJAX-Calls der Webservice \texttt{mod\underline{{ }}hyperaudio\underline{{ }}save\underline{{ }}comment} aufgerufen und die benötigten Parameter übergeben. Hierbei ist hervorzuheben, dass der Zeitpunkt, zu dem der Kommentar an das Hyperaudio-Dokument annotiert wird, über die Funktion \texttt{currentTime} des \textit{Popcorn.js}-Frameworks ermittelt werden kann. Bei der Funktion \texttt{show\underline{{ }}comments} zum Darstellen der Kommentare wurde analog vorgegangen, nur dass durch den Webservice die Kommentare für das betroffene Hyperaudio-Dokumente abgefragt und innerhalb des dazugehörigen Elements des Renderers dargestellt werden.
+Die Funktion zum Speichern eines Kommentars ist exemplarisch in Auflistung \ref{lst:it4:hyperaudio} dargestellt. Zunächst werden die im Renderer erstellten Elemente zum Erstellen eines Kommentars ausgelesen. Um Funktionen die mehrfach benötigt werden, wie die Funktion \texttt{get\underline{{ }}hyperaudio\underline{{ }}id},  auszugliedern, wurde die Datei \textbf{locallib.js} im Ordner \mbox{\textbf{/hyperaudio/thirdparty}} implementiert. Nachdem die Elemente ausgelesen wurden, wird mittels eines AJAX-Calls der Webservice \texttt{mod\underline{{ }}hyperaudio\underline{{ }}save\underline{{ }}comment} aufgerufen und die benötigten Parameter übergeben. Hierbei ist hervorzuheben, dass der Zeitpunkt, zu dem der Kommentar an das Hyperaudio-Dokument annotiert wird, über die Funktion \texttt{currentTime} des \textit{Popcorn.js}-Frameworks ermittelt werden kann. Bei der Funktion \texttt{show\underline{{ }}comments} zum Darstellen der Kommentare wurde analog vorgegangen, nur dass durch den Webservice die Kommentare für das betroffene Hyperaudio-Dokumente abgefragt und innerhalb des dazugehörigen Elements des Renderers dargestellt werden.
 
 
 \begin{lstlisting}[language=php,
@@ -1082,23 +1082,21 @@ div#hyperaudio div#comment_tools_order {
 \end{lstlisting}
 
 \begin{figure}[h!]
-\includegraphics[width=0.85\textwidth,center]{Desktop.png}
+\includegraphics[width=0.95\textwidth,center]{Desktop.png}
 \caption{\label{fig:DesktopFinal}Darstellung der finalen Desktop-Version}
 \end{figure}
 
 \begin{figure}[h!]
 \begin{subfigure}[c]{0.5\textwidth}
-\includegraphics[width=0.9\textwidth,center]{Mobil1.png}
+\includegraphics[width=0.95\textwidth,center]{Mobil1.png}
 \end{subfigure}%
 \begin{subfigure}[c]{0.5\textwidth}
-\includegraphics[width=0.9\textwidth,center]{Mobil2.png}
+\includegraphics[width=0.95\textwidth,center]{Mobil2.png}
 \end{subfigure}
 \caption{Darstellung der finalen mobilen Version}
 \label{fig:MobilFinal}
 \end{figure}
 
-\FloatBarrier
-
 %%%%%%%%%%
 \section{Zusammenfassung}
-Nachdem zu Beginn der Implementierung die grundlegende Moodle-Struktur erarbeitet wurde, wurden in den darauffolgenden Iterationen das Hyperaudio"=Plugin Schritt für Schritt um die einzelnen Anforderungen erweitert. Somit ist am Ende die in Abbildung \ref{fig:DesktopFinal} sichtbar finale Repräsentation von Kurseinheiten als Hyperaudio"=Dokumente innerhalb eines Moodle-Plugins entstanden. In der letzten Iteration wurde dann noch die Darstellung auf mobilen Endgeräten implementiert.
+Nachdem zu Beginn der Implementierung die grundlegende Moodle-Struktur erarbeitet wurde, wurden in den darauffolgenden Iterationen das Hyperaudio"=Plugin Schritt für Schritt um die einzelnen Anforderungen erweitert. Somit ist am Ende die in Abbildung \ref{fig:DesktopFinal} sichtbar finale Repräsentation von Kurseinheiten als Hyperaudio"=Dokumente innerhalb eines Moodle-Plugins entstanden. In der letzten Iteration wurde dann noch die Darstellung auf mobilen Endgeräten implementiert (vgl. Abbildung \ref{fig:MobilFinal}).

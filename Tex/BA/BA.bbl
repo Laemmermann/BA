@@ -20,7 +20,7 @@ Larry~L. Constantine.
 \newblock {Usage-Centered Software Engineering: New Models, Methods and
   Metrics}.
 \newblock In \emph{Proceedings of the 1996 International Conference on Software
-  Engineering: Education and Practice (SE:EP '96)}, SEEP '96, pages 2--,
+  Engineering: Education and Practice (SE:EP '96)}, SEEP '96, pages 2--9,
   Washington, DC, USA, 1996. IEEE Computer Society.
 \newblock ISBN 0-8186-7379-6.
 \newblock URL \url{http://dl.acm.org/citation.cfm?id=829500.829892}.
@@ -33,18 +33,18 @@ Alan Cooper et~al.
 
 \bibitem[Dillenbourg(1999)]{dillenbourg1999collaborative}
 Pierre Dillenbourg.
-\newblock \emph{Collaborative learning: Cognitive and computational approaches.
-  advances in learning and instruction series.}
+\newblock \emph{Collaborative Learning: Cognitive and Computational Approaches.
+  Advances in Learning and Instruction Series}.
 \newblock ERIC, 1999.
 
-\bibitem[Dillenbourg et~al.(1995)Dillenbourg, Baker, Blaye, and
+\bibitem[Dillenbourg et~al.(1995)Dillenbourg, Baker, Blaye, und
   O'Malley]{dillenbourg1995evolution}
-Pierre Dillenbourg, Michael~J Baker, Agnes Blaye, and Claire O'Malley.
+Pierre Dillenbourg, Michael~J Baker, Agnes Blaye, und Claire O'Malley.
 \newblock The evolution of research on collaborative learning, 1995.
 
-\bibitem[Donker and Blenn(2007)]{donker2007gestaltung}
-Hilko Donker and Norbert Blenn.
-\newblock Gestaltung von hyperlinks in einer hyperaudio-enzyklop{\"a}die.
+\bibitem[Donker und Blenn(2007)]{donker2007gestaltung}
+Hilko Donker und Norbert Blenn.
+\newblock {Gestaltung von Hyperlinks in einer Hyperaudio-Enzyklop{\"a}die.}
 \newblock In \emph{Mensch \& Computer}, pages 139--148, 2007.
 
 \bibitem[{FernUniversität in Hagen}(2014)]{fernuniversitaet2018kurs}
@@ -131,9 +131,9 @@ Hilko Donker and Norbert Blenn.
 \newblock \url{http://be-responsive.de/code/}, o.D.
 \newblock abgerufen am 27.08.2018.
 
-\bibitem[Kerres and Jechle(2002)]{kerres2002didaktische}
-Michael Kerres and Thomas Jechle.
-\newblock Didaktische konzeption des telelernens.
+\bibitem[Kerres und Jechle(2002)]{kerres2002didaktische}
+Michael Kerres und Thomas Jechle.
+\newblock {Didaktische Konzeption des Telelernens}.
 \newblock \emph{Information und Lernen mit Multimedia und Internet},
   3:\penalty0 267--281, 2002.
 
@@ -227,8 +227,8 @@ Marshall McLuhan.
 \newblock \url{https://moodle.net/stats/}, 2018{\natexlab{f}}.
 \newblock abgerufen am 28.07.2018.
 
-\bibitem[Moos and Marroquin(2010)]{moos2010multimedia}
-Daniel~C Moos and Elizabeth Marroquin.
+\bibitem[Moos und Marroquin(2010)]{moos2010multimedia}
+Daniel~C Moos und Elizabeth Marroquin.
 \newblock {Multimedia, hypermedia, and hypertext: Motivation considered and
   reconsidered}.
 \newblock \emph{Computers in Human Behavior}, 26\penalty0 (3):\penalty0
@@ -243,7 +243,7 @@ Theodor~H Nelson.
 
 \bibitem[Nielsen(2012)]{nielsen2012thinking}
 Jakob Nielsen.
-\newblock {Thinking aloud: The\# 1 usability tool}.
+\newblock {Thinking Aloud: The \#1 Usability Tool}.
 \newblock \emph{Nielsen Norman Group [online]. January}, 16, 2012.
 
 \bibitem[Nielsen(2013)]{nielsen2013multimedia}
@@ -252,17 +252,17 @@ Jakob Nielsen.
   elektronischen Publizierens}}.
 \newblock Springer-Verlag, 2013.
 
-\bibitem[Norman and Draper(1986)]{Norman1986user}
-Donald~A. Norman and Stephen~W. Draper.
+\bibitem[Norman und Draper(1986)]{Norman1986user}
+Donald~A. Norman und Stephen~W. Draper.
 \newblock \emph{{User Centered System Design; New Perspectives on
   Human-Computer Interaction}}.
 \newblock L. Erlbaum Associates Inc., Hillsdale, NJ, USA, 1986.
 \newblock ISBN 0898597811.
 
-\bibitem[Nurseitov et~al.(2009)Nurseitov, Paulson, Reynolds, and
+\bibitem[Nurseitov et~al.(2009)Nurseitov, Paulson, Reynolds, und
   Izurieta]{nurseitov2009comparison}
-Nurzhan Nurseitov, Michael Paulson, Randall Reynolds, and Clemente Izurieta.
-\newblock Comparison of json and xml data interchange formats: a case study.
+Nurzhan Nurseitov, Michael Paulson, Randall Reynolds, und Clemente Izurieta.
+\newblock {Comparison of JSON and XML data interchange formats: a case study.}
 \newblock \emph{Caine}, 9:\penalty0 157--162, 2009.
 
 \bibitem[Oppermann(2002)]{oppermann2002user}
@@ -279,39 +279,39 @@ Reinhard Oppermann.
 \newblock abgerufen am 30.07.2018.
 
 \bibitem[Rauschenberger et~al.(2013{\natexlab{a}})Rauschenberger, Schrepp,
-  Cota, Olschner, and Thomaschewski]{rauschenberger2013efficient}
+  Cota, Olschner, und Thomaschewski]{rauschenberger2013efficient}
 Maria Rauschenberger, Martin Schrepp, Manuel~P{\'e}rez Cota, Siegfried
-  Olschner, and J{\"o}rg Thomaschewski.
-\newblock Efficient measurement of the user experience of interactive products.
-  how to use the user experience questionnaire (ueq). example: spanish language
-  version.
+  Olschner, und J{\"o}rg Thomaschewski.
+\newblock {Efficient measurement of the user experience of interactive
+  products. How to use the user experience questionnaire (ueq). example:
+  spanish language version}.
 \newblock \emph{International Journal of Artificial Intelligence and
   Interactive Multimedia. 2013; 2 (1): 39-45}, 2013{\natexlab{a}}.
 
-\bibitem[Rauschenberger et~al.(2013{\natexlab{b}})Rauschenberger, Schrepp, and
+\bibitem[Rauschenberger et~al.(2013{\natexlab{b}})Rauschenberger, Schrepp, und
   Thomaschewski]{rauschenberger2013user}
-Maria Rauschenberger, Martin Schrepp, and J{\"o}rg Thomaschewski.
-\newblock User experience mit frageb{\"o}gen messen--durchf{\"u}hrung und
-  auswertung am beispiel des ueq.
+Maria Rauschenberger, Martin Schrepp, und J{\"o}rg Thomaschewski.
+\newblock {User Experience mit Frageb{\"o}gen messen -- Durchf{\"u}hrung und
+  Auswertung am Beispiel des UEQ}.
 \newblock \emph{Tagungsband UP13}, 2013{\natexlab{b}}.
 
-\bibitem[Reinmann-Rothmeier and Mandl(1995)]{reinmann1995kooperation}
-Gabi Reinmann-Rothmeier and Heinz Mandl.
-\newblock Kooperation. lernen im team.
+\bibitem[Reinmann-Rothmeier und Mandl(1995)]{reinmann1995kooperation}
+Gabi Reinmann-Rothmeier und Heinz Mandl.
+\newblock {Kooperation. Lernen im Team}.
 \newblock \emph{Grundlagen der Weiterbildung}, 6\penalty0 (2):\penalty0 65--68,
   1995.
 
-\bibitem[Reinmann-Rothmeier and Mandl(2002)]{reinmann2002analyse}
-Gabi Reinmann-Rothmeier and Heinz Mandl.
-\newblock Analyse und f{\"o}rderung kooperativen lernens in netzbasierten
-  umgebungen.
+\bibitem[Reinmann-Rothmeier und Mandl(2002)]{reinmann2002analyse}
+Gabi Reinmann-Rothmeier und Heinz Mandl.
+\newblock {Analyse und F{\"o}rderung kooperativen Lernens in netzbasierten
+  Umgebungen}.
 \newblock \emph{Zeitschrift f{\"u}r Entwicklungspsychologie und
   P{\"a}dagogische Psychologie}, 34\penalty0 (1):\penalty0 44--57, 2002.
 
 \bibitem[Schmidt-Kassow et~al.(2013)Schmidt-Kassow, Deusser, Thiel, Otterbein,
-  Montag, Reuter, Banzer, and Kaiser]{schmidt2013physical}
+  Montag, Reuter, Banzer, und Kaiser]{schmidt2013physical}
 Maren Schmidt-Kassow, Marie Deusser, Christian Thiel, Sascha Otterbein,
-  Christian Montag, Martin Reuter, Winfried Banzer, and Jochen Kaiser.
+  Christian Montag, Martin Reuter, Winfried Banzer, und Jochen Kaiser.
 \newblock {Physical exercise during encoding improves vocabulary learning in
   young female adults: a neuroendocrinological study}.
 \newblock \emph{PloS one}, 8\penalty0 (5):\penalty0 e64172, 2013.
@@ -320,9 +320,9 @@ Maren Schmidt-Kassow, Marie Deusser, Christian Thiel, Sascha Otterbein,
 Martin Schrepp.
 \newblock \emph{User Experience Questionnaire Handbook}, 2018.
 
-\bibitem[Scutter et~al.(2010)Scutter, Stupans, Sawyer, and
+\bibitem[Scutter et~al.(2010)Scutter, Stupans, Sawyer, und
   King]{scutter2010students}
-Sheila Scutter, Ieva Stupans, Tim Sawyer, and Sharron King.
+Sheila Scutter, Ieva Stupans, Tim Sawyer, und Sharron King.
 \newblock How do students use podcasts to support learning?
 \newblock \emph{Australasian journal of educational technology}, 26\penalty0
   (2), 2010.
@@ -368,9 +368,9 @@ Sheila Scutter, Ieva Stupans, Tim Sawyer, and Sharron King.
 \newblock abgerufen am 19.08.2018.
 
 \bibitem[Tremblay et~al.(2011)Tremblay, LeBlanc, Kho, Saunders, Larouche,
-  Colley, Goldfield, and Gorber]{tremblay2011systematic}
+  Colley, Goldfield, und Gorber]{tremblay2011systematic}
 Mark~S Tremblay, Allana~G LeBlanc, Michelle~E Kho, Travis~J Saunders, Richard
-  Larouche, Rachel~C Colley, Gary Goldfield, and Sarah~Connor Gorber.
+  Larouche, Rachel~C Colley, Gary Goldfield, und Sarah~Connor Gorber.
 \newblock Systematic review of sedentary behaviour and health indicators in
   school-aged children and youth.
 \newblock \emph{International Journal of Behavioral Nutrition and Physical
@@ -394,8 +394,8 @@ Ralf Wirdemann.
 \newblock \url{https://www.youtube.com/watch?v=AUChk0lxF44}, 2015.
 \newblock abgerufen am 28.07.2018.
 
-\bibitem[Zumbach and Kroeber(2006)]{zumbach2006learning}
-Joerg Zumbach and Christiane Kroeber.
+\bibitem[Zumbach und Kroeber(2006)]{zumbach2006learning}
+Joerg Zumbach und Christiane Kroeber.
 \newblock {Learning with Hyperaudio: Cognitive Load and Knowledge Acquisition
   in Non-Linear Auditory Instruction}.
 \newblock \emph{Avoiding simplicity confronting complexity. Advances in
